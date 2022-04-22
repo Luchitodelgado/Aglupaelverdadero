@@ -11,4 +11,13 @@
   <li>Sarkany</li>
 </ul>
 <h3>Objetivo público</h3>
-Objetivo público: Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
+Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
+<h3>Autores</h3>
+<ul>
+  <li>
+    <p>
+      <strong>Agustina Zárate</strong> tengo 22 años, un hijo, vivo en Buenos Aires José c Paz, estudio Programación Web Full Stack en Digital House, y espero poder
+      adentrarme de lleno en este mundo para poder trabajar de esto.
+    </p>
+  </li>
+</ul>
