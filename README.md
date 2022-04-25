@@ -27,6 +27,10 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
     </p>
   </li>
 </ul>
+<h3> Link trello </h3>
+<p><a href="https://trello.com/b/LRoXGj6U/aglupa"></a>Trello</p>
+<h3>Link boceto de Marvel</h3>
+<p><a href="https://marvelapp.com/project/6204305"></a></p>
 
 
     
