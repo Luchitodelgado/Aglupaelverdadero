@@ -28,8 +28,9 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
   </li>
 </ul>
 <h3> Tablero y Wireframes </h3>
-<a href = "https://trello.com/b/LRoXGj6U/aglupa">Tablero de Trello</a>
-<a href = "https://marvelapp.com/project/6204305">Wireframe</a>
+<ul>
+    <li><a href = "https://trello.com/b/LRoXGj6U/aglupa">Tablero de Trello</a></li>
+    <li><a href = "https://marvelapp.com/project/6204305">Wireframe</a></li>
 
 
     
