@@ -23,7 +23,7 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
 <ul>
   <li>
     <p>
-      <strong>Patricia Beatriz Dilernia</strong> tengo 34 años, vivo en Lomas de Zamora, provincia de Buenos Aires, Argentina. Soy profesora de artes plásticas y estudio Programación Web Full Stack para poder sobrepasar mis limites dentro del mundo tecnológico.
+      <strong>Patricia Beatriz Dilernia</strong> tengo 34 años, vivo en Lomas de Zamora, provincia de Buenos Aires, Argentina. Soy profesora de artes plásticas y estudio Programación Web Full Stack para poder sobrepasar mis limites dentro del mundo de la tecnología.
     </p>
   </li>
 </ul>
