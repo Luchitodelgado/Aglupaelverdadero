@@ -23,14 +23,14 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
 <ul>
   <li>
     <p>
-      <strong>Patricia Beatriz Dilernia</strong> - Tengo 34 años, vivo en Lomas de Zamora, provincia de Buenos Aires, Argentina. Soy profesora de artes plásticas y estudio Programación Web Full Stack para poder sobrepasar mis limites dentro del mundo de la tecnología.<ul> <li><a href=>"https://github.com/Patri0506">Patri0506</a></li></ul>
+      <strong>Patricia Beatriz Dilernia</strong> - Tengo 34 años, vivo en Lomas de Zamora, provincia de Buenos Aires, Argentina. Soy profesora de artes plásticas y estudio Programación Web Full Stack para poder sobrepasar mis limites dentro del mundo de la tecnología.<ul><li><a href="https://github.com/Patri0506">Patri0506</a></li></ul>
     </p>
   </li>
 </ul>
 <ul>
   <li>
     <p>
-      <strong>Ludmila Johana Gomez</strong> - Tengo 26 años, vivo en Jose Marmol, Buenos Aires. Estudie armado y reparacion de Pc, Servicio tecnico de celulares. Y ahora estoy estudiando Programacion Web Full Stack en Digital House para poder ejercer de lo que me gusta en el mundo de la programacion... <ul> <li><a href="https://github.com/ludmi2501">Ludmi2501</a></li></ul>
+      <strong>Ludmila Johana Gomez</strong> - Tengo 26 años, vivo en Jose Marmol, Buenos Aires. Estudie armado y reparacion de Pc, Servicio tecnico de celulares. Y ahora estoy estudiando Programacion Web Full Stack en Digital House para poder ejercer de lo que me gusta en el mundo de la programacion...<ul><li><a href="https://github.com/ludmi2501">Ludmi2501</a></li></ul>
     </p>
   </li>
 </ul>
