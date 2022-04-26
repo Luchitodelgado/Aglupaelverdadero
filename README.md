@@ -30,7 +30,7 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
 <ul>
   <li>
     <p>
-      <strong>Ludmila Johana Gomez</strong> tengo 25 años, vivo en Jose Marmol, Buenos Aires. Estudie armado y reparacion de Pc, Servicio tecnico de celulares. Y ahora estoy estudiando Programacion Web Full Stack en Digital House para poder ejercer de lo que me gusta en el mundo de la programacion...
+      <strong>Ludmila Johana Gomez</strong> tengo 26 años, vivo en Jose Marmol, Buenos Aires. Estudie armado y reparacion de Pc, Servicio tecnico de celulares. Y ahora estoy estudiando Programacion Web Full Stack en Digital House para poder ejercer de lo que me gusta en el mundo de la programacion...
     </p>
   </li>
 </ul>
