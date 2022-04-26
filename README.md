@@ -15,7 +15,7 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
 <h3>Autores</h3>
 <ul>
   <li>
-    <p><strong>Agustina Zárate</strong> tengo 22 años, un hijo, vivo en Buenos Aires José c Paz, estudio Programación Web Full Stack en Digital House, y espero poder 
+    <p><strong>Agustina Zárate</strong> - Tengo 22 años, un hijo, vivo en Buenos Aires José c Paz, estudio Programación Web Full Stack en Digital House, y espero poder 
       adentrarme de lleno en este mundo para poder trabajar de esto.
     </p>
   </li>
@@ -23,14 +23,14 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
 <ul>
   <li>
     <p>
-      <strong>Patricia Beatriz Dilernia</strong> tengo 34 años, vivo en Lomas de Zamora, provincia de Buenos Aires, Argentina. Soy profesora de artes plásticas y estudio Programación Web Full Stack para poder sobrepasar mis limites dentro del mundo de la tecnología.
+      <strong>Patricia Beatriz Dilernia</strong> - Tengo 34 años, vivo en Lomas de Zamora, provincia de Buenos Aires, Argentina. Soy profesora de artes plásticas y estudio Programación Web Full Stack para poder sobrepasar mis limites dentro del mundo de la tecnología.
     </p>
   </li>
 </ul>
 <ul>
   <li>
     <p>
-      <strong>Ludmila Johana Gomez</strong> tengo 26 años, vivo en Jose Marmol, Buenos Aires. Estudie armado y reparacion de Pc, Servicio tecnico de celulares. Y ahora estoy estudiando Programacion Web Full Stack en Digital House para poder ejercer de lo que me gusta en el mundo de la programacion...
+      <strong>Ludmila Johana Gomez</strong> - Tengo 26 años, vivo en Jose Marmol, Buenos Aires. Estudie armado y reparacion de Pc, Servicio tecnico de celulares. Y ahora estoy estudiando Programacion Web Full Stack en Digital House para poder ejercer de lo que me gusta en el mundo de la programacion...
     </p>
   </li>
 </ul>
