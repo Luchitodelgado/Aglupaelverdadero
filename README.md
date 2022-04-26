@@ -16,7 +16,7 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
 <ul>
   <li>
     <p><strong>Agustina Zárate</strong> - Tengo 22 años, un hijo, vivo en Buenos Aires José c Paz, estudio Programación Web Full Stack en Digital House, y espero poder 
-      adentrarme de lleno en este mundo para poder trabajar de esto.
+      adentrarme de lleno en este mundo para poder trabajar de esto.<ul><li><a href="https://github.com/agus-99">Agus-99</a></li></ul>
     </p>
   </li>
 </ul>
