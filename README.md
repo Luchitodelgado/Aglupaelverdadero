@@ -35,7 +35,7 @@ Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
   </li>
     <li>
     <p>
-      <strong>Luciano Javier Delgado Herrera/strong> -  Tengo 32 años, vivo en San Isidro, Buenos Aires. Estudie Musica y produccion de sonido, estoy estudiando Programacion Web Full Stack en Digital House para poder crear mis propios Scripts en sistemas de produccion musical...<ul><li><a href="https://github.com/luchitodelgado">Luciano Delgado</a></li></ul>
+      <strong>Luciano Javier Delgado Herrera </strong> -  Tengo 32 años, vivo en San Isidro, Buenos Aires. Estudie Musica y produccion de sonido, estoy estudiando Programacion Web Full Stack en Digital House para poder crear mis propios Scripts en sistemas de produccion musical...<ul><li><a href="https://github.com/luchitodelgado">Luciano Delgado</a></li></ul>
     </p>
   </li>
 </ul>
