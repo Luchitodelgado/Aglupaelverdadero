@@ -1,0 +1,19 @@
+{
+  "name": "grupo_3_aglupa",
+  "version": "1.0.0",
+  "description": "Trabajo integrador",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patri0506/grupo_3_Aglupa.git"
+  },
+  "author": "Agustina Luciano Ludmila Patricia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patri0506/grupo_3_Aglupa/issues"
+  },
+  "homepage": "https://github.com/Patri0506/grupo_3_Aglupa#readme"
+}
