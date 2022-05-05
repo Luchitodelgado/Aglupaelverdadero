@@ -10,12 +10,16 @@ app.use(express.static("public"));
 
 // Ponemos a escuchar el servidor
 app.listen(3030, () => {
-    console.log("Servidor corriendo en http://localhost:3000")
+    console.log("Servidor corriendo en http://localhost:4000")
 });
 
 // Definimos las rutas a los distintos pedidos que nuestro sitio sabe responder
 app.get ("/", (req,res) => {
     let htmlPath = path.resolve(__dirname, "./views/home.html");
+    res.sendFile(htmlPath)
+});
+app.get ("/shopMujer", (req,res) => {
+    let htmlPath = path.resolve(__dirname, "./views/shopMujer.html");
     res.sendFile(htmlPath)
 });
 app.get ("/ingresa", (req,res) => {
