@@ -4,7 +4,7 @@
   "description": "Trabajo integrador",
   "main": "app.js",
   "scripts": {
-    "test": "start"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
