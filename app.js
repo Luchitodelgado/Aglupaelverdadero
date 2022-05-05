@@ -10,7 +10,7 @@ app.use(express.static("public"));
 
 // Ponemos a escuchar el servidor
 app.listen(3030, () => {
-    console.log("Servidor corriendo en http://localhost:AGLUPA")
+    console.log("Servidor corriendo en http://localhost:3000")
 });
 
 // Definimos las rutas a los distintos pedidos que nuestro sitio sabe responder
