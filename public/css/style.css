@@ -1,0 +1,39 @@
+/*MUJER*/
+/*HEADER*/
+p {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: antiquewhite;
+    margin: 5px;
+}
+h4 {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    background-color: aqua;
+}
+h1 {
+    font-family: 'Cardo', serif;
+    color: #47525E;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    margin: 0px;
+}
+.container-div {
+    display: flex;
+    justify-content: center;
+}
+.container-banner {
+    width: 400px;
+    height: auto;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    background-color: #47525E;
+}
+
+
+
+
+/*HASTA ACA VA EL CSS DE MUJER*/
