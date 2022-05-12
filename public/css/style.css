@@ -3,14 +3,12 @@
 p {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
-    background-color: antiquewhite;
     margin: 5px;
 }
 h4 {
     font-size: 40px;
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
-    background-color: aqua;
 }
 h1 {
     font-family: 'Cardo', serif;
@@ -23,17 +21,47 @@ h1 {
 .container-div {
     display: flex;
     justify-content: center;
+    justify-content: space-around;
 }
 .container-banner {
-    width: 400px;
+    width: 600px;
     height: auto;
     box-sizing: border-box;
     margin: 5px;
     padding: 5px;
-    background-color: #47525E;
 }
-
-
-
+.img-banner {
+    width: 100%;
+    height: auto;
+    
+}
+.img-banner:hover {
+    filter: opacity(.9);
+}
+.container-texanas {
+    display: none;
+    position: absolute;
+    left: 200px;
+    top: 550px;
+    width: 200px;
+}
+.container-botas {
+    display: none;
+    position: absolute;
+    right:200px;
+    top: 550px;
+    width: 200px;
+}
+.container-zapatillas {
+    display: none;
+    position: absolute;
+    right: 200px;
+    top: 500px;
+    width: 200px;
+}
+.container-mocasines {
+    display: none;
+    position: absolute;
+}
 
 /*HASTA ACA VA EL CSS DE MUJER*/
