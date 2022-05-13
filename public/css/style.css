@@ -17,39 +17,54 @@ h1 {
     font-size: 50px;
     text-decoration: underline;
     margin: 0px;
+    padding: 5px;
 }
-.container-div {
+body {
+    background-color: rgb(255, 251, 216);
+}
+/*MAIN*/ /*MAIN*/ /*MAIN*/ /*MAIN*/ 
+.container-padre {
     display: flex;
     justify-content: center;
-    justify-content: space-around;
+    flex-wrap: wrap;  
+    margin: 0px;
+    padding: 0px;
 }
-.container-banner {
-    width: 600px;
+.banner-altas {
+    width: 400px;
     height: auto;
     box-sizing: border-box;
-    margin: 5px;
-    padding: 5px;
+    padding: 10px;
+}
+.banner-cortas {
+    width: 300px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 .img-banner {
     width: 100%;
-    height: auto;
-    
+    height: 100%;
 }
 .img-banner:hover {
     filter: opacity(.9);
 }
-.container-texanas {
+.texto-texanas {
     display: none;
     position: absolute;
-    left: 200px;
-    top: 550px;
+    left: 250px;
+    top: 580px;
     width: 200px;
 }
-.container-botas {
+.texto-botas {
     display: none;
     position: absolute;
     right:200px;
-    top: 550px;
+    top: 580px;
     width: 200px;
 }
 .container-zapatillas {
@@ -63,5 +78,28 @@ h1 {
     display: none;
     position: absolute;
 }
-
+/*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/
+.designed-footer {
+    color: #47525E;
+    text-align: center;
+    font-family: 'Cardo', serif;
+    font-size: 20px;
+    padding: 20px;
+    margin: 0px;
+}
+.container-footer {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.hijos-footer {
+    border: 1px solid #dfdfdf;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+}
+.icons {
+    text-align: center;
+    color: #47525E;
+}
 /*HASTA ACA VA EL CSS DE MUJER*/
