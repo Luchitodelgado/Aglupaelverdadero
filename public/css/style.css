@@ -1,21 +1,23 @@
 /*MUJER*/
 /*HEADER*/
 p {
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     margin: 5px;
+    font-weight: bold;
 }
 h4 {
-    font-size: 40px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
+    color: black;
+    overflow:hidden;
 }
 h1 {
-    font-family: 'Cardo', serif;
+    font-family: 'Cormorant Garamond', serif;
     color: #47525E;
     text-align: center;
     font-size: 50px;
-    text-decoration: underline;
     margin: 0px;
     padding: 5px;
 }
@@ -51,32 +53,29 @@ body {
     height: 100%;
 }
 .img-banner:hover {
-    filter: opacity(.9);
+    filter: opacity(.5);
 }
-.texto-texanas {
-    display: none;
-    position: absolute;
-    left: 250px;
-    top: 580px;
-    width: 200px;
+.texto-texanas{
+    position: relative;
+    bottom: 380px;
+    right:20px;
+    box-sizing: border-box;
+}
+.texto-borsegos {
+    position: relative;
+    bottom: 88px;
+    left: 68px;
+    box-sizing: border-box;
+}
+.texto-zapatillas {
+    position: relative;
+    bottom: 110px;
+    left: 68px;
+    box-sizing: border-box;
 }
 .texto-botas {
-    display: none;
     position: absolute;
-    right:200px;
-    top: 580px;
-    width: 200px;
-}
-.container-zapatillas {
     display: none;
-    position: absolute;
-    right: 200px;
-    top: 500px;
-    width: 200px;
-}
-.container-mocasines {
-    display: none;
-    position: absolute;
 }
 /*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/
 .designed-footer {
@@ -98,8 +97,16 @@ body {
     padding: 50px;
     width: 100%;
 }
+.titulo-footer {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
 .icons {
     text-align: center;
     color: #47525E;
+}
+.icons:hover {
+    color: #47525e6d;
 }
 /*HASTA ACA VA EL CSS DE MUJER*/
