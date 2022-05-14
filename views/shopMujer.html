@@ -13,41 +13,88 @@ rel="stylesheet" />
 </head>
 <body>
     <header>
-        <h1>MUJER</h1>
+        <header class="header">
+            <div class="navbar">           
+    
+                <nav class="navbar navbar-expand-lg navbar-light .text-muted" id="head-container">
+                    <div class="carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <a class="navbar-brand" href="#">
+                        <div class="div-form">
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Busque aqui su producto...">
+                                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                            </form>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Ingresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Registrate</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tienda
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Mujer</a>
+                                    <a class="dropdown-item" href="#">Hombre</a>
+                                    <!--     ACA OTRA SUBSECCION
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    -->
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Acerca de nosotros</a>
+                            </li>
+    
+                        </ul>
+    
+                    </div>
+                </nav>
+            </div>
+    
+        </header>
     </header>
     <main>
+        <h1>MUJER</h1>
         <div class="container-padre">
             <div class="banner-altas">
                 <img class="img-banner" src="/img/texanas.png" alt="texanas">
-                <div class="texto-texanas">
-                    <h4>TEXANAS</h4>
-                    <p>Shop now!</p>
-                </div>
+                <h4>TEXANAS</h4>
+                <p>Shop now!</p>
             </div>
             <div class="flex-column">
                 <div class="banner-cortas">
-                    <img class="img-banner" src="/img/borsegos.png" alt="borsegos">
-                    <div class="texto-borsegos">
-                        <h4>BORSEGOS</h4>
-                        <p>Shop now!</p>
-                    </div>
+                    <img class="img-banner" src="/img/borsegos.png" alt="borcegos">
+                    <h4>BORCEGOS</h4>
+                    <p>Shop now!</p>
                 </div>
                 <div class="banner-cortas">
                     <img class="img-banner" src="/img/zapatillas}.png" alt="zapatillas">
-                    <div class="texto-zapatillas">
-                        <p>Winter 2022</p>
-                        <h4>ZAPATILLAS</h4>
-                        <p>Shop now!</p>
-                    </div>
+                    <h4>ZAPATILLAS</h4>
+                    <p>Shop now!</p>
                 </div>
             </div>
             <div class="banner-altas">
                 <img class="img-banner" src="/img/botas.png" alt="botas">
-                <div class="texto-botas">
-                    <p>Winter 2022</p>
-                    <h4>BOTAS</h4>
-                    <p>Shop now!</p>
-                </div>
+                <h4>BOTAS</h4>
+                <p>Shop now!</p>
             </div>
         </div>
     </main>
@@ -70,7 +117,7 @@ rel="stylesheet" />
 
             </div>
         </div>
-        <p class="designed-footer">DESIGNED BY AGLUPA 2022</p>
+        <p class="designed-footer">DESIGNED BY AGLUPA | 2022</p>
     </footer>
 </body>
 </html>

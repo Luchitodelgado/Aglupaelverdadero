@@ -1,10 +1,73 @@
 /*MUJER*/
 /*HEADER*/
+.header {
+    width: 100%;
+    opacity: 95%;
+    display: none;
+}
+.divmain{
+    padding: 10px;
+}
+.logo{
+    width: 50%;
+    max-width: 740px;
+}
+.contenedor-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #99868031;
+
+}
+.contenedor-imagen-principal{
+    width: 100%;
+
+}
+.imagen-principal{
+    width: 100%;
+    opacity: 80%;
+
+}
+.carrito{
+    color:black;
+    font-size: 23px;
+
+}
+
+
+/* ----------NAVBAR-------*/
+.navbar {
+    width: 100%;
+    color: #E0BE36;
+    background-color:#e0be367a; 
+    display: flex;
+    opacity: 90%;
+    flex-direction: row-reverse;
+}
+
+.mr-sm-2 {
+    border-radius: 10%;
+}
+
+.div-form {
+    width: 100%;
+}
+
+.form-inline {
+    border-radius: 10%;
+    width: 100%;
+}
+
+.bg-light {
+    border-radius: 5%;
+}
+/*MAIN*/ /*MAIN*/ /*MAIN*/ /*MAIN*/ 
 p {
-    font-size: 15px;
+    font-size: 12px;
     font-family: 'Roboto', sans-serif;
     margin: 5px;
     font-weight: bold;
+    text-align: center;
 }
 h4 {
     font-size: 30px;
@@ -12,19 +75,19 @@ h4 {
     margin: 0px;
     color: black;
     overflow:hidden;
+    text-align: center;
 }
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    color: #47525E;
+    color: black;
     text-align: center;
     font-size: 50px;
     margin: 0px;
     padding: 5px;
 }
 body {
-    background-color: rgb(255, 251, 216);
+    background-color: rgb(255, 249, 199);
 }
-/*MAIN*/ /*MAIN*/ /*MAIN*/ /*MAIN*/ 
 .container-padre {
     display: flex;
     justify-content: center;
@@ -32,56 +95,22 @@ body {
     margin: 0px;
     padding: 0px;
 }
-.banner-altas {
-    width: 400px;
-    height: auto;
-    box-sizing: border-box;
-    padding: 10px;
-}
-.banner-cortas {
-    width: 300px;
-    height: auto;
-    box-sizing: border-box;
-    padding: 10px;
-}
 .flex-column {
     display: flex;
     flex-direction: column;
 }
 .img-banner {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .img-banner:hover {
     filter: opacity(.5);
 }
-.texto-texanas{
-    position: relative;
-    bottom: 380px;
-    right:20px;
-    box-sizing: border-box;
-}
-.texto-borsegos {
-    position: relative;
-    bottom: 88px;
-    left: 68px;
-    box-sizing: border-box;
-}
-.texto-zapatillas {
-    position: relative;
-    bottom: 110px;
-    left: 68px;
-    box-sizing: border-box;
-}
-.texto-botas {
-    position: absolute;
-    display: none;
-}
 /*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/
 .designed-footer {
-    color: #47525E;
+    color: black;
     text-align: center;
-    font-family: 'Cardo', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     padding: 20px;
     margin: 0px;
@@ -90,12 +119,13 @@ body {
     display: flex;
     justify-content: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .hijos-footer {
     border: 1px solid #dfdfdf;
     text-align: center;
     padding: 50px;
-    width: 100%;
+    width: 25%;
 }
 .titulo-footer {
     font-size: 20px;
@@ -104,9 +134,49 @@ body {
 }
 .icons {
     text-align: center;
-    color: #47525E;
+    color: black;
 }
 .icons:hover {
     color: #47525e6d;
 }
 /*HASTA ACA VA EL CSS DE MUJER*/
+@media (min-width:361px){
+    /*MOBILE-MAIN*/
+    .banner-altas {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 5px;
+        box-shadow: 0px 0px 10px rgb(199, 199, 199);
+    }
+    .banner-cortas {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 5px;
+        box-shadow: 0px 0px 10px rgb(199, 199, 199);
+    }
+    /*MOBILE-FOOTER*/
+    .container-footer {
+        justify-content: center;
+        width: 100%;
+    }
+    .hijos-footer {
+        width:100%;
+        height: auto;
+    }
+    .titulo-footer {
+        font-size: 15px;
+    }
+    .designed-footer{
+        font-size: 15px;
+    }
+}
+@media (min-width:769px){
+    .hijos-footer{
+        width: 15%;
+        height: auto;
+    }
+}
