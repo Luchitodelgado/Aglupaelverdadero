@@ -69,7 +69,6 @@ h1 {
     font-family: 'Cormorant Garamond', serif;
     color: black;
     text-align: center;
-    font-size: 50px;
     margin: 0px;
     padding: 5px;
 }
@@ -112,7 +111,7 @@ body {
 .hijos-footer {
     border: 1px solid #dfdfdf;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
 }
 .titulo-footer {
     font-family: 'Montserrat', sans-serif;
@@ -125,8 +124,24 @@ body {
 .icons:hover {
     color: #47525e6d;
 }
+.designed {
+    width: 100%;
+    padding: 20px;
+}
+.newsletter {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+.texto-newsletter {
+    width: 100px;
+    background-color: #E0BE36;
+}
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
+    h1 {
+        font-size: 50px;
+    }
     .banner-altas {
         width: 100%;
         height: auto;
@@ -160,9 +175,8 @@ body {
     }
 }
 @media (min-width:769px){
-    .hijos-footer{
-        width: 33%;
-        height: auto;
+    h1 {
+        font-size: 70px;
     }
     .banner-altas{
         box-shadow: none;
@@ -184,11 +198,14 @@ body {
         width: 100%;
         height: auto;
     }
+    .hijos-footer{
+        width: 33%;
+        height: auto;
+    }
     .titulo-footer {
         font-size: 15px;
     }
     .designed-footer{
         font-size: 15px;
     }
-
 }
