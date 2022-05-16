@@ -1,9 +1,7 @@
-/*MUJER*/
 /*HEADER*/
 .header {
     width: 100%;
     opacity: 95%;
-    display: none;
 }
 .divmain{
     padding: 10px;
@@ -70,7 +68,7 @@ p {
     text-align: center;
 }
 h4 {
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     color: black;
@@ -95,16 +93,16 @@ body {
     margin: 0px;
     padding: 0px;
 }
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
 .img-banner {
     width: 100%;
     height: auto;
 }
 .img-banner:hover {
     filter: opacity(.5);
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 /*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/
 .designed-footer {
@@ -125,10 +123,9 @@ body {
     border: 1px solid #dfdfdf;
     text-align: center;
     padding: 50px;
-    width: 25%;
+    width: 30%;
 }
 .titulo-footer {
-    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
 }
@@ -139,7 +136,6 @@ body {
 .icons:hover {
     color: #47525e6d;
 }
-/*HASTA ACA VA EL CSS DE MUJER*/
 @media (min-width:361px){
     /*MOBILE-MAIN*/
     .banner-altas {
@@ -179,4 +175,31 @@ body {
         width: 15%;
         height: auto;
     }
+    .banner-altas{
+        box-shadow: none;
+        width: 450px;
+        height: auto;
+    }
+    .banner-altas:hover {
+        box-shadow: 0px 0px 10px rgb(199, 199, 199);
+    }
+    .banner-cortas{
+        box-shadow: none;
+        width: 200px;
+        height: auto;
+    }
+    .banner-cortas:hover {
+        box-shadow: 0px 0px 10px rgb(199, 199, 199);
+    }
+    .container-footer {
+        width: 100%;
+        height: auto;
+    }
+    .titulo-footer {
+        font-size: 15px;
+    }
+    .designed-footer{
+        font-size: 15px;
+    }
+
 }
