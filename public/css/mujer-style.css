@@ -27,6 +27,9 @@
     color:black;
     font-size: 23px;
 }
+.carrito:hover {
+    color: rgba(0, 0, 0, 0.315);
+}
 /* ----------NAVBAR-------*/
 .navbar {
     width: 100%;
@@ -50,21 +53,9 @@
     border-radius: 5%;
 }
 /*----------------MAIN--------------------*/
-p {
-    font-size: 13px;
-    font-family: 'Roboto', sans-serif;
-    margin: 3px;
-    font-weight: bold;
-    text-align: center;
-}
-h4 {
-    font-weight: bold;
-    font-size: 25px;
-    font-family: 'Roboto', sans-serif;
-    margin: 0px;
-    color: black;
-    overflow:hidden;
-    text-align: center;
+.titulo-shop {
+    display: flex;
+    justify-content: center;
 }
 h1 {
     font-family: 'Cormorant Garamond', serif;
@@ -72,6 +63,31 @@ h1 {
     text-align: center;
     margin: 0px;
     padding: 5px;
+}
+.div-banner {
+    margin: 15px;
+}
+.banner {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+
+}
+p {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+h4 {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0px;
+    color: black;
+    overflow:hidden;
+    text-align: center;
 }
 body {
     background-color: rgb(255, 249, 199);
@@ -87,25 +103,11 @@ body {
     width: 100%;
     height: auto;
 }
-.img-banner:hover {
-    filter: opacity(.5);
-}
 .flex-column {
     display: flex;
     flex-direction: column;
 }
 /*-------------FOOTER--------------------*/
-footer{
-    background-color: #e3cc73; 
-}
-.designed-footer {
-    color: black;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    padding: 20px;
-    margin: 0px;
-}
 .container-footer {
     display: flex;
     justify-content: center;
@@ -115,7 +117,7 @@ footer{
 .hijos-footer {
     border: 1px solid #dfdfdf;
     text-align: center;
-    padding: 20px;
+    padding: 50px;
 }
 .titulo-footer {
     font-family: 'Montserrat', sans-serif;
@@ -130,20 +132,28 @@ footer{
 }
 .newsletter {
     text-align: center;
-    padding: 15px;
+    padding: 60px;
     width: 50%;
 }
 .contacto {
     text-align: center;
     width: 50%;
-    padding: 10px;
+    padding: 60px;
 }
 .p-contacto {
     text-align: center;
 }
+.div-designed {
+    margin: 0px;
+    background-color:#e0be3686;
+    width: 100%;
+}
 .designed {
+    color: black;
     width: 100%;
     padding: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 .button-footer {
     background-color: rgb(58, 58, 58);
@@ -193,8 +203,19 @@ footer{
     .titulo-footer {
         font-size: 15px;
     }
-    .designed-footer{
+    .div-designed{
+        padding: 20px;
+    }
+    .designed{
         font-size: 15px;
+    }
+    .newsletter {
+        padding: 25px;
+        width: 100%;
+    }
+    .contacto{
+        padding: 25px;
+        width: 100%;
     }
 }
 @media (min-width:769px){
@@ -203,7 +224,7 @@ footer{
     }
     .banner-altas{
         box-shadow: none;
-        width: 450px;
+        width: 470px;
         height: auto;
     }
     .banner-altas:hover {
@@ -211,10 +232,10 @@ footer{
     }
     .banner-cortas{
         box-shadow: none;
-        width: 200px;
+        width: 215px;
         height: auto;
     }
-    .banner-cortas:hover {
+    .banner-cortas:hover{
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
     }
     .container-footer {
@@ -226,9 +247,23 @@ footer{
         height: auto;
     }
     .titulo-footer {
-        font-size: 15px;
+        font-size: 18px;
     }
-    .designed-footer{
-        font-size: 15px;
+    .div-designed {
+        padding: 60px;
+    }
+    .designed {
+        font-size: 18px;
+    }
+    .newsletter {
+        padding: 60px;
+        width: 50%;
+    }
+    .contacto{
+        padding: 60px;
+        width: 50%;
+    }
+    h6 {
+        font-size: 20px;
     }
 }
