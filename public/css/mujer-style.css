@@ -51,13 +51,14 @@
 }
 /*----------------MAIN--------------------*/
 p {
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Roboto', sans-serif;
-    margin: 5px;
+    margin: 3px;
     font-weight: bold;
     text-align: center;
 }
 h4 {
+    font-weight: bold;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
@@ -94,6 +95,9 @@ body {
     flex-direction: column;
 }
 /*-------------FOOTER--------------------*/
+footer{
+    background-color: #e3cc73; 
+}
 .designed-footer {
     color: black;
     text-align: center;
@@ -115,25 +119,46 @@ body {
 }
 .titulo-footer {
     font-family: 'Montserrat', sans-serif;
-    padding: 5px;
 }
 .icons {
     text-align: center;
     color: black;
+    padding: 5px;
 }
 .icons:hover {
     color: #47525e6d;
 }
-.designed {
-    width: 100%;
-    padding: 20px;
-}
 .newsletter {
     text-align: center;
+    padding: 15px;
+    width: 50%;
+}
+.contacto {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+}
+.p-contacto {
+    text-align: center;
+}
+.designed {
     width: 100%;
-    padding: 20px;
-    width: 100px;
-    background-color: #E0BE36;
+    padding: 10px;
+}
+.button-footer {
+    background-color: rgb(58, 58, 58);
+    border:rgb(58, 58, 58);
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+}
+.button-footer:hover {
+    background-color:rgba(58, 58, 58, 0.582);
+}
+.input-email{
+    border: white;
+    padding: 5px;
+    margin: 5px;
 }
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
