@@ -8,6 +8,7 @@ body {
 
 .header {
     width: 100%;
+    height: auto;
     opacity: 95%;
     display: flex;
     background-color: #99868031;
@@ -23,38 +24,24 @@ main {
 }
 
 .logo {
-    width: 60%;
-    justify-content: center;
-    margin-right: 2%;
-    margin-bottom: 10px;
-    display: none;
-
-
+    width: 100%;
+    position: absolute;
 }
 
 .contenedor-logo {
-    width: 100%;
-    display: none;
-    justify-content: center;
-    background-color: #99868031;
- }
-.contenedor-imagen-principal {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
+    width: 60px;
+    height: auto;
+    margin-right: 2%;
+    margin-bottom: 10px;
+}
+.contenedor-imagen-principal{
+    margin: 0px;
 }
 .imagen-principal {
     width: 100%;
+    height: auto;
+    padding: 0px;
 }
-
-.imagen-principal:hover {
-    width: 100%;
-    opacity: 30%;
-    transition: 400   0ms;
-    display: none;
-}
-
 .carrito {
     color: black;
     font-size: 25px;
@@ -74,9 +61,6 @@ main {
 
 
 }
-
-
-
 .seccion-articulos {
     width: 100%;
     display: flex;
@@ -88,7 +72,6 @@ main {
     *background-image: url("/images/flores.png");
     background-repeat: space;
     background-size: 50%;
-
 }
 
 .descripcion {
