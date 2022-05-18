@@ -27,38 +27,32 @@ main {
     justify-content: center;
     margin-right: 2%;
     margin-bottom: 10px;
+    display: none;
 
 
 }
 
 .contenedor-logo {
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     background-color: #99868031;
- 
-
-}
-
+ }
 .contenedor-imagen-principal {
     width: 100%;
     display: flex;
     flex-direction: column;
 
 }
-
 .imagen-principal {
     width: 100%;
-    opacity: 80%;
-
-
 }
 
 .imagen-principal:hover {
     width: 100%;
     opacity: 30%;
     transition: 400   0ms;
-
+    display: none;
 }
 
 .carrito {
