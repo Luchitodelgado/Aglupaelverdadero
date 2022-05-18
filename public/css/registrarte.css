@@ -139,6 +139,11 @@ button{
 
 }
 
+.login{
+    margin-top: 20%;
+    
+}
+
 /*-------------FOOTER--------------------*/
 .container-footer {
     display: flex;
