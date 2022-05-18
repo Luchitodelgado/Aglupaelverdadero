@@ -108,6 +108,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+.button-shop-now {
+    text-align: center;
+    background-color: #dfdfdf;
+    color: black;
+    border: white;
+}
 /*-------------FOOTER--------------------*/
 .container-footer {
     display: flex;
