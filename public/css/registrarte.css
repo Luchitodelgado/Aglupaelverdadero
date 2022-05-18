@@ -105,7 +105,6 @@ body {
     height: auto;
 }
 .input {
-    font-size: 13px;
     font-family: 'Roboto', sans-serif;
     margin: 3px;
     font-weight: bold;
@@ -129,6 +128,7 @@ button{
     margin-bottom: 5%;
     border-radius: 50%;
     background-color: #e3cc73;
+    border: #e3cc73;
 
 }
 

@@ -30,3 +30,7 @@ app.get ("/registrarte", (req,res) => {
     let htmlPath = path.resolve(__dirname, "./views/registrarte.html");
     res.sendFile(htmlPath)
 });
+app.get ("/sobreMi", (req,res) => {
+    let htmlPath = path.resolve(__dirname, "./views/sobreMi.html");
+    res.sendFile(htmlPath)
+});
