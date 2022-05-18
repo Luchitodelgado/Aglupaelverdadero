@@ -91,7 +91,7 @@ h4 {
     text-align: center;
 }
 body {
-    background-color: rgb(255, 249, 199);
+    background-color: white;
 }
 .container-padre {
     display: flex;
@@ -107,6 +107,12 @@ body {
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+.button-shop-now {
+    text-align: center;
+    background-color: #dfdfdf;
+    color: black;
+    border: white;
 }
 /*-------------FOOTER--------------------*/
 .container-footer {
