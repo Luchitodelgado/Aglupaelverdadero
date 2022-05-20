@@ -113,7 +113,9 @@ body {
     width: 300px;
 }
 .input-hijo{
-    width: 50%;
+    width: 100%;
+    border: white;
+    padding: 10px;
 }
 
 body {
