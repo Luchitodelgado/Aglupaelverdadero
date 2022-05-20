@@ -104,14 +104,16 @@ body {
     width: 100%;
     height: auto;
 }
-.input {
-    font-size: 13px;
+.login {
     font-family: 'Roboto', sans-serif;
-    margin: 3px;
     font-weight: bold;
     text-align: center;
     border: none;
     margin: 1%;
+    width: 600px;
+}
+.input-hijo{
+    width: 100%;
 }
 
 body {
@@ -129,7 +131,7 @@ button{
     margin-bottom: 5%;
     border-radius: 50%;
     background-color: #e3cc73;
-
+    border: #e3cc73;
 }
 
 /*-------------FOOTER--------------------*/
