@@ -6,6 +6,7 @@ body {
 }
 .header {
     width: 100%;
+    height: auto;
     opacity: 95%;
     display: flex;
     background-color: #99868031;
@@ -18,12 +19,18 @@ main {
     display: flex;
 }
 .logo {
+<<<<<<< HEAD
     width: 60%;
     justify-content: center;
     margin-right: 2%;
     margin-bottom: 10px;
+=======
+    width: 100%;
+    position: absolute;
+>>>>>>> 16271b6e3018eea66ce09ff5f97d67d42f5f29ad
 }
 .contenedor-logo {
+<<<<<<< HEAD
     width: 100%;
     display: flex;
     justify-content: center;
@@ -44,6 +51,21 @@ main {
     transition: 400   0ms;
 
 }
+=======
+    width: 60px;
+    height: auto;
+    margin-right: 2%;
+    margin-bottom: 10px;
+}
+.contenedor-imagen-principal{
+    margin: 0px;
+}
+.imagen-principal {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+}
+>>>>>>> 16271b6e3018eea66ce09ff5f97d67d42f5f29ad
 .carrito {
     color: black;
     font-size: 25px;
@@ -69,7 +91,6 @@ main {
     *background-image: url("/images/flores.png");
     background-repeat: space;
     background-size: 50%;
-
 }
 .descripcion {
     width: 10%;
