@@ -92,6 +92,7 @@ body {
     flex-wrap: wrap;  
     margin: 0px;
     padding: 0px;
+    text-align: center;
 }
 .img-banner {
     width: 100%;
@@ -103,9 +104,13 @@ body {
 }
 .button-shop-now {
     text-align: center;
-    background-color: #dfdfdf;
+    background-color:#e0be3698;
     color: black;
     border: white;
+    margin: 5px;
+}
+.button-shop-now:hover {
+    background-color:#e0be36;;
 }
 /*-------------FOOTER--------------------*/
 .container-footer {
