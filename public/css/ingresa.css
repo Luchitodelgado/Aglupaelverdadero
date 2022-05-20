@@ -221,6 +221,11 @@ button{
         margin: 5px;
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
     }
+
+    .input-hijo{
+        width: 361px;
+    }
+
     /*-----------MOBILE-FOOTER-----------*/
     .container-footer {
         justify-content: center;
@@ -260,6 +265,11 @@ button{
     .banner-altas:hover {
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
     }
+
+    .input-hijo{
+        width: 600px;
+    }
+
     .banner-cortas{
         box-shadow: none;
         width: 215px;

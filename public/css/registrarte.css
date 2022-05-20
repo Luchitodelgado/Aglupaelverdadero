@@ -231,6 +231,12 @@ button{
         margin: 5px;
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
     }
+    
+    .input-hijo{
+        width: 361px;
+    
+    }
+
     /*-----------MOBILE-FOOTER-----------*/
     .container-footer {
         justify-content: center;
@@ -253,11 +259,13 @@ button{
         padding: 25px;
         width: 100%;
     }
+    
     .contacto{
         padding: 25px;
         width: 100%;
     }
 }
+
 @media (min-width:769px){
     h1 {
         font-size: 70px;
@@ -289,6 +297,11 @@ button{
     .titulo-footer {
         font-size: 18px;
     }
+    .input-hijo{
+        width: 600px;
+    
+    }
+
     .div-designed {
         padding: 60px;
     }
@@ -307,3 +320,4 @@ button{
         font-size: 20px;
     }
 }
+
