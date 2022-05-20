@@ -108,13 +108,14 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-align: center;
-    border: none;
     margin: 1%;
     width: 600px;
 }
 
 .input-hijo{
     width: 100%;
+    border: white;
+    padding: 10px;
 
 }
 
@@ -136,6 +137,7 @@ button{
     border-radius: 50%;
     background-color: #e3cc73;
     border: #e3cc73;
+    padding: 10px;
 
 }
 
