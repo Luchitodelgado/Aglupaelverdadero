@@ -221,6 +221,10 @@ button{
         margin: 5px;
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
     }
+
+    .login{
+        width: 600px;
+    }
     /*-----------MOBILE-FOOTER-----------*/
     .container-footer {
         justify-content: center;
@@ -296,4 +300,5 @@ button{
     h6 {
         font-size: 20px;
     }
+
 }
