@@ -222,16 +222,10 @@ button{
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
     }
 
-<<<<<<< HEAD
     .input-hijo{
         width: 361px;
     }
 
-=======
-    .login{
-        width: 600px;
-    }
->>>>>>> 3fd2705c57114e7a7521b2650c9efcb938deb9ae
     /*-----------MOBILE-FOOTER-----------*/
     .container-footer {
         justify-content: center;
