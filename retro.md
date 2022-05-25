@@ -1,0 +1,25 @@
+
+
+1- CREEMOS QUE EN NUESTRO GRUPO LA PERSONA MAS HABIL PARA EL CODIGO ES: LUCIANO
+
+2- CREEMOS QUE EN NUESTRO GRUPO LA PERSONA MAS HABIL PARA LA ESTETICA ES: AGUSTINA
+
+3- CREEMOS QUE EN NUESTRO GRUPO LA PERSONA MAS HABIL A NIVEL ORGANIZATIVO ES: LUDMILA
+
+
+                                                          QUE PODEMOS HACER PARA MEJORAR COMO GRUPO?
+                                                          
+
+1 -  ORGANIZAR REUNIONES CON HORARIOS Y DIAS.
+2 - ESTAR MAS PENDIENTES DE TRELLO  
+
+
+
+                                                            CUALES SON LAS FORTALEZAS COMO GRUPO?
+                                                            
+
+1- TENEMOS UNA BUENA COMUNICACION.
+2- TENEMOS BUEN CLIMA DE TRABAJO.
+
+
+
