@@ -117,12 +117,6 @@ body {
     border: white;
     padding: 10px;
 }
-
-body {
-    background-color: rgb(255, 249, 199);
-}
-
-
 form{
     display: flex;
     flex-direction: column;
