@@ -2,6 +2,7 @@
 .header {
     width: 100%;
     opacity: 95%;
+    margin-bottom: 12px;
 }
 .divmain{
     padding: 10px;
@@ -50,9 +51,11 @@
 .titulo-shop {
     display: flex;
     justify-content: center;
-    background-color: #E0BE36;
-    padding: 5px;
-
+    width: 300px;
+    margin: auto;
+    border-bottom:2px solid #E0BE36;
+    border-top:2px solid #E0BE36;
+    border-radius: 50px;
 }
 h1 {
     font-family: 'Cormorant Garamond', serif;
@@ -62,13 +65,12 @@ h1 {
     padding: 5px;
 }
 .div-banner {
-    margin: 15px;
+    margin: 12px;
 }
 .banner {
     width: 100%;
     height: auto;
     padding: 5px;
-
 }
 p {
     font-size: 14px;
