@@ -54,10 +54,7 @@
     border-radius: 5%;
 }
 /*----------------MAIN--------------------*/
-.titulo-shop {
-    display: flex;
-    justify-content: center;
-}
+
 h1 {
     font-family: 'Cormorant Garamond', serif;
     color: black;
@@ -65,42 +62,7 @@ h1 {
     margin: 0px;
     padding: 5px;
 }
-.div-banner {
-    margin: 15px;
-}
-.banner {
-    width: 100%;
-    height: auto;
-    padding: 5px;
 
-}
-p {
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    margin: 3px;
-    font-weight: bold;
-    text-align: center;
-}
-h4 {
-    font-weight: bold;
-    font-size: 30px;
-    font-family: 'Cormorant Garamond', serif;
-    margin: 0px;
-    color: black;
-    overflow:hidden;
-    text-align: center;
-}
-.container-padre {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;  
-    margin: 0px;
-    padding: 0px;
-}
-.img-banner {
-    width: 100%;
-    height: auto;
-}
 .login {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -114,6 +76,7 @@ h4 {
     border: white;
     padding: 10px;
 }
+
 form{
     display: flex;
     flex-direction: column;
