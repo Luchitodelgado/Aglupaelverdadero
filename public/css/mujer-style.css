@@ -51,11 +51,9 @@
 .titulo-shop {
     display: flex;
     justify-content: center;
-    width: 300px;
     margin: auto;
-    border-bottom:2px solid #E0BE36;
-    border-top:2px solid #E0BE36;
     border-radius: 50px;
+    border:2px solid #e0be36bb;
 }
 h1 {
     font-family: 'Cormorant Garamond', serif;
@@ -81,7 +79,6 @@ p {
 }
 h4 {
     font-weight: bold;
-    font-size: 30px;
     font-family: 'Cormorant Garamond', serif;
     margin: 0px;
     color: black;
@@ -103,16 +100,14 @@ body {
     width: 100%;
     height: auto;
 }
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
 .button-shop-now {
     text-align: center;
     background-color:#e0be3698;
     color: black;
     border: white;
     margin: 5px;
+    padding: 15px;
+    border-radius: 5px;
 }
 .button-shop-now:hover {
     background-color:#e0be36;;
@@ -183,10 +178,16 @@ body {
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
     h1 {
-        font-size: 50px;
+        font-size: 40px;
+    }
+    .titulo-shop {
+        width: 200px;
+    }
+    h4 {
+        font-size: 25px;
     }
     .banner-altas {
-        width: 80%;
+        width: 160px;
         height: auto;
         box-sizing: border-box;
         padding: 10px;
@@ -194,12 +195,18 @@ body {
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
     }
     .banner-cortas {
-        width: 80%;
+        width: 0px;
         height: auto;
         box-sizing: border-box;
         padding: 10px;
         margin: 5px;
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
+    }
+    .button-shop-now {
+        padding: 4px;
+    }
+    .flex-column {
+        display: flex;
     }
     /*-----------MOBILE-FOOTER-----------*/
     .container-footer {
@@ -232,10 +239,16 @@ body {
     h1 {
         font-size: 70px;
     }
+    .titulo-shop {
+        width: 310px;
+    }
+    h4{
+        font-size: 35px;
+    }
     .banner-altas{
         box-shadow: none;
         width: 470px;
-        height: auto;
+        height: 800px;
     }
     .banner-altas:hover {
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
@@ -243,10 +256,14 @@ body {
     .banner-cortas{
         box-shadow: none;
         width: 215px;
-        height: auto;
+        height: 400px;
     }
     .banner-cortas:hover{
         box-shadow: 0px 0px 10px rgb(199, 199, 199);
+    }
+    .flex-column {
+        display: flex;
+        flex-direction: column;
     }
     .container-footer {
         width: 100%;
