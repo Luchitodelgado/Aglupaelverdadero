@@ -96,6 +96,20 @@ body {
     padding: 0px;
     text-align: center;
 }
+.banner-altas:hover {
+    box-shadow: 0px 0px 10px rgb(199, 199, 199);
+}
+.banner-cortas:hover{
+    box-shadow: 0px 0px 10px rgb(199, 199, 199);
+}
+.banner-cortas {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px;
+}
+.flex-column {
+    display: flex;
+}
 .img-banner {
     width: 100%;
     height: auto;
@@ -178,35 +192,35 @@ body {
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
     h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
     .titulo-shop {
         width: 200px;
     }
     h4 {
-        font-size: 25px;
+        font-size: 90%;
     }
     .banner-altas {
-        width: 170px;
+        width: 25%;
         height: auto;
         box-sizing: border-box;
-        padding: 10px;
-        margin: 5px;
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
-    .banner-cortas {
-        width: 170px;
-        height: auto;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 5px;
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
-    .button-shop-now {
-        padding: 4px;
+        padding: 5px;
+        margin: 1px;
+        align-self: center;
     }
     .flex-column {
-        display: flex;
+        width: 25%;
+        height: auto;
+        margin: 1px;
+        padding: 0px;
+    }
+    .banner-cortas {
+        width: 100%;
+        height: auto;
+    }
+    .button-shop-now {
+        font-size: 10px;
+        padding: 4px;
     }
     /*-----------MOBILE-FOOTER-----------*/
     .container-footer {
@@ -243,27 +257,19 @@ body {
         width: 310px;
     }
     h4{
-        font-size: 35px;
+        font-size: 30px;
     }
     .banner-altas{
-        box-shadow: none;
-        width: 470px;
-        height: 800px;
-    }
-    .banner-altas:hover {
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
-    .banner-cortas{
-        box-shadow: none;
-        width: 215px;
-        height: 400px;
-    }
-    .banner-cortas:hover{
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
+        width: 35%;
+        height: auto;
     }
     .flex-column {
-        display: flex;
-        flex-direction: column;
+        width: 15%;
+        height: auto;
+    }
+    .button-shop-now {
+        font-size: 15px;
+        padding: 4px;
     }
     .container-footer {
         width: 100%;
