@@ -82,7 +82,6 @@ h4 {
     font-family: 'Cormorant Garamond', serif;
     margin: 0px;
     color: black;
-    overflow:hidden;
     text-align: center;
 }
 body {
@@ -104,8 +103,8 @@ body {
 }
 .banner-cortas {
     box-sizing: border-box;
-    padding: 10px;
-    margin: 5px;
+    padding: 5px;
+    margin: 0px;
 }
 .flex-column {
     display: flex;
@@ -203,8 +202,7 @@ body {
     .banner-altas {
         width: 25%;
         height: auto;
-        box-sizing: border-box;
-        padding: 5px;
+        padding: 4px;
         margin: 1px;
         align-self: center;
     }
@@ -257,15 +255,17 @@ body {
         width: 310px;
     }
     h4{
-        font-size: 30px;
+        font-size:20px;
     }
     .banner-altas{
         width: 35%;
         height: auto;
+        margin: 5px;
     }
     .flex-column {
         width: 15%;
         height: auto;
+        margin: 5px;
     }
     .button-shop-now {
         font-size: 15px;
@@ -297,6 +297,6 @@ body {
         width: 50%;
     }
     h6 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
