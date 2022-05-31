@@ -90,9 +90,6 @@ h4 {
     overflow:hidden;
     text-align: center;
 }
-body {
-    background-color: rgb(255, 249, 199);
-}
 .container-padre {
     display: flex;
     justify-content: center;
@@ -118,13 +115,6 @@ body {
     padding: 10px;
 
 }
-
-
-body {
-    background-color: rgb(255, 249, 199);
-}
-
-
 form{
     display: flex;
     flex-direction: column;

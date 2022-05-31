@@ -2,6 +2,7 @@
 .header {
     width: 100%;
     opacity: 95%;
+    margin-bottom: 12px;
 }
 .divmain{
     padding: 10px;
@@ -50,6 +51,9 @@
 .titulo-shop {
     display: flex;
     justify-content: center;
+    margin: auto;
+    border-radius: 50px;
+    border:2px solid #e0be36bb;
 }
 h1 {
     font-family: 'Cormorant Garamond', serif;
@@ -59,13 +63,12 @@ h1 {
     padding: 5px;
 }
 .div-banner {
-    margin: 15px;
+    margin: 12px;
 }
 .banner {
     width: 100%;
     height: auto;
     padding: 5px;
-
 }
 p {
     font-size: 14px;
@@ -76,11 +79,9 @@ p {
 }
 h4 {
     font-weight: bold;
-    font-size: 30px;
     font-family: 'Cormorant Garamond', serif;
     margin: 0px;
     color: black;
-    overflow:hidden;
     text-align: center;
 }
 body {
@@ -94,13 +95,23 @@ body {
     padding: 0px;
     text-align: center;
 }
-.img-banner {
-    width: 100%;
-    height: auto;
+.banner-altas:hover {
+    box-shadow: 0px 0px 10px rgb(199, 199, 199);
+}
+.banner-cortas:hover{
+    box-shadow: 0px 0px 10px rgb(199, 199, 199);
+}
+.banner-cortas {
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0px;
 }
 .flex-column {
     display: flex;
-    flex-direction: column;
+}
+.img-banner {
+    width: 100%;
+    height: auto;
 }
 .button-shop-now {
     text-align: center;
@@ -108,6 +119,8 @@ body {
     color: black;
     border: white;
     margin: 5px;
+    padding: 15px;
+    border-radius: 5px;
 }
 .button-shop-now:hover {
     background-color:#e0be36;;
@@ -178,23 +191,34 @@ body {
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
     h1 {
-        font-size: 50px;
+        font-size: 35px;
+    }
+    .titulo-shop {
+        width: 200px;
+    }
+    h4 {
+        font-size: 90%;
     }
     .banner-altas {
-        width: 100%;
+        width: 25%;
         height: auto;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 5px;
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
+        padding: 4px;
+        margin: 1px;
+        align-self: center;
+    }
+    .flex-column {
+        width: 25%;
+        height: auto;
+        margin: 1px;
+        padding: 0px;
     }
     .banner-cortas {
         width: 100%;
         height: auto;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 5px;
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
+    }
+    .button-shop-now {
+        font-size: 10px;
+        padding: 4px;
     }
     /*-----------MOBILE-FOOTER-----------*/
     .container-footer {
@@ -227,21 +251,25 @@ body {
     h1 {
         font-size: 70px;
     }
+    .titulo-shop {
+        width: 310px;
+    }
+    h4{
+        font-size:20px;
+    }
     .banner-altas{
-        box-shadow: none;
-        width: 470px;
+        width: 35%;
         height: auto;
+        margin: 5px;
     }
-    .banner-altas:hover {
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
-    .banner-cortas{
-        box-shadow: none;
-        width: 215px;
+    .flex-column {
+        width: 15%;
         height: auto;
+        margin: 5px;
     }
-    .banner-cortas:hover{
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
+    .button-shop-now {
+        font-size: 15px;
+        padding: 4px;
     }
     .container-footer {
         width: 100%;
@@ -269,6 +297,6 @@ body {
         width: 50%;
     }
     h6 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
