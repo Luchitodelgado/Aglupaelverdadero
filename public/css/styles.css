@@ -43,13 +43,7 @@ main {
 }
 .imagen-principal {
     width: 100%;
-    opacity: 80%;
-}
-.imagen-principal:hover {
-    width: 100%;
-    opacity: 30%;
-    transition: 400   0ms;
-
+    height: auto;
 }
 =======
     width: 60px;
