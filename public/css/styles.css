@@ -19,9 +19,9 @@ main {
     width: 35%;
     height: auto;
     left: 33%;
-    top: 35%;
+    top: 50%;
     border-radius: 50%;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.55);
 }
 .img-logo {
     width: 100%;
