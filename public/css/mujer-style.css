@@ -21,9 +21,6 @@
     color:black;
     font-size: 23px;
 }
-.carrito:hover {
-    color: rgba(0, 0, 0, 0.315);
-}
 /* ----------NAVBAR-------*/
 .navbar {
     width: 100%;
