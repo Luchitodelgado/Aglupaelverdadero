@@ -14,6 +14,10 @@ const controller = {
 	productos:(req,res)=>{
 		res.render("productos")
 	},
+
+
+
+
 };
 
 
