@@ -4,9 +4,8 @@
       Habilidades como grupo
     </h2>
   <p>
-    Consideramos que la persona mas hábil para desarrollar <strong>código</strong> es Lucho,
-    para editar la <strong>estética</strong> del sitio Agus.
-    Y a nivel <strong>organizativo</strong> Ludmi que creemos que siempre esta presente.
+    Consideramos que las personas mas hábiles para desarrollar <strong>código</strong> son Lucho y Ludmy,
+    para editar la <strong>estética</strong> del sitio Agus. Y a nivel <strong>organizativo</strong> Ludmy.
   </p>
     </section>
   <section>
