@@ -1,72 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-        <link href="/css/mujer-style.css" rel="stylesheet" type="text/css">
-        <title>Aglupa calzados</title>
-    </head>
+    <%- include('partials/head') %>
     <body>
-        <header class="header">
-            <div class="navbar">
-                <nav class="navbar navbar-expand-lg navbar-light .text-muted" id="head-container">
-                    <div class="carrito">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <a class="navbar-brand" href="#">
-                        <div class="div-form">
-                            <form class="form-inline">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Busque aqui su producto...">
-                                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-                            </form>
-                        </div>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/ingresa">Ingresa</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/registrarte">Registrate</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/shopMujer" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Tienda
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/shopMujer">Mujer</a>
-                                    <a class="dropdown-item" href="#">Hombre</a>
-                                    <!--     ACA OTRA SUBSECCION
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    -->
-                                </div>
-                            </li>
-                        </ul>
-    
-                    </div>
-                </nav>
-            </div>
-        </header>
+        <%- include('partials/header') %>
     <main>
 
 
@@ -88,42 +24,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <footer>
-        <div class="container-footer">
-            <div class="hijos-footer">
-                <i class="fas fa-credit-card icons"></i>
-                <p class="titulo-footer">3|6 cuotas sin interés</p>
-                <p>Ahora 6</p>
-            </div>
-            <div class="hijos-footer">
-                <i class="fas fa-shipping-fast icons"></i>
-                <p class="titulo-footer">Envío gratis a partir de $8999</p>
-                <p>Recomendamos retiro por sucursal</p>
-            </div>
-            <div class="hijos-footer">
-                <i class="fas fa-percent icons"></i>
-                <p class="titulo-footer">15% de descuento</p>
-                <p>Abonando con transferencia bancaria</p>
-            </div>
-            <div class="newsletter">
-                <h6>NEWSLETTER <i class="fas fa-envelope icons"></i></h6>
-                <p>¿Quieres recibir nuestras ofertas? ¡Registrate ya mismo y comenzá a disfrutarlas!</p>
-                <form action="" method="">
-                    <input class="input-email" type="email" id="email" name="email" placeholder="E-mail">
-                    <button class="button-footer" type="submit">Enviar</button>
-                </form>
-            </div>
-            <div class="contacto">
-                <h6>CONTACTO <i class="fas fa-phone-alt icons"></i></h6>
-                <p class="p-contacto"><i class="fas fa-envelope-square icons"></i> aglupa@calzados.gmail.com</p>
-                <p class="p-contacto"><i class="fab fa-whatsapp icons"></i> +54 1167689534</p>
-                <p class="p-contacto"><i class="fab fa-instagram icons"></i> aglupa_calzados</p>
-            </div>
-            <div class="div-designed">
-                <p class="designed">DESIGNED BY AGLUPA | 2022</p>
-            </div>
-        </div>
-    </footer>
+
+        <%- include('partials/footer') %>
 </body>
 
 </html>

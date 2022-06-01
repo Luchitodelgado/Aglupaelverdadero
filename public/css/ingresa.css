@@ -29,6 +29,13 @@
     font-size: 23px;
 }
 
+.contenedor-input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 1%;
+    width: 600px;
+}
 
 /*nav*/
 /* ----------NAVBAR-------*/
