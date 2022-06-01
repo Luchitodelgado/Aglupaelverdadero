@@ -1,0 +1,83 @@
+[
+    {
+     "id": 1,
+     "name": "",
+     "price": "",
+     "discount": "",
+     "category": "",
+     "description": "",
+     "image": ""
+    },
+    {
+     "id": 2,
+     "name": "",
+     "price": 500,
+     "discount": 3,
+     "category": "in-sale",
+     "description": "",
+     "image": ""
+    },
+    {
+     "id": 3,
+     "name": "",
+     "price": ,
+     "discount": ,
+     "category": "",
+     "description": "",
+     "image": ""
+    },
+    {
+     "id": 4,
+     "name": "",
+     "description": "",
+     "price": ,
+     "discount":,
+     "image": "",
+     "category": ""
+    },
+    {
+     "id": 5,
+     "name": "",
+     "description": "",
+     "price": 53000,
+     "discount": 20,
+     "image": "",
+     "category": "in-sale"
+    },
+    {
+     "id": 6,
+     "name": "",
+     "description": "",
+     "price": 20999,
+     "discount": 12,
+     "image": "",
+     "category": "in-sale"
+    },
+    {
+     "id": 7,
+     "name": "",
+     "description": "",
+     "price": ,
+     "discount": ,
+     "image": "",
+     "category": ""
+    },
+    {
+     "id": 8,
+     "name": "",
+     "description": "",
+     "price": ,
+     "discount": 2,
+     "image": "",
+     "category": "in-sale"
+    },
+    {
+     "id": 11,
+     "name": "",
+     "description": "",
+     "price": 29990,
+     "discount": 12,
+     "image": "img-parlante-bose.jpg",
+     "category": "visited"
+    }
+   ]
