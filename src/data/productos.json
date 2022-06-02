@@ -1,0 +1,74 @@
+[
+    {
+     "id": 1,
+     "name": "IRGIZI NEGRO",
+     "price": "32000",
+     "discount": "",
+     "category": "",
+     "description": "Bota texana de cuero liso con detalle de costuras a contratono y aplique metálico en puntera. Altura: 5,5 cm - ¡Súper trendy y atemporales!",
+     "image": "bota 1.webp"
+    },
+    {
+     "id": 2,
+     "name": "IRGIZI NEGRO",
+     "price": 20000,
+     "discount": 3,
+     "category": "",
+     "description": "Bota texana de cuero liso con detalle de costuras a contratono y aplique metálico en puntera.",
+     "image": "bota 2.webp"
+    },
+    {
+     "id": 3,
+     "name": "TEXANAS INTENSE",
+     "price": "25000",
+     "discount": "",
+     "category": "",
+     "description": "Bota texanas con caña más alta y bordadas a tono. El taco medio permite ganar altura y estiliza al máximo.",
+     "image": "bota3.webp"
+    },
+    {
+     "id": 4,
+     "name": "IMORI NEGRO",
+     "description": "Bota de cuero texturado con detalle de estilo texano, con detalle de recortes, costuras a tono y cierre lateral para un mejor calce. Altura: 5 cm - ¡Es tendencia y lo seguirá siendo!",
+     "price": "16000",
+     "discount":"",
+     "image": "bota4.webp",
+     "category": ""
+    },
+    {
+     "id": 5,
+     "name": "IRGIZI HUESO",
+     "description": "Bota texana de cuero liso con detalle de costuras a contratono y aplique metálico en puntera. Altura: 5,5 cm - ¡Súper trendy y atemporales!",
+     "price": 36000,
+     "discount": "",
+     "image": "bota5.webp",
+     "category": ""
+    },
+    {
+     "id": 6,
+     "name": "LIMAI NEGRO",
+     "description": "Bota de cuero graneado con detalle de cierres metálicos laterales y punta cuadrada. Altura: 8,5cm",
+     "price": 20999,
+     "discount": "",
+     "image": "bota6.webp",
+     "category": ""
+    },
+    {
+     "id": 7,
+     "name": "IMORI NEGRO",
+     "description": "Bota de cuero texturado con detalle de estilo texano, con detalle de recortes, costuras a tono y cierre lateral para un mejor calce. Altura: 5 cm - ¡Es tendencia y lo seguirá siendo!",
+     "price": "21450",
+     "discount": "",
+     "image": "bota7.webp",
+     "category": ""
+    },
+    {
+     "id": 8,
+     "name": "TEXANA MEI",
+     "description": "Las texanas Mei confeccionadas en cuero, tienen un bordado en contraste que las vuelve un producto único.",
+     "price": "",
+     "discount": 19500,
+     "image": "bota8.webp",
+     "category": ""
+    }
+   ]

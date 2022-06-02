@@ -1,68 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUJER</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-    <link href="/css/mujer-style.css" rel="stylesheet" type="text/css">
-</head>
+    
+    <%- include('partials/head') %>
+
 <body>
-    <header class="header">
-            <div class="navbar">
-                <nav class="navbar navbar-expand-lg navbar-light .text-muted" id="head-container">
-                    <div class="carrito">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <a class="navbar-brand" href="#">
-                        <div class="div-form">
-                            <form class="form-inline">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Busque aqui su producto...">
-                                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-                            </form>
-                        </div>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
     
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/ingresa">Ingresa</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/registrarte">Registrate</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/shopMujer" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Tienda
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/shopMujer">Mujer</a>
-                                    <a class="dropdown-item" href="#">Hombre</a>
-                                    <!--     ACA OTRA SUBSECCION
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    -->
-                                </div>
-                            </li>
-                        </ul>
-    
-                    </div>
-                </nav>
-            </div>
-        </header>
+    <%- include('partials/headerNavbar') %>
+
     <main>
         <div class="titulo-shop">
             <p class="shop">Shop/</p>
@@ -74,7 +19,7 @@
         <div class="container-padre">
             <div class="banner-altas">
                 <img class="img-banner" src="/img/texanas.png" alt="texanas">
-                <h4>TEXANAS</h4>
+            <a href="./productos">TEXANAS</a>
                 <button class="button-shop-now">Shop now!</button>
             </div>
             <div class="flex-column">
@@ -96,6 +41,7 @@
             </div>
         </div>
     </main>
+<<<<<<< HEAD
     <footer>
         <div class="container-footer">
             <div class="hijos-footer">
@@ -132,5 +78,11 @@
             </div>
         </div>
     </footer>
+=======
+    
+    <%- include('partials/footer') %>
+
+
+>>>>>>> 6505c0764d62090c48fedabb29b2ec34c38d1a9d
 </body>
 </html>

@@ -10,6 +10,12 @@ const controller = {
 	shopMujer:(req,res)=>{
 		res.render("shopMujer")
 	},
+
+	productos:(req,res)=>{
+		res.render("productos")
+	},
+
 };
+
 
 module.exports = controller;
