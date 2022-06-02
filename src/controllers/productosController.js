@@ -11,7 +11,16 @@ const controller = {
 		res.render('productos', {
 			productos
 		})
-	}
+	},
+
+	// Detail - Detail from one product
+	detail: (req, res) => {
+		let id = req.params.id;
+ 
+		res.render('detail', {
+			product
+		})
+	},
 };
 
 module.exports = controller;

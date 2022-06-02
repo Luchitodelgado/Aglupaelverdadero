@@ -9,6 +9,8 @@ body {
     height: auto;
     display: flex;
     background-color: #99868031;
+    margin: 0px;
+    margin-bottom: 0px !important;
 }
 main {
     width: 100%;
@@ -20,14 +22,15 @@ main {
     background-color: #99868031;
     position: absolute;
     background-color: red;
-    left: 50px;
-    top: 200px;
+    *left: 50px;
+    *top: 200px;
+    
 }
 .logo {
     width: 100%;
     height: auto;
     justify-content: center;
-    background-color:rebeccapurple;
+    *background-color:rebeccapurple;
 }
 .contenedor-imagen-principal {
     width: 100%;
