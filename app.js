@@ -20,4 +20,4 @@ app.use('/', mainRouter);
 
 app.use('/', userRouter);
 
-app.use("/productos", productosRouter);
+app.use("/", productosRouter);
