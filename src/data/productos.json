@@ -5,17 +5,17 @@
      "price": "",
      "discount": "",
      "category": "",
-     "description": "Bota texana de cuero liso con detalle de costuras a contratono y aplique metálico en puntera.",
+     "description": "Bota texana de cuero liso con detalle de costuras a contratono y aplique metálico en puntera. Altura: 5,5 cm - ¡Súper trendy y atemporales!",
      "image": "bota 1.webp"
     },
     {
      "id": 2,
-     "name": "",
+     "name": "IRGIZI NEGRO",
      "price": 500,
      "discount": 3,
-     "category": "in-sale",
-     "description": "",
-     "image": ""
+     "category": "",
+     "description": "Bota texana de cuero liso con detalle de costuras a contratono y aplique metálico en puntera.",
+     "image": "bota 2.webp"
     },
     {
      "id": 3,
