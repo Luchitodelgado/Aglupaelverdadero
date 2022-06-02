@@ -29,6 +29,13 @@
     font-size: 23px;
 }
 
+.contenedor-input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 1%;
+    width: 600px;
+}
 
 /*nav*/
 /* ----------NAVBAR-------*/
@@ -55,32 +62,6 @@
 }
 /*----------------MAIN--------------------*/
 
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    color: black;
-    text-align: center;
-    margin: 0px;
-    padding: 5px;
-}
-
-.login {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    border: none;
-    margin: 1%;
-    width: 300px;
-}
-.input-hijo{
-    width: 100%;
-    padding: 10px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 button{
     margin-bottom: 5%;
@@ -157,29 +138,7 @@ button{
 }
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
-    h1 {
-        font-size: 50px;
-    }
-    .banner-altas {
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 5px;
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
-    .banner-cortas {
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 5px;
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
 
-    .input-hijo{
-        width: 361px;
-    }
 
     /*-----------MOBILE-FOOTER-----------*/
     .container-footer {
@@ -209,30 +168,7 @@ button{
     }
 }
 @media (min-width:769px){
-    h1 {
-        font-size: 70px;
-    }
-    .banner-altas{
-        box-shadow: none;
-        width: 470px;
-        height: auto;
-    }
-    .banner-altas:hover {
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
-
-    .input-hijo{
-        width: 600px;
-    }
-
-    .banner-cortas{
-        box-shadow: none;
-        width: 215px;
-        height: auto;
-    }
-    .banner-cortas:hover{
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
+ 
     .container-footer {
         width: 100%;
         height: auto;
