@@ -3,12 +3,40 @@
 
     <%- include('partials/head') %>
 
-    <%- include('partials/headerNavbar') %>
-<body>
     
-    <%- include('partials/productos') %>
+<body>
+
+    <%- include('partials/headerNavbar') %>
 
 
+    <div class="">
+        <div class="">
+            <div class="">
+                <h2 class="">Texanas</h2>
+            </div>
+            <% productos.forEach(function(product){ 
+                let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+            %>
+                <div class="todosProductos">
+                    <section class="productos">
+                        <a href="/productos/<%= product.id %>">
+                            <figure class="img">
+                                <img src="/img/<%= product.image %>" alt="imagen de producto">
+                            </figure>
+                            <article class="">
+                                <p><%= product.name %></p>
+                                <p class="descrip"><%= product.description %></p>
+                                <p class="descrip"><%= product.price %></p>
+                                <i class="fas fa-truck"></i> <div class="">
+						<button type="submit" class="buy-now-button">Comprar</button>
+					</div>
+                            </article>
+                        </a>
+                    </section>
+                </div>
+            <% }) %>
+            </div>
+        </div>
     <%- include('partials/footer') %>
 </body>
 </html>

@@ -8,7 +8,6 @@ const controller = {
 	// Root - Show all products
 	productos: (req, res) => {
         let id = req.params.id
-		let productos = productos.find(productos => productos.id == id)
 		res.render('productos', {
 			productos
 		})
