@@ -186,6 +186,28 @@ button{
 .formulario{
     display: block;
 }
+img{
+    width: 20%;
+    text-align: center;
+}
+.productos{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+figure{
+    text-align: center;
+}
+.descrip{
+    text-align: center;
+}
+.columnas{
+    display: block;
+}
+.titulo{
+    text-align: center;
+}
+
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
     h1 {

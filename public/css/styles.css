@@ -42,6 +42,8 @@ main {
 .contenedor-imagen-principal {
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .imagen-principal {
@@ -49,12 +51,17 @@ main {
     height: auto;
 }
 
-.carrito {
+.container-carrito {
+    display: flex;
+    position: absolute;
+    right: 0%;
     color: black;
-    font-size: 25px;
-    width: 10%;
-    margin: center;
-    text-align: center;
+    width: 5%;
+}
+
+.carrito {
+    width: 100%;
+    height: auto;
 }
 
 .imagen-producto {
@@ -121,18 +128,17 @@ main {
 /* ----------NAVBAR-------*/
 .navbar {
     width: 100%;
+    height: auto;
     display: flex;
     opacity: 90%;
     flex-direction: row-reverse;
     justify-content: center;
-    margin: auto;
     padding: 0px;
     background-color: #e0be36ae !important;
 }
 
 #head-container {
     flex-direction: column;
-
 }
 
 .mr-sm-2 {
@@ -161,7 +167,6 @@ nav {
     justify-content: center;
     width: 100%;
     padding: 0px;
-
 }
 
 @media (min-width: 380px) {
