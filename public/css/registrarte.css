@@ -204,6 +204,9 @@ figure{
 .columnas{
     display: block;
 }
+.titulo{
+    text-align: center;
+}
 
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
