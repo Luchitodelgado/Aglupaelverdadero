@@ -9,9 +9,6 @@ const controller = {
 	ingresar:(req,res)=>{
 		res.render("ingresa")
 	},
-	carrito:(req,res)=>{
-		res.render("carrito")
-	}
 };
 
 module.exports = controller;

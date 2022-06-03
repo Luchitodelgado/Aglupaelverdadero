@@ -1,74 +1,29 @@
-/*------------HEADER-------------*/
-.header {
-    width: 100%;
-    opacity: 95%;
-    margin-bottom: 12px;
-}
-.divmain{
-    padding: 10px;
-}
-.logo{
-    width: 50%;
-    max-width: 740px;
-}
-.contenedor-logo{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #99868031;
-}
-.carrito{
-    color:black;
-    font-size: 23px;
-}
-.carrito:hover {
-    color: rgba(0, 0, 0, 0.315);
-}
-/* ----------NAVBAR-------*/
-.navbar {
-    width: 100%;
-    color: #E0BE36;
-    background-color:#e0be367a; 
-    display: flex;
-    opacity: 90%;
-    flex-direction: row-reverse;
-    padding: 20px;
-}
-.mr-sm-2 {
-    border-radius: 10%;
-}
-.div-form {
-    width: 100%;
-}
-.form-inline {
-    border-radius: 10%;
-    width: 100%;
-}
-.bg-light {
-    border-radius: 5%;
-}
 /*----------------MAIN--------------------*/
+main{
+    margin-top:20px;
+}
 .titulo-shop {
     display: flex;
     justify-content: center;
-    margin: auto;
     border-radius: 50px;
-    border:2px solid #e0be36bb;
+    margin: auto;
+    color: white;
+    background-color: #e0be3697;
 }
-h1 {
+.h1-mujer {
     font-family: 'Cormorant Garamond', serif;
-    color: black;
+    color: white;
     text-align: center;
-    margin: 0px;
     padding: 5px;
 }
 .div-banner {
-    margin: 12px;
+    margin-top: 20px;
 }
 .banner {
     width: 100%;
     height: auto;
-    padding: 5px;
+    padding-left:20px;
+    padding-right:20px;
 }
 p {
     font-size: 14px;
@@ -200,17 +155,16 @@ body {
         font-size: 90%;
     }
     .banner-altas {
-        width: 25%;
+        width: 100%;
         height: auto;
-        padding: 4px;
-        margin: 1px;
-        align-self: center;
+        padding: 10px;
+        margin: 5px;
     }
     .flex-column {
-        width: 25%;
+        width: 100%;
         height: auto;
-        margin: 1px;
-        padding: 0px;
+        margin: 5px;
+        padding: 10px;
     }
     .banner-cortas {
         width: 100%;
