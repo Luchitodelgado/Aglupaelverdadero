@@ -1,75 +1,10 @@
-/*header*/
-
-.header {
-    width: 100%;
-    opacity: 95%;
-}
-.divmain{
-    padding: 10px;
-}
-.logo{
-    width: 50%;
-    max-width: 740px;
-}
-.contenedor-logo{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #99868031;
-}
-.contenedor-imagen-principal{
-    width: 100%;
-}
-.imagen-principal{
-    width: 100%;
-    opacity: 80%;
-}
-.carrito{
-    color:black;
-    font-size: 23px;
-}
-
-.contenedor-input {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin: 1%;
-    width: 600px;
-}
-
-/*nav*/
-/* ----------NAVBAR-------*/
-.navbar {
-    width: 100%;
-    color: #E0BE36;
-    background-color:#e0be367a; 
-    display: flex;
-    opacity: 90%;
-    flex-direction: row-reverse;
-}
-.mr-sm-2 {
-    border-radius: 10%;
-}
-.div-form {
-    width: 100%;
-}
-.form-inline {
-    border-radius: 10%;
-    width: 100%;
-}
-.bg-light {
-    border-radius: 5%;
-}
 /*----------------MAIN--------------------*/
-
-
 button{
     margin-bottom: 5%;
     border-radius: 50%;
     background-color: #e3cc73;
     border: #e3cc73;
 }
-
 /*-------------FOOTER--------------------*/
 .container-footer {
     display: flex;
@@ -137,10 +72,8 @@ button{
     display: block;
 }
 @media (min-width:361px){
-    /*----------------MOBILE-MAIN------*/
-
-
-    /*-----------MOBILE-FOOTER-----------*/
+/*----------------MOBILE-MAIN------*/
+/*-----------MOBILE-FOOTER-----------*/
     .container-footer {
         justify-content: center;
         width: 100%;
