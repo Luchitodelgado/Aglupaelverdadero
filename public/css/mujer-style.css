@@ -1,25 +1,29 @@
 /*----------------MAIN--------------------*/
+main{
+    margin-top:20px;
+}
 .titulo-shop {
     display: flex;
     justify-content: center;
-    margin: auto;
     border-radius: 50px;
-    border:2px solid #e0be36bb;
+    margin: auto;
+    color: white;
+    background-color: #e0be3697;
 }
-h1 {
+.h1-mujer {
     font-family: 'Cormorant Garamond', serif;
-    color: black;
+    color: white;
     text-align: center;
-    margin: 0px;
     padding: 5px;
 }
 .div-banner {
-    margin: 12px;
+    margin-top: 20px;
 }
 .banner {
     width: 100%;
     height: auto;
-    padding: 5px;
+    padding-left:20px;
+    padding-right:20px;
 }
 p {
     font-size: 14px;
