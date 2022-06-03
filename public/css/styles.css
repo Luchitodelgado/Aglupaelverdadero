@@ -2,28 +2,25 @@
     font-family: Roboto;
 }
 body {
-    width: 100vw;
+    width: 100%;
 }
 .header {
     width: 100%;
-    height: auto;
+    height: 150px;
     display: flex;
     background-color: #99868031;
     margin: 0px;
     margin-bottom: 0px !important;
-    background-color: #d0b137e1 !important;
+    background-color: #d0b137c3 !important;
 }
-main {
-    width: 100%;
-}
-.contenedor-logo {
-    width: 40%;
+.contenedor-logo{
+    width: 60%;
     display: flex;
     justify-content: center;
-    background-color: #99868031;
     position: absolute;
-    left: 50px;
-    top: 200px;
+    left: 20%;
+    top: 110px;
+    border-radius: 50%;
 }
 .logo {
     width: 100%;
@@ -35,7 +32,6 @@ main {
     height: auto;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 .imagen-principal {
     width: 100%;
@@ -51,6 +47,12 @@ main {
 .carrito {
     width: 100%;
     height: auto;
+    text-align: end;
+    color: black;
+    font-size: 25px;
+}
+.carrito:hover{
+    color: rgb(109, 109, 109);
 }
 .imagen-producto {
     width: 50%;
@@ -111,17 +113,26 @@ main {
     width: 100%;
     height: auto;
     display: flex;
-    opacity: 90%;
     flex-direction: row-reverse;
     justify-content: center;
-    padding: 0px;
-    background-color: #e0be36ae !important;
+    padding: 10px;
+    background-color: #e0be3624 !important;
 }
 #head-container {
     flex-direction: column;
 }
+.mr-auto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
 .mr-sm-2 {
     border-radius:5px;
+    position: absolute;
+    left:0%;
+    top:0%;
+    background-color: white;
 }
 .div-form {
     width: 100%;
@@ -131,7 +142,7 @@ main {
     width: 100%;
 }
 .bg-light {
-    border-radius: 5%;
+    border-radius: 5px;
 }
 header div {
     width: 100%;
