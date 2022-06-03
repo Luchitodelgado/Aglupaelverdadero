@@ -192,6 +192,8 @@ img{
 }
 .productos{
     display: flex;
+    justify-content: space-around;
+    text-align: center;
 }
 figure{
     text-align: center;
@@ -199,7 +201,9 @@ figure{
 .descrip{
     text-align: center;
 }
-
+.columnas{
+    display: block;
+}
 
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
