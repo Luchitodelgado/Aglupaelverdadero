@@ -15,37 +15,52 @@ body {
 main {
     width: 100%;
 }
-.contenedor-logo {
-    width:40%;
-    display: flex;
-    justify-content: center;
-    background-color: #99868031;
+.container-logo{
     position: absolute;
+<<<<<<< HEAD
+    display: flex;
+    width: 35%;
+    height: auto;
+    left: 33%;
+    top: 50%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.55);
+=======
     background-color: red;
     *left: 50px;
     *top: 200px;
     
+>>>>>>> 6505c0764d62090c48fedabb29b2ec34c38d1a9d
 }
-.logo {
+.img-logo {
     width: 100%;
     height: auto;
+<<<<<<< HEAD
+=======
     justify-content: center;
     *background-color:rebeccapurple;
+>>>>>>> 6505c0764d62090c48fedabb29b2ec34c38d1a9d
 }
 .contenedor-imagen-principal {
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
 }
 .imagen-principal {
     width: 100%;
     height: auto;
 }
-.carrito {
+.container-carrito {
+    display: flex;
+    position: absolute;
+    right: 0%;
     color: black;
-    font-size: 25px;
-    width: 10%;
-    margin: center;
-    text-align: center;
+    width: 5%;
+}
+.carrito{
+    width: 100%;
+    height: auto;
 }
 .imagen-producto {
     width: 50%;
@@ -105,16 +120,15 @@ main {
 /* ----------NAVBAR-------*/
 .navbar {
     width: 100%;
+    height: auto;
     display: flex;
     opacity: 90%;
     flex-direction: row-reverse;
     justify-content: center;
-    margin: auto;
     padding: 0px;
 }
 #head-container {
     flex-direction: column;
-
 }
 .show {
     *background-color: #e0be367a;
@@ -141,7 +155,6 @@ nav {
     justify-content: center;
     width: 100%;
     padding: 0px;
-
 }
 @media (min-width: 380px) {
     .articulo-container {

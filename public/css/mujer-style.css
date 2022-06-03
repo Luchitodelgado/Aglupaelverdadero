@@ -21,9 +21,6 @@
     color:black;
     font-size: 23px;
 }
-.carrito:hover {
-    color: rgba(0, 0, 0, 0.315);
-}
 /* ----------NAVBAR-------*/
 .navbar {
     width: 100%;
@@ -200,17 +197,16 @@ body {
         font-size: 90%;
     }
     .banner-altas {
-        width: 25%;
+        width: 100%;
         height: auto;
-        padding: 4px;
-        margin: 1px;
-        align-self: center;
+        padding: 10px;
+        margin: 5px;
     }
     .flex-column {
-        width: 25%;
+        width: 100%;
         height: auto;
-        margin: 1px;
-        padding: 0px;
+        margin: 5px;
+        padding: 10px;
     }
     .banner-cortas {
         width: 100%;
