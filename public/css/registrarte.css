@@ -11,7 +11,6 @@ p {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     margin: 3px;
-    font-weight: bold;
     text-align: center;
 }
 h4 {
@@ -22,17 +21,6 @@ h4 {
     color: black;
     overflow:hidden;
     text-align: center;
-}
-.container-padre {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;  
-    margin: 0px;
-    padding: 0px;
-}
-.img-banner {
-    width: 100%;
-    height: auto;
 }
 .contenedor-input {
     font-family: 'Roboto', sans-serif;
@@ -65,64 +53,6 @@ button{
 
 
 
-/*-------------FOOTER--------------------*/
-.container-footer {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.hijos-footer {
-    border: 1px solid #dfdfdf;
-    text-align: center;
-    padding: 50px;
-}
-.titulo-footer {
-    font-family: 'Montserrat', sans-serif;
-}
-.icons {
-    text-align: center;
-    color: black;
-    padding: 5px;
-}
-.icons:hover {
-    color: #47525e6d;
-}
-.newsletter {
-    text-align: center;
-    padding: 60px;
-    width: 50%;
-}
-.contacto {
-    text-align: center;
-    width: 50%;
-    padding: 60px;
-}
-.p-contacto {
-    text-align: center;
-}
-.div-designed {
-    margin: 0px;
-    background-color:#e0be3686;
-    width: 100%;
-}
-.designed {
-    color: black;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-.button-footer {
-    background-color: rgb(58, 58, 58);
-    border:rgb(58, 58, 58);
-    color: white;
-    border-radius: 2px;
-    padding: 5px;
-}
-.button-footer:hover {
-    background-color:rgba(58, 58, 58, 0.582);
-}
 .input-email{
     border: white;
     padding: 5px;
@@ -158,89 +88,13 @@ figure{
     h1 {
         font-size: 50px;
     }
-    .banner-altas {
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 5px;
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
-    .banner-cortas {
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 5px;
-        box-shadow: 0px 0px 10px rgb(199, 199, 199);
-    }
-    
     .input-hijo{
         width: 361px;
-    
-    }
-
-    /*-----------MOBILE-FOOTER-----------*/
-    .container-footer {
-        justify-content: center;
-        width: 100%;
-    }
-    .hijos-footer {
-        width:100%;
-        height: auto;
-    }
-    .titulo-footer {
-        font-size: 15px;
-    }
-    .div-designed{
-        padding: 20px;
-    }
-    .designed{
-        font-size: 15px;
-    }
-    .newsletter {
-        padding: 25px;
-        width: 100%;
-    }
-    
-    .contacto{
-        padding: 25px;
-        width: 100%;
     }
 }
-
 @media (min-width:769px){
     h1 {
         font-size: 70px;
-    }
-    .container-footer {
-        width: 100%;
-        height: auto;
-    }
-    .hijos-footer{
-        width: 33%;
-        height: auto;
-    }
-    .titulo-footer {
-        font-size: 18px;
-    }
-    .input-hijo{
-        width: 600px;
-    }
-
-    .div-designed {
-        padding: 60px;
-    }
-    .designed {
-        font-size: 18px;
-    }
-    .newsletter {
-        padding: 60px;
-        width: 50%;
-    }
-    .contacto{
-        padding: 60px;
-        width: 50%;
     }
     h6 {
         font-size: 20px;
