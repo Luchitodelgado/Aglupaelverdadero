@@ -1,0 +1,68 @@
+header {
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    background-color:#e0be3693;
+}
+.logo-header{
+    width: 30%;
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: rgb(125, 125, 125);
+    cursor: pointer;
+  }
+.container-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ul-izquierda{
+    display: flex;
+    margin: 5px;
+    width: 30%;
+    padding: 5px;
+}
+.hijos-ul-izq{
+    padding: 5px;
+}
+.ul-derecha{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+}
+.hijos-ul-derecha{
+    padding: 5px;
+}
+.fa-hand-holding-usd{
+    color: black;
+}
+.barra-busqueda {
+    border: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3px;
+    box-sizing: border-box;
+}
+.burger-menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.menu{
+    color: white;
+    background-color: #1259c3;
+    padding: 10px;
+    border-radius: 10%;
+    margin: 10px;
+}
