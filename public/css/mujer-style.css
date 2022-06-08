@@ -4,7 +4,8 @@
     display: flex;
     width: 100%;
     background-color:#e0be36;
-    margin: 15px;
+    margin: auto;
+    border:15px solid white;
 }
 .h1-mujer {
     font-family: 'Cormorant Garamond', serif;
