@@ -5,8 +5,11 @@ header {
     background-color:#e0be3693;
 }
 .logo-header{
-    width: 30%;
     height: auto;
+    text-align: center;
+}
+.buscador{
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -26,15 +29,6 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.ul-izquierda{
-    display: flex;
-    margin: 5px;
-    width: 30%;
-    padding: 5px;
-}
-.hijos-ul-izq{
-    padding: 5px;
-}
 .ul-derecha{
     display: flex;
     margin: 5px;
@@ -43,6 +37,11 @@ a:hover {
 }
 .hijos-ul-derecha{
     padding: 5px;
+    list-style: none;
+    text-decoration: none;
+}
+.hijos-ul-derecha:hover{
+    color: rgba(0, 0, 0, 0.826);
 }
 .fa-hand-holding-usd{
     color: black;
@@ -61,8 +60,37 @@ a:hover {
 }
 .menu{
     color: white;
-    background-color: #1259c3;
+    background-color: #e0be36;
     padding: 10px;
     border-radius: 10%;
     margin: 10px;
+}
+/*------------------------------MEDIA 361PX----------------------------*/
+@media (min-width:361px){
+    nav {
+        display: none;
+    }
+    .logo-header {
+        width: 50%;
+    }
+    .buscador {
+        width: 50%;
+        color: #666;
+    }
+}
+/*--------------------------- MEDIA 769PX--------------------------------*/
+@media (min-width: 769px){
+    nav {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .logo-header {
+        width:50%;
+    }
+    .buscador {
+        color: #666;
+        width:50%;
+    }
 }
