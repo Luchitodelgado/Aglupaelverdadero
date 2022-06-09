@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const productosRouter = require ("./src/routes/productosRouter")
-
 app.use(express.static("public"));
 
 app.listen(3000, () => {
@@ -17,7 +16,5 @@ const userRouter = require('./src/routes/userRouter'); // Rutas main
 const productos = require ("./src/routes/productosRouter");
 
 app.use('/', mainRouter);
-
 app.use('/', userRouter);
-
 app.use("/productos", productos);
