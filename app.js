@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 
 const path = require("path");
-const productosRouter = require ("./src/routes/productsRouter")
 
 const mainRouter = require('./src/routes/mainRouter'); // Rutas main
 const userRouter = require('./src/routes/userRouter'); // Rutas main
