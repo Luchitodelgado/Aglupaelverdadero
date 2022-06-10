@@ -4,12 +4,12 @@ const app = express();
 const path = require("path");
 const productosRouter = require ("./src/routes/productsRouter")
 
-app.set('view engine', 'ejs'); 
-app.set('views', path.join(__dirname, '/src/views'));
-
 const mainRouter = require('./src/routes/mainRouter'); // Rutas main
 const userRouter = require('./src/routes/userRouter'); // Rutas main
 const productos = require ("./src/routes/productsRouter");
+
+app.set('view engine', 'ejs'); 
+app.set('views', path.join(__dirname, '/src/views'));
 
 app.use(express.static("public"));
 

@@ -10,7 +10,7 @@
 
 
     <div class="columnas">
-        <div class="">
+        <section class="">
             <div class="">
                 <h2 class="titulo">Texanas</h2>
             </div>
@@ -18,24 +18,26 @@
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
                 <div class="todosProductos">
-                    <section class="productos">
+                    <article class="productos">
                         <a href="/productos/<%= product.id %>">
                             <figure class="img">
                                 <img src="/img/<%= product.image %>" alt="imagen de producto">
                             </figure>
-                            <article class="">
+                            <div class="">
                                 <p><%= product.name %></p>
                                 <p class="descrip"><%= product.description %></p>
                                 <p class="descrip"><%= product.price %></p>
                                 <i class="fas fa-truck"></i> <div class="">
 						<button type="submit" class="buy-now-button">Comprar</button> </div>
-                            </article>
+                            </div>
                         </a>
-                    </section>
+                    </article>
                 </div>
             <% }) %>
-            </div>
-        </div>
+    
+        </section>
+    </div>
+
     <%- include('partials/footer') %>
 </body>
 </html>
