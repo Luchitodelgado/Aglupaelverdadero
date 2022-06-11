@@ -10,7 +10,6 @@ h1 {
 p {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
-    margin: 3px;
     text-align: center;
 }
 h4 {
@@ -61,13 +60,15 @@ button{
 .formulario{
     display: block;
 }
+
+/* TEXANAS */
+
 img{
-    width: 20%;
+    width: 50%;
     text-align: center;
 }
+
 .productos{
-    display: flex;
-    justify-content: space-around;
     text-align: center;
 }
 figure{
@@ -81,6 +82,27 @@ figure{
 } */
 .titulo{
     text-align: center;
+}
+section{
+    width: 90vw;
+    font-size: 24px;
+    margin: auto;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+a{
+    margin-bottom: 15px;
+}
+.todosProductos{
+    border: 1px solid #ebebeb;
+    background-color: white;
+    width: 35%;
+    display: flex;
 }
 
 @media (min-width:361px){
