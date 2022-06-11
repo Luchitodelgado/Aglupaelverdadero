@@ -1,0 +1,63 @@
+/* TEXANAS */
+
+img{
+    width: 50%;
+    text-align: center;
+}
+
+.productos{
+    text-align: center;
+}
+figure{
+    text-align: center;
+}
+.descrip{
+    text-align: center;
+}
+/* .columnas{
+    display: block;
+} */
+.titulo-productos{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+section{
+    width: 90vw;
+    font-size: 24px;
+    margin: auto;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+a{
+    margin-bottom: 15px;
+}
+.todosProductos{
+    border: 1px solid #ebebeb;
+    background-color: white;
+    width: 35%;
+    display: flex;
+}
+
+@media (min-width:361px){
+    /*----------------MOBILE-MAIN------*/
+    h1 {
+        font-size: 50px;
+    }
+    .input-hijo{
+        width: 361px;
+    }
+}
+@media (min-width:769px){
+    h1 {
+        font-size: 70px;
+    }
+    h6 {
+        font-size: 20px;
+    }
+}
+
