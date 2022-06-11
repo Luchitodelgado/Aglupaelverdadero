@@ -1,14 +1,13 @@
 /*----------------MAIN--------------------*/
-
 .titulo-shop {
     display: flex;
+    justify-content: center;
     width: 100%;
-    background-color:#e0be36;
     margin: auto;
     border:15px solid white;
 }
 .h1-mujer {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
     color: black;
     text-align: center;
     padding: 5px;
@@ -32,7 +31,7 @@ p {
 }
 h4 {
     font-weight: bold;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
     color: black;
     text-align: center;
@@ -97,7 +96,7 @@ body {
     padding: 50px;
 }
 .titulo-footer {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
 .icons {

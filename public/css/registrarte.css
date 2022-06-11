@@ -1,7 +1,7 @@
 /*----------------MAIN--------------------*/
 
 h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;    
     color: black;
     text-align: center;
     margin: 0px;
@@ -16,7 +16,7 @@ p {
 h4 {
     font-weight: bold;
     font-size: 30px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Roboto', serif;
     margin: 0px;
     color: black;
     overflow:hidden;
@@ -79,8 +79,9 @@ figure{
 /* .columnas{
     display: block;
 } */
-.titulo{
+.titulo-productos{
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media (min-width:361px){
