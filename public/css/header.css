@@ -10,11 +10,15 @@ body {
     padding: 0px;
 }
 .logo-header{
+    text-align:start;
+}
+.img-logo{
+    width: 20%;
     height: auto;
-    text-align: center;
 }
 .buscador{
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 a {
     text-decoration: none;
@@ -27,12 +31,12 @@ a:hover {
 .container-header{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 .container-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+
 }
 .ul-derecha{
     display: flex;
@@ -46,14 +50,13 @@ a:hover {
     text-decoration: none;
 }
 .a-header{
-    color: black;
+    color: white;
+    font-family: 'roboto';
+    margin: 8px;
 }
 .a-header:hover{
-    color: rgb(255, 255, 255);
+    color:rgb(70, 70, 70);
     text-decoration: none;
-}
-.fa-hand-holding-usd{
-    color: black;
 }
 .barra-busqueda {
     border: white;
@@ -80,10 +83,10 @@ a:hover {
         display: none;
     }
     .logo-header {
-        width: 50%;
+        width: 90%;
     }
     .buscador {
-        width: 50%;
+        width: 10%;
         color: #666;
     }
 }
@@ -103,6 +106,6 @@ a:hover {
         width:50%;
     }
     .a-header{
-        font-size:15px;
+        font-size:18px;
     }
 }
