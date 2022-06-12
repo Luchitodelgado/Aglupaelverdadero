@@ -1,22 +1,8 @@
 * {
     font-family: Roboto;
 }
-
 body {
     width: 100%;
-}
-.contenedor-logo{
-    width: 45%;
-    display:flex;
-    justify-content: center;
-    position: absolute;
-    left: 28%;
-    top: 260px;
-}
-.logo {
-    width: 100%;
-    height:auto;
-    justify-content: center;
 }
 .contenedor-imagen-principal {
     width:100%;
@@ -72,15 +58,16 @@ body {
 .descuentos {
     margin: center;
     margin-right: 10px;
-    width: 50%;
-    font-size: 16px;
-    color: red;
+    width: 60%;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
 }
 .precio {
     margin: center;
     margin-right: 10px;
     width: 50%;
-    font-size: 15px;
+    font-size: 18px;
     color: black;
 }
 @media (min-width: 380px) {

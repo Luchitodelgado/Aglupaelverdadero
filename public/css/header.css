@@ -1,24 +1,47 @@
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
 header {
     width: 100%;
     padding: 0px;
     height: auto;
     background-color:#e0be3693;
 }
-body {
+.container-logo{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    margin: 0px;
-    padding: 0px;
 }
-.logo-header{
-    text-align:start;
-}
-.img-logo{
-    width: 20%;
-    height: auto;
+.fa-search{
+    color: white;
 }
 .buscador{
-    display: flex;
-    flex-wrap: wrap;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+.barra-busqueda {
+    border: white;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right:15;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin: 3px;
+    box-sizing: border-box;
+}
+.container-carrito{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+.carrito{
+    color:white;
+}
+.carrito:hover{
+    color: rgb(125, 125, 125);
 }
 a {
     text-decoration: none;
@@ -58,36 +81,32 @@ a:hover {
     color:rgb(70, 70, 70);
     text-decoration: none;
 }
-.barra-busqueda {
-    border: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 3px;
-    box-sizing: border-box;
-}
-.burger-menu {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.menu{
-    color: white;
-    background-color: #e0be36;
-    padding: 10px;
-    border-radius: 10%;
-    margin: 10px;
-}
 /*------------------------------MEDIA 361PX----------------------------*/
 @media (min-width:361px){
     nav {
         display: none;
     }
-    .logo-header {
-        width: 90%;
+    .img-logo{
+        width: 15%;
+        height: auto;
     }
-    .buscador {
-        width: 10%;
-        color: #666;
+    .buscador{
+        display: none;
+    }
+    .carrito{
+        font-size: 20px;
+    }
+    .burger-menu {
+        position: absolute;
+        left: 5%;
+        top: 5%;
+    }
+    .menu{
+        color: white;
+        background-color: #e0be36;
+        padding: 10px;
+        border-radius: 10%;
+        margin: 0px;
     }
 }
 /*--------------------------- MEDIA 769PX--------------------------------*/
@@ -95,17 +114,23 @@ a:hover {
     nav {
         display: block;
     }
+    .img-logo{
+        width: 13%;
+        height: auto;
+    }
     .menu {
         display: none;
     }
-    .logo-header {
-        width:50%;
-    }
-    .buscador {
-        color: #666;
-        width:50%;
-    }
     .a-header{
         font-size:18px;
+    }
+    .buscador{
+        display: block;
+    }
+    .barra-busqueda{
+        font-size: 15px;
+    }
+    .carrito{
+        font-size: 25px;
     }
 }
