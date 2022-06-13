@@ -217,74 +217,74 @@
     },
     {
     "id": 25,
-    "name": "Rs-Fast Double",
+    "name": "glass class",
     "price": "32000",
     "discount": "",
     "category": "botas",
-    "description": "Zapatilla de punta estilizada, con doble amortiguación",
-    "image": "zapatillas1.jpg"
+    "description": "Botas cortas con hebilla de cuero en negro y tacos transparentes",
+    "image": "botas1.jpg"
     },
     {
     "id": 26,
-    "name": "RS-Curve Wns",
+    "name": "",
     "price": 20000,
     "discount": 3,
     "category": "botas",
     "description": "Zapatillas de otoño, ligeras y con interior de doble material",
-    "image": "zapatillas2.jpg"
+    "image": "botas2.jpg"
     },
     {
     "id": 27,
-    "name": "Rs-X Bubble Wns",
+    "name": "",
     "price": "25000",
     "discount": "",
     "category": "botas",
     "description": "Zapatillas de cuero ecologico, con caña alta y amortiguación",
-    "image": "zapatillas3.jpg"
+    "image": "botas3.jpg"
        },
     {
     "id": 28,
-    "name": "Cruise Rider Silk Road Wn's",
+    "name": "",
     "description": "",
     "price": "16000", 
     "discount":"Zapatillas urbanas, con suela de caucho y caña alta",
-    "image": "zapatillas4.jpg",
+    "image": "botas4.jpg",
     "category": "botas"
     },
     {
     "id": 29,
-    "name": "Vikky v2 Cat",
+    "name": "",
     "description": "",
     "price": 36000,
     "discount": "Zapatillas casuales, con empeine sintético y suela de goma",
-    "image": "zapatillas5.jpg",
+    "image": "botas5.jpg",
     "category": "botas"
     },
     {
     "id": 30,
-    "name": "Tori Raw Metallics",
+    "name": "",
     "description": "",
     "price": 20999,
     "discount": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
-    "image": "zapatillas6.jpg",
+    "image": "botas6.jpg",
     "category": "botas"
     },
     {
     "id": 31,
-    "name": "Graviton",
+    "name": "",
     "description": "Zapatillas para correr, con superposición del antepié",
     "price": "21450",
     "discount": "",
-    "image": "zapatillas7.jpg",
+    "image": "botas7.jpg",
     "category": "botas"
     },
     {
     "id": 32,
-    "name": "ST Runner v3 NL",
+    "name": "",
     "description": "Zapatillas urbanas, con interior acolchado y suela de goma",
     "price": "",
     "discount": 19500,
-    "image": "zapatillas8.jpg",
+    "image": "botas8.jpg",
     "category": "botas"
     }
    ]
