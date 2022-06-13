@@ -2,7 +2,7 @@
     {
      "id": 1,
      "name": "IRGIZI NEGRO",
-     "price": "32000",
+     "price": "$32.000",
      "discount": "",
      "category": "texanas",
      "description": "Texana lisa con aplique metálico en puntera.",
@@ -11,7 +11,7 @@
     {
      "id": 2,
      "name": "IRGIZI NEGRO",
-     "price": 20000,
+     "price": "$20.000",
      "discount": 3,
      "category": "texanas",
      "description": "Texana de cuero liso con detalle de costuras.",
@@ -20,7 +20,7 @@
     {
      "id": 3,
      "name": "TEXANAS INTENSE",
-     "price": "25000",
+     "price": "$25.000",
      "discount": "",
      "category": "texanas",
      "description": "Texanas con caña más alta y bordadas a tono.",
@@ -30,7 +30,7 @@
      "id": 4,
      "name": "IMORI NEGRO",
      "description": "Bota de cuero con detalle de estilo texano.",
-     "price": "16000",
+     "price": "$16.000",
      "discount":"",
      "image": "bota4.webp",
      "category": "texanas"
@@ -39,7 +39,7 @@
      "id": 5,
      "name": "IRGIZI HUESO",
      "description": "Texana de cuero liso con detalle de costuras",
-     "price": 36000,
+     "price": "$36.000",
      "discount": "",
      "image": "bota5.webp",
      "category": "texanas"
@@ -48,7 +48,7 @@
      "id": 6,
      "name": "LIMAI NEGRO",
      "description": "Bota de cuero graneado con detalle de cierres metálicos",
-     "price": 20999,
+     "price": "$25.000",
      "discount": "",
      "image": "bota6.webp",
      "category": "texanas"
@@ -57,7 +57,7 @@
      "id": 7,
      "name": "IMORI NEGRO",
      "description": "Texana con detalle de recortes, costuras y cierre lateral",
-     "price": "21450",
+     "price": "$21.450",
      "discount": "",
      "image": "bota7.webp",
      "category": "texanas"
@@ -66,15 +66,15 @@
      "id": 8,
      "name": "TEXANA MEI",
      "description": "Texana confeccionadas en cuero, con un bordado en contraste.",
-     "price": "",
-     "discount": 19500,
+     "price": "$19.500",
+     "discount": "",
      "image": "bota8.webp",
      "category": "texanas"
     },
     {
     "id": 9,
     "name": "RS-FAST DOUBLE",
-    "price": "32000",
+    "price": "$32.000",
     "discount": "",
     "category": "zapatillas",
     "description": "Zapatilla de punta estilizada, con doble amortiguación",
@@ -83,7 +83,7 @@
     {
     "id": 10,
     "name": "RS-CURVE WNS",
-    "price": 20000,
+    "price": "$32.000",
     "discount": 3,
     "category": "zapatillas",
     "description": "Zapatillas de otoño, ligeras y con interior de doble material",
@@ -92,7 +92,7 @@
     {
     "id": 11,
     "name": "RS-X BUBBLE",
-    "price": "25000",
+    "price": "$25.000",
     "discount": "",
     "category": "zapatillas",
     "description": "Zapatillas de cuero ecologico, con caña alta y amortiguación",
@@ -102,7 +102,7 @@
     "id": 12,
     "name": "CRUISE RIDER SILK",
     "description": "Zapatillas urbanas, con suela de caucho y caña alta",
-    "price": "16000", 
+    "price": "$16.000", 
     "discount":"",
     "image": "zapatillas4.jpg",
     "category": "zapatillas"
@@ -111,7 +111,7 @@
     "id": 13,
     "name": "VIKKY V2 CAT",
     "description": "Zapatillas casuales, con empeine sintético y suela de goma",
-    "price": 36000,
+    "price": "$36.000",
     "discount": "",
     "image": "zapatillas5.jpg",
     "category": "zapatillas"
@@ -120,7 +120,7 @@
     "id": 14,
     "name": "TORI RAW METALLICS",
     "description": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
-    "price": 20999,
+    "price": "$20.999",
     "discount": "",
     "image": "zapatillas6.jpg",
     "category": "zapatillas"
@@ -129,7 +129,7 @@
     "id": 15,
     "name": "GRAVITION",
     "description": "Zapatillas para correr, con superposición del antepié",
-    "price": "21450",
+    "price": "$21.450",
     "discount": "",
     "image": "zapatillas7.jpg",
     "category": "zapatillas"
@@ -138,15 +138,15 @@
     "id": 16,
     "name": "ST RUNNER V3 NL",
     "description": "Zapatillas urbanas, con interior acolchado y suela de goma",
-    "price": "",
-    "discount": 19500,
+    "price": "$19.500",
+    "discount": "",
     "image": "zapatillas8.jpg",
     "category": "zapatillas"
     },
     {
     "id": 17,
     "name": "JONSON SUELA",
-    "price": "32000",
+    "price": "$32.000",
     "discount": "",
     "category": "borcegos",
     "description": "Borcegos de cuero, con suela de goma y acceso por cordones",
@@ -155,7 +155,7 @@
     {
     "id": 18,
     "name": "NATURAL",
-    "price": 20000,
+    "price": "$20.000",
     "discount": 3,
     "category": "borcegos",
     "description": "Borcegos acolchonados de cuero, con suela de goma",
@@ -164,7 +164,7 @@
     {
     "id": 19,
     "name": "BLACK SHOE",
-    "price": "25000",
+    "price": "$25.000",
     "discount": "",
     "category": "borcegos",
     "description": "Borcegos de cuero con recortes en negro y forrado en poliester",
@@ -174,7 +174,7 @@
     "id": 20,
     "name": "BLANCK SPACE",
     "description": "Borcegos de cuero blanco con taco negro de 8,5cm",
-    "price": "16000",
+    "price": "$16.000",
     "discount":"",
     "image": "borcegos4.jpg",
     "category": "borcegos"
@@ -183,7 +183,7 @@
     "id": 21,
     "name": "STUDS",
     "description": "Borcegos de cuero con tachas metálicas y plataforma de 4,5cm",
-    "price": 36000,
+    "price": "$36.000",
     "discount": "",
     "image": "borcegos5.jpg",
     "category": "borcegos"
@@ -192,7 +192,7 @@
     "id": 22,
     "name": "SUP JOGGING",
     "description": "Borcegos de cuero negro y suela de goma con estilo deportivo ",
-    "price": 20999,
+    "price": "$20.000",
     "discount": "",
     "image": "borcegos6.jpg",
     "category": "borcegos"
@@ -201,7 +201,7 @@
     "id": 23,
     "name": "CLASSIC BORDER",
     "description": "Borcegos de cuero graneado con puño elástico y estilo clásico",
-    "price": "21450",
+    "price": "$21.450",
     "discount": "",
     "image": "borcegos7.jpg",
     "category": "borcegos"
@@ -210,15 +210,15 @@
     "id": 24,
     "name": "ALPINA",
     "description": "Borcegos reforzados con herrajes de cuero verde y suela de goma",
-    "price": "",
-    "discount": 19500,
+    "price": "$19.500",
+    "discount": "",
     "image": "borcegos8.jpg",
     "category": "borcegos"
     },
     {
     "id": 25,
     "name": "GLASS CLASS",
-    "price": "32000",
+    "price": "$32.000",
     "discount": "",
     "category": "botas",
     "description": "Botas cortas con hebilla de cuero en negro y tacos transparentes",
@@ -227,7 +227,7 @@
     {
     "id": 26,
     "name": "ELASTIC",
-    "price": 20000,
+    "price": "$20.000",
     "discount": 3,
     "category": "botas",
     "description": "Bota corta de cuero, con planta de goma y acceso mediante elástico en los laterales",
@@ -236,7 +236,7 @@
     {
     "id": 27,
     "name": "GAMUZERAS",
-    "price": "25000",
+    "price": "$25.000",
     "discount": "",
     "category": "botas",
     "description": "Botas altas de gamuza, con suela de cuero natural y estilo abuchonado",
@@ -246,7 +246,7 @@
     "id": 28,
     "name": "TALL BROWN",
     "description": "Botas de corte militar, con elástico de cuero en la suela",
-    "price": "16000", 
+    "price": "$16.000", 
     "discount":"",
     "image": "botas4.jpg",
     "category": "botas"
@@ -255,7 +255,7 @@
     "id": 29,
     "name": "ACRILIC",
     "description": "Botas cortas de cuero texturada en nude y con taco acrílico",
-    "price": 36000,
+    "price": "$36.000",
     "discount": "",
     "image": "botas5.jpg",
     "category": "botas"
@@ -264,26 +264,26 @@
     "id": 30,
     "name": "TACKS OUT",
     "description": "Botas cortas con tachas de cuero, suela de goma y con acceso por cierre",
-    "price": 20999,
+    "price": "$20.999",
     "discount": "",
     "category": "botas",
     "image": "botas6.jpg"
     },
     {
     "id": 31,
-    "name": "",
-    "description": "Zapatillas para correr, con superposición del antepié",
-    "price": "21450",
+    "name": "INNERCOAT",
+    "description": "Botinetas de cuero y pelo en suela, con tramas y texturas",
+    "price": "$21.450",
     "discount": "",
     "image": "botas7.jpg",
     "category": "botas"
     },
     {
     "id": 32,
-    "name": "",
-    "description": "Zapatillas urbanas, con interior acolchado y suela de goma",
-    "price": "",
-    "discount": 19500,
+    "name": "CHAROL",
+    "description": "Botas cortas con plataforma de charol bordó",
+    "price": "$19.500",
+    "discount": "",
     "image": "botas8.jpg",
     "category": "botas"
     }
