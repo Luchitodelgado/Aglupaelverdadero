@@ -226,28 +226,28 @@
     },
     {
     "id": 26,
-    "name": "",
+    "name": "Elastic",
     "price": 20000,
     "discount": 3,
     "category": "botas",
-    "description": "Zapatillas de otoño, ligeras y con interior de doble material",
+    "description": "Bota corta de cuero, con planta de goma y acceso mediante elástico en los laterales",
     "image": "botas2.jpg"
     },
     {
     "id": 27,
-    "name": "",
+    "name": "Gamuzeras",
     "price": "25000",
     "discount": "",
     "category": "botas",
-    "description": "Zapatillas de cuero ecologico, con caña alta y amortiguación",
+    "description": "Botas altas de gamuza, con suela de cuero natural y estilo abuchonado",
     "image": "botas3.jpg"
        },
     {
     "id": 28,
-    "name": "",
+    "name": "Tall Brown",
     "description": "",
     "price": "16000", 
-    "discount":"Zapatillas urbanas, con suela de caucho y caña alta",
+    "discount":"Botas de corte militar, con elástico de cuero en la suela",
     "image": "botas4.jpg",
     "category": "botas"
     },
