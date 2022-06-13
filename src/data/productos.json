@@ -101,27 +101,27 @@
     {
     "id": 12,
     "name": "Cruise Rider Silk Road Wn's",
-    "description": "",
+    "description": "Zapatillas urbanas, con suela de caucho y caña alta",
     "price": "16000", 
-    "discount":"Zapatillas urbanas, con suela de caucho y caña alta",
+    "discount":"",
     "image": "zapatillas4.jpg",
     "category": "zapatillas"
     },
     {
     "id": 13,
     "name": "Vikky v2 Cat",
-    "description": "",
+    "description": "Zapatillas casuales, con empeine sintético y suela de goma",
     "price": 36000,
-    "discount": "Zapatillas casuales, con empeine sintético y suela de goma",
+    "discount": "",
     "image": "zapatillas5.jpg",
     "category": "zapatillas"
     },
     {
     "id": 14,
     "name": "Tori Raw Metallics",
-    "description": "",
+    "description": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
     "price": 20999,
-    "discount": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
+    "discount": "",
     "image": "zapatillas6.jpg",
     "category": "zapatillas"
     },
