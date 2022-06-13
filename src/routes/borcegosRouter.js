@@ -3,6 +3,6 @@ const router = express.Router();
 
 const borcegosController = require('../controllers/borcegosController');
 
-router.get('/borcegos', borcegosController.borcegos);
+router.get('/', borcegosController.borcegos);
 
 module.exports = router;
