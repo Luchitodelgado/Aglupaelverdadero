@@ -13,6 +13,7 @@ const controller = {
 		})
 	},
 
+	
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		let id = req.params.id;
