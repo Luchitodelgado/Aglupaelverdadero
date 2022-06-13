@@ -10,16 +10,16 @@
 
 
     <div class="columnas">
-        <h1 class="titulo-productos">Texanas</h1>
+        <h1 class="titulo-productos">Borcegos</h1>
         <section class="">
             <div class="">
             </div>
-            <% productos.forEach(function(product){ 
+            <% borcegos.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
                 <div class="todosProductos">
                     <article class="productos">
-                        <a href="/productos/<%= product.id %>">
+                        <a href="/borcegos/<%= product.id %>">
                             <figure class="img">
                                 <img src="/img/<%= product.image %>" alt="imagen de producto">
                             </figure>
