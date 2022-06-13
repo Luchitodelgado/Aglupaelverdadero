@@ -4,7 +4,7 @@
      "name": "IRGIZI NEGRO",
      "price": "32000",
      "discount": "",
-     "category": "",
+     "category": "texanas",
      "description": "Texana lisa con aplique metálico en puntera.",
      "image": "bota 1.webp"
     },
@@ -13,7 +13,7 @@
      "name": "IRGIZI NEGRO",
      "price": 20000,
      "discount": 3,
-     "category": "",
+     "category": "texanas",
      "description": "Texana de cuero liso con detalle de costuras.",
      "image": "bota 2.webp"
     },
@@ -22,7 +22,7 @@
      "name": "TEXANAS INTENSE",
      "price": "25000",
      "discount": "",
-     "category": "",
+     "category": "texanas",
      "description": "Texanas con caña más alta y bordadas a tono.",
      "image": "bota3.webp"
     },
@@ -33,7 +33,7 @@
      "price": "16000",
      "discount":"",
      "image": "bota4.webp",
-     "category": ""
+     "category": "texanas"
     },
     {
      "id": 5,
@@ -42,7 +42,7 @@
      "price": 36000,
      "discount": "",
      "image": "bota5.webp",
-     "category": ""
+     "category": "texanas"
     },
     {
      "id": 6,
@@ -51,7 +51,7 @@
      "price": 20999,
      "discount": "",
      "image": "bota6.webp",
-     "category": ""
+     "category": "texanas"
     },
     {
      "id": 7,
@@ -60,7 +60,7 @@
      "price": "21450",
      "discount": "",
      "image": "bota7.webp",
-     "category": ""
+     "category": "texanas"
     },
     {
      "id": 8,
@@ -69,6 +69,78 @@
      "price": "",
      "discount": 19500,
      "image": "bota8.webp",
-     "category": ""
-    }
+     "category": "texanas"
+    },
+    {
+    "id": 9,
+    "name": "Rs-Fast Double",
+    "price": "32000",
+    "discount": "",
+    "category": "zapatillas",
+    "description": "Zapatilla de punta estilizada, con doble amortiguación",
+    "image": "zapatillas1.jpg"
+    },
+    {
+    "id": 10,
+    "name": "RS-Curve Wns",
+    "price": 20000,
+    "discount": 3,
+    "category": "zapatillas",
+    "description": "Zapatillas de otoño, ligeras y con interior de doble material",
+    "image": "zapatillas2.jpg"
+    },
+    {
+    "id": 11,
+    "name": "Rs-X Bubble Wns",
+    "price": "25000",
+    "discount": "",
+    "category": "zapatillas",
+    "description": "Zapatillas de cuero ecologico, con caña alta y amortiguación",
+    "image": "zapatillas3.jpg"
+    },
+    {
+    "id": 12,
+    "name": "Cruise Rider Silk Road Wn's",
+    "description": "",
+    "price": "16000", 
+    "discount":"Zapatillas urbanas, con suela de caucho y caña alta",
+    "image": "zapatillas4.jpg",
+    "category": "zapatillas"
+    },
+    {
+    "id": 13,
+    "name": "Vikky v2 Cat",
+    "description": "",
+    "price": 36000,
+    "discount": "Zapatillas casuales, con empeine sintético y suela de goma",
+    "image": "zapatillas5.jpg",
+    "category": "zapatillas"
+    },
+    {
+    "id": 14,
+    "name": "Tori Raw Metallics",
+    "description": "",
+    "price": 20999,
+    "discount": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
+    "image": "zapatillas6.jpg",
+    "category": "zapatillas"
+    },
+    {
+    "id": 15,
+    "name": "Graviton",
+    "description": "Zapatillas para correr, con superposición del antepié",
+    "price": "21450",
+    "discount": "",
+    "image": "zapatillas7.jpg",
+    "category": "zapatillas"
+    },
+    {
+    "id": 16,
+    "name": "ST Runner v3 NL",
+    "description": "Zapatillas urbanas, con interior acolchado y suela de goma",
+    "price": "",
+    "discount": 19500,
+    "image": "zapatillas8.jpg",
+    "category": "zapatillas"
+    },
    ]
