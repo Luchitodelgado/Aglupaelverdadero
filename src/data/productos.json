@@ -73,7 +73,7 @@
     },
     {
     "id": 9,
-    "name": "Rs-Fast Double",
+    "name": "RS-FAST DOUBLE",
     "price": "32000",
     "discount": "",
     "category": "zapatillas",
@@ -82,7 +82,7 @@
     },
     {
     "id": 10,
-    "name": "RS-Curve Wns",
+    "name": "RS-CURVE WNS",
     "price": 20000,
     "discount": 3,
     "category": "zapatillas",
@@ -91,7 +91,7 @@
     },
     {
     "id": 11,
-    "name": "Rs-X Bubble Wns",
+    "name": "RS-X BUBBLE",
     "price": "25000",
     "discount": "",
     "category": "zapatillas",
@@ -100,7 +100,7 @@
     },
     {
     "id": 12,
-    "name": "Cruise Rider Silk Road Wn's",
+    "name": "CRUISE RIDER SILK",
     "description": "Zapatillas urbanas, con suela de caucho y caña alta",
     "price": "16000", 
     "discount":"",
@@ -109,7 +109,7 @@
     },
     {
     "id": 13,
-    "name": "Vikky v2 Cat",
+    "name": "VIKKY V2 CAT",
     "description": "Zapatillas casuales, con empeine sintético y suela de goma",
     "price": 36000,
     "discount": "",
@@ -118,7 +118,7 @@
     },
     {
     "id": 14,
-    "name": "Tori Raw Metallics",
+    "name": "TORI RAW METALLICS",
     "description": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
     "price": 20999,
     "discount": "",
@@ -127,7 +127,7 @@
     },
     {
     "id": 15,
-    "name": "Graviton",
+    "name": "GRAVITION",
     "description": "Zapatillas para correr, con superposición del antepié",
     "price": "21450",
     "discount": "",
@@ -136,7 +136,7 @@
     },
     {
     "id": 16,
-    "name": "ST Runner v3 NL",
+    "name": "ST RUNNER V3 NL",
     "description": "Zapatillas urbanas, con interior acolchado y suela de goma",
     "price": "",
     "discount": 19500,
@@ -145,7 +145,7 @@
     },
     {
     "id": 17,
-    "name": "Jonson Suela",
+    "name": "JONSON SUELA",
     "price": "32000",
     "discount": "",
     "category": "borcegos",
@@ -154,7 +154,7 @@
     },
     {
     "id": 18,
-    "name": "Natural",
+    "name": "NATURAL",
     "price": 20000,
     "discount": 3,
     "category": "borcegos",
@@ -163,7 +163,7 @@
     },
     {
     "id": 19,
-    "name": "Black shoe",
+    "name": "BLACK SHOE",
     "price": "25000",
     "discount": "",
     "category": "borcegos",
@@ -172,7 +172,7 @@
     },
     {
     "id": 20,
-    "name": "Blanck Space",
+    "name": "BLANCK SPACE",
     "description": "Borcegos de cuero blanco con taco negro de 8,5cm",
     "price": "16000",
     "discount":"",
@@ -181,7 +181,7 @@
     },
     {
     "id": 21,
-    "name": "Studs",
+    "name": "STUDS",
     "description": "Borcegos de cuero con tachas metálicas y plataforma de 4,5cm",
     "price": 36000,
     "discount": "",
@@ -190,7 +190,7 @@
     },
     {
     "id": 22,
-    "name": "Sup Jogging",
+    "name": "SUP JOGGING",
     "description": "Borcegos de cuero negro y suela de goma con estilo deportivo ",
     "price": 20999,
     "discount": "",
@@ -199,7 +199,7 @@
     },
     {
     "id": 23,
-    "name": "Classic Border",
+    "name": "CLASSIC BORDER",
     "description": "Borcegos de cuero graneado con puño elástico y estilo clásico",
     "price": "21450",
     "discount": "",
@@ -208,7 +208,7 @@
     },
     {
     "id": 24,
-    "name": "Alpina",
+    "name": "ALPINA",
     "description": "Borcegos reforzados con herrajes de cuero verde y suela de goma",
     "price": "",
     "discount": 19500,
@@ -217,7 +217,7 @@
     },
     {
     "id": 25,
-    "name": "glass class",
+    "name": "GLASS CLASS",
     "price": "32000",
     "discount": "",
     "category": "botas",
@@ -226,7 +226,7 @@
     },
     {
     "id": 26,
-    "name": "Elastic",
+    "name": "ELASTIC",
     "price": 20000,
     "discount": 3,
     "category": "botas",
@@ -235,7 +235,7 @@
     },
     {
     "id": 27,
-    "name": "Gamuzeras",
+    "name": "GAMUZERAS",
     "price": "25000",
     "discount": "",
     "category": "botas",
@@ -244,7 +244,7 @@
        },
     {
     "id": 28,
-    "name": "Tall Brown",
+    "name": "TALL BROWN",
     "description": "Botas de corte militar, con elástico de cuero en la suela",
     "price": "16000", 
     "discount":"",
@@ -253,7 +253,7 @@
     },
     {
     "id": 29,
-    "name": "Acrilic",
+    "name": "ACRILIC",
     "description": "Botas cortas de cuero texturada en nude y con taco acrílico",
     "price": 36000,
     "discount": "",
@@ -262,11 +262,12 @@
     },
     {
     "id": 30,
-    "name": "Tacks out",
+    "name": "TACKS OUT",
     "description": "Botas cortas con tachas de cuero, suela de goma y con acceso por cierre",
     "price": 20999,
     "discount": "",
-    "category": "botas"
+    "category": "botas",
+    "image": "botas6.jpg"
     },
     {
     "id": 31,
