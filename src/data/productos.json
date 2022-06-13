@@ -245,18 +245,18 @@
     {
     "id": 28,
     "name": "Tall Brown",
-    "description": "",
+    "description": "Botas de corte militar, con elástico de cuero en la suela",
     "price": "16000", 
-    "discount":"Botas de corte militar, con elástico de cuero en la suela",
+    "discount":"",
     "image": "botas4.jpg",
     "category": "botas"
     },
     {
     "id": 29,
-    "name": "",
-    "description": "",
+    "name": "Acrilic",
+    "description": "Botas cortas de cuero texturada en nude y con taco acrílico",
     "price": 36000,
-    "discount": "Zapatillas casuales, con empeine sintético y suela de goma",
+    "discount": "",
     "image": "botas5.jpg",
     "category": "botas"
     },
