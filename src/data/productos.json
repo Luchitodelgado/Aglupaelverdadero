@@ -143,4 +143,148 @@
     "image": "zapatillas8.jpg",
     "category": "zapatillas"
     },
+    {
+    "id": 17,
+    "name": "Jonson Suela",
+    "price": "32000",
+    "discount": "",
+    "category": "borcegos",
+    "description": "Borcegos de cuero, con suela de goma y acceso por cordones",
+    "image": "borcegos1.jpg"
+    },
+    {
+    "id": 18,
+    "name": "Natural",
+    "price": 20000,
+    "discount": 3,
+    "category": "borcegos",
+    "description": "Borcegos acolchonados de cuero, con suela de goma",
+    "image": "borcegos2.jpg"
+    },
+    {
+    "id": 19,
+    "name": "Black shoe",
+    "price": "25000",
+    "discount": "",
+    "category": "borcegos",
+    "description": "Borcegos de cuero con recortes en negro y forrado en poliester",
+    "image": "borcegos3.jpg"
+    },
+    {
+    "id": 20,
+    "name": "Blanck Space",
+    "description": "Borcegos de cuero blanco con taco negro de 8,5cm",
+    "price": "16000",
+    "discount":"",
+    "image": "borcegos4.jpg",
+    "category": "borcegos"
+    },
+    {
+    "id": 21,
+    "name": "Studs",
+    "description": "Borcegos de cuero con tachas metálicas y plataforma de 4,5cm",
+    "price": 36000,
+    "discount": "",
+    "image": "borcegos5.jpg",
+    "category": "borcegos"
+    },
+    {
+    "id": 22,
+    "name": "Sup Jogging",
+    "description": "Borcegos de cuero negro y suela de goma con estilo deportivo ",
+    "price": 20999,
+    "discount": "",
+    "image": "borcegos6.jpg",
+    "category": "borcegos"
+    },
+    {
+    "id": 23,
+    "name": "Classic Border",
+    "description": "Borcegos de cuero graneado con puño elástico y estilo clásico",
+    "price": "21450",
+    "discount": "",
+    "image": "borcegos7.jpg",
+    "category": "borcegos"
+    },
+    {
+    "id": 24,
+    "name": "Alpina",
+    "description": "Borcegos reforzados con herrajes de cuero verde y suela de goma",
+    "price": "",
+    "discount": 19500,
+    "image": "borcegos8.jpg",
+    "category": "borcegos"
+    },
+    {
+    "id": 25,
+    "name": "Rs-Fast Double",
+    "price": "32000",
+    "discount": "",
+    "category": "botas",
+    "description": "Zapatilla de punta estilizada, con doble amortiguación",
+    "image": "zapatillas1.jpg"
+    },
+    {
+    "id": 26,
+    "name": "RS-Curve Wns",
+    "price": 20000,
+    "discount": 3,
+    "category": "botas",
+    "description": "Zapatillas de otoño, ligeras y con interior de doble material",
+    "image": "zapatillas2.jpg"
+    },
+    {
+    "id": 27,
+    "name": "Rs-X Bubble Wns",
+    "price": "25000",
+    "discount": "",
+    "category": "botas",
+    "description": "Zapatillas de cuero ecologico, con caña alta y amortiguación",
+    "image": "zapatillas3.jpg"
+       },
+    {
+    "id": 28,
+    "name": "Cruise Rider Silk Road Wn's",
+    "description": "",
+    "price": "16000", 
+    "discount":"Zapatillas urbanas, con suela de caucho y caña alta",
+    "image": "zapatillas4.jpg",
+    "category": "botas"
+    },
+    {
+    "id": 29,
+    "name": "Vikky v2 Cat",
+    "description": "",
+    "price": 36000,
+    "discount": "Zapatillas casuales, con empeine sintético y suela de goma",
+    "image": "zapatillas5.jpg",
+    "category": "botas"
+    },
+    {
+    "id": 30,
+    "name": "Tori Raw Metallics",
+    "description": "",
+    "price": 20999,
+    "discount": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
+    "image": "zapatillas6.jpg",
+    "category": "botas"
+    },
+    {
+    "id": 31,
+    "name": "Graviton",
+    "description": "Zapatillas para correr, con superposición del antepié",
+    "price": "21450",
+    "discount": "",
+    "image": "zapatillas7.jpg",
+    "category": "botas"
+    },
+    {
+    "id": 32,
+    "name": "ST Runner v3 NL",
+    "description": "Zapatillas urbanas, con interior acolchado y suela de goma",
+    "price": "",
+    "discount": 19500,
+    "image": "zapatillas8.jpg",
+    "category": "botas"
+    }
    ]
