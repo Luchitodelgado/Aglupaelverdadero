@@ -262,11 +262,10 @@
     },
     {
     "id": 30,
-    "name": "",
-    "description": "",
+    "name": "Tacks out",
+    "description": "Botas cortas con tachas de cuero, suela de goma y con acceso por cierre",
     "price": 20999,
-    "discount": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
-    "image": "botas6.jpg",
+    "discount": "",
     "category": "botas"
     },
     {
