@@ -12,12 +12,15 @@ const controller = {
 		})
 	},
 
-    detail: (req, res) => {
+    // Detail - Detail from one product
+	detail: (req, res) => {
+		const botas = JSON.parse(fs.readFileSync(botasFilePath, 'utf-8'));
 		let id = req.params.id;
+		let product = botas.find(product => product.id == id);
 		res.render('detail', {
 			product
 		})
-	},
+	}
 
 };
 

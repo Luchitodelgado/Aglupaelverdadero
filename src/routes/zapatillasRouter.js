@@ -5,4 +5,6 @@ const zapatillasController = require('../controllers/zapatillasController');
 
 router.get('/', zapatillasController.zapatillas);
 
+router.get('/detail/:id', zapatillasController.detail);
+
 module.exports = router;

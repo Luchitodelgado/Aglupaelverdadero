@@ -12,13 +12,15 @@ const controller = {
 		})
 	},
 
-    detail: (req, res) => {
+  // Detail - Detail from one product
+	detail: (req, res) => {
+		const borcegos = JSON.parse(fs.readFileSync(borcegosFilePath, 'utf-8'));
 		let id = req.params.id;
- 
+		let product = borcegos.find(product => product.id == id);
 		res.render('detail', {
 			product
 		})
-	},
+	}
 
 };
 
