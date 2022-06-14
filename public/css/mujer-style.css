@@ -126,7 +126,7 @@ h6{
 .div-designed {
     margin: 0px;
     background-color:#e0be3693;
-    width: 100%;
+    /* width: 100%; */
 }
 .designed {
     color: black;
