@@ -5,27 +5,27 @@
     <%- include('partials/headerNavbar') %>
     <main>
         <div class="container products-wrapper">
-            <div class=""row">
-                <div class="col-12">
+            <div class="row">
+                <div class="">
                     <h1 class="products-tittle">Formulario de creación de productos</h1>
                 </div>            
             </div>
-            <div class="col-12">
-                <form action="/products" method="POST">
+            <div class="">
+                <form action="/productos" method="POST">
                     <div class="row product-detail">
-                        <div class="col-12 col-md-6">
+                        <div class="">
                             <label for="name" class="form-label">Nombre del producto:</label>
                             <imput type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas" class="form-input">
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="">
                             <label for="price" class="form-label">Precio del producto:</label>
                             <imput type="number" id="price" name="price" placeholder="Ej: 56344" class="form-input">
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="">
                             <label for="discount" class="form-label">Descuento:</label>
                             <imput type="number" id="discount" name="discount" placeholder="Ej: 40" class="form-input">
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="">
                             <label for="category" class="form-label">Categoría:</label>
                             <select name="category" id="category" class="form-imput">
                                 <option value="">Elegí</option>
@@ -33,11 +33,11 @@
                                 <option value="visited">Últimos agregados</option>
                             </select>
                         </div>
-                        <div class="col-12">
+                        <div class="">
                             <label for="description" class="form-label">Descripción</label>
                             <textarea name="description" id="description" class="form-input"></textarea>
                         </div>
-                        <div class="col-12">
+                        <div class="">
                             <button type="submit" class="buy-now-button">Guardar producto</button>
                         </div>                        
                     </div>
