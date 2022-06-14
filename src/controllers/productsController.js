@@ -27,7 +27,7 @@ const controller = {
     create: (req, res) =>{
 		res.render('crearProducto')
     },
-
+	
 // Create -  Method to store
     store: (req, res) => {
 		/* res.send("Producto nuevo agregado"); */
@@ -43,8 +43,10 @@ const controller = {
 	}
 	products.push(newProduct);
 	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-	res.redirect("/productos");
+	res.redirect("/products");
 },
+
+
 
 };
 
