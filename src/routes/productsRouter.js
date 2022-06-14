@@ -8,4 +8,9 @@ router.get('/', productosController.productos);
 /*** GET ONE PRODUCT ***/
 router.get('/detail/:id', productosController.detail);
 
+/**crear producto */
+router.get('/create', productosController.create);
+router.post('/', productosController.store);
+/** */
+
 module.exports = router;

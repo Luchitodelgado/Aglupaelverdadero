@@ -8,7 +8,8 @@ const userRouter = require('./src/routes/userRouter'); // Rutas main
 const productos = require ("./src/routes/productsRouter");
 const borcegos = require ("./src/routes/borcegosRouter");
 const zapatillas = require ("./src/routes/zapatillasRouter");
-const botas = require ("./src/routes/botasRouter")
+const botas = require ("./src/routes/botasRouter");
+const { format } = require("path");
 
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, '/src/views'));

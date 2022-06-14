@@ -20,8 +20,18 @@ const controller = {
 		res.render('detail', {
 			product
 		})
-	}
+	},
 
+	//*crear fromulario crear//
+/*     create: (req, res) =>{ */
+/* 		res.render('product-create-form') */
+/*     }, */
+/*     //*crear metodo store// */
+/*     store: (req,res) =>{ */
+/* 		res.send("Producto nuevo creado") */
+/*     }, */
+/*  */
 };
+
 
 module.exports = controller;
