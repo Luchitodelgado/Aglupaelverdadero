@@ -9,15 +9,15 @@ const userRouter = require('./src/routes/userRouter'); // Rutas main
 const productos = require ("./src/routes/productsRouter");
 const borcegos = require ("./src/routes/borcegosRouter");
 const zapatillas = require ("./src/routes/zapatillasRouter");
-const botas = require ("./src/routes/botasRouter");
-const { format } = require("path");
+const botas = require ("./src/routes/botasRouter")
 
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, '/src/views'));
 
-app.use(express.static(path.join(__dirname, '../public'))); 
-app.use(express.urlencoded({ extended: false })); 
-app.use(express.json()); 
+app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
+app.use(express.urlencoded({ extended: false })); // Para que se usa??
+app.use(express.json()); // Para que se usa??
 app.use(methodOverride('_method'));
 
 app.use('/', mainRouter);
