@@ -15,7 +15,7 @@ header {
     width: 100%;
 }
 .fa-search{
-    color: white;
+    color: rgb(125, 125, 125);
 }
 .buscador{
     position: absolute;
@@ -79,6 +79,24 @@ a:hover {
 .a-header:hover{
     color:rgb(70, 70, 70);
     text-decoration: none;
+}
+.barra{
+    padding: 10px;
+    background-color: white;
+    border: solid 1px var(--GrisOscuro);
+    border-radius: 10px;
+}
+.barra-lupa{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.lupa{
+    padding: 2px;
+    margin: 5px;
+    max-width: 10px;
+    position: absolute;
 }
 /*------------------------------MEDIA 361PX----------------------------*/
 @media (min-width:361px){
