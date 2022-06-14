@@ -7,7 +7,7 @@ header {
     width: 100%;
     padding: 0px;
     height: auto;
-    background-color:#e0be3693;
+    background-color: #e0be3693;
 }
 .container-logo{
     display: flex;
@@ -59,23 +59,22 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 .ul-derecha{
     display: flex;
-    margin: 5px;
-    padding: 5px;
-    width: 30%;
+    justify-content: center;
+    width: 50%;
 }
 .hijos-ul-derecha{
-    padding: 5px;
+    padding: 0px;
+    width: 100%;
     list-style: none;
     text-decoration: none;
 }
 .a-header{
     color: white;
     font-family: 'roboto';
-    margin: 8px;
+    margin: 10px;
 }
 .a-header:hover{
     color:rgb(70, 70, 70);
@@ -87,7 +86,7 @@ a:hover {
         display: none;
     }
     .img-logo{
-        width: 15%;
+        width: 20%;
         height: auto;
     }
     .buscador{
@@ -122,7 +121,7 @@ a:hover {
         display: none;
     }
     .a-header{
-        font-size:18px;
+        font-size:20px;
     }
     .buscador{
         display: block;

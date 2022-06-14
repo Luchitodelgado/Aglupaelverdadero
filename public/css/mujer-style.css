@@ -78,22 +78,15 @@ body {
     background-color:#e0be36;;
 }
 /*-------------FOOTER--------------------*/
-.container-footer {
+.container-hijos {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-}
-.container-footer2 {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
-.hijos-footer {
+.hijos-footer {  
     border: 1px solid #dfdfdf;
     text-align: center;
-    padding: 50px;
 }
 .titulo-footer {
     font-family: 'Roboto', sans-serif;
@@ -110,14 +103,17 @@ body {
 h6{
     font-weight: bold;
 }
+.container-newletter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .newsletter {
     text-align: center;
     padding: 60px;
-    width: 50%;
 }
 .contacto {
     text-align: center;
-    width: 50%;
     padding: 60px;
 }
 .p-contacto {
@@ -146,9 +142,10 @@ h6{
     background-color:rgba(58, 58, 58, 0.582);
 }
 .input-email{
-    border: white;
+    background-color: rgb(205, 201, 201);
     padding: 5px;
     margin: 5px;
+    color: white;
 }
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
@@ -182,13 +179,10 @@ h6{
         padding: 4px;
     }
     /*-----------MOBILE-FOOTER-----------*/
-    .container-footer {
-        justify-content: center;
-        width: 100%;
-    }
     .hijos-footer {
         width:100%;
         height: auto;
+        padding: 50px;
     }
     .titulo-footer {
         font-size: 15px;
@@ -232,30 +226,27 @@ h6{
         font-size: 15px;
         padding: 4px;
     }
-    .container-footer {
-        width: 100%;
-        height: auto;
-    }
     .hijos-footer{
-        width: 33%;
+        width: 25%;
         height: auto;
+        padding: 50px;
     }
     .titulo-footer {
         font-size: 18px;
     }
     .div-designed {
-        padding: 40px;
+        padding: 30px;
     }
     .designed {
         font-size: 20px;
     }
     .newsletter {
-        padding: 60px;
-        width: 50%;
+        padding: 50px;
+        width: 40%;
     }
     .contacto{
-        padding: 60px;
-        width: 50%;
+        padding: 50px;
+        width: 40%;
     }
     h6 {
         font-size: 18px;
