@@ -13,4 +13,8 @@ router.get('/create', productosController.create);
 router.post('/', productosController.store);
 /** */
 
+// EDITAR PRODUCTO
+
+router.get('/:id/edit', )
+
 module.exports = router;
