@@ -9,15 +9,36 @@ h1 {
     display: block;
 }
 
-.container{
-    border: solid 1px black;
-    flex-direction: column;
+.hijo{
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 150%;
+    display: flex;
+    align-items: center;
+
 
 }
 .descripcion{
-    border: solid 1px black;
+    border: solid 1px rgb(118, 118, 118);
 }
 
+.texto{
+    flex-direction: column;
+    display: flex;
+    width: 1500%;
+    height: 1000%;
+}
+
+.detalles{
+    flex-direction: column;
+    width: 35%;
+    margin-left: -15%;
+}
+
+.form-input{
+    border: solid 1px rgb(118, 118, 118);
+}
 
 
 
