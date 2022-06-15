@@ -12,7 +12,7 @@
         "id": 2,
         "name": "IRGIZI NEGRO",
         "price": "$20.000",
-        "discount": 3,
+        "discount": "",
         "category": "texanas",
         "description": "Texana de cuero liso con detalle de costuras.",
         "image": "bota 2.webp"

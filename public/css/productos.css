@@ -51,7 +51,7 @@ a{
   }
   
   .product-detail-img {
-    width: 70%;
+    width: 30%;
     display: block;
     margin: auto;
   }
@@ -111,16 +111,17 @@ a{
   }
   
   .buy-now-button {
-    background-color: var(--light-blue);
+    background-color: #e0be3693;
     font-size: 1.6em;
-    color: #ffffff;
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 15px;
     border-radius: 8px;
-    border: none;
-    margin-bottom: 15px;
+  }
+
+  .comprar{
+    width: 30%;
+    display: flex;
   }
   
   .action-button {
