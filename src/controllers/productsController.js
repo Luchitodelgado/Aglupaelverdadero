@@ -4,16 +4,18 @@ const path = require('path');
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
+
+
 const controller = {
 	// Root - Show all products
 	productos: (req, res) => {
-        let id = req.params.id
+		let id = req.params.id
 		res.render('productos', {
 			productos
 		})
 	},
 
-	
+
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
@@ -24,12 +26,12 @@ const controller = {
 		})
 	},
 	//*crear fromulario crear//
-    create: (req, res) =>{
+	create: (req, res) => {
 		res.render('crearProducto')
-    },
-	
-// Create -  Method to store
-    store: (req, res) => {
+	},
+
+	// Create -  Method to store
+	store: (req, res) => {
 		/* res.send("Producto nuevo agregado"); */
 		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		let newProduct = {
@@ -40,40 +42,49 @@ const controller = {
 			discount: req.body.discount,
 			image: "default-image.png",
 			category: req.body.category
+		}
+		products.push(newProduct);
+		fs.writeFileSync(productosFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/productos");
+	},
+
+
+	edit: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+		res.render('product-edit-form', { productToEdit })
+	},
+	// Update - Method to update
+	update: (req, res) => {
+		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		let productosToEdit = productos.find(productos => req.params.id == productos.id);
+
+		let editedProductos = {
+			id: req.params.id,
+			name: req.body.name,
+			description: req.body.description,
+			price: req.body.price,
+			discount: req.body.discount,
+			image: productosToEdit.image,
+			category: req.body.category
+		}
+
+		let indice = productos.findIndex(productos => productos.id == req.params.id);
+		productos[indice] = editedProductos;
+
+		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
+		res.redirect("/productos");
+	},
+
+	destroy: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+
+		let finalProducts = products.filter(product => product.id != req.params.id);
+		fs.writeFileSync(productosFilePath, JSON.stringify(finalProducts, null, " "));
+
+		res.redirect("/productos");
 	}
-	products.push(newProduct);
-	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-	res.redirect("/products");
-},
-
-
-edit: (req, res) => {
-	const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-	let id = req.params.id
-	let productToEdit = products.find(product => product.id == id)
-	res.render('product-edit-form', {productToEdit})
-},
-// Update - Method to update
-update: (req, res) => {
-	const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-	let productosToEdit = productos.find(productos => req.params.id == productos.id);
-
-	let editedProductos = {
-		id: req.params.id,
-		name: req.body.name,
-		description: req.body.description,
-		price: req.body.price,
-		discount: req.body.discount,
-		image: productosToEdit.image,
-		category: req.body.category
-	}
-
-	let indice = productos.findIndex(productos => productos.id == req.params.id);
-	productos[indice] = editedProductos;
-
-	fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
-	res.redirect("/products");
-},
 
 
 

@@ -15,10 +15,8 @@ router.post('/', productosController.store);
 /**Edicion productos*/
 router.get('/edit/:id', productosController.edit);
 router.patch('/edit/:id', productosController.update);
+router.delete('/delete/:id', productosController.destroy);
 
 
-// EDITAR PRODUCTO
-
-router.get('/:id/edit', )
 
 module.exports = router;
