@@ -30,6 +30,15 @@
     <li>Motivacion</li>
   </p>
   </section>
+  <section>
+  <h2>Cambios post reunión Agus/totura</h2>
+  <li>Actualizamos trello y asignamos tareas.</li>
+  <li>Mantuvimos el orden, comentamos cuando codeabamos, no nos pisamos.</li>
+  <li>Comunicamos desde cada paso que lograbamos, hasta las tareas pendientes que no logramos.<li>
+   <p>
+   Luego de la reunión con Agus pudimos mantener la comunicación a lo largo de cada tarea, y coordinamos reuniones fijas que venimos respetando, eso nos ayuda un montón a descubrir dificultades que van surgiendo, trabajar juntos, ir chequeando en grupo las tareas individuales, etc.
+  </p>
+  </section>
 
 
 
