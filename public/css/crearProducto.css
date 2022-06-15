@@ -16,7 +16,7 @@ h1 {
     width: 150%;
     display: flex;
     align-items: center;
-
+    margin-top: 5%;
 
 }
 .descripcion{
@@ -40,6 +40,14 @@ h1 {
     border: solid 1px rgb(118, 118, 118);
 }
 
+.form-label{
+    width: 85%;
+}
+
+.categoria{
+    display:flex;
+
+}
 
 
 @media (min-width:361px){
