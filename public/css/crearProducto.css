@@ -14,20 +14,6 @@ h1 {
     flex-direction: column;
 
 }
-
-/* .precio{ */
-/*     border: solid 1px black; */
-/*  */
-/* } */
-/*  */
-/* .descuento{ */
-/*     border: solid 1px black; */
-/* } */
-/*  */
-/* .categoria{ */
-/*     border: solid 1px black; */
-/* } */
-
 .descripcion{
     border: solid 1px black;
 }
