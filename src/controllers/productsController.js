@@ -47,6 +47,36 @@ const controller = {
 },
 
 
+edit: (req, res) => {
+	const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+	let id = req.params.id
+	let productToEdit = products.find(product => product.id == id)
+	res.render('product-edit-form', {productToEdit})
+},
+// Update - Method to update
+update: (req, res) => {
+	const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+	let productosToEdit = productos.find(productos => req.params.id == productos.id);
+
+	let editedProductos = {
+		id: req.params.id,
+		name: req.body.name,
+		description: req.body.description,
+		price: req.body.price,
+		discount: req.body.discount,
+		image: productosToEdit.image,
+		category: req.body.category
+	}
+
+	let indice = productos.findIndex(productos => productos.id == req.params.id);
+	productos[indice] = editedProductos;
+
+	fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
+	res.redirect("/products");
+},
+
+
+
 
 };
 
