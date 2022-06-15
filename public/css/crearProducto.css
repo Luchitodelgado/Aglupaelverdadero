@@ -9,7 +9,7 @@ h1 {
     display: block;
 }
 
-.hijo{
+.cajita{
 
     flex-direction: row;
     flex-wrap: nowrap;
@@ -17,45 +17,52 @@ h1 {
     display: flex;
     align-items: center;
     margin-top: 5%;
-
-}
-.descripcion{
     border: solid 1px rgb(118, 118, 118);
 }
-
-.texto{
-    flex-direction: column;
-    display: flex;
-    width: 1500%;
-    height: 1000%;
+.desc{
+    margin-top: 5%;
+   /*  border: solid 1px rgb(118, 118, 118); */
 }
 
-.detalles{
+.tex{
+    flex-direction: column;
+    display: flex;
+    /* width: 1500%; */
+    /* height: 1000%; */
+}
+
+.listados{
     flex-direction: column;
     width: 35%;
     margin-left: -15%;
 }
 
-.form-input{
+.pequeño{
     border: solid 1px rgb(118, 118, 118);
 }
 
-.form-label{
-    width: 85%;
-}
+/* .detalles{ */
+/*     width: 85%; */
+/* } */
 
 .categoria{
     display:flex;
-
+    flex-direction: column;
+    margin-top: 5%;
+  /*   border: solid 1px rgb(118, 118, 118); */
 }
 
-
+.bot{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
     h1 {
         font-size: 50px;
     }
-    .input-hijo{
+    .hijo{
         width: 361px;
     }
 }
@@ -67,4 +74,3 @@ h1 {
         font-size: 20px;
     }
 }
-

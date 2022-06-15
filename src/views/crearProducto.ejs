@@ -7,27 +7,27 @@
         <div class="container products-wrapper">
             <div class="row">
                 <div class="">
-                    <h1 class="products-tittle">Crear producto</h1>
+                    <h1 class="titulo">Crear producto</h1>
                 </div>            
             </div>
             <div class="">
                 <form action="/productos" method="POST">
-                    <div class="detalles">
-                        <div class="hijo">
-                            <label for="name" class="form-label">Nombre del producto:</label>
-                            <imput type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas" class="form-input">
+                    <div class="listados">
+                        <div class="cajita">
+                            <label for="name" class="detalles">Nombre del producto:</label>
+                            <imput type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas" class="pequeño">
                         </div>
-                        <div class="hijo">
-                            <label for="price" class="form-label">Precio del producto:</label>
-                            <imput type="number" id="price" name="price" placeholder="Ej: 56344" class="form-input">
+                        <div class="cajita">
+                            <label for="price" class="detalles">Precio del producto:</label>
+                            <imput type="number" id="price" name="price" placeholder="Ej: 56344" class="pequeño">
                         </div>
-                        <div class="hijo">
-                            <label for="discount" class="form-label">Descuento:</label>
-                            <imput type="number" id="discount" name="discount" placeholder="Ej: 40" class="form-input">
+                        <div class="cajita">
+                            <label for="discount" class="detalles">Descuento:</label>
+                            <imput type="number" id="discount" name="discount" placeholder="Ej: 40" class="pequeño">
                         </div>
                         <div class="categoria">
-                            <label for="category" class="form-label">Categoría:</label>
-                            <select name="category" id="category" class="form-imput">
+                            <label for="category" class="detalles">Categoría:</label>
+                            <select name="category" id="category" class="pequeño">
                                 <option value="">Elegí</option>
                                 <option value="texanas">Texanas</option>
                                 <option value="botas">Botas</option>
@@ -35,13 +35,13 @@
                                 <option value="borcegos">Borcegos</option>
                             </select>
                         </div>
-                        <div class="texto">
-                            <label for="description" class="form-label">Descripción</label>
-                            <textarea name="description" id="description" class="descripcion"></textarea>
+                        <div class="desc">
+                            <label for="descripcion" class="detalles">Descripción</label>
+                            <textarea name="description" id="description" class="tex"></textarea>
                         </div>
-                        <div class="boton">
-                            <button type="submit" class="buy-now-button">Guardar producto</button>
-                            <button type="delete" class="buy-now-button">Borrar</button>
+                        <div class="bot">
+                            <button type="submit" class="botonDeEnviar">Guardar producto</button>
+                            <button type="delete" class="botonDeBorrar">Borrar</button>
                         </div>                        
                     </div>
                 </form>
