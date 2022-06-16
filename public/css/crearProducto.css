@@ -15,6 +15,7 @@ h1 {
     display: flex;
     align-items: center;
     margin-top: 5%;
+    padding: 10px;
     /* border: solid 1px rgb(118, 118, 118); */
 }
 .desc{
@@ -47,6 +48,7 @@ h1 {
     display:flex;
     flex-direction: column;
     margin-top: 5%;
+
   /*   border: solid 1px rgb(118, 118, 118); */
 }
 
@@ -55,6 +57,11 @@ h1 {
     display: flex;
     justify-content: space-around;
 }
+
+.detalles{
+    font-weight: bold;
+}
+
 @media (min-width:361px){
     /*----------------MOBILE-MAIN------*/
     h1 {
@@ -63,10 +70,6 @@ h1 {
     .hijo{
         width: 361px;
     }
-}
-
-.detalle{
-    font-weight: bold;
 }
 
 @media (min-width:769px){
