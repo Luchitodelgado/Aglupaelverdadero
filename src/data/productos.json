@@ -1,74 +1,86 @@
 [
-    {
-        "id": 1,
-        "name": "IRGIZI NEGRO",
-        "price": "$32.000",
-        "discount": "",
-        "category": "texanas",
-        "description": "Texana lisa con aplique metálico en puntera.",
-        "image": "bota 1.webp"
-       },
-       {
-        "id": 2,
-        "name": "IRGIZI NEGRO",
-        "price": "$20.000",
-        "discount": 3,
-        "category": "texanas",
-        "description": "Texana de cuero liso con detalle de costuras.",
-        "image": "bota 2.webp"
-       },
-       {
-        "id": 3,
-        "name": "TEXANAS INTENSE",
-        "price": "$25.000",
-        "discount": "",
-        "category": "texanas",
-        "description": "Texanas con caña más alta y bordadas a tono.",
-        "image": "bota3.webp"
-       },
-       {
-        "id": 4,
-        "name": "IMORI NEGRO",
-        "description": "Bota de cuero con detalle de estilo texano.",
-        "price": "$16.000",
-        "discount":"",
-        "image": "bota4.webp",
-        "category": "texanas"
-       },
-       {
-        "id": 5,
-        "name": "IRGIZI HUESO",
-        "description": "Texana de cuero liso con detalle de costuras",
-        "price": "$36.000",
-        "discount": "",
-        "image": "bota5.webp",
-        "category": "texanas"
-       },
-       {
-        "id": 6,
-        "name": "LIMAI NEGRO",
-        "description": "Bota de cuero graneado con detalle de cierres metálicos",
-        "price": "$25.000",
-        "discount": "",
-        "image": "bota6.webp",
-        "category": "texanas"
-       },
-       {
-        "id": 7,
-        "name": "IMORI NEGRO",
-        "description": "Texana con detalle de recortes, costuras y cierre lateral",
-        "price": "$21.450",
-        "discount": "",
-        "image": "bota7.webp",
-        "category": "texanas"
-       },
-       {
-        "id": 8,
-        "name": "TEXANA MEI",
-        "description": "Texana confeccionadas en cuero, con un bordado en contraste.",
-        "price": "$19.500",
-        "discount": "",
-        "image": "bota8.webp",
-        "category": "texanas"
-       }
+ {
+  "id": 1,
+  "name": "IRGIZI NEGRO",
+  "price": "$32.000",
+  "discount": "",
+  "category": "texanas",
+  "description": "Texana lisa con aplique metálico en puntera.",
+  "image": "bota 1.webp"
+ },
+ {
+  "id": 2,
+  "name": "IRGIZI NEGRO",
+  "price": "$20.000",
+  "discount": 3,
+  "category": "texanas",
+  "description": "Texana de cuero liso con detalle de costuras.",
+  "image": "bota 2.webp"
+ },
+ {
+  "id": 3,
+  "name": "TEXANAS INTENSE",
+  "price": "$25.000",
+  "discount": "",
+  "category": "texanas",
+  "description": "Texanas con caña más alta y bordadas a tono.",
+  "image": "bota3.webp"
+ },
+ {
+  "id": 4,
+  "name": "IMORI NEGRO",
+  "description": "Bota de cuero con detalle de estilo texano.",
+  "price": "$16.000",
+  "discount": "",
+  "image": "bota4.webp",
+  "category": "texanas"
+ },
+ {
+  "id": 5,
+  "name": "IRGIZI HUESO",
+  "description": "Texana de cuero liso con detalle de costuras",
+  "price": "$36.000",
+  "discount": "",
+  "image": "bota5.webp",
+  "category": "texanas"
+ },
+ {
+  "id": 6,
+  "name": "LIMAI NEGRO",
+  "description": "Bota de cuero graneado con detalle de cierres metálicos",
+  "price": "$25.000",
+  "discount": "",
+  "image": "bota6.webp",
+  "category": "texanas"
+ },
+ {
+  "id": 7,
+  "name": "IMORI NEGRO",
+  "description": "Texana con detalle de recortes, costuras y cierre lateral",
+  "price": "$21.450",
+  "discount": "",
+  "image": "bota7.webp",
+  "category": "texanas"
+ },
+ {
+  "id": 8,
+  "name": "TEXANA MEI",
+  "description": "Texana confeccionadas en cuero, con un bordado en contraste.",
+  "price": "$19.500",
+  "discount": "",
+  "image": "bota8.webp",
+  "category": "texanas"
+ },
+ {
+  "id": 9,
+  "description": "",
+  "image": "default-image.png",
+  "category": ""
+ },
+ {
+  "id": 10,
+  "description": "",
+  "image": "default-image.png",
+  "category": ""
+ }
 ]
