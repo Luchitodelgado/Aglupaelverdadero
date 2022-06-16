@@ -64,6 +64,11 @@ h1 {
         width: 361px;
     }
 }
+
+.detalle{
+    font-weight: bold;
+}
+
 @media (min-width:769px){
     h1 {
         font-size: 70px;
