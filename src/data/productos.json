@@ -70,5 +70,11 @@
   "discount": "",
   "image": "bota8.webp",
   "category": "texanas"
+ },
+ {
+  "id": 9,
+  "description": "",
+  "image": "default-image.png",
+  "category": ""
  }
 ]
