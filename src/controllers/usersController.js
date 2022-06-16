@@ -21,7 +21,7 @@ const controller = {
 			description: req.body.description,
 			price: req.body.price,
 			discount: req.body.discount,
-			image: "default-image.png",
+			image: "image.png",
 			category: req.body.category
 		}
 		products.push(newUser);

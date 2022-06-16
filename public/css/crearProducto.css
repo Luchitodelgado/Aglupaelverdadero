@@ -8,9 +8,7 @@ h1 {
     padding: 5px;
     display: block;
 }
-
 .cajita{
-
     flex-direction: row;
     flex-wrap: nowrap;
     width: 150%;
