@@ -70,5 +70,14 @@
   "discount": "",
   "image": "bota8.webp",
   "category": "texanas"
+ },
+ {
+  "id": 9,
+  "name": "Texanas Cuero Real",
+  "description": "Texana con cuero  y apliques alas",
+  "price": "$33200",
+  "discount": "",
+  "image": "texanas.png",
+  "category": "texanas"
  }
 ]
