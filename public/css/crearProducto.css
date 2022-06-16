@@ -8,9 +8,7 @@ h1 {
     padding: 5px;
     display: block;
 }
-
 .cajita{
-
     flex-direction: row;
     flex-wrap: nowrap;
     width: 150%;
@@ -18,6 +16,8 @@ h1 {
     align-items: center;
     margin-top: 5%;
     border: solid 1px rgb(118, 118, 118);
+    border-radius: 5px;
+    padding: 10px;
 }
 .desc{
     margin-top: 5%;
