@@ -16,6 +16,7 @@ router.post('/', productosController.store);
 router.get('/edit/:id', productosController.edit);
 router.patch('/edit/:id', productosController.update);
 
+/* borrar producto */
 router.delete('/delete/:id', productosController.destroy);
 
 
