@@ -19,6 +19,7 @@ const controller = {
 		let newUser = {
 			nombreapellido: req.body.nombreapellido,
 			nombreuser: req.body.nombreuser,
+			email: req.body.email,
 			fechadenacimiento: req.body.fechadenacimiento,
 			avatar: 'prueba1',
 			password: req.body.password,
