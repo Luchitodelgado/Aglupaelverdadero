@@ -1,3 +1,12 @@
 [
-    
+ {
+  "nombreapellido": "asd",
+  "nombreuser": "asd",
+  "fechadenacimiento": "2022-04-06",
+  "avatar": "prueba1",
+  "password": [
+   "asd",
+   "asd"
+  ]
+ }
 ]

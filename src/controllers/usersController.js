@@ -16,16 +16,15 @@ const controller = {
 	store: (req, res) => {
 		/* res.send("Producto nuevo agregado"); */
 		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-		let newUser = {		
-			name: req.body.name,			
-			description: req.body.description,
-			price: req.body.price,
-			discount: req.body.discount,
-			image: "image.png",
-			category: req.body.category
+		let newUser = {
+			nombreapellido: req.body.nombreapellido,
+			nombreuser: req.body.nombreuser,
+			fechadenacimiento: req.body.fechadenacimiento,
+			avatar: 'prueba1',
+			password: req.body.password,
 		}
-		products.push(newUser);
-		fs.writeFileSync(usersFilePath, JSON.stringify(products, null, " "));
+		users.push(newUser);
+		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
 		res.redirect("/ingresa");
 	},
 	create: (req, res) => {
