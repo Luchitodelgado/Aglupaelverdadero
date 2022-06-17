@@ -1,12 +1,12 @@
 [
  {
-  "id": 1,
+  "id": "1",
   "name": "IRGIZI NEGRO",
-  "price": "$32.000",
-  "discount": "",
-  "category": "texanas",
   "description": "Texana lisa con aplique metálico en puntera.",
-  "image": "bota 1.webp"
+  "price": "",
+  "discount": "",
+  "image": "bota 1.webp",
+  "category": "zapatillas"
  },
  {
   "id": 2,
