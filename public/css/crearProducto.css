@@ -16,12 +16,14 @@ h1 {
     align-items: center;
     margin-top: 5%;
    /*  padding: 10px; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* border: solid 1px rgb(118, 118, 118); */
+    justify-content: center;
 }
 .desc{
     margin-top: 5%;
     padding: 10px;
+    margin-left: 5px;
    /*  border: solid 1px rgb(118, 118, 118); */
 }
 
