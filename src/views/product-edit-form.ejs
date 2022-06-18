@@ -39,6 +39,13 @@
                         <label for="description" class="form-label">Descipción:</label>
                         <textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
                     </div>
+
+                    <div class="contenedor-input">
+                        <label>Foto de usuario:</label>
+                        <br>
+                        <input type="file" value="<%= productToEdit.image %>" required name="fotoProducto">
+                    </div>
+
                     <div class="col-12">
                         <button type="submit" class="buy-now-button">Guardar producto</button>
                     </div>

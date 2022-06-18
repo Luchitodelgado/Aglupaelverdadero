@@ -29,5 +29,27 @@
    "pato2501",
    "pato2501"
   ]
+ },
+ {
+  "nombreapellido": "ludmi gomez",
+  "nombreuser": "ludmi2501",
+  "email": "ludmi1628@gmail.com",
+  "fechadenacimiento": "1994-07-05",
+  "avatar": "prueba1",
+  "password": [
+   "123",
+   "123"
+  ]
+ },
+ {
+  "nombreapellido": "ludmi gomez",
+  "nombreuser": "ludmi2501",
+  "email": "ludmi1628@gmail.com",
+  "fechadenacimiento": "1996-03-01",
+  "avatar": "prueba1",
+  "password": [
+   "123456",
+   "123456"
+  ]
  }
 ]
