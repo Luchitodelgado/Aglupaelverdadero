@@ -10,6 +10,7 @@
                     <h1 class="titulo">Crear producto</h1>
                 </div>            
             </div>
+
             <div class="">
                 <form action="/productos" method="POST" enctype="multipart/form-data">
                     <div class="listados">
@@ -17,14 +18,17 @@
                             <label for="name" class="detalles">Nombre del producto</label>
                             <input type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas" class="pequeño">
                         </div>
+
                         <div class="cajita">
                             <label for="price" class="detalles">Precio del producto</label>
                             <input type="number" id="price" name="price" placeholder="Ej: 56344" class="pequeño">
                         </div>
+
                         <div class="cajita">
                             <label for="discount" class="detalles">Descuento</label>
                             <input type="number" id="discount" name="discount" placeholder="Ej: 40" class="pequeño">
                         </div>
+
                         <div class="cajita">
                             <label for="category" class="detalles">Categoría</label>
                             <select name="category" id="category" class="pequeño">
@@ -35,6 +39,7 @@
                                 <option value="borcegos">Borcegos</option>
                             </select>
                         </div>
+
                         <div class="desc">
                             <label for="descripcion" class="detalles">Descripción</label>
                             <textarea name="description" id="description" class="tex"></textarea>
@@ -44,7 +49,7 @@
                         <div class="">
                             <label for="detail" class="detalles">Foto de producto</label>
                             <br>
-                            <input type="file" class="foti" required name="file">
+                            <input type="file" class="foti" required name="fotoProducto">
                         </div>
 
                         <div class="bot">
