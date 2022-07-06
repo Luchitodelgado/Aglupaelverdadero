@@ -9,13 +9,21 @@ const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 const controller = {
 	// Root - Show all products
 	productos: (req, res) => {
-		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		/* let id = req.params.id */
-		
-		res.render('productos', {
-			productos
+		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		const borcegos = productos.filter(function(borcegos){
+			return productos.category === "borcegos"
+		const zapatillas = productos.filter(function(zapatillas){
+			return productos.category === "zapatillas"
+		const texanas = productos.filter(function(texanas){
+			return productos.category === "texanas"
 		})
-	},
+		},
+			/* let id = req.params.id */
+		
+	/* 	res.render('productos', { */
+	/* 		productos */
+	/* 	}) */
+	
 
 
 	// Detail - Detail from one product
@@ -23,10 +31,9 @@ const controller = {
 		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		let id = req.params.id;
 		let product = productos.find(product => product.id == id);
-		res.render('detail', {
-			product
-		})
+		res.render('detail', product)
 	},
+
 	//*crear fromulario crear//
 	create: (req, res) => {
 		res.render('crearProducto')
@@ -87,9 +94,6 @@ const controller = {
 
 		res.redirect("/productos");
 	}
-
-
-
 
 };
 
