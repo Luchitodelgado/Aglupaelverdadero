@@ -49,7 +49,7 @@ const controller = {
 			description: req.body.description,
 			price: req.body.price,
 			discount: req.body.discount,
-			image: "image.png",
+			image: req.file.filename,
 			category: req.body.category
 		}
 		products.push(newProduct);
@@ -75,7 +75,7 @@ const controller = {
 			description: req.body.description,
 			price: req.body.price,
 			discount: req.body.discount,
-			image: productosToEdit.image,
+			image: req.file.filename,
 			category: req.body.category
 		}
 

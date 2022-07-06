@@ -21,7 +21,7 @@ const controller = {
 			nombreuser: req.body.nombreuser,
 			email: req.body.email,
 			fechadenacimiento: req.body.fechadenacimiento,
-			avatar: 'prueba1',
+			avatar:req.file.filename,
 			password: req.body.password,
 		}
 		users.push(newUser);
