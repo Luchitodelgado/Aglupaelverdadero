@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const zapatillasFilePath = path.join(__dirname, '../data/zapatillas.json');
-const zapatillas = JSON.parse(fs.readFileSync(zapatillasFilePath, 'utf-8'));
+const productosFilePath = path.join(__dirname, '../data/productos.json');
+const zapatillas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 const controller = {
 	zapatillas: (req, res) => {
@@ -14,7 +14,7 @@ const controller = {
 
     // Detail - Detail from one product
 	detail: (req, res) => {
-		const zapatillas = JSON.parse(fs.readFileSync(zapatillasFilePath, 'utf-8'));
+		const zapatillas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		let id = req.params.id;
 		let product = zapatillas.find(product => product.id == id);
 		res.render('detail', {

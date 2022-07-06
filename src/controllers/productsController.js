@@ -10,11 +10,26 @@ const controller = {
 	// Root - Show all products
 	productos: (req, res) => {
 		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		/* let id = req.params.id */
+		let productsTexanas = productos.filter((productsTexanas)=>{
+			return productsTexanas.category == "texanas"
+		})
+
+		let productsBorcegos = productos.filter((productsBorcegos)=>{
+			return productsBorcegos.category === "borcegos"
+		})
+
+		let productsBotas = productos.filter((productsBotas)=>{
+			return productsBotas.category === "botas"
+		})
+
+		let productsZapatillas = productos.filter((productsZapatillas)=>{
+			return productsZapatillas.category === "zapatillas"
+		})
 		
 		res.render('productos', {
-			productos
-		})
+			productos: productsTexanas, productsBorcegos: productsBorcegos, 
+			productsBotas: productsBotas, productsZapatillas: productsZapatillas
+	})
 	},
 
 
