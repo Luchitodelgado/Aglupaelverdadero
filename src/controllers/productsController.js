@@ -9,21 +9,28 @@ const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 const controller = {
 	// Root - Show all products
 	productos: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		const borcegos = productos.filter(function(borcegos){
-			return productos.category === "borcegos"
-		const zapatillas = productos.filter(function(zapatillas){
-			return productos.category === "zapatillas"
-		const texanas = productos.filter(function(texanas){
-			return productos.category === "texanas"
+		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		let productsTexanas = productos.filter((productsTexanas)=>{
+			return productsTexanas.category == "texanas"
 		})
-		},
-			/* let id = req.params.id */
+
+		let productsBorcegos = productos.filter((productsBorcegos)=>{
+			return productsBorcegos.category === "borcegos"
+		})
+
+		let productsBotas = productos.filter((productsBotas)=>{
+			return productsBotas.category === "botas"
+		})
+
+		let productsZapatillas = productos.filter((productsZapatillas)=>{
+			return productsZapatillas.category === "zapatillas"
+		})
 		
-	/* 	res.render('productos', { */
-	/* 		productos */
-	/* 	}) */
-	
+		res.render('productos', {
+			productos: productsTexanas, productsBorcegos: productsBorcegos, 
+			productsBotas: productsBotas, productsZapatillas: productsZapatillas
+	})
+	},
 
 
 	// Detail - Detail from one product

@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const borcegosFilePath = path.join(__dirname, '../data/borcegos.json');
-const borcegos = JSON.parse(fs.readFileSync(borcegosFilePath, 'utf-8'));
+const productosFilePath = path.join(__dirname, '../data/productos.json');
+const borcegos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 const controller = {
 	borcegos: (req, res) => {
@@ -14,7 +14,7 @@ const controller = {
 
   // Detail - Detail from one product
 	detail: (req, res) => {
-		const borcegos = JSON.parse(fs.readFileSync(borcegosFilePath, 'utf-8'));
+		const borcegos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		let id = req.params.id;
 		let product = borcegos.find(product => product.id == id);
 		res.render('detail', {
