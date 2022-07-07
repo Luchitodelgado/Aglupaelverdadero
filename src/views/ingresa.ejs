@@ -5,6 +5,16 @@
   <%- include('partials/headerNavbar') %>
   <main>
     <h1>Ingresá</h1>
+    <% if (typeof errors !="undefined"){%>
+    <p style="color:red">ERROR</p>
+    <ul>
+      <% for (let i = 0; i < errors.length; i++){%>
+      <li>
+        <%=errors[i].msg%>
+      </li>
+    <% } %>
+    </ul>
+    <% } %>
     <form action="/login" method="POST">
       <div class="login">
         <input class="input-hijo" type="nombre-usuario" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de Usuario"></input>
