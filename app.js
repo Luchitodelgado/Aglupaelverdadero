@@ -7,7 +7,8 @@ const methodOverride = require('method-override');
 const mainRouter = require('./src/routes/mainRouter'); // Rutas main
 const userRouter = require('./src/routes/userRouter'); // Rutas main
 const productos = require ("./src/routes/productsRouter");
-const borcegos = require ("./src/routes/borcegosRouter");
+const borcegos = require ('./src/routes/productsRouter')
+/* const borcegos = require ("./src/routes/borcegosRouter"); */
 const zapatillas = require ("./src/routes/zapatillasRouter");
 const botas = require ("./src/routes/botasRouter")
 
@@ -24,6 +25,7 @@ app.use('/', mainRouter);
 app.use('/', userRouter);
 app.use("/productos", productos);
 app.use("/borcegos", borcegos);
+/* app.use("/borcegos", borcegos); */
 app.use("/zapatillas", zapatillas);
 app.use("/botas",botas);
 

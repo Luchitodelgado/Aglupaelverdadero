@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require ('multer');
 const path = require('path');
+const bcrypt = require('bcryptjs');
 
 const userController = require('../controllers/usersController');
 
@@ -19,7 +20,7 @@ const storage = multer.diskStorage({
 const upload = multer ({storage})
 
 router.get("/registrarte", userController.registro)
-router.get("/ingresa", userController.ingresar)
+router.get("/ingresa", userController.ingresa)
 router.post('/users', upload.single("usuario"), userController.store);
 router.get('/users', userController.create )
 module.exports = router;

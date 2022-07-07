@@ -1,4 +1,4 @@
-const fs = require('fs');
+/* const fs = require('fs');
 const path = require('path');
 
 const productosFilePath = path.join(__dirname, '../data/productos.json');
@@ -24,4 +24,4 @@ const controller = {
 
 };
 
-module.exports = controller;
+module.exports = controller; */

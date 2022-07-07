@@ -8,7 +8,7 @@ const controller = {
 	registro: (req, res) => {
 		res.render("registrarte")
 	},
-	ingresar: (req, res) => {
+	ingresa: (req, res) => {
 		res.render("ingresa")
 	},
 
