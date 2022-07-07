@@ -11,7 +11,6 @@ const controller = {
 	ingresar: (req, res) => {
 		res.render("ingresa")
 	},
-
 	// Create -  Method to store
 	store: (req, res) => {
 		/* res.send("Producto nuevo agregado"); */
