@@ -11,6 +11,29 @@ const controller = {
 	ingresar: (req, res) => {
 		res.render("ingresa")
 	},
+	processLogin: function(req,res){
+		let errors = validationResult(req);
+
+		if(errors.isEmpty()){
+		
+		for (let i = 0; i < users.length; i++){
+			if (users[i].email == req.body.email){
+				if(bcrypt.compareSync(req.body.password, users[i].password)){
+					let usuarioALoguearse = users[i];
+				}
+			}
+		}
+		if(usuarioALoguearse == undefined){
+			return res.render('login',{errors: [
+				{msg:"Credenciales invalidas"}
+			]});
+		}
+		req.session.usuarioLogueado = usuarioALoguearse;
+		res.render("sucess");
+		}else{
+			return res.render("ingresa",{errors: errors.errors});
+		}
+	},
 	// Create -  Method to store
 	store: (req, res) => {
 		/* res.send("Producto nuevo agregado"); */
