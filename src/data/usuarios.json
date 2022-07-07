@@ -51,5 +51,16 @@
    "123456",
    "123456"
   ]
+ },
+ {
+  "nombreapellido": "Agustina Zárate",
+  "nombreuser": "agus-99",
+  "email": "Agusti_zarate@hotmail.com",
+  "fechadenacimiento": "1999-06-30",
+  "avatar": "usuario1657205085570.jpg",
+  "password": [
+   "AZ300699",
+   "AZ300699"
+  ]
  }
 ]
