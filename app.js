@@ -27,7 +27,7 @@ app.use("/productos", productos);
 app.use("/borcegos", borcegos);
 app.use("/zapatillas", zapatillas);
 app.use("/botas",botas);
-app.use(session({secret:"Mensaje secreto"}));
+app.use(session({secret: "mensaje secreto", resave: true, saveUninitialized: true }));
 
 app.listen(3000, () => {
     console.log("Servidor corriendo en http://localhost:3000")});

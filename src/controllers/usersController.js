@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 
-
 const controller = {
 
 	registro: (req, res) => {
@@ -19,19 +18,19 @@ const controller = {
 		for (let i = 0; i < users.length; i++){
 			if (users[i].email == req.body.email){
 				if(bcrypt.compareSync(req.body.password, users[i].password)){
-					let usuarioALoguearse = users[i];
+					let usuarioAloguearse = users[i];
 				}
 			}
 		}
-		if(usuarioALoguearse == undefined){
-			return res.render('login',{errors: [
+		if(usuarioAloguearse == undefined){
+			return res.render('/ingresa',{errors: [
 				{msg:"Credenciales invalidas"}
 			]});
 		}
-		req.session.usuarioLogueado = usuarioALoguearse;
-		res.render("sucess");
+		req.session.usuarioLogueado = usuarioAloguearse;
+		res.redirect("/");
 		}else{
-			return res.render("ingresa",{errors: errors.errors});
+			return res.render("/ingresa",{errors: errors.errors});
 		}
 	},
 	// Create -  Method to store

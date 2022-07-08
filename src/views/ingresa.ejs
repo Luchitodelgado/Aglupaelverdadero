@@ -15,10 +15,13 @@
     <% } %>
     </ul>
     <% } %>
-    <form action="/login" method="POST">
+    <form action="/ingresa" method="POST">
       <div class="login">
         <input class="input-hijo" type="nombre-usuario" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de Usuario"></input>
       </div>
+        <div class="login">
+          <input class="input-hijo" type="email" required name="email" id="email" placeholder="Email"></input>
+          </div>
       <div class="login">
         <input class="input-hijo" type="password" name="password" id="password" placeholder="Contraseña"></input>
       </div>
