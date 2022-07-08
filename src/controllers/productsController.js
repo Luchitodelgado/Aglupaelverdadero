@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const productosFilePath = path.join(__dirname, '../data/productos.json');
-const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 
 
@@ -13,22 +12,35 @@ const controller = {
 		let productsTexanas = productos.filter((productsTexanas)=>{
 			return productsTexanas.category == "texanas"
 		})
-
-		let productsBorcegos = productos.filter((productsBorcegos)=>{
-			return productsBorcegos.category === "borcegos"
-		})
-
-		let productsBotas = productos.filter((productsBotas)=>{
-			return productsBotas.category === "botas"
-		})
-
-		let productsZapatillas = productos.filter((productsZapatillas)=>{
-			return productsZapatillas.category === "zapatillas"
-		})
-		
 		res.render('productos', {
-			productos: productsTexanas, productsBorcegos: productsBorcegos, 
-			productsBotas: productsBotas, productsZapatillas: productsZapatillas
+			productos: productsTexanas
+	})
+	},
+	borcegos: (req, res) => {
+		const borcegos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		let productsBorcegos = borcegos.filter((productsBorcegos)=>{
+			return productsBorcegos.category == "borcegos"
+		})
+		res.render('borcegos', {
+			borcegos: productsBorcegos
+	})
+    },
+	botas: (req, res) => {
+		const botas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		let productsBotas = botas.filter((productsBotas)=>{
+			return productsBotas.category == "botas"
+		})
+		res.render('botas', {
+			botas: productsBotas
+	})
+	},
+	zapatillas: (req, res) => {
+		const zapatillas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		let productsZapatillas = zapatillas.filter((productsZapatillas)=>{
+			return productsZapatillas.category == "zapatillas"
+		})
+		res.render('zapatillas', {
+			zapatillas: productsZapatillas
 	})
 	},
 
