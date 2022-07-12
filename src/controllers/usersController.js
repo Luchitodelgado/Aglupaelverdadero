@@ -40,7 +40,7 @@ const controller = {
 	},
 	// Create -  Method to store
 	store: (req, res) => {
-		/* res.send("Producto nuevo agregado"); */
+
 		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 		let newUser = {
 			nombreapellido: req.body.nombreapellido,
@@ -48,14 +48,14 @@ const controller = {
 			email: req.body.email,
 			fechadenacimiento: req.body.fechadenacimiento,
 			avatar:req.file.filename,
-			password: bcryptjs.hashSync(req.body.password, 10),
+			password: bcryptjs.hashSync(req.body.password, 10)
 		}
 		users.push(newUser);
-		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
 		res.redirect("/ingresa");
 	},
 	create: (req, res) => {
-		res.render('crearProducto')
+		res.render('ingresa')
 	}
 };
 

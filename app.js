@@ -8,6 +8,7 @@ const mainRouter = require('./src/routes/mainRouter'); // Rutas main
 const userRouter = require('./src/routes/userRouter'); // Rutas main
 const productos = require ("./src/routes/productsRouter");
 const session = require('express-session');
+const { create } = require("domain");
 
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, '/src/views'));
