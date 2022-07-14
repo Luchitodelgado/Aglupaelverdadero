@@ -21,7 +21,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', mainRouter);
 app.use('/', userRouter);
-app.use("/", productos);
+app.use('/', productos);
 app.use(session({secret:"Mensaje secreto"}));
 
 app.listen(3000, () => {
