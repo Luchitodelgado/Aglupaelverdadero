@@ -7,13 +7,13 @@
     <section class="global-cont">
 
         <div class="welcome">   
-        <h1 class="welcome">Hola, <%= locals.userLogged.firstName %></h1>
+        <h1 class="welcome">Hola, <%= usuario.nombre %></h1>
         </div> 
 
         <section class="image-data-editButton">
 
             <div class="image-and-data">
-                <img id="profile-image" src="/img/users/<%=locals.userLogged.profileImage%>" alt="imagen">
+                <img id="profile-image" src="/img/users/<%=usuario.filname%>" alt="imagen">
             
                 <div class="data-cont" >  
                     <h2>Estos son tus datos:</h2>
