@@ -56,7 +56,12 @@ const controller = {
 	},
 	create: (req, res) => {
 		res.render('ingresa')
-	}
+	},
+	profile: (req,res) => {
+        let cssSheets = ["profile"];
+        let title = "Tu cuenta";
+        res.render("users/profile.ejs", {cssSheets, title})
+    }
 };
 
 module.exports = controller;
