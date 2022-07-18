@@ -7,11 +7,11 @@
 <p>Entre las tareas que habiamos acordado, volver a retomar las reuniones FIJAS semanales, por lo menos 2 reuniones semanales, antes de la clase en el caso de no poderse en otro horario. SIN EXCEPCIÓN, y si alguno por alguna razón extraordinaria no puede, que los demás se junten igual obligatoriamente.Este punto es fundamental para poder mantener un hilo y trabajar el sprint a lo largo de las dos semanas y no los ultimos días con atraso.<p>
 
 <h2>CONTINUAR HACIENDO<h2>
-<p>
-<p>
-<h2>Hacer menos<h2>
+<p>Seguir comunicandonos cuando codeamos.Continuar trabajando de la forma que ejecutamos el sprint 4.</p>
 
-<h3> Dejar de hacer<h3>
+<h2>Hacer menos<h2>
+<p>No comunicar avances o conflictos.</p>
+
 
 
 

@@ -20,7 +20,7 @@ const controller = {
 
 		let productsBotas = productos.filter((productsBotas)=>{
 			return productsBotas.category === "botas"
-		})
+	})
 
 		let productsZapatillas = productos.filter((productsZapatillas)=>{
 			return productsZapatillas.category === "zapatillas"
