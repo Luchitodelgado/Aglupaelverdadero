@@ -26,19 +26,21 @@ router.get('/botas', productosController.botas);
 router.get('/zapatillas', productosController.zapatillas);
 
 /*** GET ONE PRODUCT ***/
-router.get('/detail/:id', productosController.detail);
+router.get('/productos/detail/:id', productosController.detail);
 
 /**crear productos */
-router.get('/create', productosController.create);
+router.get('/productos/create', productosController.create);
 router.post('/', upload.single("fotoProducto"), productosController.store);
 
 /**Edicion productos*/
-router.get('/edit/:id', productosController.edit);
-router.patch('/edit/:id', upload.single("fotoProducto"), productosController.update);
+router.get('/productos/edit/:id', productosController.edit);
+router.patch('/productos/edit/:id', upload.single("fotoProducto"), productosController.update);
 
 /* borrar producto */
-router.delete('/delete/:id', productosController.destroy);
+router.delete('/productos/delete/:id', productosController.destroy);
 
+// CARRITO
+router.get("/productos/carrito",productosController.carrito);
 
 
 module.exports = router;

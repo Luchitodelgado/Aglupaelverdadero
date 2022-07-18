@@ -100,7 +100,13 @@ const controller = {
 		fs.writeFileSync(productosFilePath, JSON.stringify(finalProducts, null, " "));
 
 		res.redirect("/productos");
-	}
+	},
+
+	carrito: (req, res) => {
+        let cssSheets = ["carrito"];
+        let title = "Carrito";
+        return res.render("carrito", {cssSheets, title})
+    }
 
 };
 
