@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const {validationResult}=require('express-validator')
-const bcryptjs=require('bcryptjs')
+const bcrypt =require('bcrypt')
 
 
 const controller = {
@@ -48,7 +48,7 @@ const controller = {
 			email: req.body.email,
 			fechadenacimiento: req.body.fechadenacimiento,
 			avatar:req.file.filename,
-			password: bcryptjs.hashSync(req.body.password, 10)
+			password: bcrypt.hashSync(req.body.password, 10)
 		}
 		users.push(newUser);
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));

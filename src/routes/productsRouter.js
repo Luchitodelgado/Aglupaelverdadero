@@ -39,7 +39,8 @@ router.patch('/productos/edit/:id', upload.single("fotoProducto"), productosCont
 /* borrar producto */
 router.delete('/productos/delete/:id', productosController.destroy);
 
-
+// CARRITO
+router.get("/productos/carrito",productosController.carrito);
 
 
 module.exports = router;
