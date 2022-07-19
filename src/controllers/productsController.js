@@ -7,13 +7,13 @@ const productosFilePath = path.join(__dirname, '../data/productos.json');
 
 const controller = {
 	// Root - Show all products
-	productos: (req, res) => {
-		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let productsTexanas = productos.filter((productsTexanas)=>{
+	texanas: (req, res) => {
+		const texanas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		let productsTexanas = texanas.filter((productsTexanas)=>{
 			return productsTexanas.category == "texanas"
 		})
-		res.render('productos', {
-			productos: productsTexanas
+		res.render('texanas', {
+			texanas: productsTexanas
 	})
 	},
 	borcegos: (req, res) => {
@@ -113,6 +113,13 @@ const controller = {
 		fs.writeFileSync(productosFilePath, JSON.stringify(finalProducts, null, " "));
 
 		res.redirect("/productos");
+	},
+	carrito: (req,res)=>{
+		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		res.render('carrito')
+	},
+	productos:(req,res)=>{
+		res.render('shopMujer')
 	}
 
 
