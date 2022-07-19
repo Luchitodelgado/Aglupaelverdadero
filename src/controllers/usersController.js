@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-const {validationResult}=require('express-validator')
-const bcrypt =require('bcrypt')
+const {validationResult}=require('express-validator');
+const bcrypt =require('bcrypt');
 
 
 const controller = {
