@@ -51,7 +51,8 @@ const controller = {
 
 		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 		let newUser = {
-			nombreapellido: req.body.nombreapellido,
+			nombre: req.body.nombre,
+			apellido: req.body.apellido,
 			nombreuser: req.body.nombreuser,
 			email: req.body.email,
 			fechadenacimiento: req.body.fechadenacimiento,
@@ -66,7 +67,17 @@ const controller = {
 	create: (req, res) => {
 		res.render('ingresa')
 	},
-
+	profile: (req,res) => {
+		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+		/* let id = req.params.id; */
+		let usuario = users.find(usuario => usuario.id == id);
+		res.render('perfil', {
+			usuario
+		})
+       /*  let cssSheets = ["perfil"];
+        let title = "Tu cuenta"; */
+        /* res.render("perfil", {cssSheets, title}) */
+    }
 };
 
 

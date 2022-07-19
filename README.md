@@ -1,7 +1,10 @@
 <h1>Proyecto Integrador_ GRUPO 3</h1>
 <h2>AGLUPA CALZADOS</h2>
 <h3>Temática del Sitio</h3>
-<p>Tienda e-commerce dedicada a la venta de diferentes tipos de zapatos, para hombres y mujeres.</p>
+<p>Tienda e-commerce dedicada a la venta de diferentes tipos de calzado para mujeres.</p>
+<h3>Objetivo público</h3>
+Brindar un sitio on-line orientado a mujeres de entre 20 y 50 años, donde comprar calzado de forma rápida y segura.
+
 <h3>Páginas Referentes del Proyecto</h3>
 <ul>
     <li><a href="https://www.viamo.com/">VIAMO</a></li>
@@ -10,8 +13,8 @@
     <li><a href="https://calzadosbatistella.com.ar/shop/?gclid=CjwKCAjwjZmTBhB4EiwAynRmD0Y9NRf7Xrrq_h6r-1PsLUxqAJGkWa4kRgzXLu2f0uEm0xYnR_qcQxoCkLgQAvD_BwE">Batistella</a></li>
     <li><a href="https://www.rickysarkany.com/coleccion?gclid=CjwKCAjwjZmTBhB4EiwAynRmD0JGHnWevoQeu1A_uVu5I8WPbeFG4hXT1eImmhm24aPwkS-WLezbPRoCmBwQAvD_BwE#">Sarkany<a/></li>
   </ul>
-<h3>Objetivo público</h3>
-Brindar un sitio on-line donde comprar calzado de forma rápida y segura.
+
+
 <h3>Autores</h3>
 <ul>
   <li>
