@@ -119,7 +119,7 @@ const controller = {
 		res.render('carrito')
 	},
 	productos:(req,res)=>{
-		res.render('shopMujer')
+		res.render('productos')
 	}
 
 
