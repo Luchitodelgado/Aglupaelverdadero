@@ -25,10 +25,7 @@
   "email": "ludmi1628@gmail.com",
   "fechadenacimiento": "1996-03-01",
   "avatar": "prueba1",
-  "password": [
-   "pato2501",
-   "pato2501"
-  ]
+  "password2": "pato2501"
  },
  {
   "nombreapellido": "ludmi gomez",
@@ -84,5 +81,29 @@
    "AZ300699",
    "AZ300699"
   ]
+ },
+ {
+  "nombreapellido": "Pedro",
+  "nombreuser": "Perdona",
+  "email": "contactldelgado@gmail.com",
+  "fechadenacimiento": "2022-04-04",
+  "avatar": "usuario1657900203071.jpg",
+  "password2": "$2a$10$BLsGc.Ba4YYBKlIP7s6dguWRnEYbYPNgCSDgz.Kj0iZlrrJxBf1IO"
+ },
+ {
+  "nombreapellido": "Veronica",
+  "nombreuser": "sinUser",
+  "email": "uno@uno.com",
+  "fechadenacimiento": "2022-03-31",
+  "avatar": "usuario1657902160148.jpg",
+  "password2": "$2a$10$FPMtDAqqY84PVHlnYxr59.qp/ZSCMfBwFF.qFrhe8fItH/E826clm"
+ },
+ {
+  "nombreapellido": "Probando registro",
+  "nombreuser": "Taco molorto",
+  "email": "probando@gmail.com",
+  "fechadenacimiento": "2022-03-30",
+  "avatar": "usuario1657917842849.jpg",
+  "password2": "$2a$10$5TVuIbFiWoh.Z3gk7zS1z.DoAoK2oEefZn5ysFVvRVYvoN64bCbtG"
  }
 ]
