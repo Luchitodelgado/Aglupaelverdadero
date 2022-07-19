@@ -59,10 +59,12 @@ const controller = {
 		res.render('ingresa')
 	},
 	profile: (req,res) => {
-		/* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 		/* let id = req.params.id; */
-		/*let usuario = users.find(usuario => usuario.id == id); */
-		res.render('perfil')
+		let usuario = users.find(usuario => usuario.id == id);
+		res.render('perfil', {
+			usuario
+		})
        /*  let cssSheets = ["perfil"];
         let title = "Tu cuenta"; */
         /* res.render("perfil", {cssSheets, title}) */
