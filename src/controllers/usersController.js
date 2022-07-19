@@ -36,11 +36,11 @@ const controller = {
 					errors: [
 						{ msg: "Credenciales invalidas" }
 					]
-			
+
 				});
 			}
 			req.session.usuarioLogueado = usuarioAloguearse;
-			
+
 		} else {
 			return res.render("home", { errors: errors.errors });
 		}
@@ -67,17 +67,19 @@ const controller = {
 	create: (req, res) => {
 		res.render('ingresa')
 	},
-	profile: (req,res) => {
+	profile: (req, res) => {
 		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-		/* let id = req.params.id; */
+		id = req.params.id
 		let usuario = users.find(usuario => usuario.id == id);
-		res.render('perfil', {
-			usuario
-		})
-       /*  let cssSheets = ["perfil"];
-        let title = "Tu cuenta"; */
-        /* res.render("perfil", {cssSheets, title}) */
-    }
+		res.render('perfil', { usuario })
+
+
+
+
+		/*  let cssSheets = ["perfil"];
+		 let title = "Tu cuenta"; */
+		/* res.render("perfil", {cssSheets, title}) */
+	}
 };
 
 

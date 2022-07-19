@@ -1,109 +1,13 @@
 [
  {
-  "nombreapellido": "asd",
-  "nombreuser": "asd",
-  "fechadenacimiento": "2022-04-06",
-  "avatar": "prueba1",
-  "password": [
-   "asd",
-   "asd"
-  ]
- },
- {
-  "nombreapellido": "ludmila gomez",
-  "nombreuser": "ludmi2501",
-  "fechadenacimiento": "1996-03-01",
-  "avatar": "prueba1",
-  "password": [
-   "pato2501",
-   "pato2501"
-  ]
- },
- {
-  "nombreapellido": "ludmi gomez",
-  "nombreuser": "ludmi2501",
-  "email": "ludmi1628@gmail.com",
-  "fechadenacimiento": "1996-03-01",
-  "avatar": "prueba1",
-  "password2": "pato2501"
- },
- {
-  "nombreapellido": "ludmi gomez",
-  "nombreuser": "ludmi2501",
-  "email": "ludmi1628@gmail.com",
-  "fechadenacimiento": "1994-07-05",
-  "avatar": "prueba1",
-  "password": [
-   "123",
-   "123"
-  ]
- },
- {
-  "nombreapellido": "ludmi gomez",
-  "nombreuser": "ludmi2501",
-  "email": "ludmi1628@gmail.com",
-  "fechadenacimiento": "1996-03-01",
-  "avatar": "prueba1",
-  "password": [
-   "123456",
-   "123456"
-  ]
- },
- {
-  "nombreapellido": "Agustina Zárate",
-  "nombreuser": "agus-99",
-  "email": "Agusti_zarate@hotmail.com",
-  "fechadenacimiento": "1999-06-30",
-  "avatar": "usuario1657205085570.jpg",
-  "password": [
-   "AZ300699",
-   "AZ300699"
-  ]
- },
- {
-  "nombreapellido": "Agustina Zárate",
-  "nombreuser": "agus-99",
-  "email": "Agusti_zarate@hotmail.com",
-  "fechadenacimiento": "1999-06-30",
-  "avatar": "usuario1657232987770.jpg",
-  "password": [
-   "AZ300699",
-   "AZ300699"
-  ]
- },
- {
-  "nombreapellido": "Agustina Zárate",
-  "nombreuser": "agus-99",
-  "email": "Agusti_zarate@hotmail.com",
-  "fechadenacimiento": "1999-06-30",
-  "avatar": "usuario1657233704217.jpg",
-  "password": [
-   "AZ300699",
-   "AZ300699"
-  ]
- },
- {
-  "nombreapellido": "Pedro",
-  "nombreuser": "Perdona",
-  "email": "contactldelgado@gmail.com",
-  "fechadenacimiento": "2022-04-04",
-  "avatar": "usuario1657900203071.jpg",
-  "password2": "$2a$10$BLsGc.Ba4YYBKlIP7s6dguWRnEYbYPNgCSDgz.Kj0iZlrrJxBf1IO"
- },
- {
-  "nombreapellido": "Veronica",
-  "nombreuser": "sinUser",
-  "email": "uno@uno.com",
-  "fechadenacimiento": "2022-03-31",
-  "avatar": "usuario1657902160148.jpg",
-  "password2": "$2a$10$FPMtDAqqY84PVHlnYxr59.qp/ZSCMfBwFF.qFrhe8fItH/E826clm"
- },
- {
+    "id": 145,
   "nombreapellido": "Probando registro",
   "nombreuser": "Taco molorto",
   "email": "probando@gmail.com",
   "fechadenacimiento": "2022-03-30",
   "avatar": "usuario1657917842849.jpg",
-  "password2": "$2a$10$5TVuIbFiWoh.Z3gk7zS1z.DoAoK2oEefZn5ysFVvRVYvoN64bCbtG"
+  "password2": "$2a$10$5TVuIbFiWoh.Z3gk7zS1z.DoAoK2oEefZn5ysFVvRVYvoN64bCbtG",
+  "roleId": 1
+  
  }
 ]

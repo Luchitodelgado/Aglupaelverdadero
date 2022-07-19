@@ -31,6 +31,6 @@ router.post('/users', upload.single("usuario"), userController.store);
 router.get('/users', userController.create)
 
 // VER PERFIL
-router.get("/perfil", userController.profile);
+router.get("/perfil/:id", userController.profile);
 
 module.exports = router;
