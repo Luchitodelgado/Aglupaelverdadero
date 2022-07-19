@@ -120,6 +120,11 @@ const controller = {
 	},
 	productos:(req,res)=>{
 		res.render('productos')
+	},
+	search: (req,res)=>{		
+
+	
+		res.send('hola')
 	}
 
 

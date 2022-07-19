@@ -30,6 +30,7 @@ router.get('/carrito', productosController.carrito);
 router.post('/carrito/:id', productosController.carrito);
 /*** GET ONE PRODUCT ***/
 router.get('/productos/detail/:id', productosController.detail);
+router.get('/:barra-busqueda?', productosController.search)
 
 /**crear productos */
 router.get('/productos/create', productosController.create);
