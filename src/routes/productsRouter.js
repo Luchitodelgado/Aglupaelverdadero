@@ -24,9 +24,13 @@ router.get('/productos', productosController.productos);
 router.get('/borcegos', productosController.borcegos);
 router.get('/botas', productosController.botas);
 router.get('/zapatillas', productosController.zapatillas);
+router.get('/texanas', productosController.texanas);
 
+router.get('/carrito', productosController.carrito);
+router.post('/carrito/:id', productosController.carrito);
 /*** GET ONE PRODUCT ***/
 router.get('/productos/detail/:id', productosController.detail);
+router.get('/:barra-busqueda?', productosController.search)
 
 /**crear productos */
 router.get('/productos/create', productosController.create);
@@ -39,8 +43,7 @@ router.patch('/productos/edit/:id', upload.single("fotoProducto"), productosCont
 /* borrar producto */
 router.delete('/productos/delete/:id', productosController.destroy);
 
-// CARRITO
-router.get("/productos/carrito",productosController.carrito);
+
 
 
 module.exports = router;

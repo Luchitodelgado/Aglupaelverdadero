@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head') %>
-<body>
-  <%- include('partials/headerNavbar') %>
-  <main>
-    <h1>Ingresá</h1>
-    <% if (typeof errors !="undefined"){%>
-    <p style="color:red">ERROR</p>
-    <ul>
-      <% for (let i = 0; i < errors.length; i++){%>
-      <li>
-        <%=errors[i].msg%>
-      </li>
-    <% } %>
-    </ul>
-    <% } %>
-    <form action="/ingresa" method="POST">
-      <div class="login">
-        <input class="input-hijo" type="nombre-usuario" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de Usuario"></input>
-      </div>
-        <div class="login">
-          <input class="input-hijo" type="email" required name="email" id="email" placeholder="Email"></input>
-          </div>
-      <div class="login">
-        <input class="input-hijo" type="password" name="password" id="password" placeholder="Contraseña"></input>
-      </div>
-      <button class="boton-login" type="submit">Enviar</button>
-    </form>
-  </main>
-  <%- include('partials/footer') %>
-</body>
+<%- include('partials/head') %>
+
+  <body>
+    <%- include('partials/headerNavbar') %>
+      <main>
+        <h1>Ingresá</h1>
+        <% if (typeof errors !="undefined" ){%>
+          <p style="color:red">ERROR</p>
+          <ul>
+            <% for (let i=0; i < errors.length; i++){%>
+              <li>
+                <%=errors[i].msg%>
+              </li>
+              <% } %>
+          </ul>
+          <% } %>
+            <form action="/ingresa" method="POST">
+              <div class="login">
+                <input class="input-hijo" type="email" required name="email" id="email" placeholder="Email"></input>
+              </div>
+              <div class="login">
+                <input class="input-hijo" type="password" name="password" id="password"
+                  placeholder="Contraseña"></input>
+              </div>
+              <button class="boton-login" type="submit">Enviar</button>
+            </form>
+      </main>
+      <%- include('partials/footer') %>
+  </body>
+
 </html>

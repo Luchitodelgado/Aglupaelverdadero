@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('partials/head') %>
+<%- include('partials/head') %>
 
-    
-<body>
 
-    <%- include('partials/headerNavbar') %>
-    <main>
+    <body>
 
-    <div class="columnas">
-        <h1 class="titulo-productos">Borcegos</h1>
-        <section class="">
-            <div class="">
-            </div>
-            <% borcegos.forEach(function(product){ 
-                let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
-            %>
-                <div class="todosProductos">
-                    <article class="productos">
-                        <a href="/productos/detail/<%= product.id %>">
-                            <figure class="img">
-                                <img src="/img/<%= product.image %>" alt="imagen de producto">
-                            </figure>
-                            <div class="">
-                                <p><%= product.name %></p>
-                                <p class="descrip"><%= product.description %></p>
-                                <p class="descrip"><%= product.price %></p>
-                                <div class="">  <i class="fas fa-truck"></i>
-						<button type="submit" class="buy-now-button">Comprar</button> </div>
+        <%- include('partials/headerNavbar') %>
+            <main>
+
+                <div class="columnas">
+                    <h1 class="titulo-productos">Borcegos</h1>
+                    <section class="">
+                        <div class="">
+                        </div>
+                        <% borcegos.forEach(function(product){ let finalPrice=(product.price * ((100 - product.discount)
+                            / 100)).toFixed(0) %>
+                            <div class="todosProductos">
+                                <article class="productos">
+
+                                    <figure class="img">
+                                        <img src="/img/<%= product.image %>" alt="imagen de producto">
+                                    </figure>
+                                    <div class="">
+                                        <p>
+                                            <%= product.name %>
+                                        </p>
+                                        <p class="descrip">
+                                            <%= product.description %>
+                                        </p>
+                                        <p class="descrip">
+                                            <%= product.price %>
+                                        </p>
+
+                                        <div class="descrip">
+                                            <form>
+                                                <a href="/carrito/<%= product.id %>">
+                                                    <i class="fas fa-truck">
+                                                    </i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+                                    <button type="submit" class="buy-now-button">
+                                        <a href="/productos/detail/<%= product.id %>">Comprar</a>
+                                    </button>
+                                    </a>
+                                </article>
                             </div>
-                        </a>
-                    </article>
+                            <% }) %>
+
+                    </section>
                 </div>
-            <% }) %>
-    
-        </section>
-    </div>
-    
-    </main>
-    <%- include('partials/footer') %>
-</body>
+
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
 </html>

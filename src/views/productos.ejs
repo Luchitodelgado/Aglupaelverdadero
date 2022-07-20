@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+    
     <%- include('partials/head') %>
 
-    
 <body>
-
-    <%- include('partials/headerNavbar') %>
-    <main>
-
-    <div class="columnas">
-        <h1 class="titulo-productos">Texanas</h1>
-        <section class="">
-            <div class="">
-            </div>
-            <% productos.forEach(function(product){ 
-                let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
-            %>
-                <div class="todosProductos">
-                    <article class="productos">
-                        <a href="/productos/detail/<%= product.id %>">
-                            <figure class="img">
-                                <img src="/img/<%= product.image %>" alt="imagen de producto">
-                            </figure>
-                            <div class="">
-                                <p><%= product.name %></p>
-                                <p class="descrip"><%= product.description %></p>
-                                <p class="descrip"><%= product.price %></p>
-                                <div class="">  <i class="fas fa-truck"></i>
-						<button type="submit" class="buy-now-button">Comprar</button> </div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-            <% }) %>
     
-        </section>
-    </div>
+    <%- include('partials/headerNavbar') %>
+
+    <main>
+        <div class="titulo-shop">
+            <p class="shop">Shop/</p>
+            <h1 class="h1-mujer">Mujer</h1>
+        </div>
+        <div class="div-banner">
+            <img class="banner" src="/img/nueva coleccion invierno 2022.webp" alt="banner">
+        </div>
+        <div class="container-padre">
+            <a class="a-texanas" href="/texanas">
+            <div class="banner-altas">
+                <img class="img-banner" src="/img/texanas.png" alt="texanas">
+            <a href="/texanas"><h4>TEXANAS</h4>
+                <button class="button-shop-now">Shop now!</button>
+            </div>
+        </a>
+            <div class="flex-column">
+                <div class="banner-cortas">
+                    <a class="a-texanas" href="./borcegos">
+                    <img class="img-banner" src="/img/borsegos.png" alt="borcegos">
+                    <a href="./borcegos"><h4>BORCEGOS</h4>
+                    <button class="button-shop-now">Shop now!</button>
+                </div>
+            </a>
+                <div class="banner-cortas">
+                    <a class="a-texanas" href="./zapatillas">
+                    <img class="img-banner" src="/img/zapatillas}.png" alt="zapatillas">
+                    <a href="./zapatillas"><h4>ZAPAS</h4>
+                    <button class="button-shop-now">Shop now!</button>
+                </div>
+            </a>
+            </div>
+            <div class="banner-altas">
+                <a class="a-texanas" href="./botas">
+                <img class="img-banner" src="/img/botas.png" alt="botas">
+                <a href="./botas"><h4>BOTAS</h4>
+                <button class="button-shop-now">Shop now!</button>
+            </div>
+        </a>
+        </div>
     </main>
     <%- include('partials/footer') %>
+
+
 </body>
 </html>
