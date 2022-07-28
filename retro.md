@@ -1,16 +1,20 @@
-<h1>ARCHIVO RETROSPECTIVA<h1>
+<h1>ARCHIVO RETROSPECTIVA, sobre como trabajamos este SPRINT 6<h1>
 
 <h2><strong>COMENZAR A HACER</strong><h2>
-<p>Mejorar la comunicacion por Discord, contar conflictos en el grupo. Si alguien no puede hacer algo por x razón COMUNICARLO. Siempre apoyarnos, perdir ayuda. Mantener comunicación para mejorar el funcionamiento como equipo.<p>
+<p>Afianzarnos como grupo y aprender a trabajar en equipo de a dos. Conocer fortalezas y debilidades de cada uno y explotar al máximo lo que podemos aportar individualmente al grupo.<p>
 
 <h2><strong>HACER MÁS</strong> <h2>
-<p>Entre las tareas que habiamos acordado, volver a retomar las reuniones FIJAS semanales, por lo menos 2 reuniones semanales, antes de la clase en el caso de no poderse en otro horario. SIN EXCEPCIÓN, y si alguno por alguna razón extraordinaria no puede, que los demás se junten igual obligatoriamente.Este punto es fundamental para poder mantener un hilo y trabajar el sprint a lo largo de las dos semanas y no los ultimos días con atraso.<p>
+<p>Explotar destrezas individuales, apoyarnos en el otro en las actividades que nos cuestan más o en las que necesitamos ayuda y no nos sentimos tan cómodos o tenemos dudas.<p>
 
 <h2>CONTINUAR HACIENDO<h2>
-<p>Seguir comunicandonos cuando codeamos.Continuar trabajando de la forma que ejecutamos el sprint 4.</p>
+<p>Seguir manteniendo comunicación constante de que hicimos ayer, si alguna tarea quedó pendiente plantear si hay que comenzar una busqueda de información para lograrlo, etc; y qué tareas vamos a realidar con prioridad el día de hoy.</p>
 
-<h2>Hacer menos<h2>
-<p>No comunicar avances o conflictos.</p>
+<h2>HACER MENOS<h2>
+<p></p>
+
+<h2>DEJAR DE HACER</h2>
+<p>No enfocarnos en qué hacen o no los participantes del grupo, enfocarnos en los avances y en como nos propusimos encarar este sprint.</p>
+
 
 
 
