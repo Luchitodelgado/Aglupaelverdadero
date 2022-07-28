@@ -2,8 +2,9 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "zale",
+    "database": "zadel_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorAliases": false
   }
 }
