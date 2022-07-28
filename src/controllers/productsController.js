@@ -4,8 +4,7 @@ const path = require('path');
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 
 
-const controller = {
-	// Root - Show all products
+const controller = {	
 	texanas: (req, res) => {
 		const texanas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		let productsTexanas = texanas.filter((productsTexanas)=>{

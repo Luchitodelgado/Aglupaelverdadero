@@ -19,10 +19,11 @@ app.use(express.urlencoded({ extended: false })); // Para que se usa??
 app.use(express.json()); // Para que se usa??
 app.use(methodOverride('_method'));
 
+app.use(session({secret:"Mensaje secreto"}));
 app.use('/', mainRouter);
 app.use('/', userRouter);
 app.use('/', productos);
-app.use(session({secret:"Mensaje secreto"}));
+
 
 app.listen(3000, () => {
     console.log("Servidor corriendo en http://localhost:3000")});

@@ -1,61 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('partials/head') %>
+<%- include('partials/head') %>
 
-<body>
-    
+  <body>
+
     <%- include('partials/headerNavbar') %>
 
-    <main>
+      <main>
         <h1>Crea tu cuenta</h1>
         <form action="/users" method="POST" enctype="multipart/form-data">
-  
+
           <div class="contenedor-input">
-          <input class="input-hijo" type="text" required name="nombre" id="nombre" placeholder="Nombre"></input>
+            <input class="input-hijo" type="text" required name="firstName" id="nombre" placeholder="Nombre"></input>
           </div>
 
           <div class="contenedor-input">
-            <input class="input-hijo" type="text" required name="apellido" id="apellido" placeholder="Apellido"></input>
-            </div>
-          
+            <input class="input-hijo" type="text" required name="lastName" id="apellido" placeholder="Apellido"></input>
+          </div>
+
           <div class="contenedor-input">
-          <input class="input-hijo" type="text" required name="nombreuser" id="nombre-user" placeholder="Nombre de usuario"></input>
+            <input class="input-hijo" type="text" required name="userName" id="nombre-user"
+              placeholder="Nombre de usuario"></input>
           </div>
 
           <div class="contenedor-input">
             <input class="input-hijo" type="email" required name="email" id="email" placeholder="Email"></input>
-            </div>
-  
-          <div class="contenedor-input">
-              <label for="fecha-de-nacimiento">Fecha de nacimiento</label>
-              <br>
-              <input type="date" required min="1945-01-01" max="2022-04-06" name="fechadenacimiento" id="fecha-de-nacimiento" /></br>
-            </div>
-  
-          <div class="contenedor-input">
-          <input class="input-hijo" type="text" required name="domicilio" id="domicilio" placeholder="Domicilio"></input>
           </div>
-  
-  
+
           <div class="contenedor-input">
-              <label>Foto de usuario:</label>
-              <br>
-              <input type="file" required name="usuario">
+            <label for="fecha-de-nacimiento">Fecha de nacimiento</label>
+            <br>
+            <input type="date" required min="1945-01-01" max="2022-04-06" name="birthday"
+              id="fecha-de-nacimiento" /></br>
           </div>
-  
+
+          <div class="contenedor-input">
+            <label>Foto de usuario:</label>
+            <br>
+            <input type="file" required name="avatar">
+          </div>
+
           <div class="contenedor-input">
             <label for="password">Contraseña</label>
             <br>
             <input class="input-hijo" type="password" required name="password" id="password" />
           </div>
-  
-  
-         <div class="botones"> <button type="submit">Enviar</button> <button type="reset">Borrar</button> </div>
-      </form>
-    </main>
-    
-    <%- include('partials/footer') %>
 
-</body>
+
+          <div class="botones"> <button type="submit">Enviar</button></div>
+        </form>
+      </main>
+
+      <%- include('partials/footer') %>
+
+  </body>
+
 </html>

@@ -15,19 +15,25 @@ const storage = multer.diskStorage({
         console.log(file);
         const newFilename = "usuario" + Date.now() + path.extname(file.originalname);
         cb(null, newFilename);
+        req.session.newFileName = newFilename
     }
 });
 
 const upload = multer({ storage })
-const validacion = [
 
-    check('email').isEmail().withMessage('Email inválido'),
-    check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
+const validations=[
+    check('firstName').notEmpty().isLength({min:3, max:15}).withMessage('minimo 3 caracteres, maximo 12.').bail(),
+    check('lastName').notEmpty().isLength({min:3, max:20}).withMessage('minimo 3 caraceres, maximo 12.').bail(),
+    check('userName').notEmpty().isLength({min:3, max:40}).withMessage('minimo 3 caraceres, maximo 12.').bail(),
+    check('email').notEmpty().isLength({min:3, max:50}).isEmail().withMessage('Ingrese un Email valido').bail(),
+    check('password').notEmpty().isLength({min:7, max:16}).withMessage('ingrese una passowrd').bail(),
+    check('birthday').notEmpty().isDate().withMessage('El formato de fecha no es correcto').bail()
 ]
+
 router.get("/registrarte", userController.registro);
 router.get("/ingresa", userController.ingresa);
-router.post("/ingresa", validacion, userController.processLogin);
-router.post('/users', upload.single("usuario"), userController.store);
+router.post("/ingresa", validations, userController.processLogin);
+router.post('/users', upload.single("avatar"), userController.store);
 router.get('/users', userController.create)
 
 // VER PERFIL

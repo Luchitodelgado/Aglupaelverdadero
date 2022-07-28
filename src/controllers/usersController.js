@@ -3,6 +3,9 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
+const db = require("../../models")
+const sequelize = db.sequelize;
+const User = db.User;
 
 
 const controller = {
@@ -46,8 +49,48 @@ const controller = {
 		}
 	},
 	// Create -  Method to store
+
 	store: (req, res) => {
-		let pass = bcrypt.hashSync(req.body.password2, 10);
+		const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('registrarte', { errors: resultValidation.mapped(), oldData: req.body }),
+                console.log('hubo errores', {})
+        }
+        else
+            User.create({
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+				userName: req.body.userName,
+				email: req.body.email,
+				birthday: req.body.birthday,
+                avatar: req.session.newFileName,
+				password: req.body.password,
+				typeUserId: 1
+            }),
+				// TYPEUYERID:
+					// 0 = STANDARD USER
+					// 1 = ADMINISTRATOR
+					// 3 = OWNER		
+
+                res.redirect('/');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 		let pass = bcrypt.hashSync(req.body.password2, 10);
 
 		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 		let newUser = {
@@ -62,7 +105,7 @@ const controller = {
 		}
 		users.push(newUser);
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-		res.redirect("/ingresa");
+		res.redirect("/ingresa"); */
 	},
 	create: (req, res) => {
 		res.render('ingresa')
