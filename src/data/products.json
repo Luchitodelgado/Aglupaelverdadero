@@ -1,0 +1,12 @@
+[
+    {
+     
+        "name": "IRGIZI NEGRO",
+        "description": "Texana lisa con aplique metálico en puntera.",
+        "price": 12450,
+        "discount": 14,
+        "image": "bota 1.webp",
+        "stock": 55,
+        "typeProductId":1
+    }
+]
