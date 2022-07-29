@@ -26,6 +26,7 @@ router.get('/botas', productosController.botas);
 router.get('/zapatillas', productosController.zapatillas);
 router.get('/texanas', productosController.texanas);
 
+
 router.get('/productos/carrito', productosController.carrito);
 router.post('/productos/carrito/:id', productosController.carrito);
 /*** GET ONE PRODUCT ***/

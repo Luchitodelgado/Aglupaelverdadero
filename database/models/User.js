@@ -15,9 +15,6 @@ module.exports = (sequelize, dataTypes) => {
         lastName: {
             type: dataTypes.STRING
         },
-        userName: {
-            type: dataTypes.STRING
-        },
         birthday: {
             type: dataTypes.DATE
         },
@@ -36,6 +33,5 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const User = sequelize.define(alias, cols, config)
-    
     return User
 }

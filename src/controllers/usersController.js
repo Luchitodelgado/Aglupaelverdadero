@@ -48,65 +48,40 @@ const controller = {
 			return res.render("home", { errors: errors.errors });
 		}
 	},
-	// Create -  Method to store
-
+	// DESDE AQUI CON BASE DE DATOS
 	store: (req, res) => {
 		const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
-            return res.render('registrarte', { errors: resultValidation.mapped(), oldData: req.body }),
-                console.log('hubo errores', {})
-        }
-        else
-            User.create({
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
+		if (resultValidation.errors.length > 0) {
+			return res.render('registrarte', { errors: resultValidation.mapped(), oldData: req.body }),
+				console.log('hubo errores', {})
+		}
+		else
+			User.create({
+				firstName: req.body.firstName,
+				lastName: req.body.lastName,
 				userName: req.body.userName,
 				email: req.body.email,
 				birthday: req.body.birthday,
-                avatar: req.session.newFileName,
+				avatar: req.session.newFileName,
 				password: req.body.password,
 				typeUserId: 1
-            }),
 				// TYPEUYERID:
-					// 0 = STANDARD USER
-					// 1 = ADMINISTRATOR
-					// 3 = OWNER		
+				// 0 = STANDARD USER
+				// 1 = ADMINISTRATOR
+				// 3 = OWNER		
 
-                res.redirect('/');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 		let pass = bcrypt.hashSync(req.body.password2, 10);
-
-		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-		let newUser = {
-			nombre: req.body.nombre,
-			apellido: req.body.apellido,
-			nombreuser: req.body.nombreuser,
-			email: req.body.email,
-			fechadenacimiento: req.body.fechadenacimiento,
-			avatar: req.file.filename,
-			password2: pass
-
-		}
-		users.push(newUser);
-		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-		res.redirect("/ingresa"); */
+			}),
+				res.redirect('/');
 	},
+
+
+	list: (req, res) => {
+        db.User.findAll()
+            .then(user => {
+                res.render('pruebas.ejs', {user})			
+            })
+			
+    },
 	create: (req, res) => {
 		res.render('ingresa')
 	},
