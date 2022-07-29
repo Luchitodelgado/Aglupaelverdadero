@@ -67,8 +67,6 @@ const controller = {
 
 
 
-	return res.render("home", { errors: errors.errors });
-
 	// DESDE AQUI CON BASE DE DATOS
 	store: (req, res) => {
 		const resultValidation = validationResult(req);
