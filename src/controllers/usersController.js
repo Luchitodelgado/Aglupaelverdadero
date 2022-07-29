@@ -17,37 +17,58 @@ const controller = {
 		res.render("ingresa")
 	},
 	processLogin: function (req, res) {
-		let users = usersFilePath;
-		let errors = validationResult(req);
-		let usuarioAloguearse;
+		let emailVerify = req.body.email
+		let password = req.body.password
+		User.findOne({
+			where: {
+				email: emailVerify,
 
-
-		if (errors.isEmpty()) {
-
-			for (let i = 0; i < users.length; i++) {
-				if (users[i].email == req.body.email) {
-					if (bcrypt.compareSync(req.body.password, users[i].password2)) {
-						usuarioAloguearse = users[i];
-						console.log('accediste')
-						console.log(usuarioAloguearse);
+			}
+		})
+			.then(function (usuario) {
+				let dbPassword = usuario.password;
+				let key = bcryptjs.compareSync(password, dbPassword);
+				Humanos.findOne({
+					where: {
+						email: emailVerify,
+						password: key
 					}
-				}
-			}
-			if (usuarioAloguearse == undefined) {
-				console.log('incorrecto')
-				return res.render('home', {
-					errors: [
-						{ msg: "Credenciales invalidas" }
-					]
 
-				});
-			}
-			req.session.usuarioLogueado = usuarioAloguearse;
+				}).then(function () {
+					if (emailVerify === usuario.email && key == true) {
+						req.session.userLogged = usuario;
+						res.redirect('/profile')
+					}
+					else {
+						res.render('login', { oldData: req.body }, {
+							errors: {
+								email: {
+									msg: 'No se encuentra este email'
+								}
+							}
+						})
+					}
+				})
 
-		} else {
-			return res.render("home", { errors: errors.errors });
-		}
+			}).catch((err) => {
+				res.render('login', { oldData: req.body }, {
+					errors: {
+						email: {
+							msg: 'No se encuentra este email'
+						}
+					}
+				})
+
+			});
 	},
+
+
+
+
+
+
+	return res.render("home", { errors: errors.errors });
+
 	// DESDE AQUI CON BASE DE DATOS
 	store: (req, res) => {
 		const resultValidation = validationResult(req);
@@ -76,12 +97,12 @@ const controller = {
 
 
 	list: (req, res) => {
-        db.User.findAll()
-            .then(user => {
-                res.render('pruebas.ejs', {user})			
-            })
-			
-    },
+		db.User.findAll()
+			.then(user => {
+				res.render('pruebas.ejs', { user })
+			})
+
+	},
 	create: (req, res) => {
 		res.render('ingresa')
 	},
