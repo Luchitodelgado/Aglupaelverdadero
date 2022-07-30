@@ -18,9 +18,6 @@ module.exports = (sequelize, dataTypes) => {
         image: {
             type: dataTypes.STRING
         },
-        category: {
-            type: dataTypes.STRING
-        },
         stock: {
             type: dataTypes.INTEGER
         },
@@ -32,9 +29,9 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'products',
         timestamps: false
     };
-    
+
     const Product = sequelize.define(alias, cols, config)
-    
-    
+
+
     return Product
 }

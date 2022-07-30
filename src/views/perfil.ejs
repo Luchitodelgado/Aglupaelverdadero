@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('partials/head') %>
 
-    <%- include('partials/head') %>
-<body>
-    <section class="">
-
-        <div class="">   
-        <h1 class="">Hola, <%= usuario.nombreapellido %></h1>
-        </div> 
-
+    <body>
+        <%- include('partials/headerNavbar') %>
         <section class="">
-
             <div class="">
-                <img id="" src="/img/img-usuarios/<%=usuario.avatar%>" alt="imagen">
-            
-                <div class="" >  
-                    <h2>Estos son tus datos:</h2>
-                    <p>Nombre: <%= usuario.nombreapellido%> </p>
-                  
-                    <p>Usuario: <%= usuario.email %></p>
-                    <p>Fecha de Nacimiento: <%= usuario.fechadenacimiento%></p>
-                </div> 
+                <h1 class="">Hola, <%= usuario.firstName %>
+                </h1>
             </div>
-            
-    </section>
-                
-    </section>
-    
-
-    <%- include('partials/footer') %>
-</body>
+            <section class="">
+                <div class="">
+                    <img id="" src="/img/img-usuarios/<%=usuario.avatar%>" alt="imagen">
+                    <div class="">
+                        <h2>Estos son tus datos:</h2>
+                        <p>Nombre: <%= usuario.lastName%>
+                        </p>
+                        <p>Usuario: <%= usuario.email %>
+                        </p>
+                        <p>Fecha de Nacimiento: <%= usuario.birthday%>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <%- include('partials/footer') %>
+    </body>
 </html>

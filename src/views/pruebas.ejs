@@ -7,10 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <% for( let i = 0; i < user.length; i++ ) { %>
+    <% for( let i = 0; i < texanas.length; i++ ) { %>
         <li>
-           <%= user[i].firstName %></a>
+           <%= texanas[i].name %></a>
         </li>
         <% } %>
+
+        <%= locals.texanas%>
 </body>
 </html>

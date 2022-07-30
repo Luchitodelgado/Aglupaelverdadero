@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const { validationResult } = require('express-validator')
-const bcrypt = require('bcryptjs')
+const bcryptjs = require('bcryptjs')
 const db = require("../../database/models")
 const sequelize = db.sequelize;
 const User = db.User;
@@ -19,16 +19,18 @@ const controller = {
 	processLogin: function (req, res) {
 		let emailVerify = req.body.email
 		let password = req.body.password
+		console.log(req.body.email)
+		console.log(req.body.password)
 		User.findOne({
 			where: {
 				email: emailVerify,
-
 			}
 		})
 			.then(function (usuario) {
 				let dbPassword = usuario.password;
-				let key = bcryptjs.compareSync(password, dbPassword);
-				Humanos.findOne({
+				/* let key = password */
+				let key = bcryptjs.compareSync(password, dbPassword); 
+				User.findOne({
 					where: {
 						email: emailVerify,
 						password: key
@@ -36,11 +38,11 @@ const controller = {
 
 				}).then(function () {
 					if (emailVerify === usuario.email && key == true) {
-						req.session.userLogged = usuario;
-						res.redirect('/profile')
+						req.session.userLogged = usuario;						
+						res.redirect('/perfil')
 					}
 					else {
-						res.render('login', { oldData: req.body }, {
+						res.render('ingresa', { oldData: req.body }, {
 							errors: {
 								email: {
 									msg: 'No se encuentra este email'
@@ -51,7 +53,8 @@ const controller = {
 				})
 
 			}).catch((err) => {
-				res.render('login', { oldData: req.body }, {
+				console.log(err)
+				res.render('ingresa', { oldData: req.body }, {
 					errors: {
 						email: {
 							msg: 'No se encuentra este email'
@@ -60,6 +63,7 @@ const controller = {
 				})
 
 			});
+
 	},
 
 
@@ -82,7 +86,8 @@ const controller = {
 				email: req.body.email,
 				birthday: req.body.birthday,
 				avatar: req.session.newFileName,
-				password: req.body.password,
+				password: bcryptjs.hashSync(req.body.password, 10),
+				/* 	password: req.body.password, */
 				typeUserId: 1
 				// TYPEUYERID:
 				// 0 = STANDARD USER
@@ -104,19 +109,10 @@ const controller = {
 	create: (req, res) => {
 		res.render('ingresa')
 	},
-	profile: (req, res) => {
-		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-		id = req.params.id
-		let usuario = users.find(usuario => usuario.id == id);
-		res.render('perfil', { usuario })
+    userProfile: (req, res) => {
 
-
-
-
-		/*  let cssSheets = ["perfil"];
-		 let title = "Tu cuenta"; */
-		/* res.render("perfil", {cssSheets, title}) */
-	}
+        res.render('perfil', { usuario: req.session.userLogged });
+    },
 };
 
 

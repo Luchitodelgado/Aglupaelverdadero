@@ -1,47 +1,49 @@
 const fs = require('fs');
 const path = require('path');
+const db = require("../../database/models")
+const sequelize = db.sequelize;
+const Product = db.Product;
 
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 
 
-const controller = {	
+const controller = {
 	texanas: (req, res) => {
-		const texanas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let productsTexanas = texanas.filter((productsTexanas)=>{
-			return productsTexanas.category == "texanas"
+		Product.findAll({
+			where: {
+				typeProductId: 1
+			}
+		}).then(function (texanas) {
+			res.render("texanas", { texanas })
 		})
-		res.render('texanas', {
-			texanas: productsTexanas
-	})
 	},
 	borcegos: (req, res) => {
-		const borcegos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let productsBorcegos = borcegos.filter((productsBorcegos)=>{
-			return productsBorcegos.category == "borcegos"
+		Product.findAll({
+			where: {
+				typeProductId: 3
+			}
+		}).then(function (borcegos) {
+			res.render("borcegos", { borcegos })
 		})
-		res.render('borcegos', {
-			borcegos: productsBorcegos
-	})
-    },
+	},
 	botas: (req, res) => {
-		const botas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let productsBotas = botas.filter((productsBotas)=>{
-			return productsBotas.category == "botas"
+		Product.findAll({
+			where: {
+				typeProductId: 2
+			}
+		}).then(function (botas) {
+			res.render("botas", { botas })
 		})
-		res.render('botas', {
-			botas: productsBotas
-	})
 	},
 	zapatillas: (req, res) => {
-		const zapatillas = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let productsZapatillas = zapatillas.filter((productsZapatillas)=>{
-			return productsZapatillas.category == "zapatillas"
+		Product.findAll({
+			where: {
+				typeProductId: 4
+			}
+		}).then(function (zapatillas) {
+			res.render("zapatillas", { zapatillas })
 		})
-		res.render('zapatillas', {
-			zapatillas: productsZapatillas
-	})
 	},
-
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
@@ -112,16 +114,16 @@ const controller = {
 
 		res.redirect("/productos");
 	},
-	carrito: (req,res)=>{
+	carrito: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		res.render('carrito')
 	},
-	productos:(req,res)=>{
+	productos: (req, res) => {
 		res.render('productos')
 	},
-	search: (req,res)=>{		
+	search: (req, res) => {
 
-	
+
 		res.send('hola')
 	}
 
