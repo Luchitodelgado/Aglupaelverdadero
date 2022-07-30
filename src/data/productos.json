@@ -1,12 +1,12 @@
 [
  {
   "id": "1",
-  "name": "IRGIZI NEGRO",
-  "description": "Texana lisa con aplique metálico en puntera.",
-  "price": "",
-  "discount": "",
-  "image": "bota 1.webp",
-  "category": "texanas"
+  "name": "Chanclas",
+  "description": "Texana de cuero liso con detalle de costuras.",
+  "price": "20500",
+  "discount": "14",
+  "image": "fotoProducto1659209280438.jpg",
+  "category": ""
  },
  {
   "id": 2,
@@ -111,12 +111,12 @@
   "id": 12,
   "name": "CRUISE RIDER SILK",
   "description": "Zapatillas urbanas, con suela de caucho y caña alta",
-  "price": "$16.000", 
-  "discount":"",
+  "price": "$16.000",
+  "discount": "",
   "image": "zapatillas4.jpg",
   "category": "zapatillas"
-  },
-  {
+ },
+ {
   "id": 13,
   "name": "VIKKY V2 CAT",
   "description": "Zapatillas casuales, con empeine sintético y suela de goma",
@@ -152,7 +152,7 @@
   "image": "zapatillas8.jpg",
   "category": "zapatillas"
  },
- { 
+ {
   "id": 17,
   "name": "JONSON SUELA",
   "price": "$32.000",
@@ -184,7 +184,7 @@
   "name": "BLANCK SPACE",
   "description": "Borcegos de cuero blanco con taco negro de 8,5cm",
   "price": "$16.000",
-  "discount":"",
+  "discount": "",
   "image": "borcegos4.jpg",
   "category": "borcegos"
  },
@@ -223,7 +223,7 @@
   "discount": "",
   "image": "borcegos8.jpg",
   "category": "borcegos"
- }, 
+ },
  {
   "id": 25,
   "name": "GLASS CLASS",
@@ -255,8 +255,8 @@
   "id": 28,
   "name": "TALL BROWN",
   "description": "Botas de corte militar, con elástico de cuero en la suela",
-  "price": "$16.000", 
-  "discount":"",
+  "price": "$16.000",
+  "discount": "",
   "image": "botas4.jpg",
   "category": "botas"
  },
@@ -295,8 +295,5 @@
   "discount": "",
   "image": "botas8.jpg",
   "category": "botas"
- } 
-
-
- 
+ }
 ]
