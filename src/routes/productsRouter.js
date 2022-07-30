@@ -15,6 +15,7 @@ const storage = multer.diskStorage({
         console.log(file);
         const newFilename = "fotoProducto" + Date.now() + path.extname(file.originalname);
         cb (null, newFilename);
+        req.session.newFileName = newFilename
     }
 });
 
@@ -34,8 +35,8 @@ router.get('/productos/detail/:id', productosController.detail);
 router.get('/:barra-busqueda?', productosController.search)
 
 /**crear productos */
-router.get('/productos/create', productosController.create);
-router.post('/', upload.single("fotoProducto"), productosController.store);
+router.get('/create', productosController.createProductForm);
+router.post('/newProduct', upload.single("fotoProducto"), productosController.create);
 
 /**Edicion productos*/
 router.get('/productos/edit/:id', productosController.edit);

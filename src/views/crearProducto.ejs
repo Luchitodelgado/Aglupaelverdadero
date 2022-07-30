@@ -12,7 +12,7 @@
             </div>
 
             <div class="">
-                <form action="/productos" method="POST" enctype="multipart/form-data">
+                <form action="/newProduct" method="POST" enctype="multipart/form-data">
                     <div class="listados">
                         <div class="cajita">
                             <label for="name" class="detalles">Nombre del producto</label>
@@ -33,15 +33,15 @@
                             <label for="category" class="detalles">Categoría</label>
                             <select name="category" id="category" class="pequeño">
                                 <option value="">Elegí</option>
-                                <option value="texanas">Texanas</option>
-                                <option value="botas">Botas</option>
-                                <option value="zapatillas">Zapatillas</option>
-                                <option value="borcegos">Borcegos</option>
+                                <option value=1>Texanas</option>
+                                <option value=2>Botas</option>
+                                <option value=4>Zapatillas</option>
+                                <option value=3>Borcegos</option>
                             </select>
                         </div>
 
                         <div class="desc">
-                            <label for="descripcion" class="detalles">Descripción</label>
+                            <label for="description" class="detalles">Descripción</label>
                             <textarea name="description" id="description" class="tex"></textarea>
                         </div>
                         <br>

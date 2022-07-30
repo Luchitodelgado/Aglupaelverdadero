@@ -44,24 +44,39 @@ const controller = {
 			res.render("zapatillas", { zapatillas })
 		})
 	},
-
-	// Detail - Detail from one product
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id)
 			.then(product => {
 				res.render('detail.ejs', { product });
 			});
 	},
-	create: (req, res) => {
-		res.render('crearProducto')
+	createProductForm: (req,res)=>{
+		res.render("crearProducto")
 	},
+	create: (req, res) => {
+		Product.create(
+            {
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                discount: req.body.discount,
+                image: req.session.newFileName,
+                stock: 55,
+				typeProductId :1
+            }
+        )
+        .then(()=> {
+            return res.redirect('/productos')})            
+        .catch(error => res.send(error))
+    },
 
-// Create -  Method to store
+
+
 store: (req, res) => {
 	/* res.send("Producto nuevo agregado"); */
 	const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 	let newProduct = {
-		id: products[products.length - 1].id + 1,
+		id: products[products.image - 1].id + 1,
 		name: req.body.name,
 		description: req.body.description,
 		price: req.body.price,
