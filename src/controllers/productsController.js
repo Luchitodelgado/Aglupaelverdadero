@@ -47,35 +47,32 @@ const controller = {
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let id = req.params.id;
-		let product = productos.find(product => product.id == id);
-		res.render('detail', {
-			product
-		})
+		db.Product.findByPk(req.params.id)
+			.then(product => {
+				res.render('detail.ejs', { product });
+			});
 	},
-	//*crear fromulario crear//
 	create: (req, res) => {
 		res.render('crearProducto')
 	},
 
-	// Create -  Method to store
-	store: (req, res) => {
-		/* res.send("Producto nuevo agregado"); */
-		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let newProduct = {
-			id: products[products.length - 1].id + 1,
-			name: req.body.name,
-			description: req.body.description,
-			price: req.body.price,
-			discount: req.body.discount,
-			image: req.file.filename,
-			category: req.body.category
-		}
-		products.push(newProduct);
-		fs.writeFileSync(productosFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/productos");
-	},
+// Create -  Method to store
+store: (req, res) => {
+	/* res.send("Producto nuevo agregado"); */
+	const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+	let newProduct = {
+		id: products[products.length - 1].id + 1,
+		name: req.body.name,
+		description: req.body.description,
+		price: req.body.price,
+		discount: req.body.discount,
+		image: req.file.filename,
+		category: req.body.category
+	}
+	products.push(newProduct);
+	fs.writeFileSync(productosFilePath, JSON.stringify(products, null, " "));
+	res.redirect("/productos");
+},
 
 
 	edit: (req, res) => {
@@ -84,48 +81,48 @@ const controller = {
 		let productToEdit = products.find(product => product.id == id)
 		res.render('product-edit-form', { productToEdit })
 	},
-	// Update - Method to update
-	update: (req, res) => {
-		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let productosToEdit = productos.find(productos => req.params.id == productos.id);
+		// Update - Method to update
+		update: (req, res) => {
+			const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+			let productosToEdit = productos.find(productos => req.params.id == productos.id);
 
-		let editedProductos = {
-			id: req.params.id,
-			name: req.body.name,
-			description: req.body.description,
-			price: req.body.price,
-			discount: req.body.discount,
-			image: req.file.filename,
-			category: req.body.category
-		}
+			let editedProductos = {
+				id: req.params.id,
+				name: req.body.name,
+				description: req.body.description,
+				price: req.body.price,
+				discount: req.body.discount,
+				image: req.file.filename,
+				category: req.body.category
+			}
 
-		let indice = productos.findIndex(productos => productos.id == req.params.id);
-		productos[indice] = editedProductos;
+			let indice = productos.findIndex(productos => productos.id == req.params.id);
+			productos[indice] = editedProductos;
 
-		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
-		res.redirect("/productos");
-	},
+			fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
+			res.redirect("/productos");
+		},
 
-	destroy: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+			destroy: (req, res) => {
+				const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
-		let finalProducts = products.filter(product => product.id != req.params.id);
-		fs.writeFileSync(productosFilePath, JSON.stringify(finalProducts, null, " "));
+				let finalProducts = products.filter(product => product.id != req.params.id);
+				fs.writeFileSync(productosFilePath, JSON.stringify(finalProducts, null, " "));
 
-		res.redirect("/productos");
-	},
-	carrito: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		res.render('carrito')
-	},
-	productos: (req, res) => {
-		res.render('productos')
-	},
-	search: (req, res) => {
+				res.redirect("/productos");
+			},
+				carrito: (req, res) => {
+					const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+					res.render('carrito')
+				},
+					productos: (req, res) => {
+						res.render('productos')
+					},
+						search: (req, res) => {
 
 
-		res.send('hola')
-	}
+							res.send('hola')
+						}
 
 
 
