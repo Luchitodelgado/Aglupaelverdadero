@@ -11,7 +11,10 @@ const User = db.User;
 const controller = {
 
 	registro: (req, res) => {
-		res.render("registrarte")
+		if (req.session.userLogged) { res.redirect("/perfil") }
+		else
+		res.render("ingresa")
+			
 	},
 	ingresa: (req, res) => {
 		res.render("ingresa")
@@ -29,7 +32,7 @@ const controller = {
 			.then(function (usuario) {
 				let dbPassword = usuario.password;
 				/* let key = password */
-				let key = bcryptjs.compareSync(password, dbPassword); 
+				let key = bcryptjs.compareSync(password, dbPassword);
 				User.findOne({
 					where: {
 						email: emailVerify,
@@ -38,7 +41,7 @@ const controller = {
 
 				}).then(function () {
 					if (emailVerify === usuario.email && key == true) {
-						req.session.userLogged = usuario;						
+						req.session.userLogged = usuario;
 						res.redirect('/perfil')
 					}
 					else {
@@ -109,10 +112,15 @@ const controller = {
 	create: (req, res) => {
 		res.render('ingresa')
 	},
-    userProfile: (req, res) => {
+	userProfile: (req, res) => {
+		if (req.session.userLogged) {
 
-        res.render('perfil', { usuario: req.session.userLogged });
-    },
+			res.render('perfil', { usuario: req.session.userLogged });
+		}
+		else
+			res.render("ingresa")
+
+	},
 };
 
 

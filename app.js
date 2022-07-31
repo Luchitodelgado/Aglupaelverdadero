@@ -8,7 +8,9 @@ const mainRouter = require('./src/routes/mainRouter');
 const userRouter = require('./src/routes/userRouter');
 const productos = require("./src/routes/productsRouter");
 const session = require('express-session');
-const { create } = require("domain");
+
+
+
 /* ------------------------------ MOTOR DE PLANTILLAS (TEMPLATE ENGINES) ------------------------------*/
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views'));
