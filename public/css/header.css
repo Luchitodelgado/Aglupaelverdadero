@@ -1,13 +1,16 @@
-body {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
 header {
     width: 100%;
     padding: 0px;
     height: auto;
     background-color: white;
+    top: 0px;
+    left: 0%;
+    position: fixed;
+    transition: 0.5s;
+}
+header:hover{
+    height: 180px;
+    box-shadow: 5px 5px 5px #bc9c84;
 }
 .div-padre{
     display: flex;
@@ -151,7 +154,7 @@ a:hover {
         display: none;
     }
     .a-header{
-        font-size:15px;
+        font-size:14px;
     }
     /*.buscador{
         display: block;

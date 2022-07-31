@@ -1,8 +1,8 @@
 /*----------------MAIN--------------------*/
 
-h1 {
+h1{
     font-family: 'Montserrat', sans-serif;  
-    color: black;
+    color:#434343;
     text-align: center;
     margin: 0px;
     padding: 5px;
@@ -13,7 +13,6 @@ p {
     text-align: center;
 }
 h4 {
-    font-weight: bold;
     font-size: 30px;
     font-family: 'Roboto', serif;
     margin: 0px;

@@ -4,64 +4,45 @@
 <body>
     <%- include('partials/headerNavbar') %>
     <main>
-        <div class="container products-wrapper">
-            <div class="row">
-                <div class="">
-                    <h1 class="titulo">Crear producto</h1>
-                </div>            
-            </div>
-
-            <div class="">
+        <div>
+            <h1 class="titulo">Crear producto</h1>
+         </div>            
+            <div>
                 <form action="/newProduct" method="POST" enctype="multipart/form-data">
-                    <div class="listados">
-                        <div class="cajita">
-                            <label for="name" class="detalles">Nombre del producto</label>
-                            <input type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas" class="pequeño">
+                        <div class="div-hijos">
+                            <label for="name">Nombre del producto</label>
+                            <input type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas">
                         </div>
-
-                        <div class="cajita">
-                            <label for="price" class="detalles">Precio del producto</label>
-                            <input type="number" id="price" name="price" placeholder="Ej: 56344" class="pequeño">
+                        <div class="div-hijos">
+                            <label for="price">Precio del producto</label>
+                            <input type="number" id="price" name="price" placeholder="Ej: 56344">
                         </div>
-
-                        <div class="cajita">
-                            <label for="discount" class="detalles">Descuento</label>
-                            <input type="number" id="discount" name="discount" placeholder="Ej: 40" class="pequeño">
+                        <div class="div-hijos">
+                            <label for="discount">Descuento</label>
+                            <input type="number" id="discount" name="discount" placeholder="Ej: 40">
                         </div>
-
-                        <div class="cajita">
-                            <label for="category" class="detalles">Categoría</label>
-                            <select name="category" id="category" class="pequeño">
+                        <div class="div-hijos">
+                            <label for="category">Categoría</label>
+                            <select name="category" id="category">
                                 <option value="">Elegí</option>
                                 <option value=1>Texanas</option>
                                 <option value=2>Botas</option>
                                 <option value=4>Zapatillas</option>
                                 <option value=3>Borcegos</option>
                             </select>
-                        </div>
-
-                        <div class="desc">
-                            <label for="description" class="detalles">Descripción</label>
+                            <label for="description">Descripción</label>
                             <textarea name="description" id="description" class="tex"></textarea>
                         </div>
                         <br>
-
-                        <div class="">
-                            <label for="detail" class="detalles">Foto de producto</label>
+                            <label for="detail">Foto de producto</label>
                             <br>
-                            <input type="file" class="foti" required name="fotoProducto">
+                            <input type="file" required name="fotoProducto">
                         </div>
-
-                        <div class="bot">
+                        <div>
                             <button type="submit" class="botonDeEnviar">Guardar producto</button>
-                            <button type="delete" class="botonDeBorrar">Borrar</button>
                         </div>                        
-                    </div>
                 </form>
             </div>
-
-        </div>
-
     </main>
     <%- include('partials/footer') %>    
 </body>

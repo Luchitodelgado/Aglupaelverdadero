@@ -3,19 +3,14 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    border-top:2px solid #bc9c84;
     padding: 10px;
-}
-.titulo-shop:hover{
-    box-shadow: #bc9c8486;
 }
 .h1-mujer {
     font-family: 'Montserrat', sans-serif;
-    color: black;
+    color:#434343;
     text-align: center;
     padding: 0px;
     width: 100%;
-    box-shadow: #bc9c84;
 }
 .div-banner {
     display: none;
@@ -34,11 +29,10 @@ p {
     margin: 3px;
     text-align: center;
 }
-h4 {
-    font-weight: bold;
+.h4-mujer{
     font-family: 'Roboto', sans-serif;
     margin: 0px;
-    color: black;
+    color: #434343;
     text-align: center;
 }
 body {
@@ -71,18 +65,6 @@ body {
     width: 100%;
     height: auto;
 }
-.button-shop-now {
-    text-align: center;
-    background-color:#bc9c84;
-    color: black;
-    border: white;
-    margin: 5px;
-    padding: 15px;
-    border-radius: 5px;
-}
-.button-shop-now:hover {
-    background-color:#bc9c84d0;
-}
 /*-------------FOOTER--------------------*/
 .container-hijos {
     display: flex;
@@ -96,18 +78,15 @@ body {
 }
 .titulo-footer {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    color: #434343;
 }
 .icons {
     text-align: center;
-    color: black;
+    color: #3b3a3a;
     padding: 5px;
 }
 .icons:hover {
     color: #47525e6d;
-}
-h6{
-    font-weight: bold;
 }
 .container-newletter {
     display: flex;
@@ -116,24 +95,24 @@ h6{
 }
 .newsletter {
     text-align: center;
-    padding: 60px;
+    padding: 40px;
 }
 .contacto {
     text-align: center;
-    padding: 60px;
+    padding: 40px;
 }
 .p-contacto {
     text-align: center;
 }
 .div-designed {
     margin: 0px;
-    background-color: #bc9c84;
+    background-color: #bc9c84b7;
     /* width: 100%; */
 }
 .designed {
-    color: black;
+    color: #313131;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
@@ -180,10 +159,6 @@ h6{
         width: 100%;
         height: auto;
     }
-    .button-shop-now {
-        font-size: 10px;
-        padding: 4px;
-    }
     /*-----------MOBILE-FOOTER-----------*/
     .hijos-footer {
         width:100%;
@@ -228,10 +203,6 @@ h6{
         height: auto;
         margin: 5px;
     }
-    .button-shop-now {
-        font-size: 15px;
-        padding: 4px;
-    }
     .hijos-footer{
         width: 25%;
         height: auto;
@@ -247,7 +218,7 @@ h6{
         font-size: 20px;
     }
     .newsletter {
-        padding: 50px;
+        padding: 20px;
         width: 40%;
     }
     .contacto{
@@ -255,6 +226,7 @@ h6{
         width: 40%;
     }
     h6 {
+        color: #434343;
         font-size: 18px;
     }
 }
