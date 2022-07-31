@@ -3,9 +3,11 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    border:2px solid #e0be36;
-    border-radius: 50px;
+    border-top:2px solid #bc9c84;
     padding: 10px;
+}
+.titulo-shop:hover{
+    box-shadow: #bc9c8486;
 }
 .h1-mujer {
     font-family: 'Montserrat', sans-serif;
@@ -13,6 +15,7 @@
     text-align: center;
     padding: 0px;
     width: 100%;
+    box-shadow: #bc9c84;
 }
 .div-banner {
     display: none;
@@ -70,7 +73,7 @@ body {
 }
 .button-shop-now {
     text-align: center;
-    background-color:#e0be3698;
+    background-color:#bc9c84;
     color: black;
     border: white;
     margin: 5px;
@@ -78,7 +81,7 @@ body {
     border-radius: 5px;
 }
 .button-shop-now:hover {
-    background-color:#e0be36;;
+    background-color:#bc9c84d0;
 }
 /*-------------FOOTER--------------------*/
 .container-hijos {
@@ -124,7 +127,7 @@ h6{
 }
 .div-designed {
     margin: 0px;
-    background-color:#e0be3693;
+    background-color: #bc9c84;
     /* width: 100%; */
 }
 .designed {

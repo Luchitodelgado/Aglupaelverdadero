@@ -1,7 +1,7 @@
 /*----------------MAIN--------------------*/
 
 h1 {
-    font-family: 'Montserrat', sans-serif;    
+    font-family: 'Montserrat', sans-serif;  
     color: black;
     text-align: center;
     margin: 0px;
@@ -43,15 +43,11 @@ form{
 
 button{
     margin-bottom: 5%;
-    border-radius: 50%;
-    background-color: #e3cc73;
-    border: #e3cc73;
+    background-color: #bc9c84;
+    border: #bc9c84;
     padding: 10px;
 
 }
-
-
-
 .input-email{
     border: white;
     padding: 5px;

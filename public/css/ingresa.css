@@ -2,11 +2,11 @@
 button{
     margin-bottom: 5%;
     border-radius: 50%;
-    background-color: #e3cc73;
-    border: #e3cc73;
+    background-color:#bc9c84;
+    border: #bc9c84;
 }
 button:hover{
-    background-color: #e9c120;
+    background-color: #bc9c84c5;
 }
 .login{
     margin: 20px;
