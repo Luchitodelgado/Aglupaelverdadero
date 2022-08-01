@@ -9,7 +9,7 @@ header {
     transition: 0.5s;
 }
 header:hover{
-    height: 180px;
+    height: 170px;
     box-shadow: 5px 5px 5px #bc9c84;
 }
 .div-padre{
@@ -21,7 +21,7 @@ header:hover{
 .container-logo{
     justify-content: center;
     height: auto;
-    width: 15%;
+    width: 13%;
 }
 .img-logo{
     width: 100%;
