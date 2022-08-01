@@ -2,9 +2,32 @@
 .h1-ingresa{
     color: #434343;
 }
-button{
+.container-login{
+    display: flex;
+    justify-content: center;
+    box-shadow:1px 1px 5px #bc9c84;
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 5px;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    margin: 5%;
+    align-items: flex-start;
+    width: 100%;
+}
+.p-login{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #434343;
+}
+.button-login{
     margin-bottom: 5%;
-    border-radius: 50%;
+    border-radius: 5px;
+    padding: 5px;
     background-color:#bc9c84;
     border: #bc9c84;
 }

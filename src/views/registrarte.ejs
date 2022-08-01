@@ -6,10 +6,11 @@
     <%- include('partials/headerNavbar') %>
     <main>
         <h1 class="h1-registrarte">Creá tu cuenta</h1>
-        <div class="container-padre">
+        <div class="contenedor-padre">
         <form action="/registrarte" method="POST" enctype="multipart/form-data">
           <div class="contenedor-input">
-            <input class="input-hijo" type="text" required name="firstName" id="nombre" placeholder="Nombre"></input>
+            <label><p class="p-registrarte">NOMBRE</p></label>
+            <input class="input-hijo" type="text" required name="firstName" id="nombre" placeholder="Juana Maria"></input>
           
             <% if (locals.errors && errors.firstName) {%>
               <%= errors.firstName.msg %>
@@ -17,22 +18,23 @@
           </div>
 
           <div class="contenedor-input">
-            <input class="input-hijo" type="text" required name="lastName" id="apellido" placeholder="Apellido"></input>
+            <label><p class="p-registrarte">APELLIDO</p></label>
+            <input class="input-hijo" type="text" required name="lastName" id="apellido" placeholder="Dorrego"></input>
             <% if (locals.errors && errors.lastName) {%>
               <%= errors.lastName.msg %>
             <%}%>
           </div>
 
           <div class="contenedor-input">
-            <input class="input-hijo" type="email" required name="email" id="createEmail" placeholder="Email"></input>
+            <label><p class="registrarte">EMAIL</p></label>
+            <input class="input-hijo" type="email" required name="email" id="createEmail" placeholder="juani_dorrego@gmail.com"></input>
             <% if (locals.errors && errors.email) {%>
               <%= errors.email.msg %>
             <%}%>
           </div>
 
           <div class="contenedor-input">
-            <label for="fecha-de-nacimiento">Fecha de nacimiento</label>
-            <br>
+            <label for="fecha-de-nacimiento"><p class="p-registrarte">FECHA DE NACIMIENTO</p></label >
             <input type="date" required min="1945-01-01" max="2022-04-06" name="birthday"
               id="fecha-de-nacimiento" />
               <% if (locals.errors && errors.birthday) {%>
@@ -41,20 +43,21 @@
           </div>
 
           <div class="contenedor-input">
-            <label>Foto de usuario:</label>
+            <label ><p class="p-registrarte">FOTO USUARIO</label ><p>
             <br>
             <input type="file" required name="avatar">
           </div>
 
           <div class="contenedor-input">
-            <label for="password">Contraseña</label>            
+            <label for="password"><p class="p-registrarte">CONTRASEÑA</p></label ><p>            
             <input class="input-hijo" type="password" required name="password" id="password" />
             <% if (locals.errors && errors.password) {%>
               <%= errors.password.msg %>
             <%}%>
           </div>
 
-          <div class="button"> <button type="submit">Enviar</button></div>
+          <div class="contenedor-input">
+            <button class="button-registrarte" type="submit">ENVIAR</button></div>
         </form>
       </div>
       </main>
