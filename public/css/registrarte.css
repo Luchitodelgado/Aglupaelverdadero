@@ -1,5 +1,4 @@
 /*----------------MAIN--------------------*/
-
 h1{
     font-family: 'Montserrat', sans-serif;  
     color:#434343;
@@ -19,6 +18,10 @@ h4 {
     color: black;
     overflow:hidden;
     text-align: center;
+}
+.container-padre{
+    display: flex;
+    flex-wrap: wrap;
 }
 .contenedor-input {
     font-family: 'Roboto', sans-serif;

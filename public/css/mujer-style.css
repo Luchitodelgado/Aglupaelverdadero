@@ -35,9 +35,6 @@ p {
     color: #434343;
     text-align: center;
 }
-body {
-    background-color: white;
-}
 .container-padre {
     display: flex;
     justify-content: center;
@@ -64,9 +61,7 @@ body {
 .img-banner {
     width: 100%;
     height: auto;
-    overflow:hidden;
 }
-.img-banner:hover{-webkit-transform:scale(1.1);transform:scale(1.1);}
 /*-------------FOOTER--------------------*/
 .container-hijos {
     display: flex;

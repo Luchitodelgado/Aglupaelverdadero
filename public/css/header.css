@@ -108,12 +108,6 @@ a:hover {
     flex-direction: row;
     padding: 10px;
 }
-.lupa{
-    padding: 5px;
-    margin: 5px;
-    max-width: 10px;
-    position: absolute;
-}
 /*------------------------------MEDIA 361PX----------------------------*/
 @media (min-width:361px){
     /*nav {
