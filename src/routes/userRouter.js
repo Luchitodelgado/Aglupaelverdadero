@@ -35,7 +35,6 @@ router.get("/registrarte",userController.registro);
 router.get("/ingresa",userController.ingresa);
 router.post("/login", validations,userController.processLogin);
 router.post('/registrarte', upload.single("avatar"), validations,userController.store);
-/* router.get('/users', userController.ingresa) */
 router.get('/pruebas', userController.list)
 router.get("/perfil",userController.userProfile);
 
