@@ -11,10 +11,10 @@ const User = db.User;
 const controller = {
 
 	registro: (req, res) => {
-		if (req.session.userLogged) { res.redirect("/perfil") }
-		else
-		res.render("ingresa")
-			
+
+
+		res.render("registrarte")
+
 	},
 	ingresa: (req, res) => {
 		res.render("ingresa")
@@ -78,14 +78,13 @@ const controller = {
 	store: (req, res) => {
 		const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
-			return res.render('registrarte', { errors: resultValidation.mapped(), oldData: req.body }),
-				console.log('hubo errores', {})
+			return res.render('registrarte', { errors: resultValidation.mapped(), oldData: req.body })
+				
 		}
 		else
 			User.create({
 				firstName: req.body.firstName,
 				lastName: req.body.lastName,
-				userName: req.body.userName,
 				email: req.body.email,
 				birthday: req.body.birthday,
 				avatar: req.session.newFileName,
