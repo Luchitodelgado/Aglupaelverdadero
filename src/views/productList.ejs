@@ -2,13 +2,14 @@
 <html lang="en">
 <%- include('partials/head') %>
 
+
     <body>
         <%- include('partials/headerNavbar') %>
 
             <% for( let i=0; i < productos.length; i++ ) { %>
                 <li>
                     <a href="/productos/detail/<%= productos[i].id %>">
-                    <img src="/img/<%=productos[i].image %>">
+                    <img src="/img/<%=productos[i].image %>">  </a>
                     <div>
                         <%= productos[i].name %>
                     </div>
@@ -27,7 +28,7 @@
                         <p> Stock </p>
                         <%= productos[i].stock %>
                     </div>
-                 </a>
+               
                 </li>
                 <% } %>
 

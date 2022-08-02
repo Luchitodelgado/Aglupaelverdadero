@@ -11,6 +11,10 @@ body {
 main{
     margin-top:12%;
 }
+
+.banner_home{
+    width: 100%;
+}
 /*MAIN*/
 .contenedor-imagen-principal {
     width:100%;
@@ -94,7 +98,7 @@ main{
     }
     .imagen-producto {
         margin: 0px;
-        width: 50%;
+        width: 100%;
     }
     /*.descuentos{
         font-size: 18px;
@@ -119,7 +123,7 @@ main{
     }
     .imagen-producto {
         margin: 0px;
-        width: 50%;
+        width: 100;
     }
     .nombre-articulo{
         font-size:15px;
