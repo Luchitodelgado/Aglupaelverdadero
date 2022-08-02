@@ -31,12 +31,13 @@ const validations=[
     check('birthday').notEmpty().isDate().withMessage('El formato de fecha no es correcto').bail()
 ]
 
-router.get("/registrarte",userController.registro);
-router.get("/ingresa",userController.ingresa);
-router.post("/login", validations,userController.processLogin);
-router.post('/registrarte', upload.single("avatar"), validations,userController.store);
+router.get("/registrarte",userMiddleware,userController.registro);
+router.get("/ingresa",userMiddleware,userController.ingresa);
+router.post("/login", userMiddleware,validations,userController.processLogin);
+router.post('/registrarte',upload.single("avatar"), userMiddleware,validations,userController.store);
 router.get('/pruebas', userController.list)
-router.get("/perfil",userController.userProfile);
+router.get("/perfil",userMiddleware,userController.userProfile);
+router.get("/salir", userController.salir)
 
 module.exports = router;
  

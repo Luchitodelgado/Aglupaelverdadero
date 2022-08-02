@@ -3,47 +3,11 @@ const path = require('path');
 const db = require("../../database/models")
 const sequelize = db.sequelize;
 const Product = db.Product;
-
-const productosFilePath = path.join(__dirname, '../data/productos.json');
+/* 
+const productosFilePath = path.join(__dirname, '../data/productos.json'); */
 
 
 const controller = {
-	texanas: (req, res) => {
-		Product.findAll({
-			where: {
-				typeProductId: 1
-			}
-		}).then(function (texanas) {
-			res.render("texanas", { texanas })
-		})
-	},
-	borcegos: (req, res) => {
-		Product.findAll({
-			where: {
-				typeProductId: 3
-			}
-		}).then(function (borcegos) {
-			res.render("borcegos", { borcegos })
-		})
-	},
-	botas: (req, res) => {
-		Product.findAll({
-			where: {
-				typeProductId: 2
-			}
-		}).then(function (botas) {
-			res.render("botas", { botas })
-		})
-	},
-	zapatillas: (req, res) => {
-		Product.findAll({
-			where: {
-				typeProductId: 4
-			}
-		}).then(function (zapatillas) {
-			res.render("zapatillas", { zapatillas })
-		})
-	},
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id)
 			.then(product => {
@@ -71,7 +35,6 @@ const controller = {
 			.catch(error => res.send(error))
 	},
 	store: (req, res) => {
-		/* res.send("Producto nuevo agregado"); */
 		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		let newProduct = {
 			id: products[products.image - 1].id + 1,
@@ -89,7 +52,6 @@ const controller = {
 	edit: (req, res) => {
 		let products = req.params.id;
 		Product.findByPk(products, {
-			/* include: [{ association: "genres" }] */
 		})
 			.then(product => {
 				return res.render('product-edit-form', { product })
@@ -132,13 +94,51 @@ const controller = {
 		res.render('productos')
 	},
 	search: (req, res) => {
-
-
 		res.send('hola')
-	}
+	},
+	productList: (req, res) => {
+		const listar = req.params.id
+		if (listar == "texanas") {
+			Product.findAll({
+				where: {
+					typeProductId: 1
+				}
+			}).then(function (productos) {
 
+				res.render("productList", { productos })
+			})
+		}
+		else if (listar == "botas") {
+			Product.findAll({
+				where: {
+					typeProductId: 2
+				}
+			}).then(function (productos) {
 
+				res.render("productList", { productos })
+			})
+		}
+		else if (listar == "borcegos") {
+			Product.findAll({
+				where: {
+					typeProductId: 3
+				}
+			}).then(function (productos) {
 
+				res.render("productList", { productos })
+			})
+		}
+		else if (listar == "zapatillas") {
+			Product.findAll({
+				where: {
+					typeProductId: 4
+				}
+			}).then(function (productos) {
+
+				res.render("productList", { productos })
+			})
+		}
+	},
 
 };
 

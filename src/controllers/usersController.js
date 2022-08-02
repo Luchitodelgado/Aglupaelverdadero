@@ -68,18 +68,12 @@ const controller = {
 			});
 
 	},
-
-
-
-
-
-
 	// DESDE AQUI CON BASE DE DATOS
 	store: (req, res) => {
 		const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
 			return res.render('registrarte', { errors: resultValidation.mapped(), oldData: req.body })
-				
+
 		}
 		else
 			User.create({
@@ -113,14 +107,20 @@ const controller = {
 	},
 	userProfile: (req, res) => {
 		if (req.session.userLogged) {
-
+			console.log(req.session.userLogged)
 			res.render('perfil', { usuario: req.session.userLogged });
+		
 		}
 		else
 			res.render("ingresa")
 
 	},
+
+	salir: (req, res) => {
+		req.session.destroy();
+		res.redirect('/')
+	}
+
+
 };
-
-
 module.exports = controller;

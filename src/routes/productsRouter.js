@@ -5,7 +5,7 @@ const path = require('path');
 
 const productosController = require('../controllers/productsController');
 
-/* Multer */
+// MULTER PARA SUBIR ARCHIVOS Y PODER VALIDARLOS
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -18,31 +18,24 @@ const storage = multer.diskStorage({
         req.session.newFileName = newFilename
     }
 });
-
 const upload = multer ({storage})
 
+
+// PROBANDO CRUD EN PRODUCTOS
 router.get('/productos', productosController.productos);
-router.get('/borcegos', productosController.borcegos);
-router.get('/botas', productosController.botas);
-router.get('/zapatillas', productosController.zapatillas);
-router.get('/texanas', productosController.texanas);
+router.get("/productos/:id", productosController.productList)
+router.get('/productos/detail/:id', productosController.detail);
 
-
+// INTENTAR IMPLEMENTAR CARRITO
 router.get('/productos/carrito', productosController.carrito);
 router.post('/productos/carrito/:id', productosController.carrito);
-/*** GET ONE PRODUCT ***/
-router.get('/productos/detail/:id', productosController.detail);
-router.get('/:barra-busqueda?', productosController.search)
 
-/**crear productos */
+
+// METODOS "ABM" (CREO QUE SERIA ESTO)
 router.get('/create', productosController.createProductForm);
 router.post('/newProduct', upload.single("fotoProducto"), productosController.create);
-
-/**Edicion productos*/
 router.get('/productos/edit/:id', productosController.edit);
 router.patch('/productos/edit/:id', upload.single("fotoProducto"), productosController.update);
-
-/* borrar producto */
 router.delete('/productos/delete/:id', productosController.destroy);
 
 

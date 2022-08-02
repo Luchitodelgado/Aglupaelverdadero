@@ -1,29 +1,98 @@
-<header>
-    <div class="div-padre">
-        <div class="div-buscador">
-            <form action="/search" method="GET" class="barra-lupa" id="inputSearch">
-                <input class="barra-busqueda barra" type="search" id="site-search" name="barra-busqueda" placeholder="¿Qué estás buscando?"></input>
-            </form>
+<% if (locals.usuario==undefined) { %>
+
+
+
+
+    <header>
+        <div class="div-padre">
+            <div class="div-buscador">
+                <form action="/search" method="GET" class="barra-lupa" id="inputSearch">
+                    <input class="barra-busqueda barra" type="search" id="site-search" name="barra-busqueda"
+                        placeholder="¿Qué estás buscando?"></input>
+                </form>
+            </div>
+            <div class="container-logo">
+                <a href="/"><img class="img-logo" src="/img/Minimalist Initial Letter Logo.png" alt="logo-header"></a>
+            </div>
+            <div class="container-carrito">
+                <a class="a-header" href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
+            </div>
         </div>
-        <div class="container-logo">
-            <a href="/"><img class="img-logo" src="/img/Minimalist Initial Letter Logo.png" alt="logo-header"></a>
+        <nav>
+            <div class="container-nav">
+                <ul class="ul">
+                    <li class="hijos-ul"><a class="a-header" href="/">HOME</a></li>
+                    <li class="hijos-ul"><a class="a-header" href="/productos">CATEGORÍAS</a></li>
+                    <li class="hijos-ul"><a class="a-header" href="/registrarte">REGISTRARTE</a></li>
+                    <li class="hijos-ul"><a class="a-header" href="/ingresa">INGRESÁ</a></li>
+                    <li class="hijos-ul"><a class="a-header" href="/create">CREAR PRODUCTOS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars menu"></i>
         </div>
-        <div class="container-carrito">
-            <a class="a-header" href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
-        </div>
-    </div>
-    <nav>
-        <div class="container-nav">
-        <ul class="ul">
-            <li class="hijos-ul"><a class="a-header" href="/">HOME NOW</a></li>
-            <li class="hijos-ul"><a class="a-header" href="/productos">CATEGORÍAS</a></li>
-            <li class="hijos-ul"><a class="a-header" href="/registrarte">REGISTRARTE</a></li>
-            <li class="hijos-ul"><a class="a-header" href="/ingresa">INGRESÁ</a></li>
-            <li class="hijos-ul"><a class="a-header" href="/create">CREAR PRODUCTOS</a></li>
-        </ul>
-    </div>
-    </nav>
-    <div class="burger-menu">
-        <i class="fas fa-bars menu"></i>
-    </div>
-</header>
+    </header>   
+
+        <% } else if (locals.usuario.typeUserId===1)  {%>
+
+            <header>
+                <div class="div-padre">
+                    <div class="div-buscador">
+                        <form action="/search" method="GET" class="barra-lupa" id="inputSearch">
+                            <input class="barra-busqueda barra" type="search" id="site-search" name="barra-busqueda"
+                                placeholder="¿Qué estás buscando?"></input>
+                        </form>
+                    </div>
+                    <div class="container-logo">
+                        <a href="/"><img class="img-logo" src="/img/Minimalist Initial Letter Logo.png" alt="logo-header"></a>
+                    </div>
+                    <div class="container-carrito">
+                        <a class="a-header" href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
+                    </div>
+                </div>
+                <nav>
+                    <div class="container-nav">
+                        <ul class="ul">
+                            <li class="hijos-ul"><a class="a-header" href="/productos">CATEGORÍAS</a></li>
+                            <li class="hijos-ul"><a class="a-header" href="/salir">SALIR</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="burger-menu">
+                    <i class="fas fa-bars menu"></i>
+                </div>
+            </header>       
+    
+            <% } else if (locals.usuario.typeUserId===2)  {%>
+
+                <header>
+                    <div class="div-padre">
+                        <div class="div-buscador">
+                            <form action="/search" method="GET" class="barra-lupa" id="inputSearch">
+                                <input class="barra-busqueda barra" type="search" id="site-search" name="barra-busqueda"
+                                    placeholder="¿Qué estás buscando?"></input>
+                            </form>
+                        </div>
+                        <div class="container-logo">
+                            <a href="/"><img class="img-logo" src="/img/Minimalist Initial Letter Logo.png" alt="logo-header"></a>
+                        </div>
+                        <div class="container-carrito">
+                            <a class="a-header" href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
+                        </div>
+                    </div>
+                    <nav>
+                        <div class="container-nav">
+                            <ul class="ul">
+                                <li class="hijos-ul"><a class="a-header" href="/productos">CATEGORÍAS</a></li>
+                                <li class="hijos-ul"><a class="a-header" href="/create">CREAR PRODUCTOS</a></li>
+                                <li class="hijos-ul"><a class="a-header" href="/create">ADMINISTRACION DE LA PAGINA</a></li>
+                                <li class="hijos-ul"><a class="a-header" href="/salir">SALIR</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="burger-menu">
+                        <i class="fas fa-bars menu"></i>
+                    </div>
+                </header>
+                <% } %>
