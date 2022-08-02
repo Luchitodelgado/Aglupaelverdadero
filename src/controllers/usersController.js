@@ -22,8 +22,6 @@ const controller = {
 	processLogin: function (req, res) {
 		let emailVerify = req.body.email
 		let password = req.body.password
-		console.log(req.body.email)
-		console.log(req.body.password)
 		User.findOne({
 			where: {
 				email: emailVerify,
@@ -31,7 +29,6 @@ const controller = {
 		})
 			.then(function (usuario) {
 				let dbPassword = usuario.password;
-				/* let key = password */
 				let key = bcryptjs.compareSync(password, dbPassword);
 				User.findOne({
 					where: {
@@ -41,8 +38,11 @@ const controller = {
 
 				}).then(function () {
 					if (emailVerify === usuario.email && key == true) {
-						req.session.userLogged = usuario;
+						res.locals.isLogged = true
+						req.session.userLogged = usuario;			
+						res.locals.usuario = usuario;		
 						res.redirect('/perfil')
+					
 					}
 					else {
 						res.render('ingresa', { oldData: req.body }, {
@@ -109,7 +109,7 @@ const controller = {
 		if (req.session.userLogged) {
 			console.log(req.session.userLogged)
 			res.render('perfil', { usuario: req.session.userLogged });
-		
+
 		}
 		else
 			res.render("ingresa")

@@ -1,4 +1,5 @@
-<% if (locals.isLogged===undefined) { %>
+<% if (locals.isLogged==false) { %>
+
     <header>
         <div class="div-padre">
             <div class="div-buscador">
@@ -18,7 +19,7 @@
             <div class="container-nav">
                 <ul class="ul">
                     <li class="hijos-ul"><a class="a-header" href="/">HOME</a></li>
-                    <li class="hijos-ul"><a class="a-header" href="/productos">CATEGORÍAS</a></li>
+                    <li class="hijos-ul"><a class="a-header" href="/productos">PRODUCTOS</a></li>
                     <li class="hijos-ul"><a class="a-header" href="/registrarte">REGISTRARTE</a></li>
                     <li class="hijos-ul"><a class="a-header" href="/ingresa">INGRESÁ</a></li>
           
@@ -30,7 +31,7 @@
         </div>
     </header>   
 
-        <% } else {%>
+        <% } else  {%>
 
             <header>
                 <div class="div-padre">
@@ -50,7 +51,7 @@
                 <nav>
                     <div class="container-nav">
                         <ul class="ul">
-                            <li class="hijos-ul"><a class="a-header" href="/productos">CATEGORÍAS</a></li>
+                            <li class="hijos-ul"><a class="a-header" href="/productos">PRODUCTOS</a></li>
                             <li class="hijos-ul"><a class="a-header" href="/create">CREAR PRODUCTOS</a></li>
                             <li class="hijos-ul"><a class="a-header" href="/salir">SALIR</a></li>
                             

@@ -1,11 +1,9 @@
 function userMiddleware(req, res, next) {
-    res.locals.isLogged=false
-    console.log('asddas')
+    res.locals.isLogged=false 
     if (req.session.userLogged) {
         usuario = req.session.userLogged;
         res.locals.userLogged = req.session.userLogged;
-/*         res.redirect('/perfil') */
-
+        res.locals.isLogged=true 
     }
     next();
 };
