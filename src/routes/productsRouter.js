@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const multer = require ('multer');
 const path = require('path');
+const guestMiddleware= require('../middlewares/guestMiddleware')
+const userMiddleware= require('../middlewares/userMiddleware')
 
 const productosController = require('../controllers/productsController');
 
@@ -22,21 +24,21 @@ const upload = multer ({storage})
 
 
 // PROBANDO CRUD EN PRODUCTOS
-router.get('/productos', productosController.productos);
-router.get("/productos/:id", productosController.productList)
-router.get('/productos/detail/:id', productosController.detail);
+router.get('/productos',userMiddleware, productosController.productos);
+router.get("/productos/:id",userMiddleware,productosController.productList)
+router.get('/productos/detail/:id',userMiddleware,productosController.detail);
 
 // INTENTAR IMPLEMENTAR CARRITO
-router.get('/productos/carrito', productosController.carrito);
-router.post('/productos/carrito/:id', productosController.carrito);
+router.get('/productos/carrito',userMiddleware, productosController.carrito);
+router.post('/productos/carrito/:id',userMiddleware, productosController.carrito);
 
 
 // METODOS "ABM" (CREO QUE SERIA ESTO)
-router.get('/create', productosController.createProductForm);
-router.post('/newProduct', upload.single("fotoProducto"), productosController.create);
-router.get('/productos/edit/:id', productosController.edit);
-router.patch('/productos/edit/:id', upload.single("fotoProducto"), productosController.update);
-router.delete('/productos/delete/:id', productosController.destroy);
+router.get('/create',userMiddleware,productosController.createProductForm);
+router.post('/newProduct',userMiddleware,upload.single("fotoProducto"), productosController.create);
+router.get('/productos/edit/:id',userMiddleware,productosController.edit);
+router.patch('/productos/edit/:id',userMiddleware,upload.single("fotoProducto"), productosController.update);
+router.delete('/productos/delete/:id',userMiddleware,productosController.destroy);
 
 
 

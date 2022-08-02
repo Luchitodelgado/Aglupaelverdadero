@@ -88,7 +88,7 @@ const controller = {
 				// TYPEUYERID:
 				// 0 = STANDARD USER
 				// 1 = ADMINISTRATOR
-				// 3 = OWNER		
+				// 2 = OWNER		
 
 			}),
 				res.redirect('/');

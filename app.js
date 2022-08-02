@@ -11,6 +11,7 @@ const session = require('express-session');
 
 
 
+
 /* ------------------------------ MOTOR DE PLANTILLAS (TEMPLATE ENGINES) ------------------------------*/
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views'));
@@ -23,7 +24,7 @@ app.use(methodOverride('_method'));
 app.use(session({ secret: "Mensaje secreto" }));
 app.use('/', mainRouter);
 app.use('/', userRouter);
-app.use('/', productos);
+app.use('/',productos);
 
 /* ------------------------------ PONER EN MARCHA EL SV------------------------------*/
 app.listen(3000, () => {

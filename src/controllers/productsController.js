@@ -97,6 +97,7 @@ const controller = {
 		res.send('hola')
 	},
 	productList: (req, res) => {
+		
 		const listar = req.params.id
 		if (listar == "texanas") {
 			Product.findAll({
@@ -138,6 +139,7 @@ const controller = {
 				res.render("productList", { productos })
 			})
 		}
+		console.log(req.session.userLogged)
 	},
 
 };
