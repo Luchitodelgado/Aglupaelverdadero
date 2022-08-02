@@ -1,3 +1,47 @@
-*{
-    
+.li-resultados{
+    list-style: none;
+}
+.container-resultados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.hijos-resultados{
+    text-align: center;
+    width:200px;
+    height:auto;
+    margin: 20px;
+}
+.img-resultados{
+    width: 100%;
+    height:300px;
+}
+.name-resultados{
+    font-family:"Roboto,sans-serif";
+    font-size:15px;
+    color:#434343;
+    font-weight: bold;
+}
+.description-resultados{
+    font-family:"Roboto,sans-serif";
+    font-size:15px;
+    color:#434343;
+    text-align: start;
+}
+.price-resultados{
+    font-family:"Roboto,sans-serif";
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+    color:#bc9c84;
+    border:1px solid #bc9c8489;
+    padding: 5px;
+}
+.stock-resultados{
+    font-family:"Roboto,sans-serif";
+    font-size:15px;
+    font-weight: bold;
+    color:#434343;
+    text-align: start;
 }
