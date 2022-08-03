@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head', {title: 'Formulario de creación'}) %>
-<body>
-    <%- include('partials/headerNavbar') %>
-    <main>
-        <div>
-            <h1 class="titulo">Crear producto</h1>
-         </div>            
-            <div class="container-crearProducto">
-                <form action="/newProduct" method="POST" enctype="multipart/form-data">
-                        <div class="div-hijos">
-                            <label for="name"><p class="p-CrearProducto">NOMBRE DEL PRODUCTO</p></label>
-                            <input class="input-crearProducto" type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas">
+<%- include('partials/head', {title: 'Formulario de creación' }) %>
+
+    <body>
+        <%- include('partials/headerNavbar') %>
+            <main>
+                <div>
+                    <h1 class="h1-registrarte">Crear producto</h1>
+                </div>
+                <div class="contenedor-padre">
+                    <form action="/newProduct" method="POST" enctype="multipart/form-data">
+                        <div class="contenedor-input">
+                            <label for="name">
+                                <p class="p-registrarte">NOMBRE DEL PRODUCTO</p>
+                            </label>
+                            <input class="input-hijo" type="text" id="name" name="name"
+                                placeholder="Ej Zapatillas Urbanas">
                         </div>
-                        <div class="div-hijos">
-                            <label for="price"><p class="p-CrearProducto">PRECIO DEL PRODUCTO</p></label>
-                            <input class="input-crearProducto" type="number" id="price" name="price" placeholder="Ej: $56.344">
+                        <div class="contenedor-input">
+                            <label for="price">
+                                <p class="p-registrarte">PRECIO DEL PRODUCTO</p>
+                            </label>
+                            <input class="input-hijo" type="number" id="price" name="price"
+                                placeholder="Ej: $56.344">
                         </div>
-                        <div class="div-hijos">
-                            <label for="discount"><p class="p-CrearProducto">DESCUENTO</p></label>
-                            <input class="input-crearProducto" type="number" id="discount" name="discount" placeholder="Ej: %40">
+                        <div class="contenedor-input">
+                            <label for="discount">
+                                <p class="p-registrarte">DESCUENTO</p>
+                            </label>
+                            <input class="input-hijo" type="number" id="discount" name="discount"
+                                placeholder="Ej: %40">
                         </div>
-                        <div class="div-hijos">
-                            <label for="category"><p class="p-CrearProducto">CATEGORÍA</p></label>
+                        <div class="contenedor-input">
+                            <label for="category">
+                                <p class="p-registrarte">CATEGORÍA</p>
+                            </label>
                             <select name="category" id="category">
                                 <option value="">Seleccionar</option>
                                 <option value=1>Texanas</option>
@@ -30,20 +42,27 @@
                                 <option value=4>Zapatillas</option>
                                 <option value=3>Borcegos</option>
                             </select>
-                            <label for="description"><p class="p-CrearProducto">DESCRIPCIÓN</p></label>
-                            <textarea class="input-crearProducto" name="description" id="description" class="tex"></textarea>
+                            <label for="description">
+                                <p class="p-registrarte">DESCRIPCIÓN</p>
+                            </label>
+                            <textarea class="input-hijo" name="description" id="description"
+                                class="tex"></textarea>
                         </div>
                         <br>
-                            <label for="detail"><p class="p-CrearProducto">FOTO DEL PRODUCTO</p></label>
-                            <br>
-                            <input class="input-crearProducto" type="file" required name="fotoProducto">
+                        <label for="detail">
+                            <p class="p-registrarte">FOTO DEL PRODUCTO</p>
+                        </label>
+                        <br>
+                        <input class="input-hijo" type="file" required name="fotoProducto">
                         <div>
-                            <button class="button-crearProducto" type="submit" class="botonDeEnviar">GUARDAR PRODUCTO</button>
-                        </div>                      
+                            <button class="button-crearProducto" type="submit" class="botonDeEnviar">GUARDAR
+                                PRODUCTO</button>
+                        </div>
                     </form>
-                </div> 
-            </div>
-    </main>
-    <%- include('partials/footer') %>    
-</body>
+                </div>
+                </div>
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
 </html>

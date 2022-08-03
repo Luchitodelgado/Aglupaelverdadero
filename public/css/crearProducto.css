@@ -6,6 +6,7 @@
     border-radius: 5px;
     padding: 5px;
 }
+
 .div-hijos{
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -13,6 +14,7 @@
     align-items: flex-start;
     width: 100%;
 }
+
 .input-crearProducto{
     border:1px solid rgba(128, 128, 128, 0.523);
     border-radius: 5px;
