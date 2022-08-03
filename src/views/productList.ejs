@@ -2,6 +2,7 @@
 <html lang="en">
 <%- include('partials/head') %>
 <body>
+    <main>
 <%- include('partials/headerNavbar') %>
         <div class="container-resultados">
             <% for( let i=0; i < productos.length; i++ ) { %>
@@ -21,6 +22,7 @@
                     <% } %>
                 </div>
                 <%- include('partials/footer') %>
-    </body>
+            </main>
+            </body>
 
 </html>
