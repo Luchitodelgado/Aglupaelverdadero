@@ -7,41 +7,41 @@
         <div>
             <h1 class="titulo">Crear producto</h1>
          </div>            
-            <div>
+            <div class="container-crearProducto">
                 <form action="/newProduct" method="POST" enctype="multipart/form-data">
                         <div class="div-hijos">
-                            <label for="name">Nombre del producto</label>
-                            <input type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas">
+                            <label for="name"><p class="p-CrearProducto">NOMBRE DEL PRODUCTO</p></label>
+                            <input class="input-crearProducto" type="text" id="name" name="name" placeholder="Ej Zapatillas Urbanas">
                         </div>
                         <div class="div-hijos">
-                            <label for="price">Precio del producto</label>
-                            <input type="number" id="price" name="price" placeholder="Ej: 56344">
+                            <label for="price"><p class="p-CrearProducto">PRECIO DEL PRODUCTO</p></label>
+                            <input class="input-crearProducto" type="number" id="price" name="price" placeholder="Ej: $56.344">
                         </div>
                         <div class="div-hijos">
-                            <label for="discount">Descuento</label>
-                            <input type="number" id="discount" name="discount" placeholder="Ej: 40">
+                            <label for="discount"><p class="p-CrearProducto">DESCUENTO</p></label>
+                            <input class="input-crearProducto" type="number" id="discount" name="discount" placeholder="Ej: %40">
                         </div>
                         <div class="div-hijos">
-                            <label for="category">Categoría</label>
+                            <label for="category"><p class="p-CrearProducto">CATEGORÍA</p></label>
                             <select name="category" id="category">
-                                <option value="">Elegí</option>
+                                <option value="">Seleccionar</option>
                                 <option value=1>Texanas</option>
                                 <option value=2>Botas</option>
                                 <option value=4>Zapatillas</option>
                                 <option value=3>Borcegos</option>
                             </select>
-                            <label for="description">Descripción</label>
-                            <textarea name="description" id="description" class="tex"></textarea>
+                            <label for="description"><p class="p-CrearProducto">DESCRIPCIÓN</p></label>
+                            <textarea class="input-crearProducto" name="description" id="description" class="tex"></textarea>
                         </div>
                         <br>
-                            <label for="detail">Foto de producto</label>
+                            <label for="detail"><p class="p-CrearProducto">FOTO DEL PRODUCTO</p></label>
                             <br>
-                            <input type="file" required name="fotoProducto">
-                        </div>
+                            <input class="input-crearProducto" type="file" required name="fotoProducto">
                         <div>
-                            <button type="submit" class="botonDeEnviar">Guardar producto</button>
-                        </div>                        
-                </form>
+                            <button class="button-crearProducto" type="submit" class="botonDeEnviar">GUARDAR PRODUCTO</button>
+                        </div>                      
+                    </form>
+                </div> 
             </div>
     </main>
     <%- include('partials/footer') %>    
