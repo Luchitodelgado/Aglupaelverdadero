@@ -87,7 +87,7 @@ const controller = {
 		res.redirect("/productos");
 	},
 	carrito: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+	
 		res.render('carrito')
 	},
 	productos: (req, res) => {
