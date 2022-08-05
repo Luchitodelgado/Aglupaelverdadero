@@ -79,12 +79,13 @@ const controller = {
 	},
 
 	destroy: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		let productId = req.params.id;
+        Product.destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/productos')})
+        .catch(error => res.send(error))
 
-		let finalProducts = products.filter(product => product.id != req.params.id);
-		fs.writeFileSync(productosFilePath, JSON.stringify(finalProducts, null, " "));
 
-		res.redirect("/productos");
 	},
 	carrito: (req, res) => {
 	
