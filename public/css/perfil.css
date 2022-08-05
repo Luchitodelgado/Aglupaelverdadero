@@ -1,0 +1,30 @@
+.container-padre-perfil{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width:100%;
+}
+.img-perfil{
+    width: 50%;
+    height: auto;
+    margin: auto;   
+    border-radius: 50%;
+}
+.div-datos{
+    flex-direction: row;
+    width: 50%;
+    align-self: center;
+    box-sizing: border-box;
+}
+.titulo-datos{
+    color:#bc9c84;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.datos-perfil{
+    color:#434343;
+    font-size: 15px;
+}

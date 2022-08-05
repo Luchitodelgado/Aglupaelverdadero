@@ -5,29 +5,18 @@
     <body>
         <main>
         <%- include('partials/headerNavbar') %>
-        <section class="">
-            <div class="">
-                <h1 class="">Hola, <%= usuario.firstName %>
-                </h1>
-            </div>
-            <section class="">
-                <div class="">
-                    <img id="" src="/img/img-usuarios/<%=usuario.avatar%>" alt="imagen">
-                    <div class="">
-                        <h2>Estos son tus datos:</h2>
-                        <p>Nombre: <%= usuario.firstName%>
-                        </p>
-                        <p> Apellido: <%= usuario.lastName %></p>
-                        <p>Usuario: <%= usuario.email %>
-                        </p>
-                        <p>Fecha de Nacimiento: <%= usuario.birthday%>
-                        </p>
+        <h1 class="">Hola, <%= usuario.firstName %>!</h1>
+        <div class="container-padre-perfil">
+                    <img class="img-perfil" src="/img/img-usuarios/<%=usuario.avatar%>" alt="imagen">
+                    <div class="div-datos">
+                        <p class="titulo-datos">Mis datos</p>
+                        <p class="datos-perfil">NOMBRE: <%= usuario.firstName%></p>
+                        <p class="datos-perfil">APELLIDO: <%= usuario.lastName %></p>
+                        <p class="datos-perfil">EMAIL: <%= usuario.email %></p>
+                        <p class="datos-perfil">FECHA DE NACIMIENTO: <%= usuario.birthday%></p>
                     </div>
                 </div>
-            </section>
-        </section>
-
-        <%- include('partials/footer') %>
+                <%- include('partials/footer') %>
     </main>
     </body>
 </html>
