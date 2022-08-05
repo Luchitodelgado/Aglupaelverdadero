@@ -1,4 +1,4 @@
-<h1>Proyecto Integrador ! GRUPO 4</h1>
+<h1>Proyecto Integrador ! GRUPO 3</h1>
 <h2>AGLUPA CALZADOS</h2>
 <h3>Temática del Sitio</h3>
 <p>Tienda e-commerce dedicada a la venta de diferentes tipos de calzado para mujeres.</p>
@@ -30,7 +30,7 @@
 </ul>
 <h3> Tablero y Wireframes </h3>
 <ul>
-    <li><a href = "https://trello.com/b/LRoXGj6U/aglupa">Tablero de Trello</a></li>
+    <li><a href = "https://trello.com/b/wPtLZny1/aglupael-verdadero">Tablero de Trello</a></li>
     <li><a href = "https://marvelapp.com/prototype/ai660bd/screen/86209660">Wireframe</a></li>
 </ul>
 
