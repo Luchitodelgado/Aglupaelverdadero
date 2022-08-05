@@ -1,0 +1,45 @@
+.h1-detail{
+    font-family: 'Montserrat', sans-serif;
+    color:#434343;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+.container-detail{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+}
+.img-detail{
+    margin: auto;
+    min-width:300px;
+    max-width:350px;
+    min-height:400px;
+    max-height: 450px;
+    border-radius: 4px;
+}
+.name-detail{
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    color: #434343;
+    text-align: center;
+}
+.description-detail{
+    font-family: "Roboto",sans-serif;
+    font-size: 15px;
+    color: #434343;
+    text-align: start;
+}
+.price-detail{
+    font-family:"Roboto,sans-serif";
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+    color:#bc9c84;
+    border:1px solid #bc9c8489;
+    padding: 5px;
+}
