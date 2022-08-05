@@ -3,8 +3,6 @@ const path = require('path');
 const db = require("../../database/models")
 const sequelize = db.sequelize;
 const Product = db.Product;
-/* 
-const productosFilePath = path.join(__dirname, '../data/productos.json'); */
 
 
 const controller = {
@@ -34,21 +32,6 @@ const controller = {
 			})
 			.catch(error => res.send(error))
 	},
-	store: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let newProduct = {
-			id: products[products.image - 1].id + 1,
-			name: req.body.name,
-			description: req.body.description,
-			price: req.body.price,
-			discount: req.body.discount,
-			image: req.file.filename,
-			category: req.body.category
-		}
-		products.push(newProduct);
-		fs.writeFileSync(productosFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/productos");
-	},
 	edit: (req, res) => {
 		let products = req.params.id;
 		Product.findByPk(products, {
@@ -76,26 +59,19 @@ const controller = {
 			})
 			.catch(error => res.send(error))
 	},
-
 	destroy: (req, res) => {
 		let productId = req.params.id;
-		Product.destroy({ where: { id: productId }, force: true }) // force: true es para asegurar que se ejecute la acción
+		Product.destroy({ where: { id: productId }, force: true })
 			.then(() => {
 				return res.redirect('/productos')
 			})
 			.catch(error => res.send(error))
-
-
 	},
 	carrito: (req, res) => {
-
 		res.render('carrito')
 	},
 	productos: (req, res) => {
 		res.render('productos')
-	},
-	search: (req, res) => {
-		res.send('hola')
 	},
 	productList: (req, res) => {
 
@@ -106,7 +82,6 @@ const controller = {
 					typeProductId: 1
 				}
 			}).then(function (productos) {
-
 				res.render("productList", { productos })
 			})
 		}
@@ -116,7 +91,6 @@ const controller = {
 					typeProductId: 2
 				}
 			}).then(function (productos) {
-
 				res.render("productList", { productos })
 			})
 		}
