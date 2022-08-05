@@ -7,9 +7,11 @@
 	<body>
 		<%- include('partials/headerNavbar') %>
 			<main>
-				<h1 class="h1-detail">Detalle del producto</h1>
 				<div class="container-detail">
-					<img class="img-detail" src="/img/<%= product.image %>" alt="product image">
+					<div class="div-img-detail">
+						<img class="img-detail" src="/img/<%= product.image %>" alt="product image">
+					</div>
+					<div class="div-info-detail">
 					<p class="name-detail">
 						<%= product.name %>
 					</p>
@@ -24,18 +26,21 @@
 						<% } else { %>
 							<%= product.price %>
 								<% } %>
-								<p>
+								<p class="icons-detail">
 									<i class="fas fa-credit-card"></i>
-									Pagá en 12 cuotas sin interés
+									HASTA 12 CUOTAS SIN INTERÉS
 								</p>
+								<p class="icons-detail">
 									<i class="fas fa-store"></i>
-									<p>Retiro gratis en locales del vendedor</p>
+									RETIRO GRATIS EN NUESTROS LOCALES
+								</p>
 									<a href="#">COMPRAR AHORA</a>
 									<a href="/productos/edit/<%= product.id %>">EDITAR PRODUCTO</a>
 									<form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST"
 										style="display: inline-flex">
 										<button type="submit">ELIMINAR</button>
 									</form>
+								</div>
 				</div>
 			</main>
 			<%- include('partials/footer') %>
