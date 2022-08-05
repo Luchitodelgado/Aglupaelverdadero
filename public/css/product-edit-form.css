@@ -11,10 +11,12 @@
 /*-----------DIV HIJOS--------*/
 .div-img-edit{
     width: 50%;
+    height: auto;
     padding: 20px;
 }
 .div-info-edit{
     width: 50%;
+    height: auto;
     padding: 5px;
 }
 /*----------CLASES INDIVIDUALES*/
