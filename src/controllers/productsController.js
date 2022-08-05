@@ -58,37 +58,37 @@ const controller = {
 			})
 	},
 	update: (req, res) => {
-		const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		let productosToEdit = productos.find(productos => req.params.id == productos.id);
-
-		let editedProductos = {
-			id: req.params.id,
-			name: req.body.name,
-			description: req.body.description,
-			price: req.body.price,
-			discount: req.body.discount,
-			image: req.file.filename,
-			category: req.body.category
-		}
-
-		let indice = productos.findIndex(productos => productos.id == req.params.id);
-		productos[indice] = editedProductos;
-
-		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
-		res.redirect("/productos");
+		let productId = req.params.id;
+		Product
+			.update({
+				id: req.params.id,
+				name: req.body.name,
+				description: req.body.description,
+				price: req.body.price,
+				discount: req.body.discount,
+				image: req.file.filename,
+				category: req.body.category
+			}, {
+				where: { id: productId }
+			}
+			).then(() => {
+				return res.redirect('/productos')
+			})
+			.catch(error => res.send(error))
 	},
 
 	destroy: (req, res) => {
 		let productId = req.params.id;
-        Product.destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
-        .then(()=>{
-            return res.redirect('/productos')})
-        .catch(error => res.send(error))
+		Product.destroy({ where: { id: productId }, force: true }) // force: true es para asegurar que se ejecute la acción
+			.then(() => {
+				return res.redirect('/productos')
+			})
+			.catch(error => res.send(error))
 
 
 	},
 	carrito: (req, res) => {
-	
+
 		res.render('carrito')
 	},
 	productos: (req, res) => {
@@ -98,7 +98,7 @@ const controller = {
 		res.send('hola')
 	},
 	productList: (req, res) => {
-		
+
 		const listar = req.params.id
 		if (listar == "texanas") {
 			Product.findAll({
