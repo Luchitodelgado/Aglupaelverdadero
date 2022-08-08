@@ -103,9 +103,9 @@
 
             name.onfocus = function (event) {
               event.preventDefault();
-              if (name.value == "") {
-                errors.push('El campo esta vacio')
-              }
+              if(name.value.length == 0){
+              errors.push("Debes completar este campo")
+            };
               if (name.value.length < 2 && name.value.length != 0) {
                 errors.push('Debe tener 2 caracteres o mas')
               }
@@ -124,9 +124,9 @@
 
             apellido.onfocus = function (event) {
               event.preventDefault();
-              if (apellido.value == "") {
-                errors.push('El campo esta vacio')
-              }
+              if(apellido.value.length == 0){
+              errors.push("Debes completar este campo")
+            };
               if (apellido.value.length < 2 && apellido.value.length != 0) {
                 errors.push('Debe tener 2 caracteres o mas')
               }
@@ -146,12 +146,13 @@
 
           email.onfocus = function (event) {
             event.preventDefault();
-            if (email.value == "") {
-              errors.push('El campo esta vacio');
-            };
             if (email.value.length >= 1 && email.value.length < 6) {
-              ('Porfavor ingrese un mail correcto')
-            }
+              errors.push('Porfavor ingrese un mail correcto')
+            };
+            if(email.value.length == 0){
+              errors.push("Debes completar este campo")
+            };
+
           };
 
         </script>
