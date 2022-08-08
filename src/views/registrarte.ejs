@@ -6,25 +6,20 @@
   <body>
     <%- include('partials/headerNavbar') %>
       <main>
-
         <h1 class="h1-registrarte">Creá tu cuenta</h1>
         <div class="contenedor-padre">
 
 
-          <form action="/registrarte" method="POST" enctype="multipart/form-data" class="registerForm">
-
+          <form action="/registrarte" method="POST" enctype="multipart/form-data" class="registerForm" id="formulario">
             <div class="contenedor-input">
-
               <label>
                 <p class="p-registrarte">NOMBRE</p>
               </label>
               <input class="input-hijo" type="text" name="firstName" id="nombre" placeholder="Juana Maria"></input>
-
               <% if (locals.errors && errors.firstName) {%>
                 <%= errors.firstName.msg %>
                   <%}%>
             </div>
-
             <div class="contenedor-input">
               <label>
                 <p class="p-registrarte">APELLIDO</p>
@@ -34,7 +29,6 @@
                 <%= errors.lastName.msg %>
                   <%}%>
             </div>
-
             <div class="contenedor-input">
               <label>
                 <p class="registrarte">EMAIL</p>
@@ -47,10 +41,10 @@
             </div>
 
             <div class="contenedor-input">
-              <label for="fecha-de-nacimiento">
+              <label for="birthday">
                 <p class="p-registrarte">FECHA DE NACIMIENTO</p>
               </label>
-              <input type="date" required min="1945-01-01" max="2022-04-06" name="birthday" id="fecha-de-nacimiento" />
+              <input type="date" required min="1945-01-01" max="2022-04-06" name="birthday" id="birthday" />
               <% if (locals.errors && errors.birthday) {%>
                 <%= errors.birthday.msg %>
                   <%}%>
@@ -103,9 +97,9 @@
 
             name.onfocus = function (event) {
               event.preventDefault();
-              if(name.value.length == 0){
-              errors.push("Debes completar este campo")
-            };
+              if (name.value.length == 0) {
+                errors.push("Debes completar este campo")
+              };
               if (name.value.length < 2 && name.value.length != 0) {
                 errors.push('Debe tener 2 caracteres o mas')
               }
@@ -118,15 +112,13 @@
                 errors.forEach(error => {
                   ulErrors.innerHTML += `<li> ${error} </li>`
                 })
-
               }
             };
-
             apellido.onfocus = function (event) {
               event.preventDefault();
-              if(apellido.value.length == 0){
-              errors.push("Debes completar este campo")
-            };
+              if (apellido.value.length == 0) {
+                errors.push("Debes completar este campo")
+              };
               if (apellido.value.length < 2 && apellido.value.length != 0) {
                 errors.push('Debe tener 2 caracteres o mas')
               }
@@ -139,22 +131,25 @@
                 errors.forEach(error => {
                   ulErrors.innerHTML += `<li> ${error} </li>`
                 })
-
               }
             }
-          };
-
-          email.onfocus = function (event) {
-            event.preventDefault();
-            if (email.value.length >= 1 && email.value.length < 6) {
-              errors.push('Porfavor ingrese un mail correcto')
+            email.onfocus = function (event) {
+              event.preventDefault();
+              if (email.value.length >= 1 && email.value.length < 6) {
+                errors.push('Porfavor ingrese un mail correcto')
+              };
+              if (email.value.length == 0) {
+                errors.push("Debes completar este campo")
+              };
+              if (errors.length > 0) {
+                event.preventDefault();
+                let ulErrors = document.querySelector('.formError ul');
+                errors.forEach(error => {
+                  ulErrors.innerHTML += `<li> ${error} </li>`
+                })
+              }
             };
-            if(email.value.length == 0){
-              errors.push("Debes completar este campo")
-            };
-
           };
-
         </script>
 
 
