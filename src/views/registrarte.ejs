@@ -6,15 +6,19 @@
   <body>
     <%- include('partials/headerNavbar') %>
       <main>
+
         <h1 class="h1-registrarte">Creá tu cuenta</h1>
         <div class="contenedor-padre">
-          <form action="/registrarte" method="POST" enctype="multipart/form-data">
+
+
+          <form action="/registrarte" method="POST" enctype="multipart/form-data" class="registerForm">
+
             <div class="contenedor-input">
+
               <label>
                 <p class="p-registrarte">NOMBRE</p>
               </label>
-              <input class="input-hijo" type="text" required name="firstName" id="nombre"
-                placeholder="Juana Maria"></input>
+              <input class="input-hijo" type="text" name="firstName" id="nombre" placeholder="Juana Maria"></input>
 
               <% if (locals.errors && errors.firstName) {%>
                 <%= errors.firstName.msg %>
@@ -25,8 +29,7 @@
               <label>
                 <p class="p-registrarte">APELLIDO</p>
               </label>
-              <input class="input-hijo" type="text" required name="lastName" id="apellido"
-                placeholder="Dorrego"></input>
+              <input class="input-hijo" type="text" name="lastName" id="apellido" placeholder="Dorrego"></input>
               <% if (locals.errors && errors.lastName) {%>
                 <%= errors.lastName.msg %>
                   <%}%>
@@ -36,7 +39,7 @@
               <label>
                 <p class="registrarte">EMAIL</p>
               </label>
-              <input class="input-hijo" type="email" required name="email" id="createEmail"
+              <input class="input-hijo" type="email" name="email" id="createEmail"
                 placeholder="juani_dorrego@gmail.com"></input>
               <% if (locals.errors && errors.email) {%>
                 <%= errors.email.msg %>
@@ -59,7 +62,7 @@
               </label>
               <p>
                 <br>
-                <input type="file" required name="avatar">
+                <input type="file" name="avatar">
             </div>
 
             <div class="contenedor-input">
@@ -67,7 +70,7 @@
                 <p class="p-registrarte">CONTRASEÑA</p>
               </label>
               <p>
-                <input class="input-hijo" type="password" required name="password" id="password" />
+                <input class="input-hijo" type="password" name="password" id="password" />
                 <% if (locals.errors && errors.password) {%>
                   <%= errors.password.msg %>
                     <%}%>
@@ -78,9 +81,21 @@
             </div>
           </form>
         </div>
+        <div class="formError">
+          <ul>
+  
+          </ul>
+        </div>
+
       </main>
 
       <%- include('partials/footer') %>
+
+ 
+        <script  src="../scripts/registerForm.js">
+
+        </script>
+  
 
   </body>
 
