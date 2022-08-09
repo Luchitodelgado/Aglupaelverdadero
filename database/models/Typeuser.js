@@ -16,5 +16,12 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Typeusers = sequelize.define(alias, cols, config)
 
+    Typeusers.associate = function (models) {
+        Typeusers.hasMany(models.User, {
+            as: "users",
+            foreignKey: "typeUserId"
+        })
+    }
+
     return Typeusers
 }

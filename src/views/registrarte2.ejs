@@ -8,9 +8,9 @@
       <main>
         <h1 class="h1-registrarte">Creá tu cuenta</h1>
         <div class="contenedor-padre">
-          <form action="/registrarte" class="formulario" id="formulario" method="POST">
+          <form action="/registrarte" class="formulario" id="formulario" method="POST" enctype="multipart/form-data">
 
-            <!-- Grupo: firstName -->
+            <!--  firstName -->
             <div class="formulario__grupo" id="grupo__firstName">
               <label for="firstName" class="formulario__label">NOMBRE</label>
               <div class="formulario__grupo-input">
@@ -24,7 +24,7 @@
                     <%}%>
             </div>
 
-            <!-- Grupo: lastName -->
+            <!--  lastName -->
             <div class="formulario__grupo" id="grupo__lastName">
               <label for="lastName" class="formulario__label">APELLIDO</label>
               <div class="formulario__grupo-input">
@@ -40,7 +40,7 @@
 
 
 
-            <!-- Grupo: Contraseña -->
+            <!--  Contraseña -->
             <div class="formulario__grupo" id="grupo__password">
               <label for="password" class="formulario__label">CONTRASEÑA</label>
               <div class="formulario__grupo-input">
@@ -53,7 +53,7 @@
               <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
             </div>
 
-            <!-- Grupo: Contraseña 2 -->
+            <!--  Contraseña 2 -->
             <div class="formulario__grupo" id="grupo__password2">
               <label for="password2" class="formulario__label">REPETIR CONTRASEÑA</label>
               <div class="formulario__grupo-input">
@@ -63,7 +63,7 @@
               <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
             </div>
 
-            <!-- Grupo: email Electronico -->
+            <!--  Correo Electronico -->
             <div class="formulario__grupo" id="grupo__email">
               <label for="email" class="formulario__label">CORREO ELECTRONICO</label>
               <div class="formulario__grupo-input">
@@ -79,7 +79,7 @@
 
 
 
-            <!-- Grupo: Teléfono -->
+            <!--  Teléfono -->
             <div class="formulario__grupo" id="grupo__telefono">
               <label for="telefono" class="formulario__label">TELEFONO</label>
               <div class="formulario__grupo-input">
@@ -112,7 +112,7 @@
               <input type="file" name="avatar">
             </div>
 
-            <!-- Grupo: Terminos y Condiciones -->
+            <!--  Terminos y Condiciones -->
             <div class="formulario__grupo" id="grupo__terminos">
               <label class="formulario__label">
                 <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">

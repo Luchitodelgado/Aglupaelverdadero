@@ -39,10 +39,10 @@ const controller = {
 				}).then(function () {
 					if (emailVerify === usuario.email && key == true) {
 						res.locals.isLogged = true
-						req.session.userLogged = usuario;			
-						res.locals.usuario = usuario;		
+						req.session.userLogged = usuario;
+						res.locals.usuario = usuario;
 						res.redirect('/perfil')
-					
+
 					}
 					else {
 						res.render('ingresa', { oldData: req.body }, {
@@ -70,31 +70,50 @@ const controller = {
 	},
 	// DESDE AQUI CON BASE DE DATOS
 	store: (req, res) => {
-		const resultValidation = validationResult(req);
-		if (resultValidation.errors.length > 0) {
-			return res.render('registrarte2', { errors: resultValidation.mapped(), oldData: req.body })
+		let emailVerify = req.body.email
+		User.findOne({
+			where: {
+				email: emailVerify,
+			}
+		}).then(function () {
+			const resultValidation = validationResult(req);
+			if (resultValidation.errors.length > 0) {
+				return res.render('registrarte2', { errors: resultValidation.mapped(), oldData: req.body })
+			}
+			else
+				User.create({
+					firstName: req.body.firstName,
+					lastName: req.body.lastName,
+					email: req.body.email,
+					birthday: req.body.birthday,
+		 			telefono: req.body.telefono,
+					avatar: req.session.newFileName,
+					password: bcryptjs.hashSync(req.body.password, 10),
+					/* 	password: req.body.password, */
+					typeUserId: 1
+					// TYPEUYERID:
+					// 0 = STANDARD USER
+					// 1 = ADMINISTRATOR
+					// 2 = OWNER		
 
-			
+				}),
+					res.redirect('/');
 
-		}
-		else
-			User.create({
-				firstName: req.body.firstName,
-				lastName: req.body.lastName,
-				email: req.body.email,
-				birthday: req.body.birthday,
-/* 				telefono: req.body.telefono, */
-				avatar: req.session.newFileName,
-				password: bcryptjs.hashSync(req.body.password, 10),
-				/* 	password: req.body.password, */
-				typeUserId: 1
-				// TYPEUYERID:
-				// 0 = STANDARD USER
-				// 1 = ADMINISTRATOR
-				// 2 = OWNER		
+		}).catch((err) => {
+			console.log(err)
+			res.render('registrarte2', { oldData: req.body }, {
+				errors: {
+					email: {
+						msg: 'Este email ya esta registrado'
+					}
+				}
+			})
 
-			}),
-				res.redirect('/');
+		});
+
+
+
+
 	},
 
 
