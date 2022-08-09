@@ -27,7 +27,8 @@ const validations=[
     check('lastName').notEmpty().isLength({min:3, max:20}).withMessage('minimo 3 caraceres, maximo 12.').bail(),
     check('email').notEmpty().isLength({min:3, max:50}).isEmail().withMessage('Ingrese un Email valido').bail(),
     check('password').notEmpty().isLength({min:7, max:16}).withMessage('ingrese una passowrd').bail(),
-    check('birthday').notEmpty().isDate().withMessage('El formato de fecha no es correcto').bail()
+    check('birthday').notEmpty().isDate().withMessage('El formato de fecha no es correcto').bail(),
+    check('telefono').notEmpty().isNumeric().isLength({min:7, max:20}).withMessage('Debes introducir un numero correcto sin simbolos')
 ]
 
 router.get("/registrarte",userMiddleware,userController.registro);

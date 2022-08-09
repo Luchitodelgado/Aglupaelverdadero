@@ -13,7 +13,7 @@ const controller = {
 	registro: (req, res) => {
 
 
-		res.render("registrarte")
+		res.render("registrarte2")
 
 	},
 	ingresa: (req, res) => {
@@ -72,7 +72,9 @@ const controller = {
 	store: (req, res) => {
 		const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
-			return res.render('registrarte', { errors: resultValidation.mapped(), oldData: req.body })
+			return res.render('registrarte2', { errors: resultValidation.mapped(), oldData: req.body })
+
+			
 
 		}
 		else
@@ -81,6 +83,7 @@ const controller = {
 				lastName: req.body.lastName,
 				email: req.body.email,
 				birthday: req.body.birthday,
+/* 				telefono: req.body.telefono, */
 				avatar: req.session.newFileName,
 				password: bcryptjs.hashSync(req.body.password, 10),
 				/* 	password: req.body.password, */
