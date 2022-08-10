@@ -16,6 +16,7 @@ const controller = {
 		res.render("crearProducto2")
 	},
 	create: (req, res) => {
+		
 		Product.create(
 			{
 				name: req.body.name,
@@ -24,7 +25,7 @@ const controller = {
 				discount: req.body.discount,
 				image: req.session.newFileName,
 				stock: 55,
-				typeProductId: 1
+				typeProductId: req.body.category
 			}
 		)
 			.then(() => {
