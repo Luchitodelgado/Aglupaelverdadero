@@ -6,7 +6,8 @@
     <%- include('partials/headerNavbar') %>
       <main>
         <h1 class="h1-ingresa">Ingresá</h1>
-        <% if (typeof errors !="undefined" ){%>
+        <div class="erorrs">
+          <% if (typeof errors !="undefined" ){%>
           <p style="color:red">ERROR</p>
           <ul>
             <% for (let i=0; i < errors.length; i++){%>
@@ -16,6 +17,7 @@
               <% } %>
           </ul>
           <% } %>
+        </div>
             <div class="container-login">
               <form action="/login" method="POST" class="loginForm">
                 <div class="login">
