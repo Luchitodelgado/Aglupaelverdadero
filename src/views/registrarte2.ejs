@@ -18,10 +18,10 @@
                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
               <p class="formulario__input-error">El Nombre tiene que ser de 4 a 16 dígitos y solo puede contener
-              letras.</p>
-                <% if (locals.errors && errors.firstName) {%>
-                  <%= errors.firstName.msg %>
-                    <%}%>
+                letras.</p>
+              <% if (locals.errors && errors.firstName) {%>
+                <%= errors.firstName.msg %>
+                  <%}%>
             </div>
 
             <!--  lastName -->
@@ -34,8 +34,8 @@
               <% if (locals.errors && errors.lastName) {%>
                 <%= errors.lastName.msg %>
                   <%}%>
-              <p class="formulario__input-error">El Apellido tiene que ser de 4 a 16 dígitos y solo puede contener
-                letras.</p>
+                    <p class="formulario__input-error">El Apellido tiene que ser de 4 a 16 dígitos y solo puede contener
+                      letras.</p>
             </div>
 
 
@@ -50,7 +50,7 @@
               <% if (locals.errors && errors.password) {%>
                 <%= errors.password.msg %>
                   <%}%>
-              <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                    <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
             </div>
 
             <!--  Contraseña 2 -->
@@ -73,11 +73,12 @@
               <% if (locals.errors && errors.email) {%>
                 <%= errors.email.msg %>
                   <%}%>
-              <p class="formulario__input-error">El email solo puede contener letras, numeros, puntos, guiones y guion
-                bajo.</p>
-                <% if (locals.mailEnUso) { %>
-                  <p> Porfavor ingrese otro email.</p>
-                 <% } %>
+                    <p class="formulario__input-error">El email solo puede contener letras, numeros, puntos, guiones y
+                      guion
+                      bajo.</p>
+                    <% if (locals.mailEnUso) { %>
+                      <p> Porfavor ingrese otro email.</p>
+                      <% } %>
             </div>
 
 
@@ -89,13 +90,14 @@
                 <input type="text" class="formulario__input" name="phone" id="phone" placeholder="4491234567">
                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
-      
-               
-          
+
+
+
               <% if (locals.errors && errors.phone) {%>
                 <%= errors.phone.msg %>
                   <%}%>
-              <p class="formulario__input-error">El phone solo puede contener numeros y el maximo son 14 dígitos.</p>
+                    <p class="formulario__input-error">El phone solo puede contener numeros y el maximo son 14 dígitos.
+                    </p>
             </div>
 
 
@@ -139,115 +141,7 @@
         </div>
       </main>
 
-      <script>
-        const formulario = document.getElementById('formulario');
-        const inputs = document.querySelectorAll('#formulario input');
-
-        const expresiones = {
-          firstName: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
-          lastName: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-          password: /^.{8,12}$/, // 4 a 12 digitos.
-          email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-          phone: /^\d{7,14}$/ // 7 a 14 numeros.
-        }
-
-        const campos = {
-          lastName: false,
-          firstName: false,
-          password: false,
-          email: false,
-          phone: false
-        }
-
-        const validarFormulario = (e) => {
-          switch (e.target.name) {
-            case "firstName":
-              validarCampo(expresiones.firstName, e.target, 'firstName');
-              break;
-            case "lastName":
-              validarCampo(expresiones.lastName, e.target, 'lastName');
-              break;
-            case "password":
-              validarCampo(expresiones.password, e.target, 'password');
-              validarPassword2();
-              break;
-            case "password2":
-              validarPassword2();
-              break;
-            case "email":
-              validarCampo(expresiones.email, e.target, 'email');
-              break;
-            case "phone":
-              validarCampo(expresiones.phone, e.target, 'phone');
-              break;
-          }
-        }
-
-        const validarCampo = (expresion, input, campo) => {
-          if (expresion.test(input.value)) {
-            document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
-            document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-            document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-            document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
-            document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
-            campos[campo] = true;
-          } else {
-            document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
-            document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-            document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
-            document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
-            document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
-            campos[campo] = false;
-          }
-        }
-
-        const validarPassword2 = () => {
-          const inputPassword1 = document.getElementById('password');
-          const inputPassword2 = document.getElementById('password2');
-
-          if (inputPassword1.value !== inputPassword2.value) {
-            document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
-            document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
-            document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
-            document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
-            document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
-            campos['password'] = false;
-          } else {
-            document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
-            document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
-            document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
-            document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
-            document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
-            campos['password'] = true;
-          }
-        }
-
-        inputs.forEach((input) => {
-          input.addEventListener('keyup', validarFormulario);
-          input.addEventListener('blur', validarFormulario);
-        });
-
-        formulario.addEventListener('submit', (e) => {
-          e.preventDefault();
-
-          const terminos = document.getElementById('terminos');
-          if (campos.lastName && campos.firstName && campos.password && campos.email && campos.phone && terminos.checked) {
-            formulario.submit();
-
-
-            document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-            setTimeout(() => {
-              document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-            }, 5000);
-
-            document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-              icono.classList.remove('formulario__grupo-correcto');
-            });
-          } else {
-            document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-          }
-        });
-      </script>
+      <script src="../../js/registerForm.js"></script>
 
 
 
