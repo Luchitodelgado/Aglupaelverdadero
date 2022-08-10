@@ -34,11 +34,11 @@ router.post('/productos/carrito/:id',userMiddleware, productosController.carrito
 
 
 // METODOS "ABM" (CREO QUE SERIA ESTO)
-router.get('/create',userMiddleware,productosController.createProductForm);
-router.post('/newProduct',userMiddleware,upload.single("fotoProducto"), productosController.create);
-router.get('/productos/edit/:id',userMiddleware,productosController.edit);
-router.patch('/productos/edit/:id',userMiddleware,upload.single("fotoProducto"), productosController.update);
-router.delete('/productos/delete/:id',userMiddleware,productosController.destroy);
+router.get('/create',guestMiddleware,productosController.createProductForm);
+router.post('/newProduct',guestMiddleware,upload.single("fotoProducto"), productosController.create);
+router.get('/productos/edit/:id',guestMiddleware,productosController.edit);
+router.patch('/productos/edit/:id',guestMiddleware,upload.single("fotoProducto"), productosController.update);
+router.delete('/productos/delete/:id',guestMiddleware,productosController.destroy);
 
 
 

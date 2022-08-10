@@ -12,35 +12,41 @@
 						<img class="img-detail" src="/img/<%= product.image %>" alt="product image">
 					</div>
 					<div class="div-info-detail">
-					<p class="name-detail">
-						<%= product.name %>
-					</p>
-					<p class="description-detail">
-						<%= product.description %>
-					</p>
-					<% if(product.discount> 0){
-						let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
-						%>
-						<p class="price-detail">$<%= finalPrice %>
+						<p class="name-detail">
+							<%= product.name %>
 						</p>
-						<% } else { %>
-							<%= product.price %>
-								<% } %>
-								<p class="icons-detail">
-									<i class="fas fa-credit-card"></i>
-									HASTA 12 CUOTAS SIN INTERÉS
-								</p>
-								<p class="icons-detail">
-									<i class="fas fa-store"></i>
-									RETIRO GRATIS EN NUESTROS LOCALES
-								</p>
-								<a href="#">COMPRAR</a>
-									<a href="/productos/edit/<%= product.id %>">EDITAR</a>
-									<form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST"
-										style="display: inline-flex">
-										<button type="submit">ELIMINAR</button>
-									</form>
-								</div>
+						<p class="description-detail">
+							<%= product.description %>
+						</p>
+						<% if(product.discount> 0){
+							let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+							%>
+							<p class="price-detail">$<%= finalPrice %>
+							</p>
+							<% } else { %>
+								<%= product.price %>
+									<% } %>
+										<p class="icons-detail">
+											<i class="fas fa-credit-card"></i>
+											HASTA 12 CUOTAS SIN INTERÉS
+										</p>
+										<p class="icons-detail">
+											<i class="fas fa-store"></i>
+											RETIRO GRATIS EN NUESTROS LOCALES
+										</p>
+										<a href="#">COMPRAR</a>
+
+										<% if (locals.isLogged) { %>
+											<a href="/productos/edit/<%= product.id %>">EDITAR</a>
+											<% }%>
+												<% if (locals.isLogged) { %>
+													<form action="/productos/delete/<%= product.id %>?_method=DELETE"
+														method="POST" style="display: inline-flex">
+														<button type="submit">ELIMINAR</button>
+													</form>
+													<% }%>
+
+					</div>
 				</div>
 			</main>
 			<%- include('partials/footer') %>

@@ -4,8 +4,6 @@
 
   <body>
     <%- include('partials/headerNavbar') %>
-
-    </section>
       <main>
         <h1 class="h1-ingresa">Ingresá</h1>
         <% if (typeof errors !="undefined" ){%>
@@ -40,47 +38,11 @@
                 </div>
               </form>
             </div>
-            <script>
-              window.onload = function (event) {
-                event.preventDefault();
-                let errors = []
-                let formulario = document.querySelector('.loginForm')
-
-                let email = document.querySelector('.loginEmail')
-
-                formulario.onsubmit = function (event) {
-                  if (email.value == "") {
-                    errors.push('El campo esta vacio')
-                  }
-                  if (email.value.length <8){
-                    errors.push('El email es muy corto')
-                  }
-
-
-                  if (errors.length > 0) {
-                    event.preventDefault();
-                    let ulErrors = document.querySelector('.errores ul');
-                    errors.forEach(error => {
-                      ulErrors.innerHTML += `<li> ${error} </li>`
-                    })
-
-                  }
-                }
-              }
 
 
 
-
-
-
-
-            </script>
-    <section class="errores">
-      <ul>
-
-      </ul>
       </main>
-      
+
       <%- include('partials/footer') %>
   </body>
 

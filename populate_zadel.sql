@@ -7,10 +7,10 @@ INSERT INTO typeProducts (categoryName) VALUES
 ('borcegos'),
 ('zapatillas');
 
-INSERT INTO typeusers (NAME) VALUES
+INSERT INTO typeusers (name) VALUES
 ('usuario registrado'),
 ('administrador'),
-('owner')
+('owner');
 -- Agregamos a la tabla de productos
 INSERT INTO products (name, description, price,discount,image,stock,typeProductId) VALUES
 ('IRGIZI NEGRO','Texana de cuero liso con detalle de costuras.',20500,14,'bota 2.webp',55,1),
