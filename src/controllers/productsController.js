@@ -37,7 +37,7 @@ const controller = {
 		Product.findByPk(products, {
 		})
 			.then(product => {
-				return res.render('product-edit-form', { product })
+				return res.render('editProduct', { product })
 			})
 	},
 	update: (req, res) => {
