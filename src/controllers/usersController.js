@@ -9,12 +9,9 @@ const User = db.User;
 
 
 const controller = {
-
 	registro: (req, res) => {
-
-
+		res.locals.mailEnUso = false
 		res.render("registrarte2")
-
 	},
 	ingresa: (req, res) => {
 		res.render("ingresa")
@@ -64,65 +61,67 @@ const controller = {
 						}
 					}
 				})
-
 			});
-
 	},
-	// DESDE AQUI CON BASE DE DATOS
 	store: (req, res) => {
 		let emailVerify = req.body.email
 		User.findOne({
 			where: {
 				email: emailVerify,
 			}
-		}).then(function () {
+		}).then(function (usuario) {
 			const resultValidation = validationResult(req);
 			if (resultValidation.errors.length > 0) {
-				return res.render('registrarte2', { errors: resultValidation.mapped(), oldData: req.body })
+				res.render('registrarte2', { errors: resultValidation.mapped(), oldData: req.body })
 			}
-			else
-				User.create({
-					firstName: req.body.firstName,
-					lastName: req.body.lastName,
-					email: req.body.email,
-					birthday: req.body.birthday,
-		 			telefono: req.body.telefono,
-					avatar: req.session.newFileName,
-					password: bcryptjs.hashSync(req.body.password, 10),
-					/* 	password: req.body.password, */
-					typeUserId: 1
-					// TYPEUYERID:
-					// 0 = STANDARD USER
-					// 1 = ADMINISTRATOR
-					// 2 = OWNER		
+			else if (emailVerify === usuario.email) {
+				res.locals.mailEnUso = true
+				console.log(' Este mail ya esta usandose')
+				return res.render('registrarte2', { oldData: req.body })
+			}
+/* 			else
+				console.log('aqui estas')
+			User.create({
+				firstName: req.body.firstName,
+				lastName: req.body.lastName,
+				email: req.body.email,
+				birthday: req.body.birthday,
+				phone: req.body.phone,
+				avatar: req.session.newFileName,
+				password: bcryptjs.hashSync(req.body.password, 10),
+				typeUserId: 1
 
-				}),
-					res.redirect('/');
+				// TYPEUYERID:				
+				// 1 = REGISTERED USER
+				// 2 = ADMINISTRATOR
+				//3 = OWNER
 
-		}).catch((err) => {
-			console.log(err)
-			res.render('registrarte2', { oldData: req.body }, {
-				errors: {
-					email: {
-						msg: 'Este email ya esta registrado'
-					}
-				}
-			})
+			}),
+				res.redirect('/'); */
 
+		}).catch(() => {
+			User.create({
+				firstName: req.body.firstName,
+				lastName: req.body.lastName,
+				email: req.body.email,
+				birthday: req.body.birthday,
+				phone: req.body.phone,
+				avatar: req.session.newFileName,
+				password: bcryptjs.hashSync(req.body.password, 10),
+				typeUserId: 1
+				// TYPEUYERID:				
+				// 1 = REGISTERED USER
+				// 2 = ADMINISTRATOR
+				//3 = OWNER
+			}),
+				res.redirect('/');
 		});
-
-
-
-
 	},
-
-
 	list: (req, res) => {
 		db.User.findAll()
 			.then(user => {
 				res.render('pruebas.ejs', { user })
 			})
-
 	},
 	create: (req, res) => {
 		res.render('ingresa')
@@ -131,18 +130,13 @@ const controller = {
 		if (req.session.userLogged) {
 			console.log(req.session.userLogged)
 			res.render('perfil', { usuario: req.session.userLogged });
-
 		}
 		else
 			res.render("ingresa")
-
 	},
-
 	salir: (req, res) => {
 		req.session.destroy();
 		res.redirect('/')
 	}
-
-
 };
 module.exports = controller;

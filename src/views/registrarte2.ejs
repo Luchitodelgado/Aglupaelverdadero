@@ -75,21 +75,27 @@
                   <%}%>
               <p class="formulario__input-error">El email solo puede contener letras, numeros, puntos, guiones y guion
                 bajo.</p>
+                <% if (locals.mailEnUso) { %>
+                  <p> Porfavor ingrese otro email.</p>
+                 <% } %>
             </div>
 
 
 
             <!--  Teléfono -->
-            <div class="formulario__grupo" id="grupo__telefono">
-              <label for="telefono" class="formulario__label">TELEFONO</label>
+            <div class="formulario__grupo" id="grupo__phone">
+              <label for="phone" class="formulario__label">NUMERO DE TELEFONO</label>
               <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+                <input type="text" class="formulario__input" name="phone" id="phone" placeholder="4491234567">
                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
-              <% if (locals.errors && errors.telefono) {%>
-                <%= errors.telefono.msg %>
+      
+               
+          
+              <% if (locals.errors && errors.phone) {%>
+                <%= errors.phone.msg %>
                   <%}%>
-              <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+              <p class="formulario__input-error">El phone solo puede contener numeros y el maximo son 14 dígitos.</p>
             </div>
 
 
@@ -142,7 +148,7 @@
           lastName: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
           password: /^.{8,12}$/, // 4 a 12 digitos.
           email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-          telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+          phone: /^\d{7,14}$/ // 7 a 14 numeros.
         }
 
         const campos = {
@@ -150,7 +156,7 @@
           firstName: false,
           password: false,
           email: false,
-          telefono: false
+          phone: false
         }
 
         const validarFormulario = (e) => {
@@ -171,8 +177,8 @@
             case "email":
               validarCampo(expresiones.email, e.target, 'email');
               break;
-            case "telefono":
-              validarCampo(expresiones.telefono, e.target, 'telefono');
+            case "phone":
+              validarCampo(expresiones.phone, e.target, 'phone');
               break;
           }
         }
@@ -225,7 +231,7 @@
           e.preventDefault();
 
           const terminos = document.getElementById('terminos');
-          if (campos.lastName && campos.firstName && campos.password && campos.email && campos.telefono && terminos.checked) {
+          if (campos.lastName && campos.firstName && campos.password && campos.email && campos.phone && terminos.checked) {
             formulario.submit();
 
 

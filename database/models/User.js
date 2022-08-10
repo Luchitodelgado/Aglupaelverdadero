@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
         email: {
             type: dataTypes.STRING
         },
-         telefono: {
+         phone: {
             type: dataTypes.INTEGER
         } 
     }
