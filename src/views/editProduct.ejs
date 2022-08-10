@@ -13,7 +13,7 @@
           </div>
           <div class="div-info-edit">
             <p class="titulo-edit">ESTÁS EDITANDO:</p>
-            <form action="/registrarte" class="formulario" id="formulario" method="POST" enctype="multipart/form-data">
+            <form action="/productos/edit/<%= product.id %>?_method=PATCH"  class="formulario" id="formulario" method="POST" enctype="multipart/form-data">
 
               <!--  name -->
               <div class="formulario__grupo" id="grupo__name">
@@ -94,7 +94,7 @@
 
               <p class="foto-edit">
                 <label>Foto del producto:</label>
-                <input type="file" value="<%= product.image %>" required name="fotoProducto">
+                <input type="file" value="<%= product.image %>" name="fotoProducto">
               </p>
               <div>
 

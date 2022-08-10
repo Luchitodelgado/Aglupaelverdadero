@@ -62,7 +62,7 @@ formulario.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const terminos = document.getElementById('terminos');
-  if (campos.price && campos.name && campos.email && campos.discount && campos.description) {
+  if (campos.price && campos.name  && campos.discount && campos.description) {
     formulario.submit();
 
 

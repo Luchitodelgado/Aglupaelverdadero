@@ -16,7 +16,7 @@ const controller = {
 		res.render("crearProducto2")
 	},
 	create: (req, res) => {
-		
+
 		Product.create(
 			{
 				name: req.body.name,
@@ -43,22 +43,40 @@ const controller = {
 	},
 	update: (req, res) => {
 		let productId = req.params.id;
-		Product
-			.update({
+		if (req.params.newFileName == undefined) {
+			Product
+				.update({
+					id: req.params.id,
+					name: req.body.name,
+					description: req.body.description,
+					price: req.body.price,
+					discount: req.body.discount,
+					typeProductId: req.body.category
+				}, {
+					where: { id: productId }
+				}
+				).then(() => {
+					return res.redirect('/productos')
+				})
+				.catch(error => res.send(error))
+		}
+		else
+			Product.update({
 				id: req.params.id,
 				name: req.body.name,
 				description: req.body.description,
 				price: req.body.price,
 				discount: req.body.discount,
 				image: req.file.filename,
-				category: req.body.category
+				typeProductId: req.body.category
 			}, {
 				where: { id: productId }
 			}
 			).then(() => {
 				return res.redirect('/productos')
 			})
-			.catch(error => res.send(error))
+				.catch(error => res.send(error))
+
 	},
 	destroy: (req, res) => {
 		let productId = req.params.id;
