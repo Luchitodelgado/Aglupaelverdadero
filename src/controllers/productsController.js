@@ -13,7 +13,7 @@ const controller = {
 			});
 	},
 	createProductForm: (req, res) => {
-		res.render("crearProducto")
+		res.render("crearProducto2")
 	},
 	create: (req, res) => {
 		Product.create(

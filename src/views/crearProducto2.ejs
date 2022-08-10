@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+    <body>
+        <%- include('partials/headerNavbar') %>
+            <main>
+                <div class="container-edit">
+                    <div class="div-img-edit">
+                    </div>
+                    <div class="div-info-edit">
+                        <p class="titulo-edit">CREAR PRODUCTO</p>
+                        <form action="/newProduct" class="formulario" id="formulario" method="POST"
+                            enctype="multipart/form-data">
+
+                            <!--  name -->
+                            <div class="formulario__grupo" id="grupo__name">
+                                <label for="name" class="formulario__label">NOMBRE DEL PRODUCTO</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="name" id="name"
+                                        placeholder="Pepito">
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">El Nombre del producto tiene que tener de 4 a 16
+                                    dígitos y solo puede
+                                    contener
+                                    letras.</p>
+                                <% if (locals.errors && errors.name) {%>
+                                    <%= errors.name.msg %>
+                                        <%}%>
+                            </div>
+
+                            <!--  price -->
+                            <div class="formulario__grupo" id="grupo__price">
+                                <label for="price" class="formulario__label">PRECIO DEL PRODUCTO</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="number" class="formulario__input" name="price" id="price"
+                                        placeholder="Elpistolero">
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <% if (locals.errors && errors.price) {%>
+                                    <%= errors.price.msg %>
+                                        <%}%>
+                                            <p class="formulario__input-error">Solo pueden ingresarse numeros
+                                                numeros.</p>
+                            </div>
+
+                            <!-- Description  -->
+                            <div class="formulario__grupo" id="grupo__description">
+                                <label for="name" class="formulario__label">DESCRIPCION</label>
+                                <div class="formulario__grupo-input">
+                                    <input class="formulario__input" name="description" id="description"
+                                        class="description-edit"></input>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">La descripcion del producto tiene que tener un minimo
+                                    de 20
+                                    caracteres y un maximo de 200
+                                    puede
+                                    contener
+                                    letras.</p>
+                                <% if (locals.errors && errors.description) {%>
+                                    <%= errors.description.msg %>
+                                        <%}%>
+                            </div>
+
+                            <!-- Categoria  -->
+                            <p class="category-edit">
+                                <label for="category" class="form-label">Categoría:</label>
+                                <select name="category" id="category" class="category-edit">
+                                    <option value="">Elige una categoria para tu producto:</option>
+                                    <option value="1">Texanas</option>
+                                    <option value="3">Borcegos</option>
+                                    <option value="2">Botas</option>
+                                    <option value="4">Zapatillas</option>
+                                </select>
+                            </p>
+
+                            <!--  Descuento -->
+                            <div class="formulario__grupo" id="grupo__discount">
+                                <label for="discount" class="formulario__label">DESCUENTO</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="number" class="formulario__input" name="discount" id="discount"
+                                        placeholder="20">
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <% if (locals.errors && errors.discount) {%>
+                                    <%= errors.discount.msg %>
+                                        <%}%>
+                                            <p class="formulario__input-error">El discount solo puede contener numeros y
+                                                el maximo son 14
+                                                dígitos.
+                                            </p>
+                            </div>
+
+                            <p class="foto-edit">
+                                <label>Foto del producto:</label>
+                                <input type="file" required name="fotoProducto">
+                            </p>
+                            <div>
+
+
+                                <div class="formulario__mensaje" id="formulario__mensaje">
+                                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el
+                                        formulario
+                                        correctamente. </p>
+                                </div>
+
+                                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                                    <button type="submit" class="formulario__btn">Enviar</button>
+                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario
+                                        enviado exitosamente!
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+            </main>
+
+            <script src="/js/newProduct.js"></script>
+            <% - include('partials/footer') %>
+    </body>
+
+</html>
