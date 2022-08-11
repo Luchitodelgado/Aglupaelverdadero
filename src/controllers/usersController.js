@@ -19,50 +19,62 @@ const controller = {
 	processLogin: function (req, res) {
 		let emailVerify = req.body.email
 		let password = req.body.password
+
 		User.findOne({
 			where: {
 				email: emailVerify,
 			}
 		})
 			.then(function (usuario) {
-				let dbPassword = usuario.password;
-				let key = bcryptjs.compareSync(password, dbPassword);
-				User.findOne({
-					where: {
-						email: emailVerify,
-						password: key
-					}
 
-				}).then(function () {
-					if (emailVerify === usuario.email && key == true) {
-						res.locals.isLogged = true
-						req.session.userLogged = usuario;
-						res.locals.usuario = usuario;
-						res.redirect('/perfil')
+				if (!usuario) {
+					console.log('el mail no se encuentra')
+					return res.render('ingresa', { message: "There is no record of the email" })
+				}
+				else {
+					console.log('logeaste')
+					let dbPassword = usuario.password;
+					let key = bcryptjs.compareSync(password, dbPassword)
 
-					}
-					else if (emailVerify === usuario.email && key == false) {
-						res.render('ingresa', { oldData: req.body }, {
-							errors: {
-								email: {
-									msg: 'password incorrecta'
+					User.findOne({
+						where: {
+							email: emailVerify,
+							password: key
+						}
+					}).then(function () {
+						if (emailVerify === usuario.email && key == true) {
+							res.locals.isLogged = true
+							req.session.userLogged = usuario;
+							res.locals.usuario = usuario;
+							res.redirect('/perfil')
+
+						}
+						else if (emailVerify === usuario.email && key == false) {
+							res.render('ingresa', { oldData: req.body }, {
+								errors: {
+									email: {
+										msg: 'password incorrecta'
+									}
 								}
-							}
-						})
-					}
-					else if (emailVerify != usuario.email){
-						res.render("ingresa",{ oldData: req.body },{
-							errors: {
-								email: {
-									msg: 'email incorrecta'
+							})
+						}
+						else if (usuario.email == undefined) {
+							res.render("ingresa", { oldData: req.body }, {
+								errors: {
+									email: {
+										msg: 'email incorrecta'
+									}
 								}
-							}
-						})
-					}
-				})
+							})
+						}
+						else if (usuario == null || password == null) {
+							res.render('ingresa')
+						}
+					})
 
+				}
 			}).catch((err) => {
-				console.log(err)
+				console.log("este es el error: " + err)
 				res.render('ingresa', { oldData: req.body }, {
 					errors: {
 						email: {
@@ -85,7 +97,7 @@ const controller = {
 			}
 			else if (emailVerify === usuario.email) {
 				res.locals.mailEnUso = true
-				console.log(' Este mail ya esta usandose')
+
 				return res.render('registrarte2', { oldData: req.body })
 			}
 			/* 			else
@@ -137,7 +149,7 @@ const controller = {
 	},
 	userProfile: (req, res) => {
 		if (req.session.userLogged) {
-			console.log(req.session.userLogged)
+
 			res.render('perfil', { usuario: req.session.userLogged });
 		}
 		else

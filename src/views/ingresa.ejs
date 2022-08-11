@@ -16,7 +16,7 @@
               <% } %>
           </ul>
           <% } %>
-            <div class="erorrs">
+            <div class="errors">
               <ul>
               </ul>
             </div>
@@ -53,37 +53,34 @@
           let campoPassword = document.querySelector("#loginPassword");
           let errors = []
 
-          formularioLogin.addEventListener("submit", function (e) {
+          campoEmail.onfocus = function (e) {
+            console.log('focus en email')
+            if (campoEmail.value == "") {             
+              errors.push("Este campo es obligatorio")
+            }
+          }
+
+          campoPassword.onfocus = function (e) {
+            console.log("focus en password")
             e.preventDefault();
-            campoEmail.onfocus = function (e) {
-
-              if (campoEmail.value == "") {
-                console.log('focus en email')
-                erorrs.push("Este campo es obligatorio")
-              }
+            if (campoPassword.value == "") {
+              errors.push("Este campo es obligatorio")
             }
-
-            campoPassword.onfocus = function (e) {
-              console.log("focus en password")
-              e.preventDefault();
-              if (campoPassword.value == "") {
-                erorrs.push("Este campo es obligatorio")
-              }
-              if (campoPassword.value.length >= 8) {
-                erorrs.push("La contraseña debe tener al menos 8 caracteres")
-              }
+            if (campoPassword.value.length >= 8) {
+              errors.push("La contraseña debe tener al menos 8 caracteres")
             }
+          }
 
-            if (erorrs.length > 0) {
-              e.preventDefault();
-            };
-            let ulErrors = document.querySelector(".errors")
-            for (let i = 0; i < erorrs.length; i++) {
-              ulErrors.innnerHTML += "<li>" + erorrs[i] + "</li>"
+          if (errors.length > 0) {
+            e.preventDefault();
+          };
+          let ulErrors = document.querySelector(".errors")
+          for (let i = 0; i < errors.length; i++) {
+            ulErrors.innnerHTML += "<li>" + errors[i] + "</li>"
 
-            }
+          }
 
-          })
+
 
         })
       </script>
