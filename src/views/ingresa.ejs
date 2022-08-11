@@ -6,8 +6,7 @@
     <%- include('partials/headerNavbar') %>
       <main>
         <h1 class="h1-ingresa">Ingresá</h1>
-        <div class="erorrs">
-          <% if (typeof errors !="undefined" ){%>
+        <% if (typeof errors !="undefined" ){%>
           <p style="color:red">ERROR</p>
           <ul>
             <% for (let i=0; i < errors.length; i++){%>
@@ -17,9 +16,12 @@
               <% } %>
           </ul>
           <% } %>
-        </div>
+            <div class="erorrs">
+              <ul>
+              </ul>
+            </div>
             <div class="container-login">
-              <form action="/login" method="POST" class="loginForm">
+              <form action="/login" method="POST" class="loginForm" id="formularioLogin">
                 <div class="login">
                   <label>
                     <p class="p-login">EMAIL</p>
@@ -32,7 +34,7 @@
                   <label>
                     <p class="p-login">CONTRASEÑA</p>
                   </label>
-                  <input class="input-hijo" type="password" name="password" id="password"
+                  <input class="input-hijo" type="password" name="password" id="loginPassword"
                     placeholder="Contraseña"></input>
                 </div>
                 <div class="login">
@@ -44,6 +46,47 @@
 
 
       </main>
+      <script>
+        window.addEventListener("load", function () {
+          let formularioLogin = document.querySelector(".loginForm");
+          let campoEmail = document.querySelector("#loginEmail");
+          let campoPassword = document.querySelector("#loginPassword");
+          let errors = []
+
+          formularioLogin.addEventListener("submit", function (e) {
+            e.preventDefault();
+            campoEmail.onfocus = function (e) {
+
+              if (campoEmail.value == "") {
+                console.log('focus en email')
+                erorrs.push("Este campo es obligatorio")
+              }
+            }
+
+            campoPassword.onfocus = function (e) {
+              console.log("focus en password")
+              e.preventDefault();
+              if (campoPassword.value == "") {
+                erorrs.push("Este campo es obligatorio")
+              }
+              if (campoPassword.value.length >= 8) {
+                erorrs.push("La contraseña debe tener al menos 8 caracteres")
+              }
+            }
+
+            if (erorrs.length > 0) {
+              e.preventDefault();
+            };
+            let ulErrors = document.querySelector(".errors")
+            for (let i = 0; i < erorrs.length; i++) {
+              ulErrors.innnerHTML += "<li>" + erorrs[i] + "</li>"
+
+            }
+
+          })
+
+        })
+      </script>
 
       <%- include('partials/footer') %>
   </body>

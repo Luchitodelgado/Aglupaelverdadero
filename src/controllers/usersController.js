@@ -41,11 +41,20 @@ const controller = {
 						res.redirect('/perfil')
 
 					}
-					else {
+					else if (emailVerify === usuario.email && key == false) {
 						res.render('ingresa', { oldData: req.body }, {
 							errors: {
 								email: {
-									msg: 'No se encuentra este email'
+									msg: 'password incorrecta'
+								}
+							}
+						})
+					}
+					else if (emailVerify != usuario.email){
+						res.render("ingresa",{ oldData: req.body },{
+							errors: {
+								email: {
+									msg: 'email incorrecta'
 								}
 							}
 						})
@@ -79,25 +88,25 @@ const controller = {
 				console.log(' Este mail ya esta usandose')
 				return res.render('registrarte2', { oldData: req.body })
 			}
-/* 			else
-				console.log('aqui estas')
-			User.create({
-				firstName: req.body.firstName,
-				lastName: req.body.lastName,
-				email: req.body.email,
-				birthday: req.body.birthday,
-				phone: req.body.phone,
-				avatar: req.session.newFileName,
-				password: bcryptjs.hashSync(req.body.password, 10),
-				typeUserId: 1
-
-				// TYPEUYERID:				
-				// 1 = REGISTERED USER
-				// 2 = ADMINISTRATOR
-				//3 = OWNER
-
-			}),
-				res.redirect('/'); */
+			/* 			else
+							console.log('aqui estas')
+						User.create({
+							firstName: req.body.firstName,
+							lastName: req.body.lastName,
+							email: req.body.email,
+							birthday: req.body.birthday,
+							phone: req.body.phone,
+							avatar: req.session.newFileName,
+							password: bcryptjs.hashSync(req.body.password, 10),
+							typeUserId: 1
+			
+							// TYPEUYERID:				
+							// 1 = REGISTERED USER
+							// 2 = ADMINISTRATOR
+							//3 = OWNER
+			
+						}),
+							res.redirect('/'); */
 
 		}).catch(() => {
 			User.create({

@@ -4,10 +4,10 @@ window.addEventListener("load",function(){
     formularioLogin.addEventListener("submit",function(e){
         let erorrs =[];
 
-        let campoEmail= document.getElementById("loginEmail");
-        let campoPassword= document.getElementById("password");
+        let campoEmail= document.querySelector("form.loginEmail");
+        let campoPassword= document.querySelector("#loginPassword");
 
-        if(campoEmail.value.length == ""){
+        if(campoEmail.value == ""){
             erorrs.push("Este campo es obligatorio")
         }
         if(campoEmail.value == validator){
@@ -22,7 +22,7 @@ window.addEventListener("load",function(){
         }
 
         if(erorrs.length > 0){
-            e.preventDefault();
+           e.preventDefault();
         };
 
         let ulErrors = document.querySelector(".errors")
