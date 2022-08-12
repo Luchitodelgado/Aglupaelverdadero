@@ -5,17 +5,7 @@
   <body>
     <%- include('partials/headerNavbar') %>
       <main>
-        <h1 class="h1-ingresa">Ingresá</h1>
-        <% if (typeof errors !="undefined" ){%>
-          <p style="color:red">ERROR</p>
-          <ul>
-            <% for (let i=0; i < errors.length; i++){%>
-              <li>
-                <%=errors[i].msg%>
-              </li>
-              <% } %>
-          </ul>
-          <% } %>
+        <h1 class="h1-ingresa">Ingresá</h1>       
             <div class="errors">
               <ul>
               </ul>
@@ -28,6 +18,9 @@
                   </label>
                   <input class="input-hijo loginEmail" type="email" name="email" id="loginEmail"
                     placeholder="Email"></input>
+                    <% if (locals.errors && errors.email) { %> 
+                        <%= errors.email.msg %>
+                    <%} %>                     
                 </div>
                 <div class="login">
 
@@ -36,7 +29,11 @@
                   </label>
                   <input class="input-hijo" type="password" name="password" id="loginPassword"
                     placeholder="Contraseña"></input>
+                   
                 </div>
+                  <% if (locals.errors  && errors.password) { %> 
+                      <%= errors.password.msg %>
+                  <%} %>    
                 <div class="login">
                   <button class="button-login" type="submit">Enviar</button>
                 </div>

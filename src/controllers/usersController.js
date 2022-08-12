@@ -20,6 +20,7 @@ const controller = {
 		let emailVerify = req.body.email
 		let password = req.body.password
 
+
 		User.findOne({
 			where: {
 				email: emailVerify,
@@ -29,10 +30,15 @@ const controller = {
 
 				if (!usuario) {
 					console.log('el mail no se encuentra')
-					return res.render('ingresa', { message: "There is no record of the email" })
+					return res.render('ingresa', {
+						errors: {
+							email: {
+								msg: "Este mail no se encuentra en la base de datos."
+							}
+						}
+					})
 				}
 				else {
-					console.log('logeaste')
 					let dbPassword = usuario.password;
 					let key = bcryptjs.compareSync(password, dbPassword)
 
@@ -50,35 +56,23 @@ const controller = {
 
 						}
 						else if (emailVerify === usuario.email && key == false) {
-							res.render('ingresa', { oldData: req.body }, {
+							console.log('Password incorrecta')
+							res.render('ingresa', {
 								errors: {
-									email: {
-										msg: 'password incorrecta'
+									password: {
+										msg: "Password incorrecta"
 									}
 								}
 							})
-						}
-						else if (usuario.email == undefined) {
-							res.render("ingresa", { oldData: req.body }, {
-								errors: {
-									email: {
-										msg: 'email incorrecta'
-									}
-								}
-							})
-						}
-						else if (usuario == null || password == null) {
-							res.render('ingresa')
 						}
 					})
-
 				}
 			}).catch((err) => {
 				console.log("este es el error: " + err)
 				res.render('ingresa', { oldData: req.body }, {
 					errors: {
 						email: {
-							msg: 'No se encuentra este email'
+							msg: err
 						}
 					}
 				})
