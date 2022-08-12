@@ -29,7 +29,6 @@ const controller = {
 			.then(function (usuario) {
 
 				if (!usuario) {
-					console.log('el mail no se encuentra')
 					return res.render('ingresa', {
 						errors: {
 							email: {
@@ -56,11 +55,10 @@ const controller = {
 
 						}
 						else if (emailVerify === usuario.email && key == false) {
-							console.log('Password incorrecta')
 							res.render('ingresa', {
 								errors: {
 									password: {
-										msg: "Password incorrecta"
+										msg: "Datos incorrectos."
 									}
 								}
 							})
@@ -94,43 +92,31 @@ const controller = {
 
 				return res.render('registrarte2', { oldData: req.body })
 			}
-			/* 			else
-							console.log('aqui estas')
-						User.create({
-							firstName: req.body.firstName,
-							lastName: req.body.lastName,
-							email: req.body.email,
-							birthday: req.body.birthday,
-							phone: req.body.phone,
-							avatar: req.session.newFileName,
-							password: bcryptjs.hashSync(req.body.password, 10),
-							typeUserId: 1
+			else
 			
-							// TYPEUYERID:				
-							// 1 = REGISTERED USER
-							// 2 = ADMINISTRATOR
-							//3 = OWNER
-			
-						}),
-							res.redirect('/'); */
-
-		}).catch(() => {
 			User.create({
 				firstName: req.body.firstName,
 				lastName: req.body.lastName,
-				email: req.body.email,
+				email: req.body.emailVerify,
 				birthday: req.body.birthday,
 				phone: req.body.phone,
 				avatar: req.session.newFileName,
 				password: bcryptjs.hashSync(req.body.password, 10),
 				typeUserId: 1
+
 				// TYPEUYERID:				
 				// 1 = REGISTERED USER
 				// 2 = ADMINISTRATOR
 				//3 = OWNER
+
 			}),
 				res.redirect('/');
-		});
+
+		}).catch((err) => {
+			console.log("este es el error: " + err)
+		}),
+			res.redirect('/');
+
 	},
 	list: (req, res) => {
 		db.User.findAll()
