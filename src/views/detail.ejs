@@ -34,15 +34,15 @@
 											<i class="fas fa-store"></i>
 											RETIRO GRATIS EN NUESTROS LOCALES
 										</p>
-										<a href="#">COMPRAR</a>
+										<a class="detailComprar" href="#">COMPRAR</a>
 
 										<% if (locals.isLogged) { %>
-											<a href="/productos/edit/<%= product.id %>">EDITAR</a>
+											<a class="detailEditar" href="/productos/edit/<%= product.id %>">EDITAR</a>
 											<% }%>
 												<% if (locals.isLogged) { %>
 													<form action="/productos/delete/<%= product.id %>?_method=DELETE"
-														method="POST" style="display: inline-flex">
-														<button type="submit">ELIMINAR</button>
+														method="POST" style="display: inline-flex" class="detailEliminar">
+														<button  type="submit">ELIMINAR</button>
 													</form>
 													<% }%>
 
