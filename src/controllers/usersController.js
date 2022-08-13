@@ -32,7 +32,7 @@ const controller = {
 					return res.render('ingresa', {
 						errors: {
 							email: {
-								msg: "Este mail no se encuentra en la base de datos."
+								msg: "Datos incorrectos."
 							}
 						}
 					})
@@ -58,7 +58,7 @@ const controller = {
 							res.render('ingresa', {
 								errors: {
 									password: {
-										msg: "Datos incorrectos."
+										msg: "Contrase;a incrrecta."
 									}
 								}
 							})
