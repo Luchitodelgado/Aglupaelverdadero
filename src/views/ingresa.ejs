@@ -27,7 +27,7 @@
                   <label>
                     <p class="p-login">CONTRASEÑA</p>
                   </label>
-                  <input class="input-hijo" type="password" name="password" id="loginPassword"
+                  <input class="input-hijo password" type="password" name="password" id="loginPassword"
                     placeholder="Contraseña"></input>
                    
                 </div>
@@ -46,8 +46,8 @@
       <script>
         window.addEventListener("load", function () {
           let formularioLogin = document.querySelector(".loginForm");
-          let campoEmail = document.querySelector("#loginEmail");
-          let campoPassword = document.querySelector("#loginPassword");
+          let campoEmail = document.getElementById("loginEmail");
+          let campoPassword = document.querySelector(".password");
           let errors = []
 
           campoEmail.onfocus = function (e) {
@@ -69,16 +69,13 @@
           }
 
           if (errors.length > 0) {
-            e.preventDefault();
+           // e.preventDefault();
           };
           let ulErrors = document.querySelector(".errors")
           for (let i = 0; i < errors.length; i++) {
             ulErrors.innnerHTML += "<li>" + errors[i] + "</li>"
 
           }
-
-
-
         })
       </script>
 
