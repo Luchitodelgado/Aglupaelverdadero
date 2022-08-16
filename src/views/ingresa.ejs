@@ -5,51 +5,53 @@
   <body>
     <%- include('partials/headerNavbar') %>
       <main>
-        <h1 class="h1-ingresa">Ingresá</h1>       
-            <div class="errors">
-              <ul>
-              </ul>
+        <h1 class="h1-ingresa">Ingresá</h1>
+        <div class="errors">
+          <ul>
+          </ul>
+        </div>
+        <div class="container-login">
+          <form action="/login" method="POST" class="loginForm" id="formularioLogin">
+            <div class="login">
+              <label>
+                <p class="p-login">EMAIL</p>
+              </label>
+              <input class="input-hijo loginEmail" type="email" name="email" id="loginEmail"
+                placeholder="Email"></input>
+              <% if (locals.errors && errors.email) { %>
+                <%= errors.email.msg %>
+                  <%} %>
             </div>
-            <div class="container-login">
-              <form action="/login" method="POST" class="loginForm" id="formularioLogin">
-                <div class="login">
-                  <label>
-                    <p class="p-login">EMAIL</p>
-                  </label>
-                  <input class="input-hijo loginEmail" type="email" name="email" id="loginEmail"
-                    placeholder="Email"></input>
-                    <% if (locals.errors && errors.email) { %> 
-                        <%= errors.email.msg %>
-                    <%} %>                     
-                </div>
-                <div class="login">
+            <div class="login">
 
-                  <label>
-                    <p class="p-login">CONTRASEÑA</p>
-                  </label>
-                  <input class="input-hijo" type="password" name="password" id="loginPassword"
-                    placeholder="Contraseña"></input>
-                   
-                </div>
-                  <% if (locals.errors  && errors.password) { %> 
-                      <%= errors.password.msg %>
-                  <%} %>    
-                <div class="login">
-                  <button class="button-login" type="submit">Enviar</button>
-                </div>
-              </form>
+              <label>
+                <p class="p-login">CONTRASEÑA</p>
+              </label>
+              <input class="input-hijo" type="password" name="password" id="loginPassword"
+                placeholder="Contraseña"></input>
+
             </div>
+            <% if (locals.errors && errors.password) { %>
+              <%= errors.password.msg %>
+                <%} %>
+                  <div class="login">
+                    <button class="button-login" type="submit">Enviar</button>
+                  </div>
+          </form>
+        </div>
 
 
 
       </main>
       <script>
-        window.addEventListener("load", function () {
-          let formularioLogin = document.querySelector(".loginForm");
-          let campoEmail = document.querySelector("#loginEmail");
-          let campoPassword = document.querySelector("#loginPassword");
-          let errors = []
+    
+        let formularioLogin = document.querySelector(".loginForm");
+        let campoEmail = document.querySelector("#loginEmail");
+        let campoPassword = document.querySelector("#loginPassword");
+        let errors = []
 
+        window.addEventListener("load", function () { 
+         
           campoEmail.onfocus = function (e) {
             console.log('focus en email')
             if (campoEmail.value == "") {             
@@ -78,7 +80,7 @@
           }
 
 
-
+ 
         })
       </script>
 
