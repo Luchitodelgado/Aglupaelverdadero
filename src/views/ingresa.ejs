@@ -6,10 +6,6 @@
     <%- include('partials/headerNavbar') %>
       <main>
         <h1 class="h1-ingresa">Ingresá</h1>
-        <div class="errors">
-          <ul>
-          </ul>
-        </div>
         <div class="container-login">
           <form action="/login" method="POST" class="loginForm" id="formularioLogin">
             <div class="login">
@@ -23,30 +19,12 @@
                   <%} %>
             </div>
             <div class="login">
-
               <label>
                 <p class="p-login">CONTRASEÑA</p>
               </label>
-              <input class="input-hijo" type="password" name="password" id="loginPassword"
+              <input class="input-hijo password" type="password" name="password" id="loginPassword"
                 placeholder="Contraseña"></input>
 
-<<<<<<< HEAD
-=======
-                  <label>
-                    <p class="p-login">CONTRASEÑA</p>
-                  </label>
-                  <input class="input-hijo password" type="password" name="password" id="loginPassword"
-                    placeholder="Contraseña"></input>
-                   
-                </div>
-                  <% if (locals.errors  && errors.password) { %> 
-                      <%= errors.password.msg %>
-                  <%} %>    
-                <div class="login">
-                  <button class="button-login" type="submit">Enviar</button>
-                </div>
-              </form>
->>>>>>> c3fa263319c6d4a09d1192f093fe2bdbefdb1589
             </div>
             <% if (locals.errors && errors.password) { %>
               <%= errors.password.msg %>
@@ -56,60 +34,52 @@
                   </div>
           </form>
         </div>
+        <div class="errors">
+          <ul>
+          </ul>
+        </div>
+        </div>
 
 
 
       </main>
       <script>
-<<<<<<< HEAD
-    
-        let formularioLogin = document.querySelector(".loginForm");
-        let campoEmail = document.querySelector("#loginEmail");
-        let campoPassword = document.querySelector("#loginPassword");
-        let errors = []
-=======
-        window.addEventListener("load", function () {
-          let formularioLogin = document.querySelector(".loginForm");
-          let campoEmail = document.getElementById("loginEmail");
-          let campoPassword = document.querySelector(".password");
-          let errors = []
->>>>>>> c3fa263319c6d4a09d1192f093fe2bdbefdb1589
+   window.addEventListener("load",function(){
+    let formularioLogin = document.querySelector(".loginForm");
 
-        window.addEventListener("load", function () { 
-         
-          campoEmail.onfocus = function (e) {
-            console.log('focus en email')
-            if (campoEmail.value == "") {             
-              errors.push("Este campo es obligatorio")
-            }
-          }
+    formularioLogin.addEventListener("submit",function(e){
+        let erorrs =[];
 
-          campoPassword.onfocus = function (e) {
-            console.log("focus en password")
-            e.preventDefault();
-            if (campoPassword.value == "") {
-              errors.push("Este campo es obligatorio")
-            }
-            if (campoPassword.value.length >= 8) {
-              errors.push("La contraseña debe tener al menos 8 caracteres")
-            }
-          }
+        let campoEmail= document.querySelector("#loginEmail");
+        let campoPassword= document.querySelector("#loginPassword");
 
-          if (errors.length > 0) {
-           // e.preventDefault();
-          };
-          let ulErrors = document.querySelector(".errors")
-          for (let i = 0; i < errors.length; i++) {
-            ulErrors.innnerHTML += "<li>" + errors[i] + "</li>"
+        if(campoEmail.value == ""){
+            erorrs.push("Este campo es obligatorio")
+        }
+        if(campoEmail.value == validator){
+            erorrs.push("Este campo debe contener un email válido")
+        }
 
-          }
-<<<<<<< HEAD
+        if(campoPassword.value == ""){
+            erorrs.push("Este campo es obligatorio")
+        }
+        if(campoPassword.value.length >= 8){
+            erorrs.push("La contraseña debe tener al menos 8 caracteres")
+        }
 
+        if(erorrs.length > 0){
+           e.preventDefault();
+        };
 
- 
-=======
->>>>>>> c3fa263319c6d4a09d1192f093fe2bdbefdb1589
-        })
+        let ulErrors = document.querySelector(".errors")
+        for (let i = 0; i < erorrs.length; i++) {
+            ulErrors.innnerHTML += "<li>" + erorrs[i] + "</li>"
+            
+        }
+
+    })
+
+})
       </script>
 
       <%- include('partials/footer') %>
