@@ -7,7 +7,9 @@
       <main>
         <h1 class="h1-ingresa">Ingresá</h1>
         <div class="container-login">
+          <!-----------------FORM--------------------->
           <form action="/login" method="POST" class="loginForm" id="formularioLogin">
+            <!-----------------EMAIL--------------------->
             <div class="login">
               <label>
                 <p class="p-login">EMAIL</p>
@@ -18,6 +20,7 @@
                 <%= errors.email.msg %>
                   <%} %>
             </div>
+            <!-----------------PASSWORD--------------------->
             <div class="login">
               <label>
                 <p class="p-login">CONTRASEÑA</p>
@@ -29,58 +32,14 @@
             <% if (locals.errors && errors.password) { %>
               <%= errors.password.msg %>
                 <%} %>
+                <!-----------------BUTTON SUBMIT-------------------->
                   <div class="login">
                     <button class="button-login" type="submit">Enviar</button>
                   </div>
           </form>
         </div>
-        <div class="errors">
-          <ul>
-          </ul>
-        </div>
-        </div>
-
-
-
       </main>
-      <script>
-   window.addEventListener("load",function(){
-    let formularioLogin = document.querySelector(".loginForm");
-
-    formularioLogin.addEventListener("submit",function(e){
-        let erorrs =[];
-
-        let campoEmail= document.querySelector("#loginEmail");
-        let campoPassword= document.querySelector("#loginPassword");
-
-        if(campoEmail.value == ""){
-            erorrs.push("Este campo es obligatorio")
-        }
-        if(campoEmail.value == validator){
-            erorrs.push("Este campo debe contener un email válido")
-        }
-
-        if(campoPassword.value == ""){
-            erorrs.push("Este campo es obligatorio")
-        }
-        if(campoPassword.value.length >= 8){
-            erorrs.push("La contraseña debe tener al menos 8 caracteres")
-        }
-
-        if(erorrs.length > 0){
-           e.preventDefault();
-        };
-
-        let ulErrors = document.querySelector(".errors")
-        for (let i = 0; i < erorrs.length; i++) {
-            ulErrors.innnerHTML += "<li>" + erorrs[i] + "</li>"
-            
-        }
-
-    })
-
-})
-      </script>
+      <script src="../../js/loginForm"></script>
 
       <%- include('partials/footer') %>
   </body>
