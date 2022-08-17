@@ -10,38 +10,68 @@
           <!-----------------FORM--------------------->
           <form action="/login" method="POST" class="loginForm" id="formularioLogin">
             <!-----------------EMAIL--------------------->
-            <div class="login">
-              <label>
+            <div class="login formulario__grupo" id="grupo__email">
+              <label for="email" class="formulario__label">
                 <p class="p-login">EMAIL</p>
               </label>
-              <input class="input-hijo loginEmail" type="email" name="email" id="loginEmail"
-                placeholder="Email"></input>
+              <div>
+                <input class="input-hijo formulario__input" type="email" name="email" id="loginEmail" placeholder="email@email.com"></input>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
               <% if (locals.errors && errors.email) { %>
                 <%= errors.email.msg %>
-                  <%} %>
+                  <%}%>
+                  <p class="formulario__input-error">El email solo puede contener letras, numeros, puntos, guiones y
+                    guion
+                    bajo.</p>
+                  <% if (locals.mailEnUso) { %>
+                    <p> Porfavor ingrese otro email.</p>
+                    <% } %>
             </div>
             <!-----------------PASSWORD--------------------->
-            <div class="login">
-              <label>
+            <div class="login formulario__grupo" id="grupo__password">
+              <label for="password" class="formulario__label">
                 <p class="p-login">CONTRASEÑA</p>
               </label>
-              <input class="input-hijo password" type="password" name="password" id="loginPassword"
-                placeholder="Contraseña"></input>
-
+              <div class="formulario__grupo-input">
+                <input class="input-hijo formulario__input" type="password" name="password" id="loginPassword" placeholder="Contraseña"></input>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
             <% if (locals.errors && errors.password) { %>
               <%= errors.password.msg %>
                 <%} %>
-                <!-----------------BUTTON SUBMIT-------------------->
-                  <div class="login">
-                    <button class="button-login" type="submit">Enviar</button>
-                  </div>
+                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+            </div>
+            <!----------------PASSWORD 2 ------------------->
+            <div class="formulario__grupo" id="grupo__password2">
+              <label for="password2" class="formulario__label">REPETIR CONTRASEÑA</label>
+              <div class="formulario__grupo-input">
+                <input type="password" class="formulario__input" name="password2" id="password2">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+            </div>
+            <!--  Terminos y Condiciones -->
+            <div class="formulario__grupo" id="grupo__terminos">
+              <label class="formulario__label">
+                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                Acepto los Términos y Condiciones
+              </label>
+            </div>
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+              <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                correctamente. </p>
+            </div>
+
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+              <button type="submit" class="formulario__btn">Enviar</button>
+              <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+            </div>
           </form>
         </div>
       </main>
-      <script src="../../js/loginForm"></script>
-
+      <script src="../../js/loginForm.js"></script>
       <%- include('partials/footer') %>
   </body>
-
-</html>
+  </html>

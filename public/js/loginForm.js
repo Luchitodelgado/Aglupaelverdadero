@@ -44,7 +44,7 @@ const validarCampo = (expresion, input, campo) => {
 }
 
 const validarPassword2 = () => {
-  const inputPassword1 = document.getElementById('password');
+  const inputPassword1 = document.getElementById('loginPassword');
   const inputPassword2 = document.getElementById('password2');
 
   if (inputPassword1.value !== inputPassword2.value) {

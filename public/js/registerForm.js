@@ -58,7 +58,6 @@ const validarCampo = (expresion, input, campo) => {
     campos[campo] = false;
   }
 }
-
 const validarPassword2 = () => {
   const inputPassword1 = document.getElementById('password');
   const inputPassword2 = document.getElementById('password2');
