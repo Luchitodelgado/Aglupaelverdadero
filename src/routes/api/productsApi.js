@@ -6,7 +6,6 @@ const db = require("../../../database/models")
 const sequelize = db.sequelize;
 const Product = db.Product;
 
-
 router.get('/api/products', (req, res) => {
 
     Product.findAll({
