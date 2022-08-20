@@ -50,7 +50,6 @@ const controller = {
 						if (emailVerify === usuario.email && key == true) {
 							res.locals.isLogged = true
 							req.session.userLogged = usuario;
-							res.locals.usuario = usuario;
 							res.redirect('/perfil')
 
 						}
@@ -58,7 +57,7 @@ const controller = {
 							res.render('ingresa', {
 								errors: {
 									password: {
-										msg: "Contrase;a incrrecta."
+										msg: "Contraseña incrrecta."
 									}
 								}
 							})
@@ -66,7 +65,7 @@ const controller = {
 					})
 				}
 			}).catch((err) => {
-				console.log("este es el error: " + err)
+				console.log("este es el error mas de abajo: " + err)
 				res.render('ingresa', { oldData: req.body }, {
 					errors: {
 						email: {
@@ -78,6 +77,7 @@ const controller = {
 	},
 	store: (req, res) => {
 		let emailVerify = req.body.email
+		console.log(req.body.email)
 		User.findOne({
 			where: {
 				email: emailVerify,
@@ -93,29 +93,29 @@ const controller = {
 				return res.render('registrarte2', { oldData: req.body })
 			}
 			else
-			
-			User.create({
-				firstName: req.body.firstName,
-				lastName: req.body.lastName,
-				email: req.body.emailVerify,
-				birthday: req.body.birthday,
-				phone: req.body.phone,
-				avatar: req.session.newFileName,
-				password: bcryptjs.hashSync(req.body.password, 10),
-				typeUserId: 1
 
-				// TYPEUYERID:				
-				// 1 = REGISTERED USER
-				// 2 = ADMINISTRATOR
-				//3 = OWNER
+				User.create({
+					firstName: req.body.firstName,
+					lastName: req.body.lastName,
+					email: emailVerify,
+					birthday: req.body.birthday,
+					phone: req.body.phone,
+					avatar: req.session.newFileName,
+					password: bcryptjs.hashSync(req.body.password, 10),
+					typeUserId: 1
 
-			}),
-				res.redirect('/');
+					// TYPEUYERID:				
+					// 1 = REGISTERED USER
+					// 2 = ADMINISTRATOR
+					//3 = OWNER
+
+				}),
+					res.redirect('/');
 
 		}).catch((err) => {
 			console.log("este es el error: " + err)
-		}),
-			res.redirect('/');
+		})
+
 
 	},
 	list: (req, res) => {
