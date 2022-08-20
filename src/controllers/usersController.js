@@ -76,9 +76,9 @@ const controller = {
 			});
 	},
 	store: (req, res) => {
-		let emailVerify = req.body.email
+		const  emailVerify = req.body.email
 		console.log(req.body.email)
-		User.findOne({
+		User.findAll({
 			where: {
 				email: emailVerify,
 			}
