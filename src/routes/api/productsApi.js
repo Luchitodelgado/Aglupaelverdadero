@@ -5,6 +5,7 @@ const router = express.Router();
 const db = require("../../../database/models")
 const sequelize = db.sequelize;
 const Product = db.Product;
+const productTypes = db.Typeproduct
 
 router.get('/api/products', (req, res) => {
 
@@ -14,24 +15,25 @@ router.get('/api/products', (req, res) => {
             return producto.dataValues;
         })
         resArray.forEach((producto) => {
+
             delete producto.price,
                 delete producto.discount,
                 delete producto.image,
                 delete producto.typeProductId,
                 delete producto.stock
             producto.detail = "Link para ver el detalle de usuario"
-        })
-
-        return res.status(200).json({
-            count: productos.length,
-            countByCategory: productos.typeProductId,
-            productos: resArray,
-            status: 200
 
         })
+        productTypes.findAll().then(typeProducts => {
 
+            return res.status(200).json({
+                count: productos.length,
+                typeProductId: typeProducts,
+                productos: resArray,
+                status: 200
+            })
+        })
     })
-
 })
 
 router.get('/api/products/:id', (req, res) => {
@@ -60,3 +62,4 @@ router.get('/api/products/:id', (req, res) => {
 })
 
 module.exports = router;
+
