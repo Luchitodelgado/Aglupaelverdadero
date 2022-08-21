@@ -9,6 +9,7 @@ const Users = db.User;
 
 router.get('/api/users', (req, res) => {
 
+
     Users.findAll({
     }).then(function (usuarios) {
         let resArray = usuarios.map((user) => {
@@ -21,14 +22,15 @@ router.get('/api/users', (req, res) => {
                 delete user.avatar,
                 delete user.typeUserId,
                 delete user.lastName,
-                user.detail= "Link para ver el detalle de usuario"
+                user.detail = 'http://localhost:3000/api/users/' + user.id
+
         })
 
-        return res.status(200).json({         
+        return res.status(200).json({
             count: usuarios.length,
             users: resArray,
             status: 200
-            
+
         })
 
     })
@@ -39,7 +41,7 @@ router.get('/api/users/:id', (req, res) => {
     id = req.params.id
 
     Users.findAll({
-        where: {id:id }
+        where: { id: id }
     }).then(function (usuarios) {
         let resArray = usuarios.map((user) => {
             return user.dataValues;
@@ -48,14 +50,14 @@ router.get('/api/users/:id', (req, res) => {
             delete user.password,
                 delete user.phone,
                 delete user.typeUserId,
-                user.detail= "Link para ver el detalle de usuario"
+                user.detail = "Link para ver el detalle de usuario"
         })
 
-        return res.status(200).json({         
+        return res.status(200).json({
             count: usuarios.length,
             users: resArray,
             status: 200
-            
+
         })
 
     })
