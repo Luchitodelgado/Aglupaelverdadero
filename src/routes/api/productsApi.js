@@ -8,7 +8,6 @@ const Product = db.Product;
 const productTypes = db.Typeproduct
 
 router.get('/api/products', (req, res) => {
-
     Product.findAll({
     }).then(function (productos) {
         let resArray = productos.map((producto) => {
@@ -21,45 +20,37 @@ router.get('/api/products', (req, res) => {
                 delete producto.image,
                 delete producto.typeProductId,
                 delete producto.stock
-            producto.detail = "Link para ver el detalle de usuario"
-
+            producto.detail = 'http://localhost:3000/api/products/' + producto.id
         })
         productTypes.findAll().then(typeProducts => {
-
             return res.status(200).json({
                 count: productos.length,
-                typeProductId: typeProducts,
+                countByCategory: typeProducts,
                 productos: resArray,
                 status: 200
             })
         })
     })
 })
-
 router.get('/api/products/:id', (req, res) => {
-    let id = req.params.id
+    id = req.params.id
     Product.findAll({
-        where: { id: id }
-    }).then(function (productos) {
-        let resArray = productos.map((producto) => {
-            return producto.dataValues;
+        where: {
+            id: id
+        }
+    }).then(function (products) {
+        let resArray = products.map((product) => {
+            return product.dataValues;
         })
-        resArray.forEach((producto) => {
-
-            producto.detail = "Link para ver el detalle del producto"
+        resArray.forEach((product) => {
+            product.detail = 'http://localhost:3000/img/' + product.image
         })
-
         return res.status(200).json({
-            property: "Aqui va una propiedad por cada campo en base, preguntar que es?",
-            arrayPorRelacionUnoMuchos: "Pregunta bien que es y como lograrlo?",
-            urlImagenProducto: "Aqui iria la url al producto (detail)",
+            property: resArray,
             status: 200
 
         })
-
     })
-
 })
-
 module.exports = router;
 

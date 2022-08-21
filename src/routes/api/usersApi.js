@@ -32,14 +32,10 @@ router.get('/api/users', (req, res) => {
             status: 200
 
         })
-
     })
-
 })
-
 router.get('/api/users/:id', (req, res) => {
     id = req.params.id
-
     Users.findAll({
         where: { id: id }
     }).then(function (usuarios) {
@@ -49,19 +45,14 @@ router.get('/api/users/:id', (req, res) => {
         resArray.forEach((user) => {
             delete user.password,
                 delete user.phone,
-                delete user.typeUserId,
-                user.detail = "Link para ver el detalle de usuario"
+                delete user.typeUserId,                
+                user.avatar = 'http://localhost:3000/img/img-usuarios/' + user.avatar 
         })
-
-        return res.status(200).json({
-            count: usuarios.length,
+        return res.status(200).json({        
             users: resArray,
             status: 200
-
         })
-
     })
-
 })
 
 module.exports = router;
