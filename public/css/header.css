@@ -42,12 +42,7 @@ header {
 }
 a {
     text-decoration: none;
-    color: white;
 }
-a:hover {
-    color: rgb(70, 70, 70);
-    cursor: pointer;
-  }
 .container-header{
     display: flex;
     flex-wrap: wrap;

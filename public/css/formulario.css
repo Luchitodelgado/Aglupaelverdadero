@@ -3,6 +3,21 @@
 * {
 	box-sizing: border-box;
 }
+.h1-formulario{
+    font-family: 'Montserrat', sans-serif;  
+    color:#434343;
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+}
+.contenedor-padre{
+	display: flex;
+	justify-content: center;
+	box-shadow:1px 1px 5px #bc9c84;
+	margin: auto;
+	border-radius: 5px;
+	padding: 10px;
+}
 
 body {
 	font-family: 'Roboto', sans-serif;
@@ -20,6 +35,7 @@ body {
 	font-weight: 700;
 	padding: 10px;
 	cursor: pointer;
+	color: #434343;
 }
 
 
@@ -140,6 +156,23 @@ body {
 
 
 /* ----- -----  Mediaqueries ----- ----- */
+@media (min-width:361px){
+    /*MAIN*/
+    .h1-formulario{
+        font-size: 45px;
+    }
+    .contenedor-padre{
+        width: 80%;
+    }
+}
+@media (min-width:769px){
+    .h1-formulario{
+        font-size: 70px;
+    }
+	.contenedor-padre{
+        width:60%;
+    }
+}
 @media screen and (max-width: 800px) {
 	.formulario {
 		grid-template-columns: 1fr;

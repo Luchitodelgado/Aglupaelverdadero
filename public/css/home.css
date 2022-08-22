@@ -20,19 +20,15 @@ ul{
     justify-content: center;
     margin-bottom: 20px;
 }
-.div-descripcion {
-    width:50%;
-    background-color:white;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.144);
-}
 .imagen-producto:hover{
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.541);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.422);
 }
 .dropdown-menu {
     background-color: red;
 }
 .nombre-articulo{
     font-weight: bold;
+    color: #434343;
 }
 .descuentos {
     margin: center;
@@ -46,6 +42,7 @@ ul{
     width: 50%;
     color: black;
 }
+/*------------------------MEDIA QUERYS------------------*/
 @media (min-width: 375px) {
     .contenedor-imagen-principal{
         width:100%;
@@ -63,22 +60,35 @@ ul{
         width: 100%;
         font-size: 12px;
     }
+    .h2-home{
+            font-family: 'Montserrat', sans-serif;
+            color:#434343;
+            text-align: center;
+            padding: 0px;
+            width: 100%;
+            font-size: 30px;
+    }
     .seccion-articulos{
         width: 100%;
         height: auto;
-        margin: 5px;
+        margin: 15px;
         display: flex;
         flex-wrap: wrap;
     }
     .articulo-container {
         width: 45%;
         display: flex;
-        align-self: center;
         justify-content: center;
     }
     .imagen-producto {
-        width: 50%;
-        height: auto;
+        width: 100%;
+        height: 100%;
+    }
+    .div-descripcion {
+        width:100%;
+        height: 120px;
+        background-color:white;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.144);
     }
 }
 
@@ -99,6 +109,32 @@ ul{
     .ul{
         width: 55%;
         font-size: 18px;
+    }
+    .h2-home{
+        font-size: 50px;
+    }
+    .seccion-articulos{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 15px;
+    }
+    .articulo-container {
+        width: 20%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .imagen-producto {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .div-descripcion {
+        width:100%;
+        height: 100%;
+        background-color:white;
     }
 }
 

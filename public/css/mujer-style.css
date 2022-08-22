@@ -68,7 +68,6 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    widh: revert;
 }
 .hijos-footer {  
     border: 1px solid #dfdfdf;
@@ -130,13 +129,11 @@
     margin: 5px;
     color: white;
 }
+/*----------------MEDIA QUERYS------------------*/
 @media (min-width:361px){
-    /*----------------MOBILE-MAIN------*/
+    /*----MAIN----*/
     .h1-mujer {
         font-size: 30px;
-    }
-    .titulo-shop {
-        width: 150px;
     }
     h4 {
         font-size: 90%;
@@ -157,7 +154,7 @@
         width: 100%;
         height: auto;
     }
-    /*-----------MOBILE-FOOTER-----------*/
+     /*----FOOTER----*/
     .hijos-footer {
         width:100%;
         height: auto;
@@ -182,12 +179,11 @@
     }
 }
 @media (min-width:769px){
+     /*----MAIN----*/
     .h1-mujer {
         font-size: 70px;
     }
-    .titulo-shop {
-        width: 310px;
-    }
+
     h4{
         font-size:20px;
     }
@@ -201,6 +197,7 @@
         height: auto;
         margin: 5px;
     }
+     /*----FOOTER----*/
     .hijos-footer{
         width: 33%;
         height: auto;

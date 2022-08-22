@@ -1,21 +1,20 @@
-/*----------DIV PADRE--------*/.container-detail{
+/*----------DIV PADRE--------*/
+.container-detail{
     display: flex;
     flex-direction: row;
     text-align: center;
-    width: 70%;
     height: auto;
     margin: auto;
     box-sizing: border-box;
+    padding: 10px;
 }
 /*----------DIV HIJOS-----------*/
 .div-img-detail{
     width: 50%;
     height: auto;
-    padding: 20px;
 }
 .div-info-detail{
     width: 50%;
-    padding: 10px;
     box-sizing: border-box;
 }
 /*-------CLASES INDIVIDUALES---------*/
@@ -26,7 +25,6 @@
 }
 .name-detail{
     font-family: "Roboto",sans-serif;
-    font-size: 25px;
     font-weight: bold;
     color: #434343;
     text-align: center;
@@ -34,13 +32,11 @@
 }
 .description-detail{
     font-family: "Roboto",sans-serif;
-    font-size: 15px;
     color: #434343;
     text-align: start;
 }
 .price-detail{
     font-family:"Roboto,sans-serif";
-    font-size:20px;
     font-weight: bold;
     text-align: center;
     color:#bc9c84;
@@ -49,15 +45,70 @@
 }
 .icons-detail{
     text-align: start;
-    font-size: 15px;
     color: #434343;
 }
 
 .detailEditar{
-color: black
+color:#434343;
 }
 
 .detailComprar{
-    color:black
+    color:#434343;
+    border:1px solid #bcbcbc;
+    border-radius: 5px;
+    padding: 5px;
 }
 
+/*-----------MEDIA QUERYS--------------*/
+@media (min-width: 375px) {
+    .div-img-detail{
+        padding: 5px;
+    }
+    .div-info-detail{
+        padding: 5px;
+    }
+    .container-detail{
+        width: 100%;
+    }
+    .name-detail{
+        font-size:20px;
+    }
+    .description-detail{
+        font-size: 12px;
+    }
+    .price-detail{
+        font-size:12px;
+    }
+    .icons-detail{
+        font-size: 12px;
+    }
+    .detailComprar{
+        font-size: 12px;
+    }
+}
+@media (min-width: 720px) {
+    .div-img-detail{
+        padding: 20px;
+    }
+    .div-info-detail{
+        padding: 10px;
+    }
+    .container-detail{
+        width: 70%;
+    }
+    .name-detail{
+        font-size: 25px;
+    }
+    .description-detail{
+        font-size: 15px;
+    }
+    .price-detail{
+        font-size:20px;
+    }
+    .icons-detail{
+        font-size: 15px;
+    }
+    .detailEditar{
+        font-size: 25px;
+    }
+}

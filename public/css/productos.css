@@ -33,9 +33,6 @@ section{
     align-items: baseline;
     margin-bottom: 15px;
 }
-a{
-    margin-bottom: 15px;
-}
 .todosProductos{
     border: 1px solid #ebebeb;
     background-color: white;
