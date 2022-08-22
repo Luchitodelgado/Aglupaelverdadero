@@ -23,7 +23,7 @@ figure{
 }
 section{
     width: 90vw;
-    font-size: 24px;
+    font-size: 100%;
     margin: auto;
     padding-bottom: 10px;
     display: flex;
