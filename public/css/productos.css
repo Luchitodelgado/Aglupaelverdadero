@@ -131,7 +131,9 @@
 @media (min-width:361px){
     /*----MAIN----*/
     .h1-productos {
-        font-size: 35px;
+        font-size: 45px;
+        padding: 0px;
+        margin: 0px;
     }
     h4 {
         font-size: 90%;
@@ -179,7 +181,7 @@
 @media (min-width:769px){
      /*----MAIN----*/
     .h1-productos {
-        font-size: 60px;
+        font-size: 65px;
     }
     h4{
         font-size:20px;

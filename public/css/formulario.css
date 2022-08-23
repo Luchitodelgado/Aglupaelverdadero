@@ -167,13 +167,13 @@ body {
 }
 @media (min-width:769px){
     .h1-formulario{
-        font-size: 70px;
+        font-size: 65px;
     }
 	.contenedor-padre{
         width:60%;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 769px) {
 	.formulario {
 		grid-template-columns: 1fr;
 	}
