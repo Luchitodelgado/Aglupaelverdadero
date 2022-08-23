@@ -43,16 +43,14 @@
     padding: 0px;
     text-align: center;
 }
-.banner-altas:hover {
-    box-shadow: 0px 0px 10px rgb(199, 199, 199);
-}
-.banner-cortas:hover{
+.banner-altas{
     box-shadow: 0px 0px 10px rgb(199, 199, 199);
 }
 .banner-cortas {
     box-sizing: border-box;
-    padding: 5px;
-    margin: 0px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgb(199, 199, 199);
 }
 .flex-column {
     display: flex;
@@ -141,7 +139,7 @@
     .banner-altas {
         width: 80%;
         height: auto;
-        padding: 10px;
+        padding: 20px;
         margin: 5px;
     }
     .flex-column {
