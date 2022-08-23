@@ -5,11 +5,9 @@
     <body>
         <%- include('partials/headerNavbar') %>
             <main>
-                <div class="container-detail">
-                    <div class="div-img-detail">
-                    </div>
-                    <div class="div-info-detail">
-                        <p class="titulo-edit">CREAR PRODUCTO</p>
+                <h2 class="h2-crearProducto">CREAR PRODUCTO</h2>
+                <div class="container-crearProducto">
+                    <div class="div-info-crear">
                         <form action="/newProduct" class="formulario" id="formulario" method="POST"
                             enctype="multipart/form-data">
 
@@ -18,7 +16,7 @@
                                 <label for="name" class="formulario__label">NOMBRE DEL PRODUCTO</label>
                                 <div class="formulario__grupo-input">
                                     <input type="text" class="formulario__input" name="name" id="name"
-                                        placeholder="Pepito">
+                                        placeholder="Bocegos Ivana">
                                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="formulario__input-error">El Nombre del producto tiene que tener de 4 a 16
@@ -35,7 +33,7 @@
                                 <label for="price" class="formulario__label">PRECIO DEL PRODUCTO</label>
                                 <div class="formulario__grupo-input">
                                     <input type="number" class="formulario__input" name="price" id="price"
-                                        placeholder="Elpistolero">
+                                        placeholder="$12.000">
                                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                                 <% if (locals.errors && errors.price) {%>
@@ -50,7 +48,7 @@
                                 <label for="name" class="formulario__label">DESCRIPCION</label>
                                 <div class="formulario__grupo-input">
                                     <input class="formulario__input" name="description" id="description"
-                                        class="description-edit"></input>
+                                        class="description-edit" placeholder="Borcegos verde oliva, caña alta, con cordones en el mismo tono. Material resistente ecocuero. "></input>
                                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="formulario__input-error">La descripcion del producto tiene que tener un minimo
@@ -114,11 +112,10 @@
                                 </div>
                             </div>
                     </div>
-                    </div>
+                </div>
             </main>
-
             <script src="/js/newProduct.js"></script>
-            <% - include('partials/footer') %>
+            <%- include('partials/footer') %>
     </body>
 
 </html>
