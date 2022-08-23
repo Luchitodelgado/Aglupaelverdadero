@@ -5,7 +5,7 @@
     margin: auto;
     padding: 10px;
 }
-.h1-mujer {
+.h1-productos{
     font-family: 'Montserrat', sans-serif;
     color:#434343;
     text-align: center;
@@ -29,7 +29,7 @@
     margin: 3px;
     text-align: center;
 } */
-.h4-mujer{
+.h4-produc.h1-productos{
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     color: #434343;
@@ -132,8 +132,8 @@
 /*----------------MEDIA QUERYS------------------*/
 @media (min-width:361px){
     /*----MAIN----*/
-    .h1-mujer {
-        font-size: 30px;
+    .h1-productos {
+        font-size: 35px;
     }
     h4 {
         font-size: 90%;
@@ -180,10 +180,9 @@
 }
 @media (min-width:769px){
      /*----MAIN----*/
-    .h1-mujer {
-        font-size: 70px;
+    .h1-productos {
+        font-size: 60px;
     }
-
     h4{
         font-size:20px;
     }
