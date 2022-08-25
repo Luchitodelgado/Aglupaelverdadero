@@ -50,19 +50,19 @@ router.get('/api/products', (req, res) => {
             
         })
         resArray.forEach((producto) => {
-<<<<<<< HEAD
+
             delete producto.price,
             delete producto.discount,
             delete producto.image,
             delete producto.typeProductId,
             delete producto.stock 
-=======
+
             delete producto.typeProductId,
                 delete producto.price,
                 delete producto.stock,
                 delete producto.discount,
                 producto.image = 'http://localhost:3001/img/' + producto.image
->>>>>>> f5fdc5a2158bf310fb5d8dc8afd0a8a20a9c2213
+
             producto.detail = 'http://localhost:3000/api/products/' + producto.id
         })
         productTypes.findAll()

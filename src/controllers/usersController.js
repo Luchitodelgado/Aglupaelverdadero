@@ -76,8 +76,7 @@ const controller = {
 			});
 	},
 	store: (req, res) => {
-		const  emailVerify = req.body.email
-		console.log(req.body.email)
+		const emailVerify = req.body.email
 		User.findAll({
 			where: {
 				email: emailVerify,
@@ -134,6 +133,32 @@ const controller = {
 		}
 		else
 			res.render("ingresa")
+	},
+
+	profileEdit: (req, res) => {
+		res.render('profileEdit')
+
+	},
+	editProfile: (req, res) => {
+		let userId = req.params.id;	
+
+		User
+			.update({
+				firstName: req.body.firstName,
+				lastName: req.body.lastName,
+				email: req.body.email,
+				phone: req.body.phone,
+				avatar: req.session.newFileName,
+			 	password: bcryptjs.hashSync(req.body.password, 10)
+			},
+				{
+					where: { id: userId }
+				}
+			).then(() => {
+				return res.redirect('/perfil')
+			})
+			.catch(error => res.send(error))
+
 	},
 	salir: (req, res) => {
 		req.session.destroy();

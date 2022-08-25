@@ -36,6 +36,8 @@ router.get("/ingresa", userMiddleware, userController.ingresa);
 router.post("/login", userMiddleware, validations, userController.processLogin);
 router.post('/registrarte', userMiddleware, upload.single("avatar"), validations, userController.store);
 router.get("/perfil", userMiddleware, userController.userProfile);
+router.get("/profileEdit", userMiddleware, userController.profileEdit)
+router.patch("/profileEdit/:id", userMiddleware, upload.single("avatar"),userController.editProfile)
 router.get("/salir", userMiddleware, userController.salir)
 
 module.exports = router;

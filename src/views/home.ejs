@@ -5,44 +5,34 @@
     <body>
         <%- include('partials/headerNavbar') %>
             <main>
+
                 <div class="contenedor-imagen-principal">
-                    <img class="imagen-principal" src="/img/1-slide-1651857467224-2756890019-89b1c196b0537ecce073efd4e46c72021651857489-1920-1920.webp" alt="img-banner">
+                    <img class="imagen-principal"
+                        src="/img/1-slide-1651857467224-2756890019-89b1c196b0537ecce073efd4e46c72021651857489-1920-1920.webp"
+                        alt="img-banner">
                     <img class="img-mobile" src="/img/img-mobile.jpg">
                 </div>
                 <h2 class="h2-home">Nuestras categorías</h2>
                 <section class="seccion-articulos">
-                    <article class="articulo-container">
-                        <a class="banner_home" href="/productos/botas"><img class="imagen-producto" src="/img/botas.png"> </a>
-                        <div class="div-descripcion">
-                            <p class="nombre-articulo">BOTAS</p>
-                            <p class="precio">$11.240</p>
-                            <p class="descuentos">15% OFF</p>
-                        </div>
-                    </article>
-                    <article class="articulo-container">
-                        <a class="banner_home" href="/productos/borcegos"><img class="imagen-producto" src="/img/borsegos.png"></a>
-                        <div class="div-descripcion">
-                            <p class="nombre-articulo">BORCEGOS</p>
-                            <p class="precio">$12.240</p>
-                            <p class="descuentos">10% OFF</p>
-                        </div>
-                    </article>
-                    <article class="articulo-container">
-                        <a class="banner_home" href="/productos/texanas"><img class="imagen-producto" src="/img/texanas.png"> </a>
-                        <div class="div-descripcion">
-                            <p class="nombre-articulo">TEXANAS</p>
-                            <p class="precio">$15.240</p>
-                            <p class="descuentos">15% OFF</p>
-                        </div>
-                    </article>
-                    <article class="articulo-container">
-                        <a class="banner_home" href="/productos/zapatillas"><img class="imagen-producto" src="/img/zapatillas}.png"></a>
-                        <div class="div-descripcion">
-                            <p class="nombre-articulo">ZAPATILLAS</p>
-                            <p class="precio">$13.220</p>
-                            <p class="descuentos">5% OFF</p>
-                        </div>
-                    </article>
+                    <% for( let i=0; i < productos.length; i++ ) { %>
+
+                        <article class="articulo-container">
+                            <a class="banner_home" href="/productos/detail/<%= productos[i].id %>"><img class="imagen-producto"
+                                    src="/img/<%=productos[i].image %>"> </a>
+                            <div class="div-descripcion">
+                                <p class="nombre-articulo">
+                                    <%=productos[i].name %>
+                                </p>
+                                <p class="precio">
+                                    <%=productos[i].price %>
+                                </p>
+                                <p class="descuentos">
+                                    <%=productos[i].discount %>
+                                </p>
+                            </div>
+                        </article>
+                        <% } %>
+    
                 </section>
             </main>
             <%- include('partials/footer') %>
