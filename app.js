@@ -9,7 +9,9 @@ const userRouter = require('./src/routes/userRouter');
 const productos = require("./src/routes/productsRouter");
 const apiRouter = require("./src/routes/api/usersApi");
 const productsApi = require("./src/routes/api/productsApi");
+
 const session = require('express-session');
+
 
 
 
@@ -23,14 +25,15 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(session({secret:"Mensaje secreto"}));
+app.use(session({ secret: "Mensaje secreto" }));
 app.use('/', mainRouter);
 app.use('/', userRouter);
-app.use('/',productos);
+app.use('/', productos);
 app.use('/', apiRouter)
 app.use('/', productsApi)
 
+
 /* ------------------------------ PONER EN MARCHA EL SV------------------------------*/
-app.listen(3000, () => {
-    console.log("Servidor corriendo en http://localhost:3000")
+app.listen(3001, () => {
+    console.log("Servidor corriendo en http://localhost:3001")
 });
