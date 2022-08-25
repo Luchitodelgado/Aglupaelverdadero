@@ -1,30 +1,81 @@
+.h1-perfil{
+    font-family: 'Montserrat', sans-serif;
+    color:#434343;
+    text-align: center;
+    padding: 10px;
+}
 .container-padre-perfil{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
     justify-content: center;
-    width:100%;
+    height: auto;
+    margin: auto;
+}
+.div-img-perfil{
+    width: 50%;
 }
 .img-perfil{
-    width: 50%;
+    width: 100%;
     height: auto;
-    margin: auto;   
-    border-radius: 50%;
+    border-radius: 4px;
 }
 .div-datos{
     flex-direction: row;
     width: 50%;
-    align-self: center;
     box-sizing: border-box;
 }
 .titulo-datos{
-    color:#bc9c84;
-    font-size: 25px;
+    color:#434343;
     font-weight: bold;
-    text-decoration: underline;
+    text-align: center;
 }
 .datos-perfil{
     color:#434343;
-    font-size: 15px;
+    text-align: start;
+    border:1px solid #bc9c84;
+    border-radius: 5px;
+}
+/*-------------MEDIA QUERYS------------------*/
+@media (min-width:361px){
+    .h1-perfil{
+        font-size:45px;
+    }
+    .container-padre-perfil{
+        width: 100%;
+        padding: 10px;
+    }
+    .div-img-perfil{
+        padding: 5px;
+    }
+    .div-datos{
+        padding: 5px;
+    }
+    .titulo-datos{
+        font-size: 20px;
+    }
+    .datos-perfil{
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+@media (min-width:769px){
+    .h1-perfil{
+        font-size:65px;
+    }
+    .container-padre-perfil{
+        width: 70%;
+    }
+    .div-img-perfil{
+        padding: 20px;
+    }
+    .div-datos{
+        padding: 10px;
+    }
+    .titulo-datos{
+        font-size: 25px;
+    }
+    .datos-perfil{
+        font-size: 18px;
+        padding: 10px;
+    }
 }

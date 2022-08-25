@@ -14,12 +14,11 @@ router.get('/api/products', (req, res) => {
             return producto.dataValues;
         })
         resArray.forEach((producto) => {
-
             delete producto.price,
-                delete producto.discount,
-                delete producto.image,
-                delete producto.typeProductId,
-                delete producto.stock
+            delete producto.discount,
+            delete producto.image,
+            delete producto.typeProductId,
+            delete producto.stock 
             producto.detail = 'http://localhost:3000/api/products/' + producto.id
         })
         productTypes.findAll().then(typeProducts => {

@@ -12,11 +12,19 @@
     width:200px;
     height:auto;
     margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.hijos-resultados:hover{
+    box-shadow: 3px 3px 3px 3px #bc9c84;
 }
 .img-resultados{
     width: 100%;
     height:250px;
 }
+/*.img-resultados:hover{
+    box-shadow: 3px 3px 3px 3px #bc9c84;
+}*/
 .name-resultados{
     font-family:"Roboto,sans-serif";
     font-size:15px;

@@ -1,7 +1,7 @@
 [
     {
         "name": "IRGIZI NEGRO",
-        "description": "Texana de cuero liso con detalle de costuras.",
+        "description":"Texana de cuero liso con detalle de costuras",
         "price":20500 ,
         "discount": 14,
         "image": "bota 2.webp",
@@ -9,8 +9,8 @@
         "typeProductId": 1
     },
     {
-        "name": "TEXANAS INTENSE",
-        "description": "Texanas con caña más alta y bordadas a tono.",
+        "name":"TEXANAS INTENSE",
+        "description":"Texanas con caña más alta y bordadas a tono",
         "price":23200 ,
         "discount": 14,
         "image": "bota3.webp",
@@ -19,7 +19,7 @@
     },
     {
         "name": "IMORI NEGRO",
-        "description": "Bota de cuero con detalle de estilo texano.",
+        "description": "Bota de cuero con detalle de estilo texano",
         "price":15250 ,
         "discount": 14,
         "image": "bota4.webp",
@@ -37,7 +37,7 @@
     },
     {
         "name": "LIMAI NEGRO",
-        "description": "Bota de cuero graneado con detalle de cierres metálicos",
+        "description": "Bota de cuero graneado con cierres metálicos",
         "price": 25325,
         "discount": 14,
         "image": "bota6.webp",
@@ -46,7 +46,7 @@
     },
     {
         "name": "IMORI NEGRO",
-        "description": "Texana con detalle de recortes, costuras y cierre lateral",
+        "description": "Texana con detalle de cierre lateral",
         "price":18521 ,
         "discount": 14,
         "image": "bota7.webp",
@@ -55,7 +55,7 @@
     },
     {
         "name": "TEXANA MEI",
-        "description": "Texana confeccionadas en cuero, con un bordado en contraste.",
+        "description": "Texana confeccionadas en cuero, con bordado",
         "price":23212 ,
         "discount": 14,
         "image": "bota8.webp",
@@ -73,7 +73,7 @@
     },
     {
         "name": "RS-FAST DOUBLE",
-        "description": "Zapatilla de punta estilizada, con doble amortiguación",
+        "description": "Zapatilla con doble amortiguación",
         "price":20225 ,
         "discount": 14,
         "image": "zapatillas1.jpg",
@@ -82,7 +82,7 @@
     },
     {
         "name": "RS-CURVE WNS",
-        "description": "Zapatillas de otoño, ligeras y con interior de doble material",
+        "description": "Zapatillasligeras y con interior de doble material",
         "price":29524 ,
         "discount": 3,
         "image": "zapatillas2.jpg",
@@ -91,7 +91,7 @@
     },
     {
         "name": "RS-X BUBBLE",
-        "description": "Zapatillas de cuero ecologico, con caña alta y amortiguación",
+        "description": "Zapatillas de cuero ecologico, con amortiguación",
         "price":23254 ,
         "discount": 14,
         "image": "zapatillas3.jpg",
@@ -100,7 +100,7 @@
     },
     {
         "name": "CRUISE RIDER SILK",
-        "description": "Zapatillas urbanas, con suela de caucho y caña alta",
+        "description": "Zapatillas urbanas, con suela de caucho",
         "price":20000 ,
         "discount": 14,
         "image": "zapatillas4.jpg",
@@ -109,7 +109,7 @@
     },
     {
         "name": "VIKKY V2 CAT",
-        "description": "Zapatillas casuales, con empeine sintético y suela de goma",
+        "description": "Zapatillas con empeine sintético y suela de goma",
         "price":25000 ,
         "discount": 14,
         "image": "zapatillas5.jpg",
@@ -118,7 +118,7 @@
     },
     {
         "name": "TORI RAW METALLICS",
-        "description": "Zapatillas inspiradas en los 80, con volumen y peso ligero",
+        "description": "Zapatillas con volumen y peso ligero",
         "price":24242 ,
         "discount": 14,
         "image": "zapatillas6.jpg",
@@ -163,7 +163,7 @@
     },
     {
         "name": "BLACK SHOE",
-        "description": "Borcegos de cuero con recortes en negro y forrado en poliester",
+        "description": "Borcegos de cuero con recortes y forrado en poliester",
         "price":20124 ,
         "discount": 14,
         "image": "borcegos3.jpg",
@@ -181,7 +181,7 @@
     },
     {
         "name": "STUDS",
-        "description": "Borcegos de cuero con tachas metálicas y plataforma de 4,5cm",
+        "description": "Borcegos de cuero con tachas metálicas y plataforma",
         "price":19635 ,
         "discount": 14,
         "image": "borcegos5.jpg",
@@ -190,7 +190,7 @@
     },
     {
         "name": "SUP JOGGING",
-        "description": "Borcegos de cuero negro y suela de goma con estilo deportivo ",
+        "description": "Borcegos de cuero negro y suela de goma",
         "price": 20145,
         "discount": 14,
         "image": "borcegos6.jpg",
@@ -199,7 +199,7 @@
     },
     {
         "name": "CLASSIC BORDER",
-        "description": "Borcegos de cuero graneado con puño elástico y estilo clásico",
+        "description": "Borcegos de cuero graneado con puño elástico",
         "price": 18524,
         "discount": 14,
         "image": "borcegos7.jpg",
@@ -208,7 +208,7 @@
     },
     {
         "name": "ALPINA",
-        "description": "Borcegos reforzados con herrajes de cuero verde y suela de goma",
+        "description": "Borcegos reforzados con herrajes de cuero verde",
         "price": 19874,
         "discount": 14,
         "image": "borcegos8.jpg",
@@ -217,7 +217,7 @@
     },
     {
         "name": "GLASS CLASS",
-        "description": "Botas cortas con hebilla de cuero en negro y tacos transparentes",
+        "description": "Botas cortas con hebilla de cuero y tacos transparentes",
         "price": 23254,
         "discount": 14,
         "image": "botas1.jpg",
@@ -226,7 +226,7 @@
     },
     {
         "name": "ELASTIC",
-        "description": "Bota corta de cuero, con planta de goma y acceso mediante elástico en los laterales",
+        "description": "Bota corta de cuero, con planta de goma",
         "price": 25452,
         "discount": 3,
         "image": "botas2.jpg",
@@ -235,7 +235,7 @@
     },
     {
         "name": "GAMUZERAS",
-        "description": "Botas altas de gamuza, con suela de cuero natural y estilo abuchonado",
+        "description": "Botas altas de gamuza, con suela de cuero natural",
         "price":23214 ,
         "discount": 14,
         "image": "botas3.jpg",
@@ -244,7 +244,7 @@
     },
     {
         "name": "TALL BROWN",
-        "description": "Botas de corte militar, con elástico de cuero en la suela",
+        "description": "Botas de corte militar, con elástico en suela",
         "price": 19874,
         "discount": 14,
         "image": "botas4.jpg",
@@ -253,7 +253,7 @@
     },
     {
         "name": "ACRILIC",
-        "description": "Botas cortas de cuero texturada en nude y con taco acrílico",
+        "description": "Botas cortas de cuero texturada en nude y taco acrílico",
         "price":26542 ,
         "discount": 14,
         "image": "botas5.jpg",
@@ -262,7 +262,7 @@
     },
     {
         "name": "TACKS OUT",
-        "description": "Botas cortas con tachas de cuero, suela de goma y con acceso por cierre",
+        "description": "Botas cortas con tachas de cuero, suela de goma",
         "price":27415 ,
         "discount": 14,
         "image": "botas6.jpg",

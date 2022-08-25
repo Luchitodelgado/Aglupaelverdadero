@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
-
-    <body>
-        <main>
+<body>
+    <main>
         <%- include('partials/headerNavbar') %>
-        <h1 class="">Hola, <%= usuario.firstName %>!</h1>
+        <h1 class="h1-perfil">Hola, <%= usuario.firstName %>!</h1>
         <div class="container-padre-perfil">
-                    <img class="img-perfil" src="/img/img-usuarios/<%=usuario.avatar%>" alt="imagen">
-                    <div class="div-datos">
-                        <p class="titulo-datos">Mis datos</p>
-                        <p class="datos-perfil">NOMBRE: <%= usuario.firstName%></p>
-                        <p class="datos-perfil">APELLIDO: <%= usuario.lastName %></p>
-                        <p class="datos-perfil">EMAIL: <%= usuario.email %></p>
-                        <p class="datos-perfil">FECHA DE NACIMIENTO: <%= usuario.birthday%></p>
-                    </div>
-                </div>
-                <%- include('partials/footer') %>
+            <div class="div-img-perfil">
+                <img class="img-perfil" src="/img/FOTO CURRICULUM.jpg" alt="imagen">
+            </div>
+            <div class="div-datos">
+                <p class="titulo-datos">MIS DATOS</p>
+                <p class="datos-perfil"><strong>Nombre:</strong> <%= usuario.firstName%></p>
+                <p class="datos-perfil"><strong>Apellido:</strong> <%= usuario.lastName %></p>
+                <p class="datos-perfil"><strong>Email:</strong> <%= usuario.email %></p>
+                <p class="datos-perfil"><strong>Fecha de nacimiento:</strong> <%= usuario.birthday%></p>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
     </main>
-    </body>
+</body>
 </html>

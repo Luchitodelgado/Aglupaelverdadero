@@ -21,7 +21,7 @@ ul{
     margin-bottom: 20px;
 }
 .imagen-producto:hover{
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.422);
+    box-shadow: 3px 3px 3px 3px #bc9c84;
 }
 .nombre-articulo{
     font-weight: bold;
@@ -81,7 +81,8 @@ ul{
     }
     .imagen-producto {
         width: 100%;
-        height: 100%;
+        height: auto;
+        border-radius: 100px;
     }
     .div-descripcion {
         width:100%;
@@ -130,7 +131,6 @@ ul{
     .imagen-producto {
         width: 100%;
         height: 100%;
-        border-radius: 5px;
     }
     .div-descripcion {
         width:100%;
