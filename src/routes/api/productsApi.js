@@ -53,7 +53,7 @@ router.get('/api/products', (req, res) => {
 
             delete producto.price,
             delete producto.discount,
-            delete producto.image,
+/*             delete producto.image, */
             delete producto.typeProductId,
             delete producto.stock 
 
