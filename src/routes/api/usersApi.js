@@ -41,7 +41,7 @@ router.get('/api/users/:id', (req, res) => {
             delete user.password,
                 delete user.phone,
                 delete user.typeUserId,                
-                user.avatar = 'http://localhost:3000/img/img-usuarios/' + user.avatar 
+                user.avatar = 'http://localhost:3001/img/img-usuarios/' + user.avatar 
         })
         return res.status(200).json({        
             users: resArray,

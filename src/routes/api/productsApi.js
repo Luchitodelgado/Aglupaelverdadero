@@ -21,25 +21,22 @@ router.get('/api/products', (req, res) => {
         let categoriesArray = productos.map((category) => {
             if (category.typeProductId === 1) {
                 texana.push(category.typeProductId)
-                console.log('texana')
+            
             }
             else if (category.typeProductId === 2) {
-                console.log('Botas')
+    
                 botas.push(category.typeProductId)
             }
             else if (category.typeProductId === 3) {
-                console.log('borcegos')
+       
                 borcegos.push(category.typeProductId)
             }
             else if (category.typeProductId === 4) {
-                console.log('zapatillas')
+          
                 zapatillas.push(category.typeProductId)
             }
         })
-        console.log(texana)
-        console.log(botas)
-        console.log(borcegos)
-        console.log(zapatillas)
+
 
             let cantidadPorCategoria={
                 texana: texana.length,
@@ -63,7 +60,7 @@ router.get('/api/products', (req, res) => {
         productTypes.findAll()
             .then(typeProducts => {
                 if (typeProducts.id === 3) {
-                    console.log('array:  ' + typeProducts.id)
+           
                 }
 
                 return res.status(200).json({
