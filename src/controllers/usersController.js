@@ -77,11 +77,12 @@ const controller = {
 	},
 	store: (req, res) => {
 		const emailVerify = req.body.email
-		User.findAll({
+		User.findOne({
 			where: {
 				email: emailVerify,
 			}
 		}).then(function (usuario) {
+			res.locals.mailEnUso = false
 			const resultValidation = validationResult(req);
 			if (resultValidation.errors.length > 0) {
 				res.render('registrarte2', { errors: resultValidation.mapped(), oldData: req.body })
