@@ -1,3 +1,18 @@
+/*-------------------PRODUCTOS DESPLEGABLE-------------*/
+.productos:hover .sub-menu{
+    display: block;
+    text-align: start;
+}
+.sub-menu{
+    color: #3e3e3e;
+    left: -10px;
+    padding: 5px;
+    display: none;
+}
+.sub-menu:hover{
+    color: #53535376;
+}
+/*----------------*/
 header {
     width: 100%;
     height: auto;
