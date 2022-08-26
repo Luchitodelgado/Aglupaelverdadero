@@ -73,7 +73,7 @@ formulario.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const terminos = document.getElementById('terminos');
-  if (campos.password && campos.email && terminos.checked) {
+  if (campos.password && campos.email) {
     formulario.submit();
 
 
