@@ -36,15 +36,14 @@
 										</p>
 										<a class="detailComprar" href="#">COMPRAR</a>
 
-										<% if (locals.isLogged) { %>
+										<% if (locals.userAdmin===true) {%>
 											<a class="detailEditar" href="/productos/edit/<%= product.id %>">EDITAR</a>
+
+											<form action="/productos/delete/<%= product.id %>?_method=DELETE"
+												method="POST" style="display: inline-flex" class="detailEliminar">
+												<button type="submit">ELIMINAR</button>
+											</form>
 											<% }%>
-												<% if (locals.isLogged) { %>
-													<form action="/productos/delete/<%= product.id %>?_method=DELETE"
-														method="POST" style="display: inline-flex" class="detailEliminar">
-														<button type="submit">ELIMINAR</button>
-													</form>
-													<% }%>
 
 					</div>
 				</div>

@@ -3,7 +3,8 @@
         <div class="div-padre">
             <div class="div-buscador">
                 <form action="/search" method="GET" class="barra-lupa" id="inputSearch">
-                    <input class="barra-busqueda" type="search" id="site-search" name="barra-busqueda" placeholder="¿Qué estás buscando?"></input>
+                    <input class="barra-busqueda" type="search" id="site-search" name="barra-busqueda"
+                        placeholder="¿Qué estás buscando?"></input>
                 </form>
             </div>
             <div class="container-logo">
@@ -27,47 +28,50 @@
                     </li>
                     <li class="hijos-ul"><a class="a-header" href="/registrarte">REGISTRARTE</a></li>
                     <li class="hijos-ul"><a class="a-header" href="/ingresa">INGRESÁ</a></li>
-          
+
                 </ul>
             </div>
         </nav>
-    </header>   
+    </header>
 
-        <% } else  {%>
+    <% } else {%>
 
-            <header>
-                <div class="div-padre">
-                    <div class="div-buscador">
-                        <form action="/search" method="GET" class="barra-lupa" id="inputSearch">
-                            <input class="barra-busqueda barra" type="search" id="site-search" name="barra-busqueda"
-                                placeholder="¿Qué estás buscando?"></input>
-                        </form>
-                    </div>
-                    <div class="container-logo">
-                        <a href="/"><img class="img-logo" src="/img/Minimalist Initial Letter Logo.png" alt="logo-header"></a>
-                    </div>
-                    <div class="container-carrito">
-                        <a class="a-header" href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
-                    </div>
+        <header>
+            <div class="div-padre">
+                <div class="div-buscador">
+                    <form action="/search" method="GET" class="barra-lupa" id="inputSearch">
+                        <input class="barra-busqueda barra" type="search" id="site-search" name="barra-busqueda"
+                            placeholder="¿Qué estás buscando?"></input>
+                    </form>
                 </div>
-                <nav>
-                    <div class="container-nav">
-                        <ul class="ul">
-                            <li class="hijos-ul"><a class="a-header" href="/">HOME</a></li>
-                            <li class="hijos-ul"><a class="a-header" href="/perfil">MI PERFIL</a></li>
-                            <li class="hijos-ul productos">PRODUCTOS</a>
-                                <ul>
-                                    <li><a class="sub-menu" href="/productos/texanas">TEXANAS</a></li>
-                                    <li><a class="sub-menu" href="/productos/botas">BOTAS</a></li>
-                                    <li><a class="sub-menu" href="/productos/borcegos">BORCEGOS</a></li>
-                                    <li><a class="sub-menu" href="/productos/zapatillas">ZAPATILLAS</a></li>
-                                </ul>
-                            </li>
-                            <li class="hijos-ul"><a class="a-header" href="/create">CREAR PRODUCTOS</a></li>                         
-                            <li class="hijos-ul"><a class="a-header" href="/salir">SALIR</a></li>
-                            
-                        </ul>
-                    </div>
-                </nav>
-            </header>       
-    <% } %>
+                <div class="container-logo">
+                    <a href="/"><img class="img-logo" src="/img/Minimalist Initial Letter Logo.png"
+                            alt="logo-header"></a>
+                </div>
+                <div class="container-carrito">
+                    <a class="a-header" href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
+                </div>
+            </div>
+            <nav>
+                <div class="container-nav">
+                    <ul class="ul">
+                        <li class="hijos-ul"><a class="a-header" href="/">HOME</a></li>
+                        <li class="hijos-ul"><a class="a-header" href="/perfil">MI PERFIL</a></li>
+                        <li class="hijos-ul productos">PRODUCTOS</a>
+                            <ul>
+                                <li><a class="sub-menu" href="/productos/texanas">TEXANAS</a></li>
+                                <li><a class="sub-menu" href="/productos/botas">BOTAS</a></li>
+                                <li><a class="sub-menu" href="/productos/borcegos">BORCEGOS</a></li>
+                                <li><a class="sub-menu" href="/productos/zapatillas">ZAPATILLAS</a></li>
+                            </ul>
+                        </li>
+                        <% if (locals.userAdmin===true) {%>
+                            <li class="hijos-ul"><a class="a-header" href="/create">CREAR PRODUCTOS</a></li>
+                            <%}%>
+                                <li class="hijos-ul"><a class="a-header" href="/salir">SALIR</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <% } %>

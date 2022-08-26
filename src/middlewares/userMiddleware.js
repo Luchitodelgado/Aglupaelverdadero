@@ -4,6 +4,12 @@ function userMiddleware(req, res, next) {
         usuario = req.session.userLogged;
         res.locals.userLogged = req.session.userLogged;
         res.locals.isLogged=true 
+
+        if (req.session.userAdmin){
+            res.locals.userAdmin=true 
+            console.log('eres admin!')
+
+        }
     }
     next();
 };
