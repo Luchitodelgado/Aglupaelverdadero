@@ -5,9 +5,10 @@
 }
 .sub-menu{
     color: #3e3e3e;
-    left: -10px;
-    padding: 5px;
+    padding: 10px;
     display: none;
+    position: relative;
+    right: 50px;
 }
 .sub-menu:hover{
     color: #53535376;

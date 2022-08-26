@@ -8,11 +8,11 @@
 
                 <div class="contenedor-imagen-principal">
                     <img class="imagen-principal"
-                        src="/img/1-slide-1651857467224-2756890019-89b1c196b0537ecce073efd4e46c72021651857489-1920-1920.webp"
+                        src="/img/nueva coleccion invierno 2022.webp"
                         alt="img-banner">
                     <img class="img-mobile" src="/img/img-mobile.jpg">
                 </div>
-                <h2 class="h2-home">Nuestras categorías</h2>
+                <h2 class="h2-home">Ofertas destacadas</h2>
                 <section class="seccion-articulos">
                     <% for( let i=0; i < productos.length; i++ ) { %>
 
@@ -24,10 +24,10 @@
                                     <%=productos[i].name %>
                                 </p>
                                 <p class="precio">
-                                    <%=productos[i].price %>
+                                    $<%=productos[i].price %>
                                 </p>
                                 <p class="descuentos">
-                                    <%=productos[i].discount %>
+                                    %<%=productos[i].discount %>
                                 </p>
                             </div>
                         </article>
