@@ -16,7 +16,7 @@ const controller = {
 			}
 
 		}).then(function (productos) {
-			console.log(productos)
+
 
 
 			return res.render('home', { productos })

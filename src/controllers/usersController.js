@@ -46,10 +46,18 @@ const controller = {
 							email: emailVerify,
 							password: key
 						}
+
+						// EL USUARIO LOGUEA
 					}).then(function () {
 						if (emailVerify === usuario.email && key == true) {
 							res.locals.isLogged = true
 							req.session.userLogged = usuario;
+
+							if (usuario.typeUserId === 2) {
+								req.session.userAdmin = usuario
+								console.log(usuario.typeUserId)
+							}
+
 							res.redirect('/perfil')
 
 						}
@@ -57,7 +65,7 @@ const controller = {
 							res.render('ingresa', {
 								errors: {
 									password: {
-										msg: "Contraseña incrrecta."
+										msg: "Contraseña incorrecta."
 									}
 								}
 							})
@@ -77,12 +85,16 @@ const controller = {
 	},
 	store: (req, res) => {
 		const emailVerify = req.body.email
-		User.findOne({
+		let buscarUsuario = User.findAll({
 			where: {
-				email: emailVerify,
+				email: req.body.email,
 			}
 		}).then(function (usuario) {
-			res.locals.mailEnUso = false
+			if (usuario != ""){
+				res.locals.mailEnUso = true
+				return res.render('registrarte2')
+			}
+
 			const resultValidation = validationResult(req);
 			if (resultValidation.errors.length > 0) {
 				res.render('registrarte2', { errors: resultValidation.mapped(), oldData: req.body })
@@ -92,7 +104,7 @@ const controller = {
 
 				return res.render('registrarte2', { oldData: req.body })
 			}
-			else
+			else {/* if (emailVerify != usuario.email && res.locals.mailEnUso === false) */
 
 				User.create({
 					firstName: req.body.firstName,
@@ -102,7 +114,7 @@ const controller = {
 					phone: req.body.phone,
 					avatar: req.session.newFileName,
 					password: bcryptjs.hashSync(req.body.password, 10),
-					typeUserId: 1
+					typeUserId: 2
 
 					// TYPEUYERID:				
 					// 1 = REGISTERED USER
@@ -111,6 +123,7 @@ const controller = {
 
 				}),
 					res.redirect('/');
+			}
 
 		}).catch((err) => {
 			console.log("este es el error: " + err)
@@ -141,7 +154,7 @@ const controller = {
 
 	},
 	editProfile: (req, res) => {
-		let userId = req.params.id;	
+		let userId = req.params.id;
 
 		User
 			.update({
@@ -150,7 +163,7 @@ const controller = {
 				email: req.body.email,
 				phone: req.body.phone,
 				avatar: req.session.newFileName,
-			 	password: bcryptjs.hashSync(req.body.password, 10)
+				password: bcryptjs.hashSync(req.body.password, 10)
 			},
 				{
 					where: { id: userId }
