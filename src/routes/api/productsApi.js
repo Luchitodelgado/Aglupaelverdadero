@@ -21,41 +21,40 @@ router.get('/api/products', (req, res) => {
         let categoriesArray = productos.map((category) => {
             if (category.typeProductId === 1) {
                 texana.push(category.typeProductId)
-            
+
             }
             else if (category.typeProductId === 2) {
-    
+
                 botas.push(category.typeProductId)
             }
             else if (category.typeProductId === 3) {
-       
+
                 borcegos.push(category.typeProductId)
             }
             else if (category.typeProductId === 4) {
-          
+
                 zapatillas.push(category.typeProductId)
             }
         })
 
 
-            let cantidadPorCategoria={
-                texana: texana.length,
-                botas: botas.length,
-                borcegos: borcegos.length,
-                zapatillas: zapatillas.length
-            }
+        let cantidadPorCategoria = {
+            texana: texana.length,
+            botas: botas.length,
+            borcegos: borcegos.length,
+            zapatillas: zapatillas.length
+        }
         let resArray = productos.map((producto) => {
-          
+
             return producto.dataValues;
-            
+
         })
         resArray.forEach((producto) => {
 
             delete producto.price,
-            delete producto.discount,
-/*             delete producto.image, */
-            delete producto.typeProductId,
-            delete producto.stock 
+                delete producto.discount,
+                delete producto.typeProductId,
+                delete producto.stock
 
             delete producto.typeProductId,
                 delete producto.price,
@@ -68,7 +67,7 @@ router.get('/api/products', (req, res) => {
         productTypes.findAll()
             .then(typeProducts => {
                 if (typeProducts.id === 3) {
-           
+
                 }
 
                 return res.status(200).json({

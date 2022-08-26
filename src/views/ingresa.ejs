@@ -15,18 +15,19 @@
                 <p class="p-login">EMAIL</p>
               </label>
               <div>
-                <input class="input-hijo formulario__input" type="email" name="email" id="loginEmail" placeholder="email@email.com"></input>
+                <input class="input-hijo formulario__input" type="email" name="email" id="loginEmail"
+                  placeholder="email@email.com"></input>
                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
               <% if (locals.errors && errors.email) { %>
                 <%= errors.email.msg %>
                   <%}%>
-                  <p class="formulario__input-error">El email solo puede contener letras, numeros, puntos, guiones y
-                    guion
-                    bajo.</p>
-                  <% if (locals.mailEnUso) { %>
-                    <p> Porfavor ingrese otro email.</p>
-                    <% } %>
+                    <p class="formulario__input-error">El email solo puede contener letras, numeros, puntos, guiones y
+                      guion
+                      bajo.</p>
+                    <% if (locals.mailEnUso) { %>
+                      <p> Porfavor ingrese otro email.</p>
+                      <% } %>
             </div>
             <!-----------------PASSWORD--------------------->
             <div class="login formulario__grupo" id="grupo__password">
@@ -34,13 +35,14 @@
                 <p class="p-login">CONTRASEÑA</p>
               </label>
               <div class="formulario__grupo-input">
-                <input class="input-hijo formulario__input" type="password" name="password" id="loginPassword" placeholder="Contraseña"></input>
+                <input class="input-hijo formulario__input" type="password" name="password" id="loginPassword"
+                  placeholder="Contraseña"></input>
                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
-            </div>
-            <% if (locals.errors && errors.password) { %>
-              <%= errors.password.msg %>
-                <%} %>
-                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+              </div>
+              <% if (locals.errors && errors.password) { %>
+                <%= errors.password.msg %>
+                  <%} %>
+                    <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
             </div>
 
             <div class="formulario__mensaje" id="formulario__mensaje">
@@ -58,4 +60,5 @@
       <script src="../../js/loginForm.js"></script>
       <%- include('partials/footer') %>
   </body>
-  </html>
+
+</html>
