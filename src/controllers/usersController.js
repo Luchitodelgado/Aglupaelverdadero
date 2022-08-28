@@ -114,7 +114,7 @@ const controller = {
 					phone: req.body.phone,
 					avatar: req.session.newFileName,
 					password: bcryptjs.hashSync(req.body.password, 10),
-					typeUserId: 1
+					typeUserId: 2
 
 					// TYPEUYERID:				
 					// 1 = REGISTERED USER

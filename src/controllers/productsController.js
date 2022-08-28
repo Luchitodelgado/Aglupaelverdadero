@@ -44,6 +44,7 @@ const controller = {
 	update: (req, res) => {
 		let productId = req.params.id;
 		if (req.params.newFileName == undefined) {
+			console.log('es undefined')
 			Product
 				.update({
 					id: req.params.id,
@@ -51,31 +52,17 @@ const controller = {
 					description: req.body.description,
 					price: req.body.price,
 					discount: req.body.discount,
-					typeProductId: req.body.category
+					typeProductId: req.body.category,
+					stock: req.body.stock
 				}, {
 					where: { id: productId }
 				}
 				).then(() => {
-					return res.redirect('/productos')
+					return res.redirect('/productos/detail/' + req.params.id)
 				})
 				.catch(error => res.send(error))
 		}
-		else
-			Product.update({
-				id: req.params.id,
-				name: req.body.name,
-				description: req.body.description,
-				price: req.body.price,
-				discount: req.body.discount,
-				image: req.file.filename,
-				typeProductId: req.body.category
-			}, {
-				where: { id: productId }
-			}
-			).then(() => {
-				return res.redirect('/productos')
-			})
-				.catch(error => res.send(error))
+
 
 	},
 	destroy: (req, res) => {
