@@ -169,7 +169,7 @@ const controller = {
 					where: { id: userId }
 				}
 			).then(() => {
-				return res.redirect('/perfil')
+				return res.redirect('/salir')
 			})
 			.catch(error => res.send(error))
 

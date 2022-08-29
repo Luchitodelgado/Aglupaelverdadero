@@ -19,7 +19,7 @@
 							<%= product.description %>
 						</p>
 						<p class="description-detail">
-							Stock del producto en unidades: <%= product.stock %>
+							Stock del producto: <%= product.stock %>
 						</p>
 						<% if(product.discount> 0){
 							let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)

@@ -29,7 +29,7 @@ const controller = {
 			}
 		)
 			.then(() => {
-				return res.redirect('/productos')
+				return res.redirect('/perfil')
 			})
 			.catch(error => res.send(error))
 	},

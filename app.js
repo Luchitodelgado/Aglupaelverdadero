@@ -21,6 +21,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views'));
 /* ------------------------------ MEDIOAMBIENTE DE LA APLICACION (MIDDLEWARES)------------------------------*/
 app.use(express.static("public"));
+
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -31,6 +32,9 @@ app.use('/', userRouter);
 app.use('/', productos);
 app.use('/', apiRouter)
 app.use('/', productsApi)
+app.use((req,res,next)=>{
+    res.status(404).send('Pagina no encontrada')
+})
 
 
 /* ------------------------------ PONER EN MARCHA EL SV------------------------------*/
