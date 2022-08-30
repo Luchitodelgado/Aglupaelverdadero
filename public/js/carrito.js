@@ -62,8 +62,11 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
             </div>
         </div>
     </div>`;
+    localStorage.clear()
   shoppingCartRow.innerHTML = shoppingCartContent;
   shoppingCartItemsContainer.append(shoppingCartRow);
+
+  
 
   shoppingCartRow
     .querySelector('.buttonDelete')
@@ -96,6 +99,7 @@ function updateShoppingCartTotal() {
       shoppingCartItemQuantityElement.value
     );
     total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
+  
   });
   shoppingCartTotal.innerHTML = `${total.toFixed(2)}€`;
 }
@@ -110,6 +114,7 @@ function quantityChanged(event) {
   const input = event.target;
   input.value <= 0 ? (input.value = 1) : null;
   updateShoppingCartTotal();
+ 
 }
 
 function comprarButtonClicked() {

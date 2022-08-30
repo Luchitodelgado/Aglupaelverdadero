@@ -9,7 +9,7 @@
                 <div class="container-resultados">
 
                     <section class="store">
-                        <div class="container">
+                        <div class="container-cart">
                             <div class="items">
                                 <div class="row">
 
@@ -20,15 +20,18 @@
                                                     <a href="/productos/detail/<%= productos[i].id %>">
                                                         <img class="item-image" src="/img/<%=productos[i].image %>">
                                                     </a>
+
+                                                    <h3 class="item-title">
+                                                        <%= productos[i].name %>
+                                                            <%= productos[i].discount %>%
+                                                    </h3>
                                                     <div class="item-details">
-                                                        <h3 class="item-title">
-                                                            <%= productos[i].name %>
-                                                                <%= productos[i].discount %>%
-                                                        </h3>
-                                                        <p class="item-price">
-                                                            $<%= productos[i].price %>
-                                                        </p>
-                                                        <button class="addToCart"> Añadir al carrito</button>
+                                                        <h4 class="item-price">
+                                                            <%= productos[i].price %>
+                                                        </h4>
+
+
+                                                        <i class="fas fa-cart-arrow-down addToCart"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -43,7 +46,7 @@
 
                     <!-- START SECTION SHOPPING CART -->
                     <section class="shopping-cart">
-                        <div class="container">
+                        <div class="container-cart">
                             <h1 class="text-center">CARRITO</h1>
                             <hr>
                             <div class="row">
@@ -73,7 +76,7 @@
                                 <div class="col-12">
                                     <div class="shopping-cart-total d-flex align-items-center">
                                         <p class="mb-0">Total</p>
-                                        <p class="ml-4 mb-0 shoppingCartTotal">0€</p>
+                                        <p class="ml-4 mb-0 shoppingCartTotal">0$</p>
                                         <div class="toast ml-auto bg-info" role="alert" aria-live="assertive"
                                             aria-atomic="true" data-delay="2000">
                                             <div class="toast-header">
@@ -123,11 +126,9 @@
 
 
                         </div>
-
-
-
                     </section>
-                    <%- include('partials/footer') %>
+                </div>
+                <%- include('partials/footer') %>
 
         </main>
 
