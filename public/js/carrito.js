@@ -101,7 +101,7 @@ function updateShoppingCartTotal() {
     total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
   
   });
-  shoppingCartTotal.innerHTML = `${total.toFixed(2)}€`;
+  shoppingCartTotal.innerHTML = `$${total.toFixed(2)}`;
 }
 
 function removeShoppingCartItem(event) {
