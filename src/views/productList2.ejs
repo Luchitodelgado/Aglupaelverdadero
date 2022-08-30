@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+    <body>
+        
+        <main>
+            <%- include('partials/headerNavbar') %>
+                <div class="container-resultados">
+
+
+                    <% for( let i=0; i < productos.length; i++ ) { %>
+                        <li class="li-resultados">
+                            <div class="hijos-resultados">
+                                <a href="/productos/detail/<%= productos[i].id %>">
+                                    <img class="img-resultados" src="/img/<%=productos[i].image %>">
+                                </a>
+                                <p class="name-resultados">
+                                    <%= productos[i].name %>
+                                        <%= productos[i].discount %>%
+                                </p>
+                                <p class="price-resultados">
+                                    $<%= productos[i].price %>
+                                </p>
+                                <button class="addToCart"> Añadir al carrito</button>
+                            </div>
+                        </li>
+                        <% } %>
+
+                </div>
+                <%- include('partials/footer') %>
+
+        </main>
+
+        <script src="../../js/carrito.js"></script>
+    </body>
+
+</html>

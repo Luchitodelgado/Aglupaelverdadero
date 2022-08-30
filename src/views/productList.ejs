@@ -3,34 +3,135 @@
 <%- include('partials/head') %>
 
     <body>
+
         <main>
             <%- include('partials/headerNavbar') %>
                 <div class="container-resultados">
 
+                    <section class="store">
+                        <div class="container">
+                            <div class="items">
+                                <div class="row">
 
-                            <% for( let i=0; i < productos.length; i++ ) { %>
-                                <li class="li-resultados">
-                                    <div class="hijos-resultados">
+                                    <% for( let i=0; i < productos.length; i++ ) { %>
+                                        <li class="li-resultados">
+                                            <div class="item shadow mb-4">
+                                                <div class="hijos-resultados">
+                                                    <a href="/productos/detail/<%= productos[i].id %>">
+                                                        <img class="item-image" src="/img/<%=productos[i].image %>">
+                                                    </a>
+                                                    <div class="item-details">
+                                                        <h3 class="item-title">
+                                                            <%= productos[i].name %>
+                                                                <%= productos[i].discount %>%
+                                                        </h3>
+                                                        <p class="item-price">
+                                                            $<%= productos[i].price %>
+                                                        </p>
+                                                        <button class="addToCart"> Añadir al carrito</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <% } %>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
 
 
-
-
-                                        <a href="/productos/detail/<%= productos[i].id %>">
-                                            <img class="img-resultados" src="/img/<%=productos[i].image %>">
-                                        </a>
-                                        <p class="name-resultados">
-                                            <%= productos[i].name %>
-                                                <%= productos[i].discount %>%
-                                        </p>
-                                        <p class="price-resultados">
-                                            $<%= productos[i].price %>
-                                        </p>
+                    <!-- START SECTION SHOPPING CART -->
+                    <section class="shopping-cart">
+                        <div class="container">
+                            <h1 class="text-center">CARRITO</h1>
+                            <hr>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="shopping-cart-header">
+                                        <h6>Producto</h6>
                                     </div>
-                                </li>
-                                <% } %>
-                </div>
-                <%- include('partials/footer') %>
+                                </div>
+                                <div class="col-2">
+                                    <div class="shopping-cart-header">
+                                        <h6 class="text-truncate">Precio</h6>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="shopping-cart-header">
+                                        <h6>Cantidad</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ? START SHOPPING CART ITEMS -->
+                            <div class="shopping-cart-items shoppingCartItemsContainer">
+                            </div>
+                            <!-- ? END SHOPPING CART ITEMS -->
+
+                            <!-- START TOTAL -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="shopping-cart-total d-flex align-items-center">
+                                        <p class="mb-0">Total</p>
+                                        <p class="ml-4 mb-0 shoppingCartTotal">0€</p>
+                                        <div class="toast ml-auto bg-info" role="alert" aria-live="assertive"
+                                            aria-atomic="true" data-delay="2000">
+                                            <div class="toast-header">
+                                                <span>✅</span>
+                                                <strong class="mr-auto ml-1 text-secondary">Elemento en el
+                                                    carrito</strong>
+                                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="toast-body text-white">
+                                                Se aumentó correctamente la cantidad
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success ml-auto comprarButton" type="button"
+                                            data-toggle="modal" data-target="#comprarModal">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- END TOTAL -->
+
+                            <!-- START MODAL COMPRA -->
+                            <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelle dby="comprarModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su
+                                                compra</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Pronto recibirá su pedido</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END MODAL COMPRA -->
+
+
+                        </div>
+
+
+
+                    </section>
+                    <%- include('partials/footer') %>
+
         </main>
+
+        <script src="../../js/carrito.js"></script>
     </body>
 
 </html>

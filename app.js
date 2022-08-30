@@ -10,6 +10,7 @@ const productos = require("./src/routes/productsRouter");
 const apiRouter = require("./src/routes/api/usersApi");
 const productsApi = require("./src/routes/api/productsApi");
 
+
 const session = require('express-session');
 
 
@@ -30,8 +31,10 @@ app.use(session({ secret: "Mensaje secreto" }));
 app.use('/', mainRouter);
 app.use('/', userRouter);
 app.use('/', productos);
-app.use('/', apiRouter)
-app.use('/', productsApi)
+app.use('/', apiRouter);
+app.use('/', productsApi);
+
+
 app.use((req,res,next)=>{
     res.status(404).send('Pagina no encontrada')
 })
