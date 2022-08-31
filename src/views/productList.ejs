@@ -18,17 +18,20 @@
                                             <div class="item shadow mb-4">
                                                 <div class="hijos-resultados">
                                                     <a href="/productos/detail/<%= productos[i].id %>">
-                                                        <img class="item-image" src="/img/<%=productos[i].image %>">
+                                                        <img class="item-image img-resultados" src="/img/<%=productos[i].image %>">
                                                     </a>
-
-                                                    <h3 class="item-title">
-                                                        <%= productos[i].name %>
+                                                    <p class="name-resultados">
+                                                        <h3 class="item-title">
+                                                            <%= productos[i].name %>
                                                             <%= productos[i].discount %>%
-                                                    </h3>
+                                                        </h3>
+                                                    </p>
                                                     <div class="item-details">
+                                                        <p class="price-resultados">
                                                         <h4 class="item-price">
                                                             <%= productos[i].price %>
                                                         </h4>
+                                                    </p>
 
 
                                                         <i class="fas fa-cart-arrow-down addToCart"></i>
@@ -40,6 +43,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                         <section class="shopping-cart">
                             <div class="container-cart">
                                 <h1 class="text-center">CARRITO</h1>
@@ -123,7 +127,7 @@
 
 
 
-                </div>
+                
                 <%- include('partials/footer') %>
 
             </main>

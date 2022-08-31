@@ -94,19 +94,19 @@ color:#434343;
         padding: 10px;
     }
     .container-detail{
-        width: 70%;
+        width: 80%;
     }
     .name-detail{
-        font-size: 25px;
+        font-size: 30px;
     }
     .description-detail{
-        font-size: 15px;
+        font-size: 17px;
     }
     .price-detail{
         font-size:20px;
     }
     .icons-detail{
-        font-size: 15px;
+        font-size: 17px;
     }
     .detailEditar{
         font-size: 25px;

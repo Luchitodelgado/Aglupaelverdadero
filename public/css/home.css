@@ -23,6 +23,7 @@ ul{
 }
 .imagen-producto:hover{
     box-shadow: 3px 3px 3px 3px #bc9c84;
+    -webkit-transform:scale(1.1);transform:scale(1.1);
 }
 .nombre-articulo{
     font-weight: bold;
