@@ -5,9 +5,8 @@
     <body>
         <%- include('partials/headerNavbar') %>
             <main>
-
-                <div class="container-resultados">
-
+                <div class="div-padre-productList">
+                    <div class="div-productos">
                     <section class="store">
                         <div class="container-cart">
                             <div class="items">
@@ -15,10 +14,10 @@
 
                                     <% for( let i=0; i < productos.length; i++ ) { %>
                                         <li class="li-resultados">
-                                            <div class="item shadow mb-4">
+                                            <div class="item mb-4">
                                                 <div class="hijos-resultados">
                                                     <a href="/productos/detail/<%= productos[i].id %>">
-                                                        <img class="item-image img-resultados" src="/img/<%=productos[i].image %>">
+                                                        <img class="item-image" src="/img/<%=productos[i].image %>">
                                                     </a>
                                                     <p class="name-resultados">
                                                         <h3 class="item-title">
@@ -33,8 +32,9 @@
                                                         </h4>
                                                     </p>
 
-
-                                                        <i class="fas fa-cart-arrow-down addToCart"></i>
+                                                    <p class="agregar-al-carrito addToCart"> Agregar al carrito
+                                                     <i class="fas fa-cart-arrow-down"></i>
+                                                    </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,12 +127,10 @@
 
 
 
-                
+                </div>
                 <%- include('partials/footer') %>
-
             </main>
-
             <script src="../../js/carrito.js"></script>
-    </body>
+        </body>
 
 </html>

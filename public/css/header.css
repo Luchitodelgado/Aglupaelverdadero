@@ -99,6 +99,9 @@ a {
     flex-direction: row;
     padding: 15px;
 }
+.carrito:hover{
+    color: #bc9c84;
+}
 /*------------------------------MEDIA 361PX----------------------------*/
 @media (min-width:361px){
     main{
