@@ -16,17 +16,17 @@
                     <% for( let i=0; i < productos.length; i++ ) { %>
 
                         <article class="articulo-container">
-                            <a class="banner_home" href="/productos/detail/<%= productos[i].id %>"><img
-                                    class="imagen-producto" src="/img/<%=productos[i].image %>"> </a>
+                            <div class="div-img-home">
+                                <a class="banner_home" href="/productos/detail/<%= productos[i].id %>">
+                                    <img class="imagen-producto" src="/img/<%=productos[i].image %>"> 
+                                </a>
+                            </div>
                             <div class="div-descripcion">
                                 <p class="nombre-articulo">
-                                    <%=productos[i].name %>
+                                    <%=productos[i].name %> %<%=productos[i].discount %>
                                 </p>
                                 <p class="precio">
                                     $<%=productos[i].price %>
-                                </p>
-                                <p class="descuentos">
-                                    DESCUENTO: %<%=productos[i].discount %>
                                 </p>
                             </div>
                         </article>

@@ -23,9 +23,8 @@
 .item-price{
     font-family:"Roboto,sans-serif";
     font-size:15px;
-    font-weight: bold;
     text-align: start;
-    color:#bc9c84;
+    color:#434343;
     padding-left: 10px;
 }
 .descuento-resultados{

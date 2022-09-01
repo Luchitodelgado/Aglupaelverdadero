@@ -25,6 +25,28 @@ ul{
     box-shadow: 3px 3px 3px 3px #bc9c84;
     -webkit-transform:scale(1.1);transform:scale(1.1);
 }
+.seccion-articulos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px;
+}
+.articulo-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.div-img-home{
+    width: 100%;
+}
+.div-descripcion{
+    width: 100%;
+    height: auto;
+    background-color: rgba(128, 128, 128, 0);
+    padding: 5px;
+}
 .nombre-articulo{
     font-weight: bold;
     color: #434343;
@@ -66,18 +88,9 @@ ul{
             width: 100%;
             font-size: 35px;
     }
-    .seccion-articulos{
-        width: 100%;
-        height: auto;
-        margin: 15px;
-        display: flex;
-        flex-wrap: wrap;
-    }
     .articulo-container {
         width: 45%;
         height:auto;
-        display: flex;
-        justify-content: center;
         margin: 5px;
         padding: 5px;
     }
@@ -85,14 +98,6 @@ ul{
         width: 100%;
         height: auto;
         border-radius: 100px;
-    }
-    .div-descripcion {
-        width:100%;
-        height: auto;
-        background-color: rgba(128, 128, 128, 0);
-        *box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.144);
-        padding: 5px;
-        
     }
 }
 
@@ -117,25 +122,16 @@ ul{
     .h2-home{
         font-size: 65px;
     }
-    .seccion-articulos{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 15px;
-    }
     .articulo-container {
-        width: 23%;
-        margin: 10px;
-        display: flex;
-        justify-content: center;
+        width: 15%;
+        margin: 20px;
+    }
+    .div-img-home{
+        width: 100%;
+        height: 250px;
     }
     .imagen-producto {
         width: 100%;
-        height: 100%;
-    }
-    .div-descripcion {
-        width:100%;
         height: 100%;
     }
 }

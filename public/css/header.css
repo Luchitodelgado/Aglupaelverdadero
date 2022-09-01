@@ -77,6 +77,7 @@ a {
 }
 .hijos-ul{
     padding: 0px;
+    margin-top: 8px;
     width: 100%;
     list-style: none;
     text-decoration: none;
@@ -102,6 +103,12 @@ a {
 .carrito:hover{
     color: #bc9c84;
 }
+#formularioBusqueda{
+    border:1px solid rgb(205, 205, 205);
+  }
+  #boton{
+    border:1px solid rgb(205, 205, 205);
+  }
 /*------------------------------MEDIA 361PX----------------------------*/
 @media (min-width:361px){
     main{
@@ -131,10 +138,25 @@ a {
     }
     .carrito{
         color:#535353;
-        font-size: 12px;
+        font-size: 15px;
+        margin: 0px;
     }
     .a-header{
         font-size: 10px;
+        
+    }
+    .productos{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    #formularioBusqueda{
+        font-size:40%;
+        margin-top: 15px;
+        margin-left: 1px;
+        padding: 3px;
+    }
+    #boton{
+        font-size:40%;
     }
 }
 /*--------------------------- MEDIA 769PX--------------------------------*/
@@ -169,5 +191,17 @@ a {
     }
     .a-header{
         font-size: 16px;
+    }
+    .productos{
+        font-size: 16px;
+    }
+    #formularioBusqueda{
+        font-size:90%;
+        margin-top: 15px;
+        margin-left: 10px;
+        padding: 5px;
+    }
+    #boton{
+        font-size:90%;
     }
 }

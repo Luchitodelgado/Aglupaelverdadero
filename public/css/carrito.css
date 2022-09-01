@@ -46,8 +46,8 @@
 }
 .agregar-al-carrito{
   font-size: 15px;
-  color:#434343;
-  border:1px solid #434343;
+  color: #bc9c84;
+  border:1px solid #bc9c84;;
   padding: 5px;
   margin: 0px;
 }
@@ -73,6 +73,14 @@
   width: 30%;
   padding: 20px;
 }
+.flex-price{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  color: #434343;
+  font-weight: bold;
+}
+
 /*------------MEDIA QUERYS-------------*/
 @media (min-width:361px){
   .item-image{
