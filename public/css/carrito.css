@@ -43,6 +43,7 @@
 /*------------------mias----------------*/
 .row{
   width: 100%;
+  justify-content: center;
 }
 .agregar-al-carrito{
   font-size: 15px;
@@ -69,14 +70,16 @@
 /*------------MEDIA QUERYS-------------*/
 @media (min-width:361px){
   .div-productos{
-    width: 100vw;
+    width: 100%;
     padding: 10px;
+    margin: 15px;
   }
   .shopping-cart{
     width: 100%;
     padding: 10px;
   }
   .div-padre-productList{
+    width: 100%;
     display: block;
     justify-content: center;
   }
