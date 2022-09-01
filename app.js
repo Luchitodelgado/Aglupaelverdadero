@@ -9,8 +9,6 @@ const userRouter = require('./src/routes/userRouter');
 const productos = require("./src/routes/productsRouter");
 const apiRouter = require("./src/routes/api/usersApi");
 const productsApi = require("./src/routes/api/productsApi");
-
-
 const session = require('express-session');
 
 
