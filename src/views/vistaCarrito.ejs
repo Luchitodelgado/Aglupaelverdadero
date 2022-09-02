@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %>
-
+    <%- include('partials/head') %>
     <body>
-
         <%- include('partials/headerNavbar') %>
-            <main> 
-                <h2 class="h2-vistaCarrito">Carrito de compras</h2>
-            </main>
-
-            <%- include('partials/footer') %>
+        <main class="main-vistaCarrito"> 
+            <h2 class="h2-vistaCarrito">Carrito de compras</h2>
+            <div class="div-padre-vistaCarrito">
+                <div class="hijos-vistaCarrito">
+                        <img class="img-vistaCarrito" src="/img/bota1.png" alt="botas8">
+                        <p class="name-vistaCarrito">Glass 14%</p>
+                        <p class="price-vistaCarrito"></p>
+                </div>
+                <div class="hijos-vistaCarrito">
+                        <img class="img-vistaCarrito" src="/img/borcegos8.jpg" alt="botas8">
+                        <p class="name-vistaCarrito">ALPINA 14%</p>
+                        <p class="price-vistaCarrito">$19874</p>
+                </div>
+            </div>
+        </main>
+        <%- include('partials/footer') %>
     </body>
-
 </html>
