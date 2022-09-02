@@ -1,0 +1,17 @@
+.h2-vistaCarrito{
+    color: #434343;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+
+@media (min-width:361px){
+    .h2-vistaCarrito{
+        font-size: 45px;
+    }
+}
+@media (min-width:769px){
+    .h2-vistaCarrito{
+        font-size: 65px;
+    }
+}
