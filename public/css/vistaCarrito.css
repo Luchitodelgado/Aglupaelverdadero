@@ -7,20 +7,17 @@
 .div-padre-vistaCarrito{
     display: flex;
     flex-direction: column;
-    width:50%;
     justify-content: center;
     margin: auto;
-    border-top:1px solid rgb(192, 192, 192);
-    border-bottom:1px solid rgb(192, 192, 192);
+    margin-bottom: 20px;
 }
 .hijos-vistaCarrito{
     display: flex;
-    width:100%;
-    height:200px;
-    margin: 15px;
 }
-.hijos-vistaCarrito:hover{
-    border: 1px solid #000000;
+.hijos-subtotal-vistaCarrito{
+    display: flex;
+    width: 100%;
+    height: auto;
 }
 .div-img-vistaCarrito{
     width: 20%;
@@ -47,22 +44,13 @@
 .cantidad-vistaCarrito{
     display: flex;
     justify-content: space-between;
-    width: 30%;
-    margin: 15px;
-    padding: 10px;
     border:1px solid #b4b4b4;
 }
 .fa-minus{
     color: #434343;
 }
-.fa-minus:hover{
-    color: black;
-}
 .fa-plus{
     color: #434343;
-}
-.fa-plus:hover{
-    color: black;
 }
 .cantidad-vistaCarrito:hover{
     border: 1px solid #434343;
@@ -79,10 +67,36 @@
     color: #434343;
     font-weight: bold;
 }
+.subtotal-vistaCarrito{
+    align-self: flex-start;
+    margin-left: 5px;
+    font-size: 20px;
+    color: #434343;
+}
+.total-vistaCarrito{
+    text-align: end;
+    font-size: 20px;
+    color: #434343;
+    font-weight: bold;
+}
 /*-------MEDIA QUERYS----------------*/
 @media (min-width:361px){
     .h2-vistaCarrito{
-        font-size: 45px;
+        font-size: 35px;
+        padding: 10px;
+    }
+    .div-padre-vistaCarrito{
+        width: 90%;
+    }
+    .hijos-vistaCarrito{
+        border: 1px solid #43434372;
+        height: 150px;
+        margin: 10px;
+    }
+    .cantidad-vistaCarrito{
+        width: 70%;
+        margin: 15px;
+        padding: 5px;
     }
 }
 @media (min-width:769px){
@@ -91,5 +105,31 @@
     }
     .h2-vistaCarrito{
         font-size: 65px;
+        padding: 0px;
+    }
+    .div-padre-vistaCarrito{
+        width:50%;
+        border-top:1px solid rgb(192, 192, 192);
+        border-bottom:1px solid rgb(192, 192, 192);
+    }
+    .hijos-vistaCarrito{
+        width:100%;
+        height:200px;
+        margin: 15px;
+        border: none;
+    }
+    .hijos-vistaCarrito:hover{
+        border: 1px solid #0000007d;
+    }
+    .cantidad-vistaCarrito{
+        width: 50%;
+        margin: 15px;
+        padding: 10px;
+    }
+    .fa-minus:hover{
+        color: black;
+    }
+    .fa-plus:hover{
+        color: black;
     }
 }
