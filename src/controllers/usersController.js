@@ -53,6 +53,10 @@ const controller = {
 							res.locals.isLogged = true
 							req.session.userLogged = usuario;
 
+							if (req.body.recordame != undefined){
+								res.cookie('recordame', usuario.email, {maxAge: 60000})
+							}
+
 							if (usuario.typeUserId === 2) {
 								req.session.userAdmin = usuario
 								console.log(usuario.typeUserId)

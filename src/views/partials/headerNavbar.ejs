@@ -8,6 +8,9 @@
 
                 <input type="text" id="formularioBusqueda" placeholder="¿Qué estás buscando?"></input>
                 <button id="boton"> Buscar</button>
+                <ul id="resultado">
+
+                </ul>
 
             </div>
             <div class="container-logo">
@@ -89,18 +92,41 @@
                     .then(respuesta => {
                         return respuesta.json()
                     })
-                    .then(productList => {
-                        console.log(productList)
+                    .then(productos => {
+                        console.log(productos)
+                        const formulario = document.querySelector("#formularioBusqueda")
+                        const boton = document.querySelector('#boton')
+                        const resultado = document.querySelector('#resultado')
+                        const filtrar = () => {
+                            resultado.innerHTML = "";
+                            console.log(productos.productos)
+
+                          
+
+
+
+                        }
+                        boton.addEventListener('click', filtrar)
                     })
-                    
-                const formulario = document.querySelector("#formularioBusqueda")
-                const boton = document.querySelector('#boton')
 
-                const filtrar = () => {
-                    console.log(formulario.value)
-                    console.log(productList)
 
+            </script>
+
+            if (producto.nombre.includes(formulario.value) !== -1) {
+            resultado.innerHTML += ` <li> ${producto.name} - valor: ${producto.price} </li>`
+
+            }
+
+
+            /* const texto = formulario.value.toLowerCase(); */
+
+
+            for (let producto of Object.keys(productos)) {
+                       
+
+
+                if (productos.producto.name.includes(formulario.value) !== -1) {
+                    resultado.innerHTML += ` <li> ${producto.name} - valor: ${producto.price} </li>`
 
                 }
-                boton.addEventListener('click', filtrar)
-            </script>
+            }

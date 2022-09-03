@@ -10,6 +10,7 @@ const productos = require("./src/routes/productsRouter");
 const apiRouter = require("./src/routes/api/usersApi");
 const productsApi = require("./src/routes/api/productsApi");
 const session = require('express-session');
+const rememberMe = require("./src/middlewares/rememberMe");
 
 
 
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(session({ secret: "Mensaje secreto" }));
+app.use(rememberMe)
 app.use('/', mainRouter);
 app.use('/', userRouter);
 app.use('/', productos);

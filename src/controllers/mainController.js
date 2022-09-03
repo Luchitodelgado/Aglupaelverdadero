@@ -24,10 +24,6 @@ const controller = {
 
 	},
 
-	shopMujer: (req, res) => {
-		res.render("shopMujer")
-	}
-
 };
 
 
