@@ -9,6 +9,7 @@ const userRouter = require('./src/routes/userRouter');
 const productos = require("./src/routes/productsRouter");
 const apiRouter = require("./src/routes/api/usersApi");
 const productsApi = require("./src/routes/api/productsApi");
+const vistaCarrito = require("./src/routes/productsRouter");
 const session = require('express-session');
 const rememberMe = require("./src/middlewares/rememberMe");
 
@@ -33,6 +34,7 @@ app.use('/', userRouter);
 app.use('/', productos);
 app.use('/', apiRouter);
 app.use('/', productsApi);
+app.use('/',vistaCarrito);
 
 
 app.use((req,res,next)=>{

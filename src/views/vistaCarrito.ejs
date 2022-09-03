@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+    <body>
+        <%- include('partials/headerNavbar') %>
+        <main class="main-vistaCarrito"> 
+            <h2 class="h2-vistaCarrito">Carrito de compras</h2>
+            <div class="div-padre-vistaCarrito">
+                <div class="hijos-vistaCarrito">
+                    <div class="div-img-vistaCarrito">
+                        <img class="img-vistaCarrito" src="/img/bota1.png" alt="botas8">
+                    </div>
+                    <div class="div-izq-vistaCarrito">
+                        <p class="name-vistaCarrito">Glass 14%</p>
+                        <p class="cantidad-vistaCarrito">
+                            <i class="fas fa-minus"></i>
+                            <i>1</i>
+                            <i class="fas fa-plus"></i>
+                        </p>
+                    </div>
+                    <div class="div-der-vistaCarrito">
+                        <i class="fas fa-trash-alt"></i>
+                        <p class="price-vistaCarrito">$23254</p>
+                    </div>
+                </div>
+                <div class="hijos-vistaCarrito">
+                    <div class="div-img-vistaCarrito">
+                        <img class="img-vistaCarrito" src="/img/borcegos8.jpg" alt="botas8">
+                    </div>
+                    <div class="div-izq-vistaCarrito">
+                        <p class="name-vistaCarrito">ALPINA 14%</p>
+                        <p class="cantidad-vistaCarrito">
+                            <i class="fas fa-minus"></i>
+                            <i>1</i>
+                            <i class="fas fa-plus"></i>
+                        </p>
+                    </div>
+                    <div class="div-der-vistaCarrito">
+                        <i class="fas fa-trash-alt"></i>
+                        <p class="price-vistaCarrito">$19874</p>
+                    </div>
+                </div>
+                <div class="hijos-subtotal-vistaCarrito">
+                    <p class="subtotal-vistaCarrito">
+                        <div class="div-izq-vistaCarrito">
+                            <p class="subtotal-vistaCarrito">Subtotal (sin envío):</p>
+                        </div>
+                        <div class="div-der-vistaCarrito">
+                            <p class="total-vistaCarrito">$43.128</p>
+                            
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </main>
+        <%- include('partials/footer') %>
+    </body>
+</html>

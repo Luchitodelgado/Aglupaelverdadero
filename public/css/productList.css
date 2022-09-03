@@ -9,7 +9,7 @@
     margin: auto;
 }
 .hijos-resultados{
-    text-align: center;
+    text-align: start;
 }
 .hijos-resultados:hover{
     border:1px solid #949494d0;
@@ -23,8 +23,9 @@
 .item-price{
     font-family:"Roboto,sans-serif";
     font-size:15px;
+    font-weight: bold;
     text-align: start;
-    color:#434343;
+    color:#bc9c84;
     padding-left: 10px;
     margin-right: 200px;
 }

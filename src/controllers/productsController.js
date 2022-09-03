@@ -95,8 +95,8 @@ const controller = {
 			})
 			.catch(error => res.send(error))
 	},
-	carrito: (req, res) => {
-		res.render('carrito')
+	vistaCarrito: (req, res) => {
+		res.render('vistaCarrito')
 	},
 	productos: (req, res) => {
 		res.render('productos')

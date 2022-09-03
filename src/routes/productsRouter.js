@@ -29,8 +29,7 @@ router.get("/productos/:id",userMiddleware,productosController.productList)
 router.get('/productos/detail/:id',userMiddleware,productosController.detail);
 
 // INTENTAR IMPLEMENTAR CARRITO
-router.get('/productos/carrito',userMiddleware, productosController.carrito);
-router.post('/productos/carrito/:id',userMiddleware, productosController.carrito);
+router.get('/vistaCarrito', productosController.vistaCarrito);
 
 
 // METODOS "ABM" (CREO QUE SERIA ESTO)
