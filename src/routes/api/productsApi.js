@@ -63,6 +63,7 @@ router.get('/api/products', (req, res) => {
                 producto.image = 'http://localhost:3001/img/' + producto.image
 
             producto.detail = 'http://localhost:3000/api/products/' + producto.id
+
         })
         productTypes.findAll()
             .then(typeProducts => {
@@ -72,6 +73,8 @@ router.get('/api/products', (req, res) => {
 
                 return res.status(200).json({
                     count: productos.length,
+
+                    dbRelations: ['typeProductId'],
                     countByCategory: cantidadPorCategoria,
                     productos: resArray,
                     status: 200

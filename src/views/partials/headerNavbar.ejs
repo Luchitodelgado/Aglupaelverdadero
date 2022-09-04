@@ -7,14 +7,13 @@
             <div class="div-buscador">
 
                 <input type="text" id="formularioBusqueda" placeholder="¿Qué estás buscando?"></input>
-<<<<<<< HEAD
                 <button id="boton"> Buscar</button>
                 <ul id="resultado">
 
                 </ul>
-=======
+
                 <button id="boton">Buscar</button>
->>>>>>> b298976dc3db853db88bd88378cad2a54acd05e6
+
 
             </div>
             <div class="container-logo">
@@ -105,7 +104,7 @@
                             resultado.innerHTML = "";
                             console.log(productos.productos)
 
-                          
+
 
 
 
@@ -115,22 +114,3 @@
 
 
             </script>
-
-            if (producto.nombre.includes(formulario.value) !== -1) {
-            resultado.innerHTML += ` <li> ${producto.name} - valor: ${producto.price} </li>`
-
-            }
-
-
-            /* const texto = formulario.value.toLowerCase(); */
-
-
-            for (let producto of Object.keys(productos)) {
-                       
-
-
-                if (productos.producto.name.includes(formulario.value) !== -1) {
-                    resultado.innerHTML += ` <li> ${producto.name} - valor: ${producto.price} </li>`
-
-                }
-            }
