@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const db = require("../../database/models")
-const Sequelize = require ('sequelize')
+const Sequelize = require('sequelize')
 const sequelize = db.sequelize;
 const Product = db.Product;
 const { Op } = require("sequelize")
+
 
 const controller = {
 	index: (req, res) => {

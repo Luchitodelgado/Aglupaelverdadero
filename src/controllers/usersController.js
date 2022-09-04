@@ -1,6 +1,4 @@
-const fs = require('fs');
 const path = require('path');
-const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
 const db = require("../../database/models")
@@ -47,19 +45,21 @@ const controller = {
 							password: key
 						}
 
-						// EL USUARIO LOGUEA
+						// EL USUARIO LOGUEA (AGREGUE USUARIO AL PARAMETRO)
 					}).then(function () {
 						if (emailVerify === usuario.email && key == true) {
 							res.locals.isLogged = true
 							req.session.userLogged = usuario;
+							// COOKIE recordame
 
-							if (req.body.recordame != undefined){
-								res.cookie('recordame', usuario.email, {maxAge: 60000})
+
+							if (req.body.recordame != undefined) {
+								res.cookie('recordame', usuario.email, { maxAge: 60000 })
 							}
 
 							if (usuario.typeUserId === 2) {
 								req.session.userAdmin = usuario
-								console.log(usuario.typeUserId)
+							
 							}
 
 							res.redirect('/perfil')
@@ -94,7 +94,7 @@ const controller = {
 				email: req.body.email,
 			}
 		}).then(function (usuario) {
-			if (usuario != ""){
+			if (usuario != "") {
 				res.locals.mailEnUso = true
 				return res.render('registrarte2')
 			}
@@ -173,12 +173,14 @@ const controller = {
 					where: { id: userId }
 				}
 			).then(() => {
+				
 				return res.redirect('/salir')
 			})
 			.catch(error => res.send(error))
 
 	},
 	salir: (req, res) => {
+		res.clearCookie("recordame");
 		req.session.destroy();
 		res.redirect('/')
 	}

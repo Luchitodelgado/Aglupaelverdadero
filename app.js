@@ -1,4 +1,4 @@
-/* ------------------------------ EL ORDEN DE TODOS ESTOS BLOQUES ES IMPORTANTE------------------------------*/
+
 /* ------------------------------ REQUERIMIENTOS ------------------------------*/
 const express = require("express");
 const app = express();
@@ -11,7 +11,9 @@ const apiRouter = require("./src/routes/api/usersApi");
 const productsApi = require("./src/routes/api/productsApi");
 const vistaCarrito = require("./src/routes/productsRouter");
 const session = require('express-session');
-const rememberMe = require("./src/middlewares/rememberMe");
+const recordame = require("./src/middlewares/rememberMe");
+const cookieParser = require('cookie-parser')
+
 
 
 
@@ -28,18 +30,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(session({ secret: "Mensaje secreto" }));
-/* 
-app.use(rememberMe) */
+app.use(cookieParser())
+app.use(recordame)
+
 
 app.use('/', mainRouter);
 app.use('/', userRouter);
 app.use('/', productos);
 app.use('/', apiRouter);
 app.use('/', productsApi);
-app.use('/',vistaCarrito);
+app.use('/', vistaCarrito);
 
 
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
     res.status(404).send('Pagina no encontrada')
 })
 
