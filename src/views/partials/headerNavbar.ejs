@@ -4,18 +4,7 @@
 
 
         <div class="div-padre">
-            <div class="div-buscador">
 
-                <input type="text" id="formularioBusqueda" placeholder="¿Qué estás buscando?"></input>
-                <button id="boton"> Buscar</button>
-                <ul id="resultado">
-
-                </ul>
-
-                <button id="boton">Buscar</button>
-
-
-            </div>
             <div class="container-logo">
                 <a href="/"><img class="img-logo" src="/img/Minimalist Initial Letter Logo.png" alt="logo-header"></a>
             </div>
@@ -48,12 +37,7 @@
 
         <header>
             <div class="div-padre">
-                <div class="div-buscador">
-                    <form action="/search" method="GET" class="barra-lupa" id="inputSearch">
-                        <input class="barra-busqueda barra" type="search" id="site-search" name="barra-busqueda"
-                            placeholder="¿Qué estás buscando?"></input>
-                    </form>
-                </div>
+              
                 <div class="container-logo">
                     <a href="/"><img class="img-logo" src="/img/Minimalist Initial Letter Logo.png"
                             alt="logo-header"></a>
@@ -89,28 +73,3 @@
         </header>
 
         <% } %>
-
-            <script>
-                fetch('/api/products')
-                    .then(respuesta => {
-                        return respuesta.json()
-                    })
-                    .then(productos => {
-                        console.log(productos)
-                        const formulario = document.querySelector("#formularioBusqueda")
-                        const boton = document.querySelector('#boton')
-                        const resultado = document.querySelector('#resultado')
-                        const filtrar = () => {
-                            resultado.innerHTML = "";
-                            console.log(productos.productos)
-
-
-
-
-
-                        }
-                        boton.addEventListener('click', filtrar)
-                    })
-
-
-            </script>
