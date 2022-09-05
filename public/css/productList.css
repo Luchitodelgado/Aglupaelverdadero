@@ -57,6 +57,8 @@
     }
     .item-title{
         font-size:15px;
+        color: #434343;
+        padding: 5px;
     }
 }
 @media (min-width:769px){
@@ -74,5 +76,8 @@
     }
     .name-resultados{
         font-size:15px;
+    }
+    .item-title{
+        font-size: 18px;
     }
 }

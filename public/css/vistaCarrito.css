@@ -56,6 +56,7 @@
 }
 .fa-trash-alt{
     margin: 15px;
+    color: #646464;
 }
 .fa-trash-alt:hover{
     color:black;
@@ -110,7 +111,7 @@
     }
     .h2-vistaCarrito{
         font-size: 65px;
-        padding: 10px;
+        padding:0px;
     }
     .div-padre-vistaCarrito{
         width:50%;

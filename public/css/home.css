@@ -21,10 +21,6 @@ ul{
     justify-content: center;
     margin-bottom: 20px;
 }
-.imagen-producto:hover{
-    box-shadow: 3px 3px 3px 3px #bc9c84;
-    -webkit-transform:scale(1.1);transform:scale(1.1);
-}
 .seccion-articulos{
     width: 100%;
     height: auto;
@@ -32,11 +28,15 @@ ul{
     flex-wrap: wrap;
     justify-content: center;
     margin: 15px;
-}
+}   
 .articulo-container{
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+.articulo-container:hover{
+    box-shadow: 3px 3px 3px 3px #a9a9a9;
+    -webkit-transform:scale(1.1);transform:scale(1.1);
 }
 .div-img-home{
     width: 100%;
