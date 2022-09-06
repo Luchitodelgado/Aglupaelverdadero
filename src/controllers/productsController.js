@@ -91,7 +91,7 @@ const controller = {
 		let productId = req.params.id;
 		Product.destroy({ where: { id: productId }, force: true })
 			.then(() => {
-				return res.redirect('/productos')
+				return res.redirect('/perfil')
 			})
 			.catch(error => res.send(error))
 	},
