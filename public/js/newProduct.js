@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     name: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios
-    description: /^[a-zA-ZÀ-ÿ\s]{20,200}$/, // Letras y espacios, pueden llevar acentos.
+   /*  description: /^[a-zA-ZÀ-ÿ\s]{20,200}$/, // Letras y espacios, pueden llevar acentos. */
     price: /^\d{1,7}$/, // 1 a 9 numeros.(max 9,9 millones)
     discount: /^\d{0,3}$/ // 0 a 3 numeros.(100% amx)
 }
@@ -13,7 +13,7 @@ const campos = {
     name: false,
     email: false,
     discount: false,
-    description: false
+/*     description: false */
 }
 
 const validarFormulario = (e) => {
@@ -25,10 +25,10 @@ const validarFormulario = (e) => {
         case "price":
             validarCampo(expresiones.price, e.target, 'price');
             break;
-        case "description":
+ /*        case "description":
             validarCampo(expresiones.description, e.target, 'description');
             console.log('campo input')
-            break;
+            break; */
         case "discount":
             validarCampo(expresiones.discount, e.target, 'discount');
             break;
@@ -62,7 +62,7 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const terminos = document.getElementById('terminos');
-    if (campos.price && campos.name && campos.discount && campos.description) {
+    if (campos.price && campos.name && campos.discount /* && campos.description */) {
         formulario.submit();
 
 
