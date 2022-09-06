@@ -1,0 +1,312 @@
+﻿(function () {
+	var API_ENDPOINT = '//track.embluemail.com';
+
+	var Browser = window._rq.browser,
+        Dom = window._rq.dom,
+        Request = window._rq.request,
+        Storage = window._rq.storage,
+        STORE_KEY = window._rq.STORE_KEY,
+        String = window._rq.string,
+        Utils = window._rq.utils,
+        _ = window._rq._,
+        _body = _.first(Dom.findByTagName('body')),
+        EMB_CDN_ENDPOINT = '//track.embluemail.com/tracker',
+        EMB_TRK_KEY = 'embtrk',
+		EMB_TRK_COOKIE = '_embtrk';
+
+	var EventsAttacher = {};
+	(function () {
+
+		function isNoActionElement(targetElement) {
+			return targetElement.tagName !== 'A' &&
+                (targetElement.type && (targetElement.type.toLowerCase() === 'button' || targetElement.type.toLowerCase() === 'reset'));
+		}
+
+		this.loadAndAttachTracker = function () {
+
+			loadKnownEvents(function (knownEvents) {
+				tryIdentifyContact(function () {
+					attachTracker(knownEvents);
+					attachVisits(knownEvents);
+				});
+			});
+			loadKnownActions(function (knownActions) {
+				createPopup();
+				var pageUrl = location.protocol + '//' + location.host + location.pathname;
+
+				var urlParts = location.hostname.split('.');
+				var subdomain = urlParts.shift();
+				var pageUrl2 = window.location.href.replace(subdomain + ".", "");
+
+				_.each(knownActions, function (action) {
+					if (action.type == 5) { //--Show Popup
+
+						var data = JSON.parse(action.data);
+
+						if (pageUrl == data.site_url || pageUrl2 == data.site_url) {
+							isShowPopup(action.id, function (response) {
+								if (response.execute) {
+									showPopup(data.html);
+								}
+							});
+						}
+					}
+				});
+			});
+		};
+
+		function attachTracker(events) {
+			_.each(events, function (event) {
+				if (event.type == 2) {  //--Click Events
+
+					var element = Dom.findBySeletor(event.selector);
+					if (!element) return;
+
+					console.log(String.format('[GB] Event \'{0}\' attached to element with query {1}.', event.name, event.selector.query));
+
+					//Dom.addClass(element, 'not-tracked');
+					element.setAttribute('tracked', 'false');
+
+					Dom.onClick(element, function (e) {
+
+						if (element.getAttribute('tracked') == 'false') {
+							e.preventDefault();
+							e.stopPropagation();
+						}
+						var eventCallback;
+						var targetElement = e.target;
+						var linkOpensNewTab = (e.which === 2 || targetElement.target === "_blank");
+
+						if (targetElement.parentElement && targetElement.parentElement.tagName === 'A') {
+							targetElement = targetElement.parentElement;
+						}
+
+						var noActionElement = isNoActionElement(targetElement);
+
+						if (!linkOpensNewTab || !noaction_button_click) {
+							eventCallback = function () {
+								console.log(String.format('[GB] Event \'{0}\' eventCallback executed', event.name));
+
+								if (targetElement.tagName === 'A') {
+									e.preventDefault();
+									var href = targetElement.href;
+
+									if (href && href.length > 0) {
+										if (href[href.length - 1] == '#')
+											href = href.substr(0, (href.length - 1));
+
+										window.location = href;
+									}
+								} else {
+									var form = targetElement.form;
+									var type = targetElement.type.toLowerCase();
+
+									if (form && type && form[type]) {
+										if (_.isFunction(form[type]))
+											form[type]();
+										else
+											console.warn('[GB] Form submit was overridden');
+									}
+								}
+							};
+						}
+
+						console.log(String.format('[GB] Event \'{0}\' sent', event.name));
+						if (element.getAttribute('tracked') == 'false') {
+							setTimeout(function () {
+								_rq.push(['trackEvent', event.name, eventCallback, undefined, event.selector]);
+								element.removeAttribute('tracked')
+							}, 500)
+						}
+					});
+				}
+
+			});
+		}
+
+		function attachVisits(events) {
+			_.each(events, function (event) {
+				if (event.type == 1 && isTrackVisit(event.selector.domain)) {  //--Visit Events
+					var evUrl = { eventUrl: event.selector.domain };
+					var idEmails = { idEmails: _rq.cookie.getStartsWith('rtq-_rtq_eid_').join(',') };
+					var qData = _.extend({}, _rq.getIdentifiedContact(), Utils.getBrowserInfo(), evUrl, idEmails);
+
+					var query = '';
+					for (key in qData) {
+						query += key + '=' + qData[key] + '&';
+					}
+					query = query.slice(0, query.length - 1);
+
+					new Request({
+						method: 'POST',
+						type: 'XHR',
+						url: String.format('{0}/contacts/visit/?{1}', API_ENDPOINT, query),
+						callback: function (response) {
+							if (response.error) throw new Error('[GB] Error tracking visit.');
+							console.log(String.format('[GB] Event \'visit\' tracked.'));
+						}
+					});
+				}
+			});
+		}
+
+		function isTrackVisit(eventUrl) {
+			var pageUrl = location.protocol + '//' + location.host + location.pathname;
+
+			if (pageUrl == eventUrl) {
+				//if (!_rq.isContactIdentified()) return false;
+
+				if (_rq.cookie.get("rtq-_rtq_c_v") && _rq.cookie.get("rtq-_rtq_c_v") != '') return false;
+
+				//--Set visit cookie
+				_rq.cookie.set("rtq-_rtq_c_v", _rq.getIdentifiedContact().contactId, 5 * 60); //--visit cookie 5 min
+
+
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
+		function isShowPopup(id, callback) {
+			if (!_rq.isContactIdentified()) return { execute: false };
+
+			var pageUrl = location.protocol + '//' + location.host + location.pathname;
+			var urlParts = location.hostname.split('.');
+			var subdomain = urlParts.shift();
+			var pageUrl2 = window.location.href.replace(subdomain + ".", "");
+
+			var qData = _.extend({}, _rq.getIdentifiedContact(), { actionId: id, pageUrl: pageUrl, pageUrl2: pageUrl2 });
+
+			//var query = '';
+			//for (key in qData) {
+			//  query += key + '=' + qData[key] + '&';
+			//}
+			//query = query.slice(0, query.length - 1);
+
+
+			new Request({
+				method: 'GET',
+				type: 'XHR',
+				url: String.format('{0}/actions/execute/?{1}', API_ENDPOINT, String.serialize(qData)),
+				callback: function (response) {
+					if (response.error) throw new Error('[GB] Error.');
+
+					if (_.isFunction(callback)) callback.call(this, response.responseJSON);
+				}
+			});
+		}
+
+		function loadKnownEvents(callback) {
+			new Request({
+				method: 'GET',
+				type: 'XHR',
+				url: String.format('{0}/events/?apiKey={1}', API_ENDPOINT, Utils.getApiKey()),
+				callback: function (response) {
+					if (response.error) throw new Error('[GB] Error getting events to attach.');
+
+					if (_.isFunction(callback)) callback.call(this, response.responseJSON);
+				}
+			});
+		}
+		function loadKnownActions(callback) {
+			new Request({
+				method: 'GET',
+				type: 'XHR',
+				url: String.format('{0}/actions/?apiKey={1}', API_ENDPOINT, Utils.getApiKey()),
+				callback: function (response) {
+					if (response.error) throw new Error('[GB] Error getting actions to execute.');
+
+					if (_.isFunction(callback)) callback.call(this, response.responseJSON);
+				}
+			});
+		}
+		function tryIdentifyContact(callback) {
+			var q = Utils.parseQueryString(location.href);
+
+			//--Identify Contact
+
+			//--If embTrk is present force identify
+			var embtrk = '';
+			var email = '';
+
+			if (_rq.cookie.get(EMB_TRK_COOKIE) && _rq.cookie.get(EMB_TRK_COOKIE).trim() != '') {
+				embtrk = _rq.cookie.get(EMB_TRK_COOKIE);
+			}
+			else if (q[EMB_TRK_KEY] && q[EMB_TRK_KEY].trim() != '') {
+				embtrk = q[EMB_TRK_KEY];
+			}
+			else if (q["email"] && q["email"].trim() != '') {
+				email = q["email"];
+			}
+
+			if (embtrk != '' || email != '') {
+				try {
+					_gb('identify', { email: email, embtrk: embtrk }, function () {
+						if (_.isFunction(callback)) callback.call(this);
+					});
+				} catch (err) {
+					if (_.isFunction(callback)) callback.call(this);
+				}
+			}
+			else {
+				if (_.isFunction(callback)) callback.call(this);
+			}
+
+			//if (!_rq.isContactIdentified()) {
+
+			//    //--Identify by query
+			//    if (q[EMB_EMAIL_KEY] && q[EMB_EMAIL_KEY].trim() != '') {
+			//        var contact = { email: q[EMB_EMAIL_KEY] };
+			//        _gb('identify', contact, function () {
+			//            if (_.isFunction(callback)) callback.call(this);
+			//        });
+			//    }                                
+			//}
+
+
+		}
+		function createPopup() {
+			_body.appendChild(Dom.create('link', { href: String.format('{0}/css/events-attacher.css', EMB_CDN_ENDPOINT), rel: 'stylesheet' }));
+
+			var _gb_iframe_wrapper = Dom.create('div', { className: '_gb_iframe_wrapper _gb_iframe_closed' });
+			var _gb_iframe_container = Dom.create('div', { className: '_gb_iframe_container' });
+			var _gb_iframe = Dom.create('iframe', { className: '_gb_iframe', src: '', frameborder: "0", scrolling: "yes", allowTransparency: "true" });
+
+			// popup close
+			var _gb_close_popup = Dom.create('a', { id: '_gb_close_popup', className: '_gb_btn_close_popup_action _gb_js_close_popup', innerHTML: 'x' });
+
+			_gb_iframe_container.appendChild(_gb_close_popup);
+
+			_gb_iframe_container.appendChild(_gb_iframe);
+			_gb_iframe_wrapper.appendChild(_gb_iframe_container);
+
+			_body.appendChild(_gb_iframe_wrapper);
+
+			Dom.onClick(_gb_iframe_wrapper, hidePopup);
+			Dom.onClick(_gb_close_popup, hidePopup);
+
+
+		}
+
+		function showPopup(html) {
+			var _gb_iframe = _.first(Dom.findByClass('._gb_iframe'));
+			//Dom.attribute(_gb_iframe, { src: "" })
+			_gb_iframe.contentDocument.documentElement.innerHTML = html;
+
+			var _gb_iframe_wrapper = _.first(Dom.findByClass('._gb_iframe_wrapper'));
+			Dom.addClass(_gb_iframe_wrapper, '_gb_iframe_opened');
+			Dom.removeClass(_gb_iframe_wrapper, '_gb_iframe_closed');
+		}
+		function hidePopup() {
+			var _gb_iframe_wrapper = _.first(Dom.findByClass('._gb_iframe_wrapper'));
+			Dom.removeClass(_gb_iframe_wrapper, '_gb_iframe_opened');
+			Dom.addClass(_gb_iframe_wrapper, '_gb_iframe_closed');
+		}
+
+	}).apply(EventsAttacher);
+
+	EventsAttacher.loadAndAttachTracker();
+
+})();
