@@ -5,7 +5,7 @@ const User = db.User;
 function rememberMe(req, res, next) {
 
     next();
-    if (req.cookies.recordame != undefined && req.session.userLogged === undefined) {
+    if (req.cookies.recordame != undefined  && req.session.userLogged == undefined ) {
         User.findOne({
             where: {
                 email: req.cookies.recordame,
@@ -15,11 +15,11 @@ function rememberMe(req, res, next) {
                 req.session.userLogged = usuario;
                 console.log(req.cookies.recordame)
           
-            }).then((err)=>{
+            }).catch((err)=>{
                 console.log( 'este es el error' + err)
             })
           
         
     }
 }
-module.exports = rememberMe;
+module.exports = rememberMe;    
